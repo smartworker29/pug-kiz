@@ -5,4 +5,4 @@ Starter Repo to be used as start point for any project. it has Babel, Pug and Sa
 <code>npm start</code>
 
 ## build project for production
-<code>npm run dev</code>
+<code>npm run build</code>
