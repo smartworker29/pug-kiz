@@ -1,0 +1,5 @@
+//Font OpenSans
+@include fontface(OpenSans, OpenSans, OpenSans, $weight: 400, $style: normal);
+@include fontface(OpenSans, OpenSans, OpenSans-Semibold, $weight: 600, $style: normal);
+@include fontface(OpenSans, OpenSans, OpenSans-SemiboldItalic, $weight: 600, $style: italic);
+@include fontface(OpenSans, OpenSans, OpenSans-Bold, $weight: 700, $style: normal);

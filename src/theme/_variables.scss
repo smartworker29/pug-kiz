@@ -1,0 +1,75 @@
+$breakpoints: ( 
+  xs: 0, 
+  sm: 576px, 
+  md: 768px, 
+  lg: 992px, 
+  xl: 1200px,
+  xxl: 1500px
+);
+/////////////////
+// Fonts
+////////////////
+$font-sizes: ( xxxs: 10px, xxs: 11px, xs:12px, sm: 14px, md:16px, lg:18px, xl: 20px, xxl: 22px, xxxl: 24px, xxxxl: 46px);
+//////
+$xxxxl-font: ( null: map-get($font-sizes, xxl), xs: map-get($font-sizes, xxl), md: map-get($font-sizes, xxxl), lg: map-get($font-sizes, xxxxl));
+$xxxl-font: ( null: map-get($font-sizes, xl), xs: map-get($font-sizes, xl), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxxl));
+$xxl-font: ( null: map-get($font-sizes, lg), xs: map-get($font-sizes, lg), md: map-get($font-sizes, xl), lg: map-get($font-sizes, xxl));
+$xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xl));
+$lg-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, md), lg: map-get($font-sizes, lg));
+$md-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, sm), lg: map-get($font-sizes, md));
+$sm-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, xs), lg: map-get($font-sizes, sm));
+$xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xs));
+$xxs-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxxs), lg: map-get($font-sizes, xxs));
+
+
+/////////////////
+// Colors
+////////////////
+
+$brand: #0047bb;
+$text: #353535;
+$text-mute: lighten(#353535,10%);
+$primary: purple;
+$secondary:  #f0f7fe;
+$mute: #F4F8FD;
+$white: #fff;
+$black: #000;
+$grey: #414141;
+$dark-grey:  #333333;
+$light-grey: #e6ebf2;
+$lighter-grey: #d7dee9;
+$light-grey:  #f6f6f6;
+
+$error-color: #f6303f;
+$error-bg: #fff0f1;
+$success-color: #390;
+
+/////////////////
+// font
+////////////////
+
+$font: "OpenSans",
+sans-serif;
+$font-normal: 400;
+$font-semi: 600;
+$font-bold: 700;
+
+////////////////////////
+// Bootstrap Overrides
+////////////////////////
+
+$body-bg: $white;
+$body-color: $grey;
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "danger": $error-color,
+  "success": $success-color
+);
+$hr-border-color: $light-grey;
+$container-max-widths: ( 
+sm: 100%, 
+md: 100%, 
+lg: 100%, 
+xl: 1500px ) !default; 
+

@@ -1,0 +1,13 @@
+.placeholder{
+
+    &--bg-brand{
+        background-color: $brand;
+    }
+    &--bg-mute{
+        background-color: $mute;
+    }
+    &--bg-light-grey{
+        background-color: $light-grey;
+    }
+    
+}

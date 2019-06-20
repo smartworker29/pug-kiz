@@ -1,0 +1,23 @@
+
+header{
+    margin-bottom: 15px;
+    @include transition(all .55s ease-in-out);
+    &.scrolled{
+        @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
+    }
+    nav.navbar{
+        
+        .navbar-brand{
+            padding: 0;
+            margin-left: 15px;
+            height: auto;
+            img{
+                height: 40px;
+                width: auto;
+                @include md{
+                    height: 54px;
+                }
+            }
+        }
+    }
+}
