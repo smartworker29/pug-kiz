@@ -4,6 +4,7 @@ const WebpackMd5Hash = require("webpack-md5-hash");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const fs = require("fs");
+const webpack = require('webpack');
 
 const pages = fs
   .readdirSync(path.resolve(__dirname, "./src/"))
@@ -81,7 +82,11 @@ module.exports = {
           filename: page.slice(0, -3) + "html"
         })
     ),
-    new WebpackMd5Hash()
+    new WebpackMd5Hash(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+    }),
   ],
   "devtool" : "none"
 };

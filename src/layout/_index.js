@@ -1,3 +1,3 @@
-import * as header from "./header/header.js";
+import "./header/header.js";
 
-header.init();
+ //header.init();

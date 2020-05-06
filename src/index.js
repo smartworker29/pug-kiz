@@ -1,11 +1,12 @@
 //styles
 import "./style.scss";
 //jQuery
-import $ from 'jquery';
-window.jQuery = $;
-window.$ = $;
+import 'jquery';
+
 //bootstrap
 import "bootstrap";
+//Swiper
+// import 'swiper';
 
 //layout
 import "./layout/_index";

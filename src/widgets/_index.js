@@ -1,3 +1,5 @@
 import * as cardList from "./card-list/card-list.js";
+// import siblingHover from "./slider/slider";
 
-cardList.init();
+// siblingHover().init();
+// cardList.init();

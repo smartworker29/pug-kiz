@@ -1,13 +1,18 @@
 .placeholder{
-
+    padding-top:40px;
+    padding-bottom:40px;
     &--bg-brand{
-        background-color: $brand;
+        background-color: $secondary;
     }
     &--bg-mute{
         background-color: $mute;
     }
     &--bg-light-grey{
         background-color: $light-grey;
+    }
+
+    &--bg-primary{
+        background-color: $primary;
     }
     
 }
