@@ -63,3 +63,18 @@
   .black-bg{
     background-color: $black;
   }
+
+  body{
+    @include font-size($sm-font);
+    font-weight: lighter;
+  }
+
+  .title{
+      text-transform: uppercase;
+      letter-spacing: 1.5;
+      @include font-size($sm-font);
+  }
+  ul{
+    margin: 0;
+    padding:0;
+  }

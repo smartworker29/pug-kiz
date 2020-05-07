@@ -19,6 +19,20 @@
             }
         }
     }
+    &.btn-secondary{
+        border:0;
+        background-color: $secondary;
+        &:hover{
+            background-color: $secondary;
+        }
+        // &--outline{
+        //     border:1px solid $white;
+        //     color:$light-grey;
+        //     &:hover{
+        //         border:1px solid $secondary;
+        //     }
+        // }
+    }
     &.btn-white{
         border:0;
         background-color: $white;

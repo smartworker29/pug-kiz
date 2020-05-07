@@ -60,6 +60,9 @@ header{
         }
         .nav-list{
             flex: auto;
+            [listitem-toggle]{
+              font-weight: normal;
+            }
             ul{
                 margin: 0;
                 padding: 0;
@@ -129,7 +132,7 @@ header{
             }
             .simscrollbar{
               overflow-y: auto;
-              max-height: 50vh;
+              max-height: 60vh;
               &::-webkit-scrollbar {
                   width: 5px;
               }
