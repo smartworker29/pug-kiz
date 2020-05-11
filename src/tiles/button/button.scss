@@ -3,6 +3,7 @@
     padding:10px 30px;
     border-radius: 10px;
     @include font-size($xxs-font);
+    font-family: $font-roboto-medium;
     color:$white;
     background: transparent;
     &.btn-primary{

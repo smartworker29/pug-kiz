@@ -1,18 +1,16 @@
 extends layout/layout
 block content
 
-  .placeholder.placeholder--bg-mute
+  .placeholder.placeholder--no-padding
+    include ./widgets/banner/banner
+    
+          
+
+
+  .placeholder.placeholder--bg-primary.placeholder--no-padding
     .container
       .row
-        .col-12
-          +button('button', 'btn-primary' ,' Contact us ') 
-          +button('button', 'btn-primary disabled' ,' Contact us ') 
-
-
-  .placeholder.placeholder--bg-light-grey
-    .container.container--big
-      .row
-        .col-12
+        include ./widgets/navigation-link/navigation-link
           
           
 

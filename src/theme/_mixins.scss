@@ -11,6 +11,29 @@
   }
 }
 
+
+// Responsive Font-Size
+@mixin line-height($fs-map,
+$fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint,
+  $fs-line-height in $fs-map {
+    @if $fs-breakpoint==null {
+      line-height: $fs-line-height;
+    }
+    @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints,
+      $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        line-height: $fs-line-height;
+      }
+    }
+  }
+}
+
 // Responsive Font-Size
 @mixin font-size($fs-map,
 $fs-breakpoints: $breakpoints) {

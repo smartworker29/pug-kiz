@@ -2,6 +2,7 @@
     @include font-size($sm-font);
     padding:10px 0;
     color:$secondary;
+    font-family: $font-roboto-regular;
     &:hover{
         color:$secondary;
         text-decoration: underline;

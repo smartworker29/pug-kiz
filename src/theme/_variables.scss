@@ -22,6 +22,21 @@ $xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: 
 $xxs-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxxs), lg: map-get($font-sizes, xxxs));
 
 
+// line height
+////////////////
+$line-height: ( xxxs: 12px, xxs: 14px, xs:20px, sm: 24px, md:28px, lg:30px, xl: 36px, xxl: 40px, xxxl: 48px, xxxxl: 74px);
+//////
+$xxxxl-line-height: ( null: map-get($line-height, xxl), xs: map-get($line-height, xxl), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
+$xxxl-line-height: ( null: map-get($line-height, xl), xs: map-get($line-height, xl), md: map-get($line-height, xxxl), lg: map-get($line-height, xxxl));
+$xxl-line-height: ( null: map-get($line-height, lg), xs: map-get($line-height, lg), md: map-get($line-height, xxl), lg: map-get($line-height, xxl));
+$xl-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, lg), lg: map-get($line-height, lg));
+$lg-line-height: ( null: map-get($line-height, md), xs: map-get($line-height, md), md: map-get($line-height, md), lg: map-get($line-height, md));
+$md-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, sm), lg: map-get($line-height, sm));
+$sm-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xs), lg: map-get($line-height, xs));
+$xs-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xxs), lg: map-get($line-height, xxs));
+$xxs-line-height: ( null: map-get($line-height, xxs), xs: map-get($line-height, xxs), md: map-get($line-height, xxxs), lg: map-get($line-height, xxxs));
+
+
 /////////////////
 // Colors
 ////////////////
@@ -44,6 +59,14 @@ $grey-bg:#f8fafd;
 $error-color: #f6303f;
 $error-bg: #fff0f1;
 $success-color: #390;
+$font-roboto-thin: "roboto-thin",sans-serif;
+$font-roboto-light: "roboto-light",sans-serif;
+$font-roboto-regular: "roboto-regular",sans-serif;
+$font-roboto-medium: "roboto-medium",sans-serif;
+$font-roboto-bold: "roboto-bold",sans-serif;
+$font-archive: "archive-regular",sans-serif;
+$font-archive-bold: "archive-bold",sans-serif;
+
 
 /////////////////
 // font

@@ -132,19 +132,19 @@ header{
             }
             .simscrollbar{
               overflow-y: auto;
-              max-height: 60vh;
+              max-height: 70vh;
               &::-webkit-scrollbar {
                   width: 5px;
               }
               &::-webkit-scrollbar-track {
-                  background: #f1f1f1;
+                  background: $light-grey;
               }
               &::-webkit-scrollbar-thumb {
-                  background: #888;
+                  background: $secondary;
                   border-radius: 5px;
               }
               &::-webkit-scrollbar-thumb:hover {
-                  background: #555;
+                  background: $secondary;
               }
             }
             .file-container{
