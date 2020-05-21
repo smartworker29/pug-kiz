@@ -2,7 +2,7 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
     .footer-wrapper
         .container
             .row
-                .col-sm-2
+                .col-sm-3
                     .footer-logo
                         img(src="${require(`./assets/images/kizad-logo-reverse.svg`)}")
                 .col-sm-3
@@ -10,7 +10,8 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
                         h4.title Download our brochure
                         img(src="${require(`./assets/images/contact.png`)}")
                         p Khalifa Industrial Zone Abu Dhabi [KIZAD], a subsidiary of Abu Dhabi Ports.
-                        +link('#', 'with-icon' ,' Download Brochure ')
+                        +button('button', 'btn-secondary' ,' Download ') 
+                        +button('button', 'btn-white' ,' Contact us ') 
 
                 .col-sm-2.footer-link
                     h4.title Clusters
@@ -32,9 +33,6 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
                         -var list = ['License Types','Dual Licensing', 'Ligal Entity Types', 'KIZAD Entrepreneurship and Incubation Centre']
                         each x in list
                             li=x
-
-                .col-sm-1
-                    +button('button', 'btn-secondary' ,' Contact us ') 
 
 
 

@@ -8,7 +8,7 @@ footer{
         background-size: contain;
         .footer-logo{
             img{
-                height:54px;
+                height:80px;
             }
         }
         .widget-brochure{
@@ -20,6 +20,18 @@ footer{
             img{
                 height:120px;
                 margin-bottom: 20px;
+            }
+            p{
+                @include lg{
+                    width:70%;
+                }
+                @include line-height($md-line-height);
+            }
+            .btn{
+                margin-right:15px;
+                &:last-child{
+                    margin-right: 0;
+                }
             }
         }
         .footer-link{

@@ -9,8 +9,8 @@
             display: flex;
             a{
                 @include link-hover;
-                color:$white;
                 padding:30px 0;
+                color:$white;
                 &:after{
                     bottom: 0px;
                 }
