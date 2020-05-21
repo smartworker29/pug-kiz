@@ -11,9 +11,12 @@ block content
     .container
       .row
         include ./widgets/navigation-link/navigation-link
-          
-          
 
+
+
+  .placeholder.placeholder--no-padding
+    include ./widgets/location/location
+    +location()
 
   .placeholder.placeholder--bg-mute
     .container.container--small

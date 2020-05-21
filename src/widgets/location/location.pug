@@ -1,0 +1,12 @@
+mixin location(rtl)
+    .location
+        .row.no-gutters
+            div(class=rtl ? 'col-12 col-lg-5 col-xl-4 order-1' : 'col-12 col-lg-5 col-xl-4 order-1 order-lg-0')
+                .location__wrap
+                    h1.section__title.text-nowrap Strategic Location
+                    p.location__text Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.
+                    +button('button', 'btn-secondary' ,' Read more ')
+            div(class=rtl ? 'col-12 col-lg-7 col-xl-8 order-0' : 'col-12 col-lg-7 col-xl-8 order-0 order-lg-1')
+
+                div(class=rtl ? 'location__image-wrap text-left' : 'location__image-wrap text-right')
+                    img(src="../src/assets/images/location.jpg")

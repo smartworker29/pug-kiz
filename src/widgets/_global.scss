@@ -45,6 +45,11 @@ body{
       letter-spacing: 1.5;
       @include font-size($sm-font);
   }
+
+  .section__title{
+    text-transform: uppercase;
+    @include font-size($xxxl-font);
+  }
   ul{
     margin: 0;
     padding:0;
