@@ -47,8 +47,15 @@ body{
   }
 
   .section__title{
+    color: $primary;
     text-transform: uppercase;
     @include font-size($xxxl-font);
+  }
+  .placeholder__info-card{
+    padding: 20px 0;
+    @include lg{
+      padding: 68px 0;
+    }
   }
   ul{
     margin: 0;

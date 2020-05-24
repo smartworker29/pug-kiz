@@ -16,7 +16,14 @@ block content
 
   .placeholder.placeholder--no-padding
     include ./widgets/location/location
-    +location()
+    +location(dir)
+
+  .placeholder.placeholder--bg-grey.placeholder__info-card
+    .container.d-lg-flex.h-100.px-lg-0
+      .row.no-gutters
+        include ./widgets/info-card/info-card
+        +info-card({image: "${require(`./assets/images/info-card-img-1-2x.jpg`)}", title: 'Business facilities', text: 'KIZAD offers a world-class infrastructure and business ecosystem. From industry innovations driving operational efficiency, reliable utilities infrastructure, waste management, internal transport network, advanced laboratory testing services and essential products and services in the value chain to provide businesses a significant advantage.', link: '#'})
+        +info-card({image: "${require(`./assets/images/info-card-img-2-2x.jpg`)}", title: 'Free zone', text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.', link: '#'})
 
   .placeholder.placeholder--bg-mute
     .container.container--small

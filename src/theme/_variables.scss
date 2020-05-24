@@ -20,7 +20,7 @@ $md-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: ma
 $sm-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, xs), lg: map-get($font-sizes, xs));
 $xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xxs));
 $xxs-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxxs), lg: map-get($font-sizes, xxxs));
-$paragraph: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xs));
+$paragraph-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xs));
 
 
 // line height
@@ -36,7 +36,7 @@ $md-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs
 $sm-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xs), lg: map-get($line-height, xs));
 $xs-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xxs), lg: map-get($line-height, xxs));
 $xxs-line-height: ( null: map-get($line-height, xxs), xs: map-get($line-height, xxs), md: map-get($line-height, xxxs), lg: map-get($line-height, xxxs));
-
+$paragraph-line-height: ( null: map-get($line-height, sm), xs: map-get($line-height, sm), md: map-get($line-height, md), lg: map-get($line-height, lg));
 
 /////////////////
 // Colors

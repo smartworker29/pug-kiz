@@ -6,34 +6,51 @@
     -webkit-box-orient: vertical;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    max-height: 7.5em;
+    max-height: 9em;
     margin: 20px 0 27px;
+    @include font-size($paragraph-font);
+    @include line-height($paragraph-line-height);
     @include lg{
-      margin: 28px 0 30px;
+      margin: 15px 0 20px;
     }
     @include xl{
       margin: 28px 0 43px;
     }
-    @include font-size($paragraph);
   }
-  &__wrap{
+  &__wrap-ltr{
     padding: 24px 16px 32px;
     @include md{
-      padding: 40px 28px 0 44px;
+      padding: 40px 28px 32px 44px;
     }
     @include lg{
-      padding: 40px 38px 0 54px;
+      padding: 30px 38px 0 34px;
     }
     @include xl{
+      padding: 50px 38px 0 44px;
+    }
+    @include xxl{
       padding: 80px 48px 0 64px;
+    }
+  }
+  &__wrap-rtl{
+    padding: 24px 16px 32px;
+    @include md{
+      padding: 40px 28px 32px 44px;
+    }
+    @include lg{
+      padding: 30px 34px 0 38px;
+    }
+    @include xl{
+      padding: 50px 44px 0 38px;
+    }
+    @include xxl{
+      padding: 80px 64px 0 48px;
     }
   }
   &__image-wrap{
     img{
       object-fit: cover;
+      max-height: 648px;
     }
-  }
-  .section__title{
-    color: #1d1d1e;
   }
 }

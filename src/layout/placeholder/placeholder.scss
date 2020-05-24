@@ -10,7 +10,9 @@
     &--bg-light-grey{
         background-color: $light-grey;
     }
-
+    &--bg-grey{
+        background-color: $grey-bg;
+    }
     &--bg-primary{
         background-color: $primary;
     }
@@ -18,5 +20,4 @@
         padding-top:0px;
         padding-bottom:0px;
     }
-    
 }

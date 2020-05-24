@@ -1,0 +1,11 @@
+mixin info-card(data)
+    .col-12.col-lg-6
+        .info-card
+            .info-card__wrap.d-flex.flex-column.h-100
+                .info-card__img-wrap
+                    img(src= data.image)
+                .info-card__descr(class=rtl ? 'text-right' : '')
+                    h2.info-card__title.section__title= data.title
+                    p.info-card__text= data.text
+                .info-card__btn.text-center
+                    a.info-card__link.text-uppercase(href='' + data.link) Read more
