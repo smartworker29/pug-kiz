@@ -1,4 +1,12 @@
 .location{
+  &__title{
+    font-size: 24px;
+    line-height: 32px;
+    @include lg{
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
   &__text{
     word-break: break-word;
     display: -webkit-box;
@@ -6,15 +14,15 @@
     -webkit-box-orient: vertical;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    max-height: 9em;
-    margin: 20px 0 27px;
+    margin: 0 0 27px;
     @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     @include lg{
       margin: 15px 0 20px;
+      max-height: 9em;
     }
     @include xl{
-      margin: 28px 0 43px;
+      margin: 24px 0 40px;
     }
   }
   &__wrap-ltr{
@@ -50,7 +58,16 @@
   &__image-wrap{
     img{
       object-fit: cover;
-      max-height: 648px;
+      height: 55.91vw;
+      width: 100%;
+      @include lg{
+        min-height: 350px;
+        height: auto;
+      }
+      @include xl{
+        min-height: 450px;
+        width: auto;
+      }
     }
   }
 }
