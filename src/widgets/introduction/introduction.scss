@@ -1,0 +1,94 @@
+.introduction{
+  &__image-wrap{
+    height: 56.25vw;
+    padding-top: calc(46px + 30vw);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: calc(331px - 25vw);
+    @include md{
+      height: 350px;
+      padding-top: calc(80px + 4vw);
+      margin-bottom: 60px;
+    }
+    @include lg{
+      height: 476px;
+      margin-bottom: 111px;
+    }
+    @include xl{
+      margin-bottom: 123px;
+    }
+    @include xxl{
+      margin-bottom: 65px;
+      padding-top: 80px;
+    }
+  }
+  &__descr{
+    padding: 24px 16px;
+    margin: 0 16px;
+    border-radius: 4px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    @include sm{
+      max-width: 400px;
+    }
+    @include lg{
+      max-width: 510px;
+      padding: 40px;
+    }
+    @include xl{
+      max-width: 600px;
+    }
+    @include xxl{
+      max-width: 724px;
+    }
+  }
+  &__descr-left{
+    @include sm{
+      margin-right: auto;
+      margin-left: 4%;
+    }
+  }
+  &__descr-right{
+    @include sm{
+      margin-left: auto;
+      margin-right: 4%;
+    }
+  }
+  &__subtitle{
+    font-family: $font-roboto-medium;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.92px;
+    color: #989898;
+  }
+  &__title{
+    font-family: $font-archive-bold;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.6px;
+    margin-top: 8px;
+    @include lg{
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 1px;
+      margin-top: 15px;
+    }
+  }
+  &__text{
+    font-family: $font-roboto-light;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $grey;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    max-height: 4.5em;
+    margin: 7px 0 28px;
+    @include lg{
+      font-size: 20px;
+      max-height: 7.5em;
+      margin: 24px 0 40px;
+    }
+  }
+}

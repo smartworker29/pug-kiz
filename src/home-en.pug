@@ -49,11 +49,20 @@ block content
           text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.',
           link: '#'})
 
-  .placeholder.placeholder--bg-mute
-    .container.container--small
-      .row
-        .col-12
-          
+  .placeholder.placeholder--no-padding
+    .container-fluid.px-0
+      .row.no-gutters
+        include ./widgets/introduction/introduction
+        +introduction({
+          side: 'introduction__descr-right',
+          link: '#'
+        })
+
+
+  //.placeholder.placeholder--bg-mute
+  //  .container.container--small
+  //    .row
+  //      .col-12
 
           
 
