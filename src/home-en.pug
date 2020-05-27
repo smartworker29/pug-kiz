@@ -12,7 +12,24 @@ block content
       .row
         include ./widgets/navigation-link/navigation-link
 
-
+  .placeholder.placeholder--bg-grey.placeholder__info-card
+    .container.d-lg-flex.h-100.px-lg-0
+      .row.no-gutters
+        include ./widgets/talk-card/talk-card
+        +talk-card({
+          color: "secondary",
+          image: "${require(`./assets/images/talk-card-icon-1.svg`)}",
+          title: 'Let’s talk',
+          text: 'At KIZAD we’re here to listen, support and deliver. To find out more about the opportunities at KIZAD for your business growth in the region or to arrange a visit please contact our customer service centre.',
+          btnText: 'Get in Touch'
+        })
+        +talk-card({
+          color: "white",
+          image: "${require(`./assets/images/talk-card-icon-2.svg`)}",
+          title: 'Need our help?',
+          text: 'If you are already a customer of KIZAD and need our support or require information to support your business please contact our customer service centre here.',
+          btnText: 'Contact Us'
+        })
 
   .placeholder.placeholder--no-padding
     include ./widgets/location/location
