@@ -21,6 +21,7 @@ $sm-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: ma
 $xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xxs));
 $xxs-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxxs), lg: map-get($font-sizes, xxxs));
 $paragraph-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xs));
+$section-title-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xxxl));
 
 
 // line height

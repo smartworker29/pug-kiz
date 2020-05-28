@@ -55,23 +55,9 @@
       margin-right: 4%;
     }
   }
-  &__subtitle{
-    font-family: $font-roboto-medium;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.92px;
-    color: #989898;
-  }
   &__title{
-    font-family: $font-archive-bold;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0.6px;
     margin-top: 8px;
     @include lg{
-      font-size: 40px;
-      line-height: 48px;
-      letter-spacing: 1px;
       margin-top: 15px;
     }
   }

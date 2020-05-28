@@ -3,7 +3,7 @@ mixin location(data)
         .row.no-gutters
             div.col-12.col-lg-5.col-xl-4.order-1(class=data.dir ? '' : 'order-lg-0')
                 div(class=data.dir ? 'location__wrap-rtl text-left' : 'location__wrap-ltr')
-                    h2.location__title.section__title.text-nowrap= data.title
+                    h2.section__title.text-nowrap= data.title
                     p.location__text= data.text
                     +button('button', 'btn-secondary' ,'  ' +data.btnText)
             div.col-12.col-lg-7.col-xl-8(class=data.dir ? '' : 'order-lg-1')

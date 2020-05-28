@@ -4,3 +4,6 @@ import siblingHover from "./slider/slider";
 
 siblingHover().init();
 // cardList.init();
+
+import partnerSlider from "./partner-slider/partner-slider";
+partnerSlider().init();

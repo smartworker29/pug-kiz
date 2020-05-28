@@ -4,8 +4,8 @@ mixin introduction(data)
             .introduction__content
                 .introduction__image-wrap(style="background-image: url( '${require(`./assets/images/introduction-bg-2x.jpg`)} ' )")
                     .introduction__descr(class= data.side)
-                        .introduction__subtitle.text-uppercase Introduction
-                        .introduction__title.section__title Abu Dhabi Ports Group
+                        .section__subtitle.text-uppercase.mb-2.mb-lg-3 Introduction
+                        .section__title Abu Dhabi Ports Group
                         .introduction__text Abu Dhabi Ports is transforming Abu Dhabi’s maritime infrastructure, positioning the Emirate as a premier logistics, transport and trade hub through a diverse portfolio of services and activities. Through constant innovation, Abu Dhabi Port Group is going beyond being a port operator and developer, to be the preferred global trade enabler.
                         .introduction__btn
                             +button('button', 'btn-secondary' ,'Read More')
