@@ -1,0 +1,25 @@
+include ../../tiles/btn/btn
+
+section.widget#banner
+    .banner__content
+        .banner__slides
+            - let text = [ "Metals", "Polyers", "Energy", "Food", "Automotive", "Oil & Gas", "Logistics"]; 
+            .swiper-container.gallery-thumbs
+                .swiper-wrapper
+                    each item in text
+                        .swiper-slide
+                            span= item
+                include ../../tiles/swiper-buttons/swiper-buttons
+            .swiper-container.gallery-top
+                .swiper-wrapper
+                    - let heading = [ "Metals", "Polyers", "Energy", "Food", "Automotive", "Oil & Gas", "Logistics"];
+                    each item in [0,1,2,3,4,5,6]
+                        .swiper-slide(style="background-image: url( './src/assets/images/slider1.jpg' )")
+                            .container
+                                .text
+                                    h1=heading[item]
+                                    p KIZAD Metals Cluster is a dedicated zone for the regional and global upstream and downstream metals industry looking to take advantage of highly competitive utility costs, proximity to raw materials and excellent infrastructure and transportation links supporting the industry.
+                                    +button('button', 'btn-secondary' ,' Read more ')
+                                    
+
+            

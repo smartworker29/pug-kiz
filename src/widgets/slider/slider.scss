@@ -1,0 +1,112 @@
+#banner {
+  display: block;
+  width: 100%;
+  height: 680px;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  .banner__slides {
+    height: 600px;
+    border-top:1px solid $light-grey;
+    .swiper-container{
+      .swiper-wrapper{
+        justify-content: space-around;
+      }
+    }
+    .gallery-top{
+      .swiper-wrapper{
+        justify-content: inherit;
+      }
+      .swiper-slide{
+        height:100%;
+        >.container{
+          z-index: 2;
+          height: 100%;
+          margin: 0px auto;
+          position: relative;
+        }
+        .text{
+          position: absolute;
+          top:50%;
+          transform: translateY(-50%);
+          color:$primary;
+          width:100%;
+          max-width:700px;
+          h1{
+            margin-bottom: 25px;
+          }
+          p{
+            margin-bottom: 25px;
+            @include font-size($sm-font);
+            @include line-height($xl-line-height);
+          }
+        }
+      }
+    }
+  }
+  .swiper-container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery-top {
+    height: 100%;
+    width: 100%;
+    .swiper-button-wrapper {
+      bottom: 0;
+      z-index: 99;
+      .btn-swiper {
+        bottom: 0;
+        top: 40px;
+      }
+    }
+  }
+  .gallery-thumbs {
+    box-sizing: border-box;
+    padding: 0 120px;
+    margin-top: -0;
+    .swiper-wrapper{
+      display:flex !important;
+    }
+    .swiper-slide {
+      height: 100%;
+      opacity: 1;
+      color: $primary;
+      cursor: pointer;
+      text-align: center;
+      width:auto !important;
+      @include font-size($sm-font);
+      padding:30px 0;
+    }
+    .swiper-slide-thumb-active {
+      opacity: 1;
+      position: relative;
+        color:$secondary;
+        font-family: $font-roboto-bold;
+        &:after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          width: calc(100% + 40px);
+          top: auto;
+          left: -20px;
+          border-radius: 3px;
+          bottom:0;
+          background-color: $secondary;
+        }
+    }
+    .btn-swiper {
+      top: 0;
+      z-index: 999999;
+      margin: 0;
+    }
+    .swiper-button-disabled{
+      pointer-events: all;
+    }
+  }
+
+}
