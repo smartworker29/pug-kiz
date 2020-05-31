@@ -120,30 +120,28 @@
       color: $primary;
       cursor: pointer;
       text-align: center;
-      @include font-size($sm-font);
+      @include font-size($xs-font);
       padding:10px 0;
       @include lg(){
-        width:auto !important;
+        @include font-size($sm-font);
+      }
+      &:after{
+        height:calc(100% - 40px);
+        width:1px;
+        content: '';
+        position: absolute;
+        right:-10px;
+        background: $grey;
+        top:20px
       }
       span{
         padding:20px 0;
-        display: inherit;
-        &:before{
-          height:calc(100% - 40px);
-          width:1px;
-          content: '';
-          position: absolute;
-          right:-20px;
-          background: $grey;
-          top:20px
-        }
+        display: inline-block;
       }
       &:last-child{
-        span{
-          &:before{
+          &:after{
             display:none;
           }
-        }
       }
     }
     .swiper-slide-thumb-active {
