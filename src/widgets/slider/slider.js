@@ -15,8 +15,8 @@ export default function siblingHover() {
                 watchSlidesProgress: true,
                 breakpoints: {
                   320: {
-                    slidesPerView: 2.5,
-                    spaceBetween: 40,
+                    slidesPerView: 3,
+                    spaceBetween: 20,
                     allowTouchMove: true
                   },
                     768: {
