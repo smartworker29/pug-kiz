@@ -1,0 +1,95 @@
+.learn-more{
+  &__header{
+    background-color: $white;
+    padding: 32px 0 24px;
+    .section__subtitle{
+      margin-bottom: 8px;
+    }
+    @include lg{
+      padding: 102px 0 40px;
+      .section__subtitle{
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .btn{
+    border: 2px solid $secondary;
+    color: $secondary;
+  }
+  &__bg{
+    height: 264px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 40px;
+    @include sm{
+      height: 320px;
+    }
+    @include md{
+      height: 520px;
+    }
+    @include lg{
+      height: 723px;
+      margin: 68px 0 40px;
+    }
+  }
+  &__card{
+    transform: translate(0, -16px);
+    @include lg{
+      transform: translate(0, -28px);
+    }
+  }
+}
+
+.card-learn-more{
+  background-color: #fff;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 0 4px 4px 4px;
+  max-width: 534px;
+  margin: 0 16px;
+  @include xxl{
+    margin: 0 0 0 32px;
+  }
+  &__subtitle{
+    font-family: $font-roboto-medium;
+    font-size: 12px;
+    letter-spacing: 0.92px;
+    color: $white;
+    background-color: $secondary;
+    width: 100%;
+    max-width: 138px;
+    border-bottom-right-radius: 8px;
+    line-height: 28px;
+    @include lg{
+      font-size: 13px;
+      letter-spacing: 1px;
+      max-width: 155px;
+    }
+  }
+  &__content{
+    padding: 16px 16px 24px;
+    @include md{
+      padding: 40px;
+      height: 340px;
+    }
+  }
+  &__title{
+    font-family: $font-archive-bold;
+    font-size: 20px;
+    color: $primary;
+    @include lg{
+      font-size: 24px;
+    }
+  }
+  &__text{
+    font-family: $font-roboto-light;
+    font-size: 20px;
+    line-height: 1.5;
+    color: $primary;
+    flex: 1 1 auto;
+      p{
+        max-height: 6em;
+        overflow: hidden;
+      }
+  }
+}

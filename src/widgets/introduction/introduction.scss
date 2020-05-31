@@ -64,8 +64,7 @@
   &__text{
     font-family: $font-roboto-light;
     font-size: 16px;
-    font-weight: 300;
-    line-height: 1.5;
+    @include line-height($paragraph-line-height);
     color: $grey;
     overflow-y: hidden;
     text-overflow: ellipsis;

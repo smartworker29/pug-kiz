@@ -25,15 +25,13 @@
     }
   }
   &__text{
+    font-family: $font-roboto-light;
+    @include line-height($paragraph-line-height);
+    @include font-size($paragraph-font);
     flex: 1 1 auto;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.43;
     letter-spacing: -0.3px;
     margin-bottom: 24px;
     @include lg{
-      font-size: 20px;
-      line-height: 1.5;
       margin-bottom: 40px;
     }
   }
