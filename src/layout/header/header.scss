@@ -60,8 +60,12 @@ header{
         }
         .nav-list{
             flex: auto;
+            display: none;
             [listitem-toggle]{
               font-weight: normal;
+            }
+            @include lg(){
+              display: flex;
             }
             ul{
                 margin: 0;

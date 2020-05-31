@@ -3,7 +3,10 @@
     font-family: $font-roboto-regular;
     ul{
         list-style: none;
-        display: flex;
+        
+        @include lg(){
+            display: flex;
+        }
         li{
             padding:0 40px;
             display: flex;

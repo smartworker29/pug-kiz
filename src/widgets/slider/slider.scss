@@ -1,13 +1,19 @@
 #banner {
   display: block;
   width: 100%;
-  height: 680px;
+  height: 535px;
   overflow: hidden;
   margin: 0;
   position: relative;
+  @include md(){
+    height: 680px;
+  }
   .banner__slides {
-    height: 600px;
+    height: 450px;
     border-top:1px solid $light-grey;
+    @include md(){
+      height: 600px;
+    }
     .swiper-container{
       .swiper-wrapper{
         justify-content: space-around;
@@ -16,6 +22,18 @@
     .gallery-top{
       .swiper-wrapper{
         justify-content: inherit;
+      }
+      .swiper-pagination.swiper-pagination-bullets{
+        bottom: 20px;
+        .swiper-pagination-bullet{
+          width:12px;
+          height:12px;
+          background:$grey;
+          opacity: 1;
+          &.swiper-pagination-bullet-active{
+            background:$secondary;
+          }
+        }
       }
       .swiper-slide{
         height:100%;
@@ -30,15 +48,31 @@
           top:50%;
           transform: translateY(-50%);
           color:$primary;
-          width:100%;
-          max-width:700px;
+          width:calc(100% - 10px);
+          max-width:800px;
+          padding-right:20px;
+          padding-left:0px;
+          @include lg{
+            padding-left:100px;
+            width:100%;
+            
+          }
           h1{
             margin-bottom: 25px;
+            @include font-size($lg-font);
+            @include lg(){
+              @include font-size($xxxl-font);
+              
+            }
           }
           p{
             margin-bottom: 25px;
+            @include font-size($xxs-font);
+            @include line-height($paragraph-line-height);
+            @include lg(){
             @include font-size($sm-font);
             @include line-height($xl-line-height);
+            }
           }
         }
       }
@@ -67,10 +101,18 @@
   }
   .gallery-thumbs {
     box-sizing: border-box;
-    padding: 0 120px;
-    margin-top: -0;
-    .swiper-wrapper{
-      display:flex !important;
+    padding: 0;
+    margin-top: 0;
+    @include lg(){
+      padding: 0 120px;
+    }
+    &.swiper-container{
+      .swiper-wrapper{
+        justify-content: initial;
+        @include lg(){
+          justify-content: space-around; 
+        }
+      }
     }
     .swiper-slide {
       height: 100%;
@@ -78,26 +120,64 @@
       color: $primary;
       cursor: pointer;
       text-align: center;
-      width:auto !important;
       @include font-size($sm-font);
-      padding:30px 0;
+      padding:10px 0;
+      @include lg(){
+        width:auto !important;
+      }
+      span{
+        padding:20px 0;
+        display: inherit;
+        &:before{
+          height:calc(100% - 40px);
+          width:1px;
+          content: '';
+          position: absolute;
+          right:-20px;
+          background: $grey;
+          top:20px
+        }
+      }
+      &:last-child{
+        span{
+          &:before{
+            display:none;
+          }
+        }
+      }
     }
     .swiper-slide-thumb-active {
       opacity: 1;
-      position: relative;
         color:$secondary;
         font-family: $font-roboto-bold;
+        span{
+          position: relative;
         &:after {
           content: "";
           position: absolute;
           height: 4px;
-          width: calc(100% + 40px);
           top: auto;
-          left: -20px;
+          width: calc(100% + 10px);
+          left: -5px;
           border-radius: 3px;
-          bottom:0;
+          bottom:-8px;
           background-color: $secondary;
+          @include lg(){
+            width: calc(100% + 40px);
+            left: -20px;
+          }
         }
+        &:before{
+          height:calc(100% - 20px);
+          top:10px
+        }
+        }
+    }
+    .swiper-button-wrapper{
+      display: none;
+      @include lg(){
+        display: block;
+      }
     }
     .btn-swiper {
       top: 0;

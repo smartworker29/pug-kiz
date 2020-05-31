@@ -8,14 +8,20 @@ export default function siblingHover() {
             var thumbnumber = $('.gallery-thumbs .swiper-slide').length;
             var galleryThumbs = new Swiper('.gallery-thumbs', {
                 spaceBetween: 0,
-                slidesPerView: thumbnumber,
+                slidesPerView: 3,
                 loop: false,
                 freeMode: false,
                 watchSlidesVisibility: true,
                 watchSlidesProgress: true,
                 breakpoints: {
-                    991: {
+                  320: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 40,
+                    allowTouchMove: true
+                  },
+                    768: {
                         slidesPerView: thumbnumber,
+                        spaceBetween: 0,
                         allowTouchMove: false
                     }
                 },
@@ -27,6 +33,7 @@ export default function siblingHover() {
                 loop: false,
                 speed: 1500,
                 centeredSlides: false,
+                
                 thumbs: {
                     swiper: galleryThumbs,
                 },
@@ -35,8 +42,14 @@ export default function siblingHover() {
                     prevEl: '.gallery-thumbs .swiper-button-prev',
                 },
                 breakpoints: {
+                    320:{
+                      pagination: {
+                        el: '.swiper-pagination',
+                      },
+                    },
                     991: {
                         slidesPerView: 1,
+                        pagination:'flase',
                         // loopedSlides: 1,
                     },
 
