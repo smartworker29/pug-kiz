@@ -1,0 +1,13 @@
+.swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+  background: #ebebeb;
+  opacity: 1;
+  margin: 0 4px;
+  &:focus{
+    outline: none;
+  }
+  &-active{
+    background: $secondary;
+  }
+}

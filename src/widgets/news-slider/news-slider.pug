@@ -1,0 +1,32 @@
+section.news-slider
+    .news-slider__header.d-flex.justify-content-between.align-items-center
+
+        h2.news-slider__title.mb-0 News and Updates
+        +button('button', 'btn d-none d-lg-inline-block' ,'View all')
+    .news-slider__content
+        .news-slider__slider
+            .swiper-container
+                .swiper-wrapper
+                    mixin newsList(item)
+                        .swiper-slide
+                            .news-slider__card.card-news
+                                .card-news__header
+                                    img(src= item.img)
+                                .card-news__content
+                                    .card-news__date.text-uppercase.mb-3.mb-md-4 January 07, 2020
+                                    .card-news__text KIZAD and AIPMA open new investment opportunities for Indian polymer companies
+                                    +link('#', 'with-icon d-none d-md-inline' ,' Read More ')
+
+                    +newsList({
+                      img: '${require(`./assets/images/news/news-img-1-2x.jpg`)}'
+                    })
+                    +newsList({
+                      img: '${require(`./assets/images/news/news-img-2-2x.jpg`)}'
+                    })
+                    +newsList({
+                      img: '${require(`./assets/images/news/news-img-3-2x.jpg`)}'
+                    })
+                    +newsList({
+                      img: '${require(`./assets/images/news/news-img-4-2x.jpg`)}'
+                    })
+                include ../../tiles/swiper-pagination/swiper-pagination

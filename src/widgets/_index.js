@@ -7,3 +7,6 @@ siblingHover().init();
 
 import partnerSlider from "./partner-slider/partner-slider";
 partnerSlider().init();
+
+import newsSlider from "./news-slider/news-slider";
+newsSlider().init();

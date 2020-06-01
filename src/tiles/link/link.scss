@@ -1,8 +1,8 @@
 .link{
-    @include font-size($sm-font);
+    @include font-size($xs-font);
     padding:10px 0;
     color:$secondary;
-    font-family: $font-roboto-regular;
+    font-family: $font-roboto-medium;
     &:hover{
         color:$secondary;
         text-decoration: underline;
@@ -15,10 +15,14 @@
     }
     &.with-icon{
         &:after{
-            content: '\2192';
-            margin-left: 15px;
-            font-size: 24px;
+            font-family: 'Material Icons';
+            content: 'trending_flat';
+            margin-left: 14px;
+            font-size: 20px;
+            line-height: 20px;
             font-weight: bolder;
+            vertical-align: middle;
+
             @include transition(all .55s ease-in-out);
         }
         &:hover{
