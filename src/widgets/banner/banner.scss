@@ -1,33 +1,74 @@
 .banner{
     position: relative;
     color:$white;
-    height:700px;
+    height:475px;
     overflow: hidden;
+    margin-top: 80px;
+    @include md(){
+        height:700px;
+    }
+    @include lg(){
+        margin-top: 0;
+    }
     video, img{
         width:100%;
         object-fit: cover;
         position: absolute;
-        bottom: 50%;
-        transform: translateY(50%);
         z-index: -1;
+        height: 100%;
+        @include md(){
+            bottom: 50%;
+            transform: translateY(50%);
+        }
     }
     .container{
+        height:100%;
+        position: relative;
         .text{
-            padding-top:40px;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left:0;
+            padding:0 20px;
+            @include md{
+                width:85%;
+            }
             @include lg{
+                position: relative;
                 width:65%;
                 padding-top:120px;
+                top:0;
+                left:auto;
+                transform: translateY(0);
             }
             h1{
-                @include font-size($xxxxl-font);
-                margin-bottom: 40px;
-                @include line-height($xxxxl-line-height);
+                @include font-size($lg-font);
+                margin-bottom: 16px;
+                @include line-height($lg-line-height);
+                @include md(){
+                    @include font-size($xxxl-font);
+                    @include line-height($xxl-line-height);
+                }
+                @include lg(){
+                    @include font-size($xxxxl-font);
+                    margin-bottom: 40px;
+                    @include line-height($xxxxl-line-height);
+                }
             }
             p{
-                @include font-size($xl-font);
-                line-height: 42px;
-                @include line-height($xxl-line-height);
-                font-family: $font-roboto-regular;
+                @include font-size($xs-font);
+                @include line-height($paragraph-line-height);
+                font-family: $font-roboto-light;
+                @include md(){
+                    @include font-size($md-font);
+                    @include line-height($xl-line-height);
+                    
+                }
+                @include lg(){
+                    @include font-size($xl-font);
+                    @include line-height($xxl-line-height);
+                    font-family: $font-roboto-regular;
+                }
             }
         }
     }
