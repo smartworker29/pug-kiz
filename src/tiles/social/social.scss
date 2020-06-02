@@ -1,6 +1,13 @@
 .social-media{
-    padding:20px 45px;
+    padding:20px 30px;
     float: left;
+    @include xl(){
+        padding: 20px 30px; 
+    }
+    h6{
+        color:$white;
+        padding: 0 15px 10px;
+    }
     ul{
         display: flex;
         li{

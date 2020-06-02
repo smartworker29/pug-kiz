@@ -4,35 +4,41 @@ include ../../tiles/button/button
 include ../../tiles/link/link
 
 .dropdown-wrapper
+    .back-menu(mega-back)
+        i.material-icons keyboard_arrow_left
+        | Back to main menu
     .simscrollbar
         .row.grey-bg.cluster-container.no-gutters
-            .col-sm-3.cluster-header
+            .col-lg-3.cluster-header.d-none.d-lg-block
                 h4 Clusters at KIZAD
-            .col-sm-9.cluster-links
+            .col-lg-9.cluster-links
+                span.cluster-mob-title.d-block.d-lg-none Overview
                 .row
                     each x in [1,2,3,4,5,6,7,8]
-                        .col-sm-3
+                        .col-sm-4.col-lg-3
                             +btn('button', 'with-icon' ,' About Cluster ','device_hub')
         .row.no-gutters
-            .col-sm-5.secondary-bg
-                include ../../widgets/contact/contact
-            
-            .col-sm-7.primary-bg
+            .col-lg-7.primary-bg.order-md-1
                 .row.no-gutters
                     .col-sm-6.file-container
                         h3 Key Downloads
                         each x in [1,2,3]
                             include ../../tiles/file-download/file-download
-                        +button('button', 'btn-primary  btn-primary--outline' ,' View all brochures ') 
+                         
                     .col-sm-6.file-container
                         h3 Quick Links
                         each x in [1,2,3]
                             include ../../tiles/file-download/file-download
+                    .col-sm-12.file-container.pt-0
+                        +button('button', 'btn-primary  btn-primary--outline' ,' View all brochures ')
+
+            .col-lg-5.secondary-bg.order-md-0
+                include ../../widgets/contact/contact
 
     .dropdown-footer.black-bg
         include ../../tiles/social/social
         .language
-            span Choose you language
+            h6.title Choose you language
             ul
                 li
                     a(href='#')

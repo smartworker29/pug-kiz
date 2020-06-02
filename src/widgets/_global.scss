@@ -43,7 +43,7 @@ body{
   .title{
       text-transform: uppercase;
       letter-spacing: 1.5;
-      @include font-size($sm-font);
+      @include font-size($xs-font);
   }
 
   .section{
