@@ -46,6 +46,34 @@ body{
       @include font-size($xs-font);
   }
 
+.widget{
+  .widget-header{
+    padding-bottom:20px;
+    .label{
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color:$lighter-grey;
+    }
+    .heading{
+      @include font-size($lg-font);
+      color:$primary;
+      @include lg(){
+        @include font-size($xxxl-font);
+      }
+    }
+    p{
+      &:last-of-type{
+        margin-bottom:0;
+      }
+    }
+  }
+
+}
+  
+p{
+  @include font-size($paragraph-font);
+}
   .section{
     &__title{
       font-family: $font-archive-bold;
