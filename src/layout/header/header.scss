@@ -21,7 +21,7 @@ header {
         a {
           @include link-hover;
           @include font-size($xxs-font);
-          @include custom-width(0px, 1170px) {
+          @include custom-width(0px, 991px) {
             color: $white;
           }
         }
@@ -115,7 +115,7 @@ header {
               }
             }
             .language {
-              padding: 30px 0 60px;
+              padding: 30px 0;
               width: 100%;
               li {
                 border: 0;
@@ -146,6 +146,23 @@ header {
             padding: 35px 0px;
           }
           margin-right: 40px;
+          .sub-menu{
+            float:left;
+            width:100%;
+            background-color: $primary;
+            ul{
+              display: flex;
+              align-items: center;
+              li{
+                border-bottom:0;
+                a{
+                  color:$white;
+                  text-align: center;
+                  padding: 15px 0;;
+                }
+              }
+            }
+          }
           .file-container {
             .btn {
               margin: 15px 0 30px;

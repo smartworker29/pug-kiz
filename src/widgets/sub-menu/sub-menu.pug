@@ -56,3 +56,9 @@ include ../../tiles/link/link
                     a(href='#')
                         img(src="${require(`./assets/images/language/lang5.png`)}")
 
+        .sub-menu
+            ul
+                each x in ['Careers', 'Contact us']
+                    li
+                        a(href="#")= x
+
