@@ -11,7 +11,9 @@ block content
         include ./widgets/navigation-link/navigation-link
 
   .placeholder
-      include ./widgets/slider/slider
+    .container
+        .row
+          include ./widgets/slider/slider
 
   .placeholder.placeholder--bg-grey.placeholder__info-card
     .container.d-lg-flex.h-100.px-lg-0
@@ -33,24 +35,26 @@ block content
         })
 
   .placeholder.placeholder--no-padding
-    include ./widgets/location/location
-    +location({
-      dir: dir,
-      title: 'Strategic Location',
-      text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
-      btnText: 'Read more',
-      image: "${require(`./assets/images/location.jpg`)}",
-      imgHeight: '648'})
+    .container
+        include ./widgets/location/location
+        +location({
+          dir: dir,
+          title: 'Strategic Location',
+          text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
+          btnText: 'Read more',
+          image: "${require(`./assets/images/location.jpg`)}",
+          imgHeight: '648'})
 
   .placeholder.placeholder--no-padding.mt-lg-2
-    include ./widgets/location/location
-    +location({
-      dir: !dir,
-      title: 'Abu Dhabi',
-      text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
-      btnText: 'Explore',
-      image: "${require(`./assets/images/city-img.jpg`)}",
-      imgHeight: '500'})
+    .container
+        include ./widgets/location/location
+        +location({
+          dir: !dir,
+          title: 'Abu Dhabi',
+          text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
+          btnText: 'Explore',
+          image: "${require(`./assets/images/city-img.jpg`)}",
+          imgHeight: '500'})
 
   .placeholder.placeholder--bg-grey.placeholder__info-card
     .container.d-lg-flex.h-100.px-lg-0

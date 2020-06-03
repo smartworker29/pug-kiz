@@ -23,13 +23,13 @@
       padding: 40px 28px 32px 44px;
     }
     @include lg{
-      padding: 30px 38px 0 34px;
+      padding: 30px 38px 0 0;
     }
     @include xl{
-      padding: 50px 38px 0 44px;
+      padding: 50px 38px 0 0;
     }
     @include xxl{
-      padding: 80px 48px 0 64px;
+      padding: 80px 48px 0 0;
     }
   }
   &__wrap-rtl{
