@@ -2,10 +2,10 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
     .footer-wrapper
         .container
             .row
-                .col-sm-3
+                .col-sm-4.col-xl-3
                     .footer-logo
                         img(src="${require(`./assets/images/kizad-logo-reverse.svg`)}")
-                .col-sm-3
+                .col-sm-8.col-xl-3
                     .widget-brochure
                         h4.title Download our brochure
                         img(src="${require(`./assets/images/contact.png`)}")
@@ -13,22 +13,25 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
                         +button('button', 'btn-secondary' ,' Download ') 
                         +button('button', 'btn-white' ,' Contact us ') 
 
-                .col-sm-2.footer-link
+                .col-sm-4.col-xl-2.footer-link
                     h4.title Clusters
+                        i.material-icons.d-block.d-md-none keyboard_arrow_down
                     ul
                         -var list = ['Food','Metals', 'Polymers', 'Antomotive', 'Oil & Gas', 'Energy', 'Logistics']
                         each x in list
                             li=x
 
-                .col-sm-2.footer-link
+                .col-sm-4.col-xl-2.footer-link
                     h4.title Business Facilities
+                        i.material-icons.d-block.d-md-none keyboard_arrow_down
                     ul
                         -var list = ['About Land','Pre-build warehouse', 'Light Industrail Units', 'Build to Suit Facilities']
                         each x in list
                             li=x
 
-                .col-sm-2.footer-link
+                .col-sm-4.col-xl-2.footer-link
                     h4.title Free Zone
+                        i.material-icons.d-block.d-md-none keyboard_arrow_down
                     ul
                         -var list = ['License Types','Dual Licensing', 'Ligal Entity Types', 'KIZAD Entrepreneurship and Incubation Centre']
                         each x in list
@@ -39,13 +42,14 @@ footer.bg-primary(style="background-image: url('${require(`./assets/images/foote
     .footer-copyright.secondary-bg
         .container
             .row
-                .col-sm-2.copyright  © KIZAL LLC 2020
+                .col-12.col-lg-5.order-lg-3
+                    include ../../tiles/social/social
+                .col-6.col-lg-3.copyright  © KIZAL LLC 2020
 
-                .col-sm-3.term-condition
+                .col-6.col-lg-4.term-condition
                     ul
                         li
                             a(href="#") Terms and Conditions
                         li
                             a(href="#") Privacy policy
-                .col-sm-7
-                    include ../../tiles/social/social
+                
