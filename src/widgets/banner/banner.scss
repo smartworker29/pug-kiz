@@ -5,7 +5,8 @@
     overflow: hidden;
     margin-top: 80px;
     @include md(){
-        height:700px;
+        height:0;
+        padding-top: 56.25%;;
     }
     @include lg(){
         margin-top: 0;
@@ -22,8 +23,12 @@
         }
     }
     .container{
-        height:100%;
-        position: relative;
+        @include xl(){
+            position: absolute;
+            top: 0;
+            left: 55%;
+            transform: translateX(-50%);
+        }
         .text{
             position: absolute;
             top:50%;
@@ -33,10 +38,10 @@
             @include md{
                 width:85%;
             }
-            @include lg{
+            @include xl{
                 position: relative;
                 width:65%;
-                padding-top:120px;
+                padding-top:20%;
                 top:0;
                 left:auto;
                 transform: translateY(0);
