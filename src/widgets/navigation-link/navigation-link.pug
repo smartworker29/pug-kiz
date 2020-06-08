@@ -1,7 +1,8 @@
-.anchor-link.navbar-fixed-top(anchor-wrapper)
+.anchor-link(anchor-wrapper)
+    <i class='material-icons '> keyboard_arrow_down </i>
     ul
+        -var ids = ['about', 'benifits', 'products', 'partners','knowMore', 'Sustainability', 'faq']
         -var link = ['About kizad', 'Benifits', 'Products', 'Business Partners', 'Know More', 'Enabling Sustainability', 'FAQ']
-        -var id = ['id1','id2','id3','id4','id5', 'id6','id7']
-        each x in link
+        each items, x in link
             li
-                a(href='#')= x
+                a(href='#'+ids[x])= items

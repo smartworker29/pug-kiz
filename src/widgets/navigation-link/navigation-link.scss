@@ -1,10 +1,24 @@
 .anchor-link{
-    margin: 0 auto;
+    margin: 0;
     font-family: $font-roboto-regular;
+    width:100%;
+    position: relative;
+    
+    i.material-icons {
+        color: $secondary;
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        @include xl(){
+            display: none;
+        }
+    }
     ul{
         list-style: none;
-        
-        @include lg(){
+        display: none;
+        @include xl(){
             display: flex;
         }
         li{
@@ -17,7 +31,9 @@
                 &:after{
                     bottom: 0px;
                 }
-                &.active{
+            }
+            &.active{
+                a{
                     &:after{
                         left:0;
                         width:100%;
@@ -25,5 +41,38 @@
                 }
             }
         }
+    }
+    select{
+        width: 100%;
+        background: $primary;
+        color:$white;
+        border: 0;
+        padding: 20px 15px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        @include font-size($xs-font);
+        @include xl(){
+            display: none;
+        }
+        option{
+            &[selected]{
+                color: $white;
+            }
+        }
+        &:after{
+            position: absolute;
+            top:20px;
+            right:20px;
+        }
+    }
+}
+.fixed-anchor{
+    position: fixed;
+    top:80px;
+    width:100vw;
+    z-index: 9999;
+    @include xl(){
+        top:90px;
+        width:calc(100vw - 17px);
     }
 }

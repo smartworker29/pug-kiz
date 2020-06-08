@@ -40,14 +40,31 @@ var header = (function () {
 
 $().ready(function () {
     header.init();
+    addClasstoElementOnScroll()
 });
-window.onscroll = function() {addClasstoElementOnScroll()};
+window.onscroll = function() {
+    addClasstoElementOnScroll();
+    stickanchor();
+};
 var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+var sticky = navbar.offsetTop;
 function addClasstoElementOnScroll(){
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky-top");
     } else {
         navbar.classList.remove("sticky-top");
+    }
+}
+// window.onscroll = function() {stickanchor()};
+let anchorlink = document.querySelectorAll("[anchor-wrapper]");
+let headerbar = document.querySelectorAll('#navbar')
+let offset = $(anchorlink).offset().top;
+stickanchor();
+
+function stickanchor(){
+    if (window.pageYOffset >= (offset - $(headerbar).height())) {
+        $(anchorlink).parents('.placeholder').addClass("fixed-anchor");
+    } else {
+        $(anchorlink).parents('.placeholder').removeClass("fixed-anchor");
     }
 }

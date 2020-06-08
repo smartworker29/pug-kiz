@@ -1,0 +1,1 @@
+require("./parallax/parallax.min");

@@ -41,7 +41,9 @@
     "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "parallax-js": "^3.1.0",
     "popper.js": "^1.14.5",
+    "scroll-parallax": "^3.0.3",
     "swiper": "^5.4.1"
   }
 }

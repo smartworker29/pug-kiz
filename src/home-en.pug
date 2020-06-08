@@ -10,12 +10,12 @@ block content
       .row
         include ./widgets/navigation-link/navigation-link
 
-  .placeholder
+  .placeholder#about
     .container
         .row
           include ./widgets/slider/slider
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card
+  .placeholder.placeholder--bg-grey.placeholder__info-card#benifits
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/talk-card/talk-card
@@ -34,7 +34,7 @@ block content
           btnText: 'Contact Us'
         })
 
-  .placeholder.placeholder--no-padding
+  .placeholder.placeholder--no-padding#products
     .container
         include ./widgets/location/location
         +location({
@@ -45,7 +45,7 @@ block content
           image: "${require(`./assets/images/location.jpg`)}",
           imgHeight: '648'})
 
-  .placeholder.placeholder--no-padding.mt-lg-2
+  .placeholder.placeholder--no-padding.mt-lg-2#partners
     .container
         include ./widgets/location/location
         +location({
@@ -56,7 +56,7 @@ block content
           image: "${require(`./assets/images/city-img.jpg`)}",
           imgHeight: '500'})
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card
+  .placeholder.placeholder--bg-grey.placeholder__info-card#knowMore
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/info-card/info-card
@@ -74,10 +74,10 @@ block content
   .placeholder.placeholder--bg-grey.placeholder--no-padding.mb-2
     include ./widgets/learn-more/learn-more
 
-  .placeholder.placeholder--bg-grey.placeholder__news-slider
+  .placeholder.placeholder--bg-grey.placeholder__news-slider#Sustainability
     include widgets/news-slider/news-slider
 
-  .placeholder.placeholder__partners
+  .placeholder.placeholder__partners#faq
     .container.px-0
       include widgets/partner-slider/partner-slider
 

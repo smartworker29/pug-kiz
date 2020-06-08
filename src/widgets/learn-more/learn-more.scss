@@ -1,16 +1,19 @@
 .learn-more{
-  &__header{
-    background-color: $white;
-    padding: 32px 0 24px;
-    .section__subtitle{
-      margin-bottom: 8px;
-    }
-    @include lg{
-      padding: 102px 0 40px;
-      .section__subtitle{
-        margin-bottom: 16px;
-      }
-    }
+  // &__header{
+  //   background-color: $white;
+  //   padding: 32px 0 24px;
+  //   .section__subtitle{
+  //     margin-bottom: 8px;
+  //   }
+  //   @include lg{
+  //     padding: 102px 0 40px;
+  //     .section__subtitle{
+  //       margin-bottom: 16px;
+  //     }
+  //   }
+  // }
+  h2{
+    margin-bottom: 0;
   }
   .btn{
     border: 2px solid $secondary;
@@ -30,7 +33,7 @@
     }
     @include lg{
       height: 723px;
-      margin: 68px 0 40px;
+      margin: 32px 0 40px;
     }
   }
   &__card{
