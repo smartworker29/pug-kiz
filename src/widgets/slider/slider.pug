@@ -18,7 +18,7 @@ section.widget#banner
                 .swiper-wrapper
                     - let heading = [ "Metals", "Polyers", "Energy", "Food", "Automotive", "Oil & Gas", "Logistics"];
                     each item in [0,1,2,3,4,5,6]
-                        .swiper-slide(style="background-image: url( './src/assets/images/slider1.jpg' )")
+                        .swiper-slide(style="background-image: url( ${require(`./assets/images/slider1.jpg`)} )")
                             .container
                                 .text
                                     h1=heading[item]
