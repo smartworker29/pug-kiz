@@ -63,3 +63,19 @@
     }
   }
 }
+
+#products{
+  .location__image-wrap{
+    img{
+      max-height: 648px;
+    }
+  }
+}
+
+#partners{
+  .location__image-wrap{
+    img{
+      max-height: 500px;
+    }
+  }
+}
