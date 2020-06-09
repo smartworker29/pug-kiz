@@ -10,10 +10,10 @@ block content
       .row
         include ./widgets/navigation-link/navigation-link
 
-  .placeholder#about
+  .placeholder.placeholder--no-padding
     .container
-        .row
-          include ./widgets/slider/slider
+      .row
+        include ./widgets/rich-content/rich-content
 
   .placeholder.placeholder--bg-grey.placeholder__info-card#benifits
     .container.d-lg-flex.h-100.px-lg-0
@@ -55,6 +55,11 @@ block content
           btnText: 'Explore',
           image: "${require(`./assets/images/city-img.jpg`)}",
           imgHeight: '500'})
+
+  .placeholder#about
+    .container
+        .row
+          include ./widgets/slider/slider
 
   .placeholder.placeholder--bg-grey.placeholder__info-card#knowMore
     .container.d-lg-flex.h-100.px-lg-0

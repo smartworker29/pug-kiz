@@ -1,0 +1,31 @@
+.content-wrapper{
+    padding:40px 15px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-size: 260px;
+    background-position: 131% 100%;
+    @include lg{
+        background-size: 344px;
+        padding:40px 140px 40px 80px;
+        background-position: 100% 100%;
+    }
+    label{
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $lighter-grey;
+    }
+    h2{
+        @include font-size($xs-font);
+        
+        color: $primary;
+        font-family: $font-roboto-light;
+        @include line-height($paragraph-line-height);
+        @include lg() {
+            letter-spacing: 2px;
+            @include font-size($xl-font);
+            @include line-height($xxxl-line-height);
+        }
+    }
+}

@@ -16,6 +16,7 @@ h6 {
 p {
   font-family: $font-roboto-light;
   @include font-size($paragraph-font);
+  @include line-height($paragraph-line-height);
 }
 
 a {
@@ -54,7 +55,10 @@ img {
 
 .widget {
   .widget-header {
-    padding-bottom: 40px;
+    padding:0 15px 30px;
+    @include lg(){
+      padding:0 0 40px;
+    }
     .label {
       font-size: 12px;
       text-transform: uppercase;
@@ -69,6 +73,7 @@ img {
       }
     }
     p {
+      
       &:last-of-type {
         margin-bottom: 0;
       }

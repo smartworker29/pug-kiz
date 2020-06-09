@@ -44,6 +44,7 @@
     "parallax-js": "^3.1.0",
     "popper.js": "^1.14.5",
     "scroll-parallax": "^3.0.3",
+    "simple-parallax-js": "^5.5.0",
     "swiper": "^5.4.1"
   }
 }
