@@ -5,8 +5,6 @@ section.partner-slider
             h2.section__title.text-uppercase.pb-4 Our Partners
     .partner-slider__content
         .partner-slider__slider
-            include ../../tiles/swiper-buttons/swiper-buttons
-
             .swiper-container
                 .swiper-wrapper.px-3.px-lg-2
                     mixin partnersList(item)
@@ -33,3 +31,5 @@ section.partner-slider
                     +partnersList({
                       logo: '${require(`./assets/images/logos/partners/cosmoplast.jpg`)}'
                     })
+
+            include ../../tiles/swiper-buttons/swiper-buttons

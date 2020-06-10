@@ -28,7 +28,7 @@
       @include lg{
         display: flex;
         top: 50%;
-        transform: translate(0, -50%);
+        // transform: translate(0, -50%);
       }
     }
     .btn-swiper{
@@ -38,15 +38,6 @@
         font-size: 42px;
         color: $white;
       }
-    }
-    .swiper-button-prev{
-      left: 15px;
-      em{
-        transform: rotate(180deg);
-      }
-    }
-    .swiper-button-next{
-      right: 15px;
     }
   }
   &__subtitle{

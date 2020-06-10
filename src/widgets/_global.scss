@@ -53,33 +53,6 @@ img {
   @include font-size($xs-font);
 }
 
-.widget {
-  .widget-header {
-    padding:0 15px 30px;
-    @include lg(){
-      padding:0 0 40px;
-    }
-    .label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: $lighter-grey;
-    }
-    .heading {
-      @include font-size($lg-font);
-      color: $primary;
-      @include lg() {
-        @include font-size($xxxl-font);
-      }
-    }
-    p {
-      
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
 .section {
   &__title {
     font-family: $font-archive-bold;

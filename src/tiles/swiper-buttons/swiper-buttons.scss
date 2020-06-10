@@ -39,3 +39,11 @@
       }
     }
   }
+  [dir=rtl] .swiper-button-wrapper {
+    .btn-swiper{
+        transform: rotate(180deg);
+        &.swiper-button-prev{
+            transform: rotate(0deg);  
+        }
+    }
+  }

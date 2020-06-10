@@ -1,0 +1,18 @@
+.widget.benefits-wrapper.text-center
+    .widget__header
+        label.label Benefits
+        h2.heading What our ecosystem offers
+    .widget__content
+        .swiper-container.benefit-swiper
+            .swiper-wrapper
+                each item in [0,1,2,3,4,5,6]
+                    .swiper-slide
+                        .container
+                            .text
+                                .icon
+                                    i.icon-icon
+                                .content 
+                                    h3 Scale
+                                    p Wide range of business facilities and future-ready development enable investors to increase their scale of operations in phases - from very small startups to mega projects.
+            include ../../tiles/swiper-buttons/swiper-buttons
+            .swiper-pagination

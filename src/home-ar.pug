@@ -1,8 +1,114 @@
 extends layout/layout
+block variables
+    -   var direction = 'rtl';
 block content
 
-  .placeholder.placeholder--bg-mute
+  .placeholder.placeholder--no-padding
+    include ./widgets/banner/banner
+    
+    
+  .placeholder.placeholder--bg-primary.placeholder--no-padding
     .container
       .row
-        .col-12
-          include widgets/card-list/card-list
+        include ./widgets/navigation-link/navigation-link
+
+  .placeholder.placeholder--no-padding
+    .container
+      .row
+        include ./widgets/rich-content/rich-content
+
+  .placeholder.placeholder--bg-grey.placeholder__info-card#benifits
+    .container.d-lg-flex.h-100.px-lg-0
+      .row.no-gutters
+        include ./widgets/talk-card/talk-card
+        +talk-card({
+          color: "secondary",
+          image: "${require(`./assets/images/talk-card-icon-1.svg`)}",
+          title: 'Let’s talk',
+          text: 'At KIZAD we’re here to listen, support and deliver. To find out more about the opportunities at KIZAD for your business growth in the region or to arrange a visit please contact our customer service centre.',
+          btnText: 'Get in Touch'
+        })
+        +talk-card({
+          color: "white",
+          image: "${require(`./assets/images/talk-card-icon-2.svg`)}",
+          title: 'Need our help?',
+          text: 'If you are already a customer of KIZAD and need our support or require information to support your business please contact our customer service centre here.',
+          btnText: 'Contact Us'
+        })
+
+  .placeholder
+    .container
+      .row
+        include ./widgets/benefits/benefits
+
+  .placeholder.placeholder--no-padding#products
+    .container
+        include ./widgets/location/location
+        +location({
+          dir: dir,
+          title: 'Strategic Location',
+          text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
+          btnText: 'Read more',
+          image: "${require(`./assets/images/location.jpg`)}",
+          imgHeight: '648'})
+
+  .placeholder.placeholder--no-padding.mt-lg-2#partners
+    .container
+        include ./widgets/location/location
+        +location({
+          dir: !dir,
+          title: 'Abu Dhabi',
+          text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
+          btnText: 'Explore',
+          image: "${require(`./assets/images/city-img.jpg`)}",
+          imgHeight: '500'})
+
+  .placeholder#about
+    .container
+        .row
+          include ./widgets/slider/slider
+
+  .placeholder.placeholder--bg-grey.placeholder__info-card#knowMore
+    .container.d-lg-flex.h-100.px-lg-0
+      .row.no-gutters
+        include ./widgets/info-card/info-card
+        +info-card({
+          image: "${require(`./assets/images/info-card-img-2-2x.jpg`)}",
+          title: 'Business facilities',
+          text: 'KIZAD offers a world-class infrastructure and business ecosystem. From industry innovations driving operational efficiency, reliable utilities infrastructure, waste management, internal transport network, advanced laboratory testing services and essential products and services in the value chain to provide businesses a significant advantage.',
+          link: '#'})
+        +info-card({
+          image: "${require(`./assets/images/info-card-img-1-2x.jpg`)}",
+          title: 'Free zone',
+          text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.',
+          link: '#'})
+
+  .placeholder.placeholder--bg-grey.placeholder--no-padding.mb-2
+    include ./widgets/learn-more/learn-more
+
+  .placeholder.placeholder--bg-grey.placeholder__news-slider#Sustainability
+    include widgets/news-slider/news-slider
+
+  .placeholder.placeholder__partners#faq
+    .container.px-0
+      include widgets/partner-slider/partner-slider
+
+
+  .placeholder.placeholder--no-padding
+    .container-fluid.px-0
+      .row.no-gutters
+        include ./widgets/introduction/introduction
+        +introduction({
+          side: 'introduction__descr-right',
+          link: '#'
+        })
+
+
+  //.placeholder.placeholder--bg-mute
+  //  .container.container--small
+  //    .row
+  //      .col-12
+
+          
+
+           

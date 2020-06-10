@@ -1,6 +1,7 @@
 //- layout.pug
 doctype html
-html(dir="ltr")
+block variables
+html(dir= direction ? direction : "ltr")
   head
     title= title
     meta(charset="UTF-8")
