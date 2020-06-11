@@ -27,7 +27,7 @@
       display: none;
       @include lg{
         display: flex;
-        top: 50%;
+        top: calc(50% - 30px);
         // transform: translate(0, -50%);
       }
     }
@@ -48,9 +48,9 @@
 
   .swiper-container {
     padding: 0;
+    width:100%;
     @include lg{
-      padding:0;
-      margin: 0 90px;
+      padding:0 90px;
     }
     .swiper-slide {
       margin: 0 12px;
@@ -87,4 +87,8 @@
       }
     }
   }
+}
+
+[dir=rtl] .partner-slider .swiper-button-wrapper .swiper-button-next{
+right:auto;
 }

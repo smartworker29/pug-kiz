@@ -52,6 +52,11 @@
     &__text{
       color: $white;
     }
+    &__btn{
+      .btn{
+        color: $white;
+      }
+    }
   }
   .btn{
     border: 2px solid #fff;

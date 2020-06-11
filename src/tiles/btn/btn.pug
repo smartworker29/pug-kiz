@@ -1,4 +1,4 @@
-mixin btn(type, calssList, name, icon)
-    button(class=calssList ? `btn ${ calssList }` : `btn`, type= type)
+mixin btn( calssList, name, icon)
+    a(class=calssList ? `btn ${ calssList }` : `btn`)
         span= name
         i(class="material-icons")= icon

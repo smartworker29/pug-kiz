@@ -16,7 +16,7 @@ include ../../tiles/link/link
                 .row
                     each x in [1,2,3,4,5,6,7,8]
                         .col-sm-4.col-lg-3
-                            +btn('button', 'with-icon' ,' About Cluster ','device_hub')
+                            +btn('with-icon' ,' About Cluster ','device_hub')
         .row.no-gutters
             .col-lg-7.primary-bg.order-md-1
                 .row.no-gutters
@@ -30,7 +30,7 @@ include ../../tiles/link/link
                         each x in [1,2,3]
                             include ../../tiles/file-download/file-download
                     .col-sm-12.file-container.pt-0
-                        +button('button', 'btn-primary  btn-primary--outline' ,' View all brochures ')
+                        +anchor('button', 'btn-primary  btn-primary--outline' ,' View all brochures ')
 
             .col-lg-5.secondary-bg.order-md-0
                 include ../../widgets/contact/contact

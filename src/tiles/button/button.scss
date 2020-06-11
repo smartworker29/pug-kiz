@@ -23,6 +23,7 @@
     &.btn-secondary{
         border:0;
         background-color: $secondary;
+        color:$white !important;
         &:hover{
             background-color: $secondary;
         }
@@ -37,16 +38,12 @@
     &.btn-white{
         border:0;
         background-color: $white;
-        color: $primary;
-        &:hover{
-            background-color: $white;
-            color: $primary;
-        } 
+        color: $primary !important;
     }
     &.with-icon{
         padding:10px 10px;
         background-color: $white;
-        color:$primary;
+        color:$primary !important;
         @include font-size($xs-font);
         @include shadow(0 5px 15px rgba(0, 0, 0, 0.15));
         width:100%;
