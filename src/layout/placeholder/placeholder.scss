@@ -1,6 +1,10 @@
 .placeholder{
     padding-top:40px;
     padding-bottom:40px;
+    @include lg{
+        padding-top:80px;
+        padding-bottom:80px;
+    }
     &--bg-brand{
         background-color: $secondary;
     }

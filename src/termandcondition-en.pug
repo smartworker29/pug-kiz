@@ -1,0 +1,14 @@
+extends layout/layout
+block content
+
+  .placeholder.placeholder--no-padding.placeholder--bg-light-grey
+    include ./widgets/banner-inner/banner-inner
+    
+  include ./tiles/need-help/need-help
+    
+  .placeholder
+    .container
+      .row
+        each x in [1,2,4]
+          include ./widgets/article/article
+

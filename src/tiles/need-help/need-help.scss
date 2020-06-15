@@ -1,0 +1,22 @@
+.need-help{
+    position: absolute;
+    top:60vh;
+    transform: rotate(-90deg);
+    right: 25px;
+    transform-origin: 100%;
+    background-color: $white;
+    color: $primary;
+    display: flex;
+    @include font-size($xs-font);
+    padding: 15px 20px;
+    text-transform: uppercase;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+    .icon{
+        transform: rotate(90deg);
+        padding-right:10px;
+        margin-right:10px;
+        border-right:1px solid $light-grey;
+    }
+}

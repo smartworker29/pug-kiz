@@ -9,7 +9,7 @@ header {
     z-index: 9;
     bottom: 0;
     color: $white;
-    @include lg {
+    @include xl {
       display: flex;
     }
     ul {
@@ -33,6 +33,13 @@ header {
     @include lg() {
       padding: 0 20px;
       border-top: 1px solid $light-grey;
+    }
+    @include custom-width(0px, 1170px) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: $white;
+      @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
     }
     &.sticky-top {
       position: fixed;

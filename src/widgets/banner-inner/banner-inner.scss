@@ -1,0 +1,60 @@
+.banner-inner{
+    min-height:320px;
+    position: relative;
+    padding:30px 15px;
+    margin-top: 80px;
+    @include md(){
+        margin-top:95px;
+    }
+    @include xl(){
+        height:510px;
+        padding:0;
+        margin-top: 0;
+    }
+    .text{
+        position: relative;
+        top:0;
+        background-color: $white;
+        width:100%;
+        padding:30px 20px;
+        @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
+        color:$primary;
+        @include xl(){
+            width:50%;
+            position: absolute;
+            padding:40px;
+            top:100px;
+        }
+        h1{
+            @include font-size($lg-font);
+            @include line-height($lg-line-height);
+            margin-bottom: 20px;
+            position: relative;
+            @include md(){
+                @include font-size($xxxl-font);
+                @include line-height($xxl-line-height);
+            }
+            @include lg(){
+                @include font-size($xxxl-font);
+                margin-bottom: 30px;
+                @include line-height($xxxl-line-height);
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom:-10px;
+                left:0;
+                background-color: $secondary;
+                height:4px;
+                width:180px;
+            }
+            
+        }
+        p{
+            @include font-size($xxs-font);
+            @include lg(){
+                @include font-size($sm-font);
+            }
+        }
+    }
+}

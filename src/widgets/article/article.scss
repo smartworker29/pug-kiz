@@ -1,0 +1,36 @@
+.widget-article{
+    margin-bottom: 40px;
+    padding:0 15px;
+    @include lg(){
+        margin-bottom: 80px;
+    }
+    @include xl(){
+        padding: 0;;
+    }
+    h2{
+        color:$primary;
+        @include font-size($lg-font);
+        text-transform: uppercase;
+        @include line-height($lg-line-height);
+        @include md(){
+            @include font-size($xxxl-font);
+            @include line-height($xxl-line-height);
+        }
+        @include lg(){
+            @include font-size($xxxl-font);
+            margin-bottom: 20px;
+            @include line-height($xxxl-line-height);
+        }
+    }
+    p{
+        &:last-child{
+            margin-bottom:0;
+        }
+    }
+    a{
+        color:$anchor;
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,12 @@
+mixin products(data)
+    .product
+        .row.no-gutters
+            .col-12.col-lg-6
+                .product__image-wrap
+                    img(src= data.image)
+
+            .col-12.col-lg-6
+                .product__wrap
+                    h2.section__title.text-nowrap= data.title
+                    p.product__text= data.text
+                    +anchor('btn-secondary' ,'  ' +data.btnText)
