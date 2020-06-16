@@ -2,7 +2,7 @@
     padding-top:40px;
     padding-bottom:40px;
     @include lg{
-        padding-top:80px;
+        padding-top:0px;
         padding-bottom:80px;
     }
     &--bg-brand{
@@ -16,6 +16,17 @@
     }
     &--bg-grey{
         background-color: $grey-bg;
+        + .placeholder--bg-grey{
+            padding-top:0;
+        }
+        + .placeholder{
+            &:not(.placeholder--bg-grey){
+                padding-top:40px;
+                @include lg{
+                    padding-top:80px;
+                }
+            }
+        }
     }
     &--bg-primary{
         background-color: $primary;
@@ -24,4 +35,5 @@
         padding-top:0px;
         padding-bottom:0px;
     }
+    
 }

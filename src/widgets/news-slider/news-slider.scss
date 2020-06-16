@@ -28,13 +28,13 @@
 
   }
   .swiper-slide{
-    margin-bottom: 44px;
+    // margin-bottom: 44px;
     @include sm{
       max-width: 350px;
     }
-    @include lg{
-      margin-bottom: 40px;
-    }
+    // @include lg{
+    //   margin-bottom: 40px;
+    // }
   }
   .swiper-pagination{
     bottom: -3px;
@@ -44,6 +44,7 @@
   }
   .swiper-container{
     padding: 0 16px;
+    overflow: visible;
   }
 }
 

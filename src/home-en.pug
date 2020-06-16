@@ -41,7 +41,7 @@ block content
           include ./widgets/benefits/benefits
 
 
-  .placeholder.placeholder--no-padding#products
+  .placeholder#products
     .container
         include ./widgets/location/location
         +location({
@@ -51,7 +51,7 @@ block content
           btnText: 'Read more',
           image: "${require(`./assets/images/location.jpg`)}"})
 
-  .placeholder.placeholder--no-padding.mt-lg-2#partners
+  .placeholder#partners
     .container
         include ./widgets/location/location
         +location({
@@ -66,7 +66,7 @@ block content
         .row
           include ./widgets/slider/slider
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card#knowMore
+  .placeholder.placeholder--bg-grey#knowMore
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/info-card/info-card
@@ -81,10 +81,10 @@ block content
           text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.',
           link: '#'})
 
-  .placeholder.placeholder--bg-grey.placeholder--no-padding.mb-2
+  .placeholder.placeholder--bg-grey
     include ./widgets/learn-more/learn-more
 
-  .placeholder.placeholder--bg-grey.placeholder__news-slider#Sustainability
+  .placeholder.placeholder--bg-grey#Sustainability
     include widgets/news-slider/news-slider
 
   .placeholder.placeholder__partners#faq
