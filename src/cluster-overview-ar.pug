@@ -1,0 +1,30 @@
+extends layout/layout
+block variables
+    -   var direction = 'rtl';
+block content
+
+
+  .placeholder.placeholder--no-padding
+    include ./widgets/banner/banner
+
+  .placeholder.placeholder--bg-primary.placeholder--no-padding
+    .container
+      .row
+        include ./widgets/navigation-link/navigation-link
+    
+  .placeholder
+    .container
+      each x in ['Metals', 'Polymers', 'Energy', 'Food', 'Automobile']
+        .product-wrapper
+          include ./widgets/overview-text/overview-text
+          +products({
+            title: x,
+            text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
+            btnText: 'Explore',
+            image: "${require(`./assets/images/city-img.jpg`)}"})
+
+  .placeholder.placeholder--bg-grey
+    include ./widgets/learn-more/learn-more
+
+  .placeholder.placeholder--bg-grey#Sustainability
+    include widgets/news-slider/news-slider
