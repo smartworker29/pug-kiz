@@ -2,8 +2,14 @@
     padding-top:40px;
     padding-bottom:40px;
     @include lg{
-        padding-top:0px;
+        padding-top:80px;
         padding-bottom:80px;
+    }
+    + .placeholder{
+        padding-top:0px;
+        @include lg{
+            padding-top:0px;
+        }
     }
     &--bg-brand{
         background-color: $secondary;
@@ -16,14 +22,20 @@
     }
     &--bg-grey{
         background-color: $grey-bg;
+        padding-top:40px !important;
+        padding-bottom:40px !important;
+        @include lg{
+            padding-top:80px !important;
+            padding-bottom:80px !important;
+        }
         + .placeholder--bg-grey{
-            padding-top:0;
+            padding-top:0 !important;
         }
         + .placeholder{
             &:not(.placeholder--bg-grey){
-                padding-top:40px;
+                padding-top:40px !important;
                 @include lg{
-                    padding-top:80px;
+                    padding-top:80px !important;
                 }
             }
         }
@@ -32,8 +44,8 @@
         background-color: $primary;
     }
     &--no-padding{
-        padding-top:0px;
-        padding-bottom:0px;
+        padding-top:0px !important;
+        padding-bottom:0px !important;
     }
     
 }
