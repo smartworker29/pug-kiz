@@ -44,6 +44,10 @@
       }
     }
     &__image-wrap{
+        margin-bottom: 20px;
+        @include lg(){
+            margin-bottom: 0;
+        }
       img{
         object-fit: cover;
         height: 55.91vw;
