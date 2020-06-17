@@ -46,6 +46,12 @@
     &--no-padding{
         padding-top:0px !important;
         padding-bottom:0px !important;
+        + .placeholder{
+            padding-top:40px;
+            @include lg{
+                padding-top:80px;
+            }
+        }
     }
     
 }
