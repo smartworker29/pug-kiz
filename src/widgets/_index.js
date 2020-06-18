@@ -4,8 +4,11 @@ import siblingHover from "./slider/slider";
 import "./scroll-events/scroll-events";
 import benefitSlider from "./benefits/benefits";
 
+import videoslider from "./video-slider/video-slider";
+
 siblingHover().init();
 benefitSlider().init();
+videoslider().init();
 // cardList.init();
 
 import partnerSlider from "./partner-slider/partner-slider";

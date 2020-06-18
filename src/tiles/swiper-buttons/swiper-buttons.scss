@@ -10,14 +10,15 @@
       position: absolute;
       z-index: 10;
       cursor: pointer;
-      width: 120px;
-      height: 100%;
+      width: 64px;
+      height: 64px;
       background-color: $secondary;
       top: 0;
       text-align: center;
       outline: none;
       margin: 0;
       color:$white;
+      top:calc(50% - 32px);
       &:after{
           display: none;
       }

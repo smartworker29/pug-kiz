@@ -1,0 +1,19 @@
+.swiper-container.video-swiper
+    .swiper-wrapper
+        -var link = ["https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0"]
+        each item in [0,1,2,3,4,5,6]
+            .swiper-slide(style="background-image='${require(`./assets/images/slider1.jpg`)}'")
+                .container
+                    .text
+                        a.icon(href="javacript:void(0)" data-src=`${link[item]}`, data-toggle="modal" data-target="#videoslider")
+                            i.material-icons play_circle_outline
+                        .content 
+                            p Lorem ipsum dolor sit amet
+                  
+    include ../../tiles/swiper-buttons/swiper-buttons
+    .modal.fade#videoslider(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+        .modal-dialog.modal-lg(role="document")
+            .modal-content
+                .modal-body.mb-0.p-0
+                    .embed-responsive.embed-responsive-16by9
+                        iframe.embed-responsive-item(src=""  allowscriptaccess="always" allow="autoplay")

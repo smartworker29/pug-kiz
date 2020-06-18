@@ -1,0 +1,58 @@
+extends layout/layout
+block content
+
+  .placeholder.placeholder--no-padding.placeholder--bg-light-grey
+    include ./widgets/banner-inner/banner-inner
+    +innerBanner({
+      title: 'News and Updates',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    })
+
+  include ./tiles/need-help/need-help
+    
+  .placeholder
+    .container
+      .widget
+        .widget__header.placeholder--no-padding
+          h2.heading Latest News
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+  .placeholder.placeholder--bg-grey
+    .container
+        .location.block-content
+          .row.no-gutters
+              .col-12.col-lg-6
+                  .location__image-wrap
+                      img(src="${require(`./assets/images/city-img.jpg`)}")
+              .col-12.col-lg-6
+                .location__wrap-rtl.pt-0
+                  label January 07, 2020
+                  h2.section__title INTERNAL TRANSPORTATION NETWORK
+                  p.location__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in. In eu finibus dui, at tincidunt eros. Etiam pretium sit amet dolor eu lacinia. Integer vulputate dolor neque, ut finibus purus lobortis sed. Praesent porta malesuada diam imperdiet condimentum. Mauris id magna nec ex convallis commodo nec vitae elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta, metus quis tristique vestibulum, leo nunc pulvinar nisl, in lacinia erat quam id lorem.
+                  +link('#', 'with-icon' ,' Read More ')
+
+
+  .placeholder.placeholder--bg-grey
+      .container
+        .widget
+          .widget__header
+            h2.heading VIDEO RELEASES
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+        include ./widgets/video-slider/video-slider
+          
+
+
+  .placeholder
+    .container
+      .widget
+        .widget__header
+          h2.heading MEDIA KIT
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      include ./tiles/learn-more/learn-more
+      +learnMore({
+        label: 'Sustainability',
+        title: 'KIZAD to Participate in GulFood 2020',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo ',
+        src: "style='background-image: url( '${require(`./assets/images/learn-more/learn-more-img-2-2x.jpg`)} ' )'"
+        })

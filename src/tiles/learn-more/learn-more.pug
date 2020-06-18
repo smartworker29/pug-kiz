@@ -1,0 +1,9 @@
+mixin learnMore(data)
+    .learn-more__bg.w-100(style="background-image: url( '${require(`./assets/images/learn-more/learn-more-img-2-2x.jpg`)} ' )")
+        .learn-more__card.card-learn-more
+            .card-learn-more__subtitle.text-uppercase.text-center= data.label
+            .card-learn-more__content.d-flex.flex-column.align-items-start
+                .card-learn-more__title.mb-md-4= data.title
+                .card-learn-more__text.d-none.d-md-block
+                    p= data.text
+                +link('#', 'with-icon d-none d-md-inline' ,' Download ')

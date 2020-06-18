@@ -7,7 +7,7 @@
     background-position: 131% 100%;
     @include lg{
         background-size: 344px;
-        padding:40px 140px 40px 80px;
+        padding:80px 140px 80px 80px;
         background-position: 100% 100%;
     }
     label{
@@ -18,7 +18,7 @@
     }
     h2{
         @include font-size($xs-font);
-        
+        margin-bottom: 0;
         color: $primary;
         font-family: $font-roboto-light;
         @include line-height($paragraph-line-height);

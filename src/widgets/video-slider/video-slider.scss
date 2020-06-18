@@ -1,0 +1,35 @@
+.video-swiper{
+    width:100%;
+    z-index: inherit;
+    .swiper-button-wrapper{
+        display: none;
+        @include lg(){
+            display: block;
+        }
+    }
+    .swiper-slide{
+        height:300px;
+        background: $grey;
+        position: relative;
+        color:$white;
+        .content{
+            position: absolute;
+            bottom:20px;
+            p{
+                @include font-size($md-font);
+            }
+        }
+        .icon{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            outline: 0;
+            i{
+                font-size: 80px;
+                color:$white;
+                outline: 0;
+            }
+        }
+    }
+}

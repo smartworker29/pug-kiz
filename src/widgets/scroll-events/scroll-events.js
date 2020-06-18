@@ -18,10 +18,12 @@ function addClasstoElementOnScroll() {
         navbar.classList.remove("sticky-top");
     }
 }
+
+
 $("[anchor-wrapper]").parents('.placeholder').removeClass("fixed-anchor");
 let anchorlink = document.querySelectorAll("[anchor-wrapper]");
 let headerbar = document.querySelectorAll('#navbar')
-let offsetvalue = $(anchorlink).offset().top - 30;
+let offsetvalue = $(anchorlink).length ? $(anchorlink).offset().top - 30 : '';
 stickanchor();
 function stickanchor() {
     if (window.pageYOffset >= (offsetvalue - $(headerbar).height())) {

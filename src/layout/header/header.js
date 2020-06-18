@@ -58,7 +58,7 @@ function addClasstoElementOnScroll(){
 // window.onscroll = function() {stickanchor()};
 let anchorlink = document.querySelectorAll("[anchor-wrapper]");
 let headerbar = document.querySelectorAll('#navbar')
-let offset = $(anchorlink).offset().top;
+let offset = $(anchorlink).length ? $(anchorlink).offset().top : '';
 stickanchor();
 
 function stickanchor(){

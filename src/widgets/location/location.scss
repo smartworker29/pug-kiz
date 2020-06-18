@@ -20,7 +20,7 @@
   &__wrap-ltr{
     padding: 24px 16px 32px;
     @include md{
-      padding: 40px 28px 32px 44px;
+      padding: 40px 0 32px 0;
     }
     @include lg{
       padding: 30px 38px 0 0;
@@ -35,7 +35,7 @@
   &__wrap-rtl{
     padding: 24px 16px 32px;
     @include md{
-      padding: 40px 28px 32px 44px;
+      padding: 40px 0 32px 0;
     }
     @include lg{
       padding: 30px 34px 0 38px;
