@@ -1,17 +1,15 @@
-include ../../tiles/button/button
+mixin newsList(image,line)
+    .news-widget
+        if image !== "false"
+            .news-widget__image
+                img(src= "${require(`./assets/images/news/news-img-1-2x.jpg`)}")
+        .news-widget__content
+            .card-stamp.text-uppercase
+                .news-widget__date January 07, 2020
+                .news-widget__food
+                    ul 
+                        li India
+                        li Food
+            p.news-widget__text(clamp-text=line) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            +link('#', 'with-icon' ,' Read More ')
 
-
-section.widget.card-list
-    .card-list__header
-        .card-list__heading
-            h2 widget header
-        .card-list__options
-            a(href="") see all 
-
-    .card-list__content
-        img.card-list__img(src='${require(`./assets/images/kizad-logo.svg`)}', alt='product')
-        p.card-list__text card data here 
-
-    .card-list__footer
-        +anchor("success")
-        +anchor

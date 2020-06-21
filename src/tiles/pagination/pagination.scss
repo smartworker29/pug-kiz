@@ -1,0 +1,17 @@
+.pagination{
+    @include font-size($xs-font);
+    .page-link{
+        border:0;
+    }
+    .page-item{
+        &.active{
+            .page-link{
+                background-color: $secondary;
+                color:$white;
+            }
+        }
+        &[disabled]{
+            opacity: .7;
+        }
+    }
+}

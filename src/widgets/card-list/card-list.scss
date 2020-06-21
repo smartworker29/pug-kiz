@@ -1,18 +1,62 @@
-// .btn{
-//     background: $brand;
-//     color: $white;
-//     &--primary {
-//         background: $primary;
-//         color: $white;
-//         &__icon {
-//             color: $white;
-//         }
-//     }
-//     &--success{
-//         background: $success-color;
-//         color: $white;
-//         &__icon {
-//             color: $white;
-//         }
-//     }
-// }
+.news-widget {
+    border-radius: 4px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background-color: $white;
+    height:100%;
+
+    &__image {
+        border-radius: 4px;
+    }
+    &__content {
+        padding: 15px 16px 24px;
+        @include md {
+            padding: 24px;
+        }
+        .card-stamp {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+    }
+    &__date {
+        font-family: $font-roboto-medium;
+        font-size: 14px;
+        letter-spacing: 1.08px;
+        color: $grey;
+    }
+    &__food {
+        ul {
+            display: flex;
+            list-style-type: none;
+            li {
+                color: $secondary;
+                &:first-child {
+                    &:before {
+                        display: none;
+                    }
+                }
+                &::before {
+                    content: "\A";
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background: $secondary;
+                    display: inline-block;
+                    margin: 2px 10px;
+                }
+            }
+        }
+    }
+    &__text {
+        font-family: $font-roboto-regular;
+        overflow: hidden;
+        color: $primary;
+        @include md {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.news-wrapper{
+    margin-bottom: 30px;
+}
