@@ -2,7 +2,7 @@
     .swiper-wrapper
         -var link = ["https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0","https://www.youtube.com/embed/A-twOC3W558","https://player.vimeo.com/video/58385453?badge=0"]
         each item in [0,1,2,3,4,5,6]
-            .swiper-slide(style="background-image='${require(`./assets/images/slider1.jpg`)}'")
+            .swiper-slide(style="background-image:url(${require(`./assets/images/city-img.jpg`)})")
                 .container
                     .text
                         a.icon(href="javacript:void(0)" data-src=`${link[item]}`, data-toggle="modal" data-target="#videoslider")

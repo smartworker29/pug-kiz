@@ -1,7 +1,7 @@
 extends layout/layout
 block content
 
-  .placeholder.placeholder--no-padding.placeholder--bg-light-grey
+  .placeholder.placeholder--no-padding.inner-banner-image(style="background-image:url(${require(`./assets/images/home-banner.jpg`)})")
     include ./widgets/banner-inner/banner-inner
     +innerBanner({
       title: 'News and Updates',

@@ -12,6 +12,8 @@
         background: $grey;
         position: relative;
         color:$white;
+        background-size: cover;
+        background-repeat: no-repeat;
         .content{
             position: absolute;
             bottom:20px;

@@ -37,7 +37,7 @@ export default function videoSlider() {
             });
 
             $('#videoslider').on('shown.bs.modal', function (e) {
-                $("#videoslider iframe").attr('src',$videoSrc + "?autoplay=0&amp;modestbranding=1&amp;showinfo=0" ); 
+                $("#videoslider iframe").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
             })
             
             $('#videoslider').on('hide.bs.modal', function (e) {
