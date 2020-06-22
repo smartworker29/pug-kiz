@@ -32,4 +32,9 @@
             }
         }
     }
+    .modal-dialog{
+        @include md(){
+            max-width: 900px;
+        }
+    }
 }
