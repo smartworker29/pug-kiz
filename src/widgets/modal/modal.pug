@@ -1,0 +1,38 @@
+mixin modal(data)
+    .modal.fade(id= data.id, tabindex="-1", role="dialog", aria-labelledby= data.id+"Label", aria-hidden="true")
+        .modal-dialog.modal-dialog-centered.mx-lg-auto(role="document")
+            .modal-content
+                .modal-header.flex-wrap
+                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true").material-icons clear
+                    h2.heading.section__title.mb-0.pt-4.w-100.text-center.text-uppercase= data.title
+                .modal-body
+                    p.text-center.mb-4.mx-lg-auto= data.modalText
+                    .form.mx-lg-auto
+                        form(action="", novalidate, validation, recaptcha)
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="First Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="FirstName" placeholder="" type="text" value="")
+                                label First Name
+                                span
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="Last Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="LastName" placeholder="" type="text" value="")
+                                label Last Name
+                                span
+                            .form__item
+                                input.form-control.support-input.email-input(type= 'email'  placeholder = '' name = 'Email' data-validate-presence = 'true', data-validate-email= 'true')
+                                label Email
+                                span
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="Phone" data-rule-phone="true" data-rule-required="true" data-validate-presence="true" name="ContactNumber" placeholder="" type="tel" value="" aria-invalid="true")
+                                label Phone
+                                span
+                            .form__item
+                                textarea.form-control.support-input.text-input(name="Message",placeholder= 'Message' data-validate-presence = 'true' data-validate-length='{"minimum": 30,"message": "^ minimum 30 charecters   "}')
+                                span
+
+                            span.d-flex.align-items-center.justify-content-between.justify-content-sm-end.mt-4
+
+                                div(recaptch-wrapper)
+                                    div.g-recaptcha(data-sitekey="6Ld5Rq8UAAAAAEWIK_tIBI7bGAugmjeOi3DVg4JS")
+                                    span#captcha
+                                button.btn.ml-sm-2.ml-md-3(type='submit') Submit

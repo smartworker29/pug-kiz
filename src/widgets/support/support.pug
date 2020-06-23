@@ -1,0 +1,22 @@
+.support-widget.align-items-center
+    button(type="button" data-toggle="modal" data-target="#feedback-modal").support-widget__bottom.d-flex.align-items-center
+        .support-widget__text.support-widget__bottom-text.mx-auto Send us feedback
+    button(type="button" data-toggle="modal" data-target="#talk-modal").support-widget__top.d-flex.align-items-center
+        .support-widget__text.support-widget__top-text Let’s talk
+        .support-widget__top-img
+            img(src='${require(`./assets/images/talk-widget-img.jpg`)}')
+
+
+include ../../widgets/modal/modal
+
++modal({
+  title: 'Talk to us',
+  id: 'talk-modal',
+  modalText: 'At KIZAD we\'re here to listen, support and deliver. To find out more about the opportunities at KIZAD for your business growth in the region or to arrange to speak with someone from our customer service centre please complete this form.'
+})
+
++modal({
+  title: 'Need some help?',
+  id: 'feedback-modal',
+  modalText: 'At KIZAD we\'re here to listen, support and recieve your feedback. Please send us your questions or feedback and a member of our team will get back to you soon.'
+})
