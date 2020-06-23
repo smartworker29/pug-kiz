@@ -1,0 +1,39 @@
+.widget-accordion {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    .accordion-tiles {
+        margin-bottom: 3px;
+        background-color: $white;
+        &.active {
+            background-color: rgba(167, 169, 172, 0.1);
+            a {
+                i {
+                    transform: rotate(180deg);
+                }
+                p {
+                    font-weight: bold;
+                }
+            }
+        }
+        a {
+            padding: 20px;
+            display: flex;
+            cursor: pointer;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                margin-bottom: 0;
+                padding-right: 10px;
+            }
+            i {
+                font-size: 45px;
+                line-height: 0;
+                color: $secondary;
+                @include transition(all 0.55s ease-in-out);
+            }
+        }
+        .accordion-content {
+            display: none;
+            padding: 0 20px 40px;
+        }
+    }
+}

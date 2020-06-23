@@ -16,3 +16,5 @@ partnerSlider().init();
 
 import newsSlider from "./news-slider/news-slider";
 newsSlider().init();
+
+import "./accordion/accordion";
