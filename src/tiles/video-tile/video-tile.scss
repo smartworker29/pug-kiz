@@ -1,0 +1,34 @@
+.video-wrapper{
+    position: relative;
+    video{
+        object-fit: cover;
+        @include lg(){
+            height: 672px;
+        }
+    }
+    i{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 50px;
+        color:$white;
+        cursor: default;
+        @include md(){
+            font-size: 150px;
+        }
+        @include xl(){
+            font-size: 200px;
+        }
+    }
+    iframe{
+        width:100%;
+        height: 400px;
+        @include md(){
+            height: 550px;
+        }
+        @include xl(){
+            height: 700px;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+extends layout/layout
+block content
+
+  .placeholder.placeholder--no-padding.placeholder--bg-light-grey
+    include ./widgets/banner-inner/banner-inner
+    +innerBanner({
+      title: 'Metals',
+      content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+    })
+
+  .placeholder
+    .container
+      .widget
+        .widget__header
+          label.label Benefits
+          h2.heading Infrastructure and Business Ecosystem
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      
+      include tiles/video-tile/video-tile
+  
