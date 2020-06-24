@@ -6,10 +6,12 @@
     margin-top: 80px;
     @include md() {
         height: calc(100vh - 81px);
+        min-height: 650px;
     }
     @include xl() {
         margin-top: 0;
         height: calc(100vh - 140px);
+        
     }
     video,
     img {
@@ -73,6 +75,15 @@
                     @include font-size($xl-font);
                     @include line-height($xxl-line-height);
                     font-family: $font-roboto-regular;
+                }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+            .btn{
+                margin-top: 20px;
+                @include lg(){
+                    margin-top: 45px;
                 }
             }
         }
