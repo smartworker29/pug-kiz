@@ -3,11 +3,12 @@
         .widget__header.container
             h2.heading.mb-0 Company license type
 .row.license-cards-wrap
-    each item in [0,1,2,3]
+    -var cardTs = ['Industrial License', 'Trading License', 'Service License', 'Issue of License']
+    each items in [0,1,2,3]
         .col-12.col-lg-6
             .license-card
                 .license-card__icon.mr-4
                     span.icon-scale
                 .license-card__content
-                    h3.mb-3  Industrial License
+                    h3.mb-3=  cardTs[items]
                     p.mb-0(clamp-text='3') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.

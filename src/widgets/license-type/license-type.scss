@@ -9,7 +9,9 @@
   display: flex;
   margin-bottom: 32px;
   &__icon{
-    flex: 1 0 64px;
+    .icon-scale{
+      font-size: 64px;
+    }
   }
   &__content{
     color:$grey;
