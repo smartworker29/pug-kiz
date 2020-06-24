@@ -76,9 +76,15 @@
                     @include line-height($xxl-line-height);
                     font-family: $font-roboto-regular;
                 }
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
             }
             .btn{
-                margin-top: 30px;
+                margin-top: 20px;
+                @include lg(){
+                    margin-top: 45px;
+                }
             }
         }
     }
