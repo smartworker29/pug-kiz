@@ -1,0 +1,29 @@
+.license-cards-wrap{
+  margin-bottom: -32px;
+}
+.license-card{
+  padding: 48px;
+  border-radius: 4px;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  display: flex;
+  margin-bottom: 32px;
+  &__icon{
+    flex: 1 0 64px;
+  }
+  &__content{
+    color:$grey;
+    h3{
+      color:$primary;
+      @include font-size($md-font);
+      @include line-height($md-line-height);
+    }
+    p{
+      @include font-size($xs-font);
+      @include line-height($paragraph-line-height);
+      @include lg{
+        @include font-size($paragraph-font);
+      }
+    }
+  }
+}
