@@ -5,25 +5,42 @@ var header = (function () {
     },
     
     _megaMenu = function () {
+        let windowWidth = $(window).width()
         let listitem = document.querySelectorAll("[listitem-toggle]");
         let megaback = document.querySelectorAll("[mega-back]");
         if(listitem){
             [].map.call(listitem, function (items) {
-                items.onclick = e => {
-                    if($(items).parent().hasClass('open')){
-                        $(items).parent().removeClass('open');
-                    }
-                    else{
-                        $(items).parent().addClass('open');
-                        $(items).parents('#header-nav').addClass('sub-menu-active')
+                var itemname = $(items).find('a').attr('href').replace('#','');
+                if(windowWidth > 980){
+                    var dropdown = $(items).parent().next();
+                    $(items).on('mouseenter', function(){
+                        $(items).parents('.nav-list').find('.dropdown-wrapper').addClass('show');
+                        $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).addClass('active').siblings().removeClass('active');
+                    })
+                    $(items).on('mouseleave', function(){
+                        $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');
+                    })
+                    $(dropdown).on('mouseover', function(){
+                        $(items).parents('.nav-list').find('.dropdown-wrapper').addClass('show');
+                    })
+                    $(dropdown).on('mouseleave', function(){
+                        $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');
+                    })
+                }
+                else{
+                    items.onclick = e => {
+                        $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');
+                        $(items).parents('.nav-list').addClass('active');
                     }
                 }
+                
             });
         }
         if(megaback){
             [].map.call(megaback, function (back) {
                 back.onclick = e => {
-                    $(back).closest('li').removeClass('open');
+                    $(back).parents('.nav-list').removeClass('active');
+                    $(back).parents('.nav-list').find('.cluster-container').removeClass('open');
                 }
             });
         }

@@ -1,0 +1,29 @@
+.swiper-custom{
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
+    .swiper-button-wrapper{
+        position: absolute;
+        top:calc(50% - 25px);
+        width:100%;
+        display: none;
+
+        @include lg(){
+            display: block;
+        }
+    }
+    .swiper-pagination{
+        bottom: 0;
+    }
+    .location__wrap-rtl{
+        @include custom-width(0px, 1170px) {
+        padding: 0;
+        padding-top:20px;
+        p{
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+        }
+    }
+}
