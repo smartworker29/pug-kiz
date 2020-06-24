@@ -6,10 +6,12 @@
     margin-top: 80px;
     @include md() {
         height: calc(100vh - 81px);
+        min-height: 650px;
     }
     @include xl() {
         margin-top: 0;
         height: calc(100vh - 140px);
+        
     }
     video,
     img {
@@ -74,6 +76,9 @@
                     @include line-height($xxl-line-height);
                     font-family: $font-roboto-regular;
                 }
+            }
+            .btn{
+                margin-top: 30px;
             }
         }
     }
