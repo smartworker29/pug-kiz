@@ -9,12 +9,13 @@ header.white-bg
             a.navbar-brand(href='#')
                 img(src='${require(`./assets/images/kizad-logo.svg`)}' alt='logo')
             .nav-list#header-nav(menu-wrapper)
+                -var menuitem = ['overview', 'investor', 'cluster', 'business', 'free']
                 ul
-                    each x in ['Overview', 'Investor Benefits', 'Cluster', 'Business Facilities', 'Free Zone']
-                        li
-                            a(href="javascript:void(0)" listItem-toggle)= x
+                    each index, x in ['Overview', 'Investor Benefits', 'Cluster', 'Business Facilities', 'Free Zone']
+                        li(listItem-toggle)
+                            a(href="#"+menuitem[x])= index
                                 i.material-icons.d-block.d-lg-none keyboard_arrow_right
-                            include ../../widgets/sub-menu/sub-menu
+                include ../../widgets/sub-menu/sub-menu
             //- .search-container
             //-     .search-input
             //-         a.search-toggle

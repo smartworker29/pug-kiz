@@ -1,5 +1,4 @@
 header {
-  margin-bottom: 15px;
   @include transition(all 0.55s ease-in-out);
 
   .sub-nav {
@@ -76,19 +75,19 @@ header {
       @include lg() {
         display: flex;
       }
-      &.sub-menu-active {
-        li.open{
-        .dropdown-wrapper {
-          .back-menu {
-            display: flex;
-          }
-          .cluster-container{
-            height:calc(100vh - 80px);
-            overflow-y: auto;
-          }
-        }
-      }
-      }
+      // &.sub-menu-active {
+      //   li.open{
+      //   .dropdown-wrapper {
+      //     .back-menu {
+      //       display: flex;
+      //     }
+      //     .cluster-container{
+      //       height:calc(100vh - 80px);
+      //       overflow-y: auto;
+      //     }
+      //   }
+      // }
+      // }
       &.show {
         display: block;
         position: fixed;
@@ -99,7 +98,7 @@ header {
         left: 0;
         width: 100vw;
         border-top: 1px solid $grey;
-        ul {
+        > ul {
           padding: 0 15px;
           display: block;
           li {
@@ -112,74 +111,39 @@ header {
               padding: 15px 0;
               display: block;
             }
-            .social-media {
-              display: block;
-              padding: 30px 0 0;
-              width: 100%;
-              li {
-                width: 50px;
-                float: left;
-              }
-            }
-            .language {
-              padding: 30px 0;
-              width: 100%;
-              li {
-                border: 0;
-                width: auto;
-                float: left;
-              }
-            }
-            &.open {
-              .dropdown-wrapper {
-                .simscrollbar {
-                  display: block;
-                }
-                .cluster-container {
-                  left: 0%;
-                }
-              }
-            }
           }
         }
       }
+      @include custom-width(0px, 1170px) {
+        &.active{
+          .back-menu{
+            display: flex;
+          }
+          .dropdown-footer, .menu-middle{
+            display: none;
+          }
+          > ul{
+            display: none;
+          }
+          .cluster-container{
+            &.open{
+              display: block;
+            }
+          }
+      }
+    }
       ul {
         margin: 0;
         padding: 0;
         display: flex;
         li {
           list-style-type: none;
+          cursor: pointer;
           @include lg {
             padding: 35px 0px;
           }
           margin-right: 40px;
-          .sub-menu{
-            float:left;
-            width:100%;
-            background-color: $primary;
-            ul{
-              display: flex;
-              align-items: center;
-              li{
-                border-bottom:0;
-                a{
-                  color:$white;
-                  text-align: center;
-                  padding: 15px 0;;
-                }
-              }
-            }
-          }
-          .file-container {
-            .btn {
-              margin: 15px 0 30px;
-              width: 100%;
-              @include lg() {
-                margin: 0 0 20px 0;
-                width: auto;
-              }
-            }
-          }
+          
           > a {
             color: $primary;
             @include transition(0.3s);
@@ -239,32 +203,72 @@ header {
           }
         }
       }
-      .file-container {
-        &:first-child {
-          .file-wrapper {
-            &:last-child {
-              .content-wrap {
-                border-bottom: 1px solid $grey;
-                &:last-child {
-                  @include md() {
-                    border-bottom: 0px solid $grey;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+      
     }
     .dropdown-wrapper {
-      position: absolute;
       z-index: 99;
-      top: 100%;
-      display: none;
       left: 0;
       background-color: transparent;
       @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
       width: 100%;
+      @include lg(){
+        position: absolute;
+        display: none;
+        top: 100%;
+      }
+      &.show{
+        display: block;
+      }
+      
+      @include custom-width(0px, 1170px) {
+        .social-media {
+          display: block;
+          padding: 30px 0 0;
+          width: 100%;
+          ul{
+            padding: 0 15px;
+            li {
+              width: 50px;
+              float: left;
+            }
+          }
+          
+        }
+        .language {
+          padding: 30px 15px;
+          width: 100%;
+          h6{
+            padding: 0 15px 20px 0;
+          }
+          li {
+            border: 0;
+            width: auto;
+            float: left;
+          }
+        }
+        .dropdown-footer{
+          .sub-menu{
+            display: flex;
+            align-items: center;
+            li{
+              width: 100%;
+              margin-right:0;
+              a{
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+                float: left;
+              }
+            }
+          }
+        }
+        @include md(){
+          .social-media, .language{
+            width:50%;
+          }
+        }
+        
+      }
       .back-menu {
         display: none;
         position: fixed;
@@ -302,16 +306,9 @@ header {
         &::-webkit-scrollbar-thumb:hover {
           background: $secondary;
         }
-        display: none;
+        display: block;
         @include lg() {
-          display: block;
           max-height: 70vh;
-        }
-      }
-      .dropdown-footer {
-        display: none;
-        @include lg() {
-          display: block;
         }
       }
       .file-container {
@@ -319,13 +316,58 @@ header {
         @include lg() {
           padding: 30px 5% 0 30px;
         }
+        &:first-child {
+          .file-wrapper {
+            &:last-child {
+              .content-wrap {
+                border-bottom: 1px solid $grey;
+                &:last-child {
+                  @include md() {
+                    border-bottom: 0px solid $grey;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .btn {
+          margin: 15px 0 30px;
+          width: 100%;
+          @include lg() {
+            margin: 0 0 20px 0;
+            width: auto;
+          }
+        }
       }
+
+      .sub-menu{
+        float:left;
+        width:100%;
+        background-color: $primary;
+        ul{
+          display: flex;
+          align-items: center;
+          li{
+            border-bottom:0;
+            a{
+              color:$white;
+              text-align: center;
+              padding: 15px 0;;
+            }
+          }
+        }
+      }
+      
       .cluster-container {
         width: 100vw;
         // @include transition(0.3s);
         z-index: 9999;
+        display: none;
         @include md(){
           width: 100%;
+        }
+        &.active{
+          display: flex;
         }
       }
     }

@@ -8,16 +8,17 @@ include ../../tiles/link/link
         i.material-icons keyboard_arrow_left
         | Back to main menu
     .simscrollbar
-        .row.grey-bg.cluster-container.no-gutters
-            .col-lg-3.cluster-header.d-none.d-lg-block
-                h4 Clusters at KIZAD
-            .col-lg-9.cluster-links
-                span.cluster-mob-title.d-block.d-lg-none Overview
-                .row
-                    each x in [1,2,3,4,5,6,7,8]
-                        .col-sm-4.col-lg-3
-                            +btn('with-icon' ,' About Cluster ','device_hub')
-        .row.no-gutters
+        each x in [0,1,2,3,4]
+            .row.grey-bg.cluster-container.no-gutters(id=menuitem[x])
+                .col-lg-3.cluster-header.d-none.d-lg-block
+                    h4=menuitem[x] 
+                .col-lg-9.cluster-links
+                    span.cluster-mob-title.d-block.d-lg-none Overview
+                    .row
+                        each x in [1,2,3,4,5,6,7,8]
+                            .col-sm-4.col-lg-3
+                                +btn('with-icon' ,' About Cluster ','device_hub')
+        .row.no-gutters.menu-middle
             .col-lg-7.primary-bg.order-md-1
                 .row.no-gutters
                     .col-sm-6.file-container
