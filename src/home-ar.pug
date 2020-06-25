@@ -17,7 +17,7 @@ block content
       .row
         include ./widgets/rich-content/rich-content
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card#benifits
+  .placeholder.placeholder--bg-grey#benifits
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/talk-card/talk-card
@@ -41,34 +41,28 @@ block content
       .row
         include ./widgets/benefits/benefits
 
-  .placeholder.placeholder--no-padding#products
+  .placeholder#products
     .container
-        include ./widgets/location/location
+      include ./widgets/location/location
+      .location-items-wrap
         +location({
           dir: dir,
           title: 'Strategic Location',
           text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
           btnText: 'Read more',
-          image: "${require(`./assets/images/location.jpg`)}",
-          imgHeight: '648'})
-
-  .placeholder.placeholder--no-padding.mt-lg-2#partners
-    .container
-        include ./widgets/location/location
+          image: "${require(`./assets/images/location.jpg`)}"})
         +location({
           dir: !dir,
           title: 'Abu Dhabi',
           text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
           btnText: 'Explore',
-          image: "${require(`./assets/images/city-img.jpg`)}",
-          imgHeight: '500'})
+          image: "${require(`./assets/images/city-img.jpg`)}"})
 
   .placeholder#about
     .container
-        .row
-          include ./widgets/slider/slider
+        include ./widgets/slider/slider
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card#knowMore
+  .placeholder#knowMore
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/info-card/info-card
@@ -83,13 +77,13 @@ block content
           text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.',
           link: '#'})
 
-  .placeholder.placeholder--bg-grey.placeholder--no-padding.mb-2
+  .placeholder.placeholder--bg-grey
     include ./widgets/learn-more/learn-more
 
-  .placeholder.placeholder--bg-grey.placeholder__news-slider#Sustainability
+  .placeholder#Sustainability
     include widgets/news-slider/news-slider
 
-  .placeholder.placeholder__partners#faq
+  .placeholder#faq
     .container.px-0
       include widgets/partner-slider/partner-slider
 

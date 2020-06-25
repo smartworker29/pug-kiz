@@ -1,16 +1,11 @@
 
 .modal{
   padding: 0 !important;
-
-  .close{
-    opacity: 1;
-  }
-
-  &-header{
+  .modal-header{
     border-bottom: none;
-    padding: 24px 16px 16px;
+    padding: 24px 16px 0;
     @include lg{
-      padding: 40px 80px 23px;
+      padding: 40px 80px 24px;
       span{
         font-size: 35px;
         color: #e60000;
@@ -18,6 +13,7 @@
     }
     .close{
       background: transparent;
+      opacity: 1;
     }
   }
 
@@ -123,8 +119,6 @@
         height: 78px;
         padding: 27px 16px;
       }
-
-
     }
     textarea{
       resize: none;

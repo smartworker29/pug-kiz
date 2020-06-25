@@ -16,7 +16,7 @@ block content
       .row
         include ./widgets/rich-content/rich-content
 
-  .placeholder.placeholder--bg-grey.placeholder__info-card#benifits
+  .placeholder.placeholder--bg-grey#benifits
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/talk-card/talk-card
@@ -44,17 +44,14 @@ block content
 
   .placeholder#products
     .container
-        include ./widgets/location/location
+      include ./widgets/location/location
+      .location-items-wrap
         +location({
           dir: dir,
           title: 'Strategic Location',
           text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
           btnText: 'Read more',
           image: "${require(`./assets/images/location.jpg`)}"})
-
-  .placeholder#partners
-    .container
-        include ./widgets/location/location
         +location({
           dir: !dir,
           title: 'Abu Dhabi',
@@ -66,7 +63,7 @@ block content
     .container
       include ./widgets/slider/slider
 
-  .placeholder.placeholder--bg-grey#knowMore
+  .placeholder#knowMore
     .container.d-lg-flex.h-100.px-lg-0
       .row.no-gutters
         include ./widgets/info-card/info-card
@@ -84,10 +81,10 @@ block content
   .placeholder.placeholder--bg-grey
     include ./widgets/learn-more/learn-more
 
-  .placeholder.placeholder--bg-grey#Sustainability
+  .placeholder#Sustainability
     include widgets/news-slider/news-slider
 
-  .placeholder.placeholder__partners#faq
+  .placeholder#faq
     .container.px-0
       include widgets/partner-slider/partner-slider
 

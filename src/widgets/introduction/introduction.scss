@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: 50% -65px;
     background-repeat: no-repeat;
-    margin-bottom: calc(331px - 25vw);
+    margin-bottom: calc(354px - 25vw);
     @include md{
       height: 350px;
       padding-top: calc(80px + 4vw);
@@ -19,7 +19,7 @@
       margin-bottom: 123px;
     }
     @include xxl{
-      margin-bottom: 65px;
+      margin-bottom: 105px;
       padding-top: 80px;
     }
   }
@@ -63,15 +63,15 @@
   }
   &__text{
     font-family: $font-roboto-light;
-    font-size: 16px;
+    @include font-size($xs-font);
     @include line-height($paragraph-line-height);
     color: $grey;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    max-height: 6em;
+    max-height: 5.6em;
     margin: 7px 0 28px;
     @include lg{
-      font-size: 20px;
+      @include font-size($sm-font);
       max-height: 7.5em;
       margin: 24px 0 40px;
     }

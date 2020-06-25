@@ -1,43 +1,26 @@
 .news-slider{
   max-width: 1500px;
+  @include lg{
+    margin-bottom: -24px;
+  }
   @include xxl{
-    margin: 0 auto;
+    margin: 0 auto -24px;
   }
   .btn{
     border: 2px solid $secondary;
     color: $secondary !important;
   }
-  &__header{
-    padding: 0 16px;
-    margin-bottom: 24px;
-    @include lg{
-      margin-bottom: 40px;
-    }
-  }
-  &__title{
-    font-family: $font-archive-bold;
-    font-size: 24px;
-    color: $primary;
-    @include lg{
-      font-family: $font-roboto-bold;
-      font-size: 32px;
-
-    }
-  }
-  &__content{
-
-  }
   .swiper-slide{
-    // margin-bottom: 44px;
+    margin-bottom: 44px;
     @include sm{
       max-width: 350px;
     }
-    // @include lg{
-    //   margin-bottom: 40px;
-    // }
+     @include lg{
+       margin-bottom: 24px;
+     }
   }
   .swiper-pagination{
-    bottom: -3px;
+    bottom: -5px;
     @include lg{
       display: none;
     }
@@ -55,7 +38,8 @@
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
   background-color: $white;
   &__header{
-    border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
   }
   &__content{
     padding: 15px 16px 24px;
@@ -75,20 +59,16 @@
   }
   &__text{
     font-family: $font-roboto-regular;
-    font-size: 16px;
-    line-height: 1.5;
+    @include font-size($xs-font);
+    @include line-height($paragraph-line-height);
     max-height: 3em;
     overflow: hidden;
     color: $primary;
     @include md{
-      font-size: 20px;
-      line-height: 1.4;
+      @include font-size($sm-font);
+      @include line-height($lg-line-height);
       margin-bottom: 32px;
       max-height: 4.5em;
-    }
-    @include lg{
-      font-size: 20px;
-      line-height: 1.4;
     }
   }
 }

@@ -25,7 +25,7 @@ export default function newsSlider() {
             spaceBetween: 20,
           },
           320: {
-            slidesPerView: 1.11,
+            slidesPerView: 1.25,
             spaceBetween: 16,
           }
         }
