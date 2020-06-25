@@ -2,13 +2,21 @@
     .widget
         .widget__header.container
             h2.heading.mb-0 Company license type
-.row.license-cards-wrap
-    -var cardTs = ['Industrial License', 'Trading License', 'Service License', 'Issue of License']
-    each items in [0,1,2,3]
-        .col-12.col-lg-6
-            .license-card
-                .license-card__icon.mr-4
-                    span.icon-scale
-                .license-card__content
-                    h3.mb-3=  cardTs[items]
-                    p.mb-0(clamp-text='4') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+.license-cards-wrap
+    .widget__content
+        .swiper-container.license-swiper
+            .swiper-wrapper
+                -var cardTs = ['Industrial License', 'Trading License', 'Service License', 'Issue of License']
+                each item in [0,1,2,3]
+                    .swiper-slide
+                        //.container
+                        a(href="#")
+                            .license-card
+                                .license-card__icon
+                                    span.icon-scale
+                                    //.license-card__content
+                                    h3.mb-3.ml-2.d-inline=  cardTs[item]
+                                    p.mb-0(clamp-text='4') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+
+            include ../../tiles/swiper-buttons/swiper-buttons
+            .swiper-pagination

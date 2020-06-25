@@ -1,6 +1,24 @@
 extends layout/layout
 block content
 
+    .placeholder
+        .container
+            .widget
+                .widget__header
+                    label.label Product
+                    h2.heading COMPANY LEGAL TYPE
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            .row.legal-type-wrap
+                .col-12.col-md-6.col-xl-4
+                    include ./widgets/legal-type/legal-type
+                    +legalType('Limited liability Company','8')
+                .col-12.col-md-6.col-xl-4
+                    include ./widgets/legal-type/legal-type
+                    +legalType('Branch Company','8')
+                .col-12.col-md-6.col-xl-4.mx-md-auto
+                    include ./widgets/legal-type/legal-type
+                    +legalType('Optional Dual Licence for Free Zone Companies','8')
+
     .placeholder.placeholder--bg-grey
         .container
             include ./widgets/license-type/license-type

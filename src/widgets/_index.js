@@ -5,6 +5,7 @@ import "./scroll-events/scroll-events";
 import "./support/support";
 import benefitSlider from "./benefits/benefits";
 
+
 import videoslider from "./video-slider/video-slider";
 
 siblingHover().init();
@@ -17,5 +18,8 @@ partnerSlider().init();
 
 import newsSlider from "./news-slider/news-slider";
 newsSlider().init();
+
+import licenseSlider from "./license-type/license-type";
+licenseSlider().init();
 
 import "./accordion/accordion";
