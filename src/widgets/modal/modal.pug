@@ -9,30 +9,31 @@ mixin modal(data)
                 .modal-body
                     p.text-center.mb-4.mx-lg-auto= data.modalText
                     .form.mx-lg-auto
-                        form(action="", novalidate, validation, recaptcha)
+                        form(action="", novalidate, validation, recaptcha, data-toastr-message='Form Submitted Successfully !')
                             .form__item
-                                input.form-control.support-input.text-input(data-msg="First Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="FirstName" placeholder="" type="text" value="")
+                                input.form-control.support-input.text-input(data-msg="First Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="FirstName" placeholder="" type="text" value="" onkeyup="this.setAttribute('value',this.value);")
                                 label First Name
                                 span
                             .form__item
-                                input.form-control.support-input.text-input(data-msg="Last Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="LastName" placeholder="" type="text" value="")
+                                input.form-control.support-input.text-input(data-msg="Last Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="LastName" placeholder="" type="text" value="" onkeyup="this.setAttribute('value',this.value);")
                                 label Last Name
                                 span
                             .form__item
-                                input.form-control.support-input.email-input(type= 'email'  placeholder = '' name = 'Email' data-validate-presence = 'true', data-validate-email= 'true')
+                                input.form-control.support-input.text-input(data-msg="Email" type='email' required  placeholder = '' name ='email' data-rule-minlength="2" data-validate-presence = 'true', value="" data-validate-email= 'true' onkeyup="this.setAttribute('value',this.value);")
                                 label Email
                                 span
                             .form__item
-                                input.form-control.support-input.text-input(data-msg="Phone" data-rule-phone="true" data-rule-required="true" data-validate-presence="true" name="ContactNumber" placeholder="" type="tel" value="" aria-invalid="true")
+                                input.form-control.support-input.text-input(data-msg="Phone" data-rule-phone="true" data-rule-required="true" data-validate-presence="true" name="ContactNumber" placeholder="" type="tel" value="" aria-invalid="true" onkeyup="this.setAttribute('value',this.value);")
                                 label Phone
                                 span
                             .form__item
-                                textarea.form-control.support-input.text-input(name="Message",placeholder= 'Message' data-validate-presence = 'true' data-validate-length='{"minimum": 30,"message": "^ minimum 30 charecters   "}')
+                                textarea.form-control.support-input.text-input(data-msg="" name="message", required placeholder= 'Message' data-validate-presence = 'true' data-rule-maxlength="150" data-rule-minlength="15")
                                 span
 
-                            span.d-flex.align-items-center.justify-content-between.justify-content-sm-end.mt-4
+                            span.d-flex.align-items-center.justify-content-between.justify-content-sm-end.mt-4.form-footer
 
                                 div(recaptch-wrapper)
                                     div.g-recaptcha(data-sitekey="6Ld5Rq8UAAAAAEWIK_tIBI7bGAugmjeOi3DVg4JS")
                                     span#captcha
+                                    input.hiddenRecaptcha.required#hiddenRecaptcha(type="hidden" name="hiddenRecaptcha")
                                 button.btn.ml-sm-2.ml-md-3(type='submit') Submit

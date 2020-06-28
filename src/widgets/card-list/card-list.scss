@@ -18,6 +18,9 @@
             margin-bottom: 15px;
             align-items: center;
         }
+        p:not(.news-widget__text){
+            margin-bottom: 24px;
+        }
     }
     &__date {
         font-family: $font-roboto-medium;
@@ -53,7 +56,7 @@
         overflow: hidden;
         color: $primary;
         @include md {
-            margin-bottom: 32px;
+            margin-bottom: 15px;
         }
     }
 }

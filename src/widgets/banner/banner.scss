@@ -96,6 +96,7 @@
         height: 250px;
         @include md(){
             height: 510px;
+            max-height: 510px;
         }
         .text {
             padding-top: 0;

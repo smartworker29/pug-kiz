@@ -7,3 +7,8 @@ import "./video-tile/video-tile";
 
 import swiperCustom from "./slider/slider";
 swiperCustom().init();
+
+// require ('./validation/validation');
+
+import form from "./validation/validation";
+form().init();
