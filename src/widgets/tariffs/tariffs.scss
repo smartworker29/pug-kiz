@@ -1,0 +1,152 @@
+.offer-card{
+  border-radius: 8px;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  max-width: 598px;
+  &__wrap{
+    margin-bottom: 16px;
+    @include lg{
+      margin-bottom: 32px;
+    }
+  }
+  &__icon{
+    background: $secondary;
+    padding: 36px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    @include xl{
+      padding: 52px 58px;
+    }
+    @include xxl{
+      padding: 67px 73px;
+    }
+  }
+  .icon-calendar{
+    font-size: 34px;
+    @include xl{
+      font-size: 44px;
+    }
+    @include xxl{
+      font-size: 54px;
+    }
+  }
+  &__content{
+    padding: 16px 0;
+    width: 100%;
+    @include lg{
+      padding: 10px 10px 10px 16px;
+    }
+    @include xl{
+      padding-left: 32px;
+    }
+    p{
+      color: #a7a9ac;
+      font-family: $font-roboto-regular;
+      line-height: 1.15;
+    }
+    h3{
+      color: $primary;
+      letter-spacing: -0.9px;
+      @include font-size($xs-font);
+      @include lg{
+        @include font-size($md-font);
+      }
+    }
+    span{
+      @include font-size($md-font);
+      color: $secondary;
+      font-family: $font-roboto-bold;
+      @include lg{
+        font-size: 28px;
+      }
+      p{
+        color: $primary;
+      }
+    }
+  }
+}
+
+.plans-table{
+  background: $white;
+  border-radius: 4px;
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  &__header{
+    background: $primary;
+    height: 67px;
+    padding-left: 16px;
+    @include lg{
+      padding-left: 32px;
+      height: 72px;
+    }
+    p{
+      color: $white;
+      font-family: $font-roboto-medium;
+      @include font-size($xs-font);
+      @include lg{
+        @include font-size($paragraph-font);
+      }
+    }
+    &.row-right{
+      padding-left: 0;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    height: 67px;
+    box-shadow: 0 1px 0 0 #e0e4e8;
+    padding-left: 18px;
+    @include lg{
+      padding-left: 34px;
+      height: 72px;
+    }
+    &.row-right{
+      padding-left: 0;
+      justify-content: center;
+      p{
+        font-family: $font-roboto-regular;
+      }
+
+    }
+  }
+  .row-left{
+    p{
+      font-family: $font-roboto-medium;
+      color: $primary;
+    }
+  }
+  &__img-wrap{
+    width: 23px;
+    img{
+      width: 100%;
+    }
+    @include lg{
+      width: 28px;
+    }
+  }
+  .swiper-container{
+    padding-bottom: 40px;
+    @include lg{
+      overflow: visible;
+      padding-bottom: 0;
+
+      .swiper-pagination{
+        display: none;
+      }
+    }
+  }
+  .swiper-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+  }
+  &__btns{
+    margin-top: 24px;
+    @include lg{
+      margin-top: 40px;
+    }
+    .link{
+      margin-left: 24px;
+    }
+  }
+}

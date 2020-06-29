@@ -1,0 +1,54 @@
+.widget
+    .widget__header
+        h2.heading COST OF SETTING UP THE BUSINESS IN KEIC
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur.
+.row
+    .col-12.col-md-6.offset-xl-1.col-xl-5.offer-card__wrap
+        .offer-card.d-flex.align-items-stretch.h-100.mx-auto
+            .offer-card__icon.d-flex.align-items-center
+                span.icon-calendar
+            .offer-card__content.d-flex.align-items-center.justify-content-around.justify-content-lg-start
+                .offer-card__content-wrap
+                    h3.mb-2.mb-xl-3 Annual packages
+                    p.mb-2 Starting at
+                    span USD 3,000
+                        p.d-inline-block.mb-0 Per year
+    .col-12.col-md-6.col-xl-5.offer-card__wrap
+        .offer-card.d-flex.align-items-stretch.h-100.mx-auto
+            .offer-card__icon.d-flex.align-items-center
+                span.icon-calendar
+            .offer-card__content.d-flex.align-items-center.justify-content-around.justify-content-lg-start
+                .offer-card__content-wrap
+                    h3.mb-2.mb-xl-3 Offers valid until 30 June 2020
+                    p.mb-2 On first year of operations
+                    span 25% OFF
+.row
+    .col-12.offset-xl-1.col-xl-10
+        .container
+            .row.plans-table
+                .col-6.col-lg-3.px-0
+                    .plans-table__header.d-flex.align-items-center
+                        p.mb-0 Visa provisions
+                    each item in [0,1,2,3]
+                        .plans-table__row.row-left
+                            .plans-table__img-wrap
+                                img(src='${require(`./assets/images/plans-img.jpg`)}')
+                            p.ml-2.ml-lg-3.mb-0= item+1+' visa package'
+                .col-6.col-lg-3.px-0
+                    .widget__content
+                        .swiper-container.plans-swiper
+                            .swiper-wrapper
+                                -var plans = ['AED 11,000', 'AED 13,000', 'AED 15,000', 'AED 17,000']
+                                -var plTitle = ['Annual package', '2 years', '3 years']
+                                each item in [0,1,2]
+                                    .swiper-slide
+                                        .plans-table__header.row-right.d-flex.align-items-center.justify-content-center
+                                            p.mb-0= plTitle[item]
+                                        each item in [0,1,2,3]
+                                            .plans-table__row.row-right
+                                                p.mb-0= plans[item]
+                            include ../../tiles/swiper-pagination/swiper-pagination
+
+        .plans-table__btns
+            +anchor('btn btn-white secondary-bordered' ,'Download Offers')
+            +link('#', 'link-primary with-icon' ,' Contact us ')

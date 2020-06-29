@@ -22,4 +22,7 @@ newsSlider().init();
 import licenseSlider from "./license-type/license-type";
 licenseSlider().init();
 
+import tariffsSlider from "./tariffs/tariffs";
+tariffsSlider().init();
+
 import "./accordion/accordion";

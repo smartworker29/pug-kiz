@@ -6,10 +6,6 @@
   @include xxl{
     margin: 0 auto -24px;
   }
-  .btn{
-    border: 2px solid $secondary;
-    color: $secondary !important;
-  }
   .swiper-slide{
     margin-bottom: 44px;
     @include sm{

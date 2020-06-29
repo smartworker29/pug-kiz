@@ -13,6 +13,9 @@
             text-decoration: none;
         }
     }
+    &.link-primary{
+        color: $primary;
+    }
     &.with-icon{
         &:after{
             font-family: 'Material Icons';
