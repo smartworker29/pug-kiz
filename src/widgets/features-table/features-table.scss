@@ -1,0 +1,131 @@
+.features-table {
+  &__wrap {
+    background: $white;
+    width: 100%;
+    max-width: 1228px;
+    margin: 0 auto;
+
+    table {
+      width: 100%;
+      box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    tr {
+      border-bottom: 1px solid #e0e4e8;
+      &:first-of-type{
+        border: none;
+      }
+      &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        min-height: 67px;
+        @include lg {
+          min-height: 72px;
+        }
+      }
+      &:nth-child(6),
+      &:nth-child(7),
+      &:nth-child(8),
+      &:nth-child(9) {
+        display: none;
+      }
+    }
+    td:nth-child(1) {
+      font-weight: 500;
+      background: $secondary;
+      font-family: $font-roboto-medium;
+      color: $white;
+      @include xl {
+        width: 30.5%;
+      }
+    }
+
+    td:nth-child(2) {
+      position: relative;
+      font-weight: 400;
+      font-family: $font-roboto-regular;
+      color: #807f83;
+      padding-left: 30px;
+      @include lg {
+        padding-left: 50px;
+      }
+      @include xl {
+        padding-left: 137px;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        transform: translate(-14px, 6px);
+        width: 5px;
+        height: 5px;
+        background: $secondary;
+        border-radius: 50%;
+        @include lg {
+          transform: translate(-22px, 10px);
+        }
+      }
+    }
+
+    th, td {
+      padding: 10px 16px;
+      @include lg {
+        padding-left: 32px;
+      }
+    }
+
+    th {
+      background: $primary;
+      color: $white;
+
+      &:nth-child(2) {
+        @include lg {
+          padding-left: 26px;
+        }
+        @include xl {
+          padding-left: 114px;
+        }
+      }
+    }
+
+    td {
+      @include font-size($paragraph-font);
+    }
+  }
+
+  th,
+  .link{
+    font-family: $font-roboto-medium;
+    font-weight: 500;
+    @include font-size($xs-font);
+    @include lg {
+      @include font-size($paragraph-font);
+    }
+  }
+
+  .link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    i{
+      margin-left: 8px;
+      @include lg{
+        font-size: 30px;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__btn{
+    background: $white;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #e0e4e8;
+    @include lg{
+      height: 72px;
+    }
+  }
+}

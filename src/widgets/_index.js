@@ -3,6 +3,7 @@ import "./navigation-link/navigation-link.js";
 import siblingHover from "./slider/slider";
 import "./scroll-events/scroll-events";
 import "./support/support";
+import "./features-table/features-table";
 import benefitSlider from "./benefits/benefits";
 
 

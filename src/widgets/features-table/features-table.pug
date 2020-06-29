@@ -1,0 +1,21 @@
+.widget
+    .widget__header
+        label.label About
+        h2.heading FEATURES &amp; BENEFITS OF BUSINESS SET UP
+        p The Free Zone jurisdiction allows 100% foreign ownership in companies, and it is suitable for wholesale distributors, re-exporters, warehousing activities, service providers and manufacturers targeting markets outside the MENA region.
+.container.features-table
+    .row
+        .features-table__wrap
+            table
+                tr
+                    th Key Featured
+                    th Free Zone
+                -var rowName = ['Ownership', 'Tax (Corporate, Income & Sales)', 'VAT', 'Sales in Local Market', 'Ownership', 'Tax (Corporate, Income & Sales)', 'VAT', 'Sales in Local Market']
+                -var rowVal = ['100% foreign ownership', '100% tax free', 'No VAT', 'Through distributors and / or local agents', '100% foreign ownership', '100% tax free', 'No VAT', 'Through distributors and / or local agents']
+                each item in [0,1,2,3,4,5,6,7]
+                    tr
+                        td= rowName[item]
+                        td= rowVal[item]
+            .features-table__btn
+                a.link.features-btn(href="javascript:void(0)") More Features
+                    i.material-icons expand_more

@@ -89,6 +89,12 @@
       padding-left: 0;
     }
   }
+  .icon-present{
+    font-size: 25px;
+    @include lg{
+      font-size: 31px;
+    }
+  }
   &__row{
     display: flex;
     align-items: center;
@@ -113,15 +119,6 @@
     p{
       font-family: $font-roboto-medium;
       color: $primary;
-    }
-  }
-  &__img-wrap{
-    width: 23px;
-    img{
-      width: 100%;
-    }
-    @include lg{
-      width: 28px;
     }
   }
   .swiper-container{
