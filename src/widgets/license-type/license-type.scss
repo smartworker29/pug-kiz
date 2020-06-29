@@ -3,9 +3,13 @@
     margin-bottom: -32px;
   }
   .license-swiper{
+    padding-bottom: 46px;
     .swiper-pagination{
-      bottom: -5px;
-      @include lg{
+      bottom: -3px;
+    }
+    @include lg{
+      padding-bottom: 0;
+      .swiper-pagination{
         display: none;
       }
     }
@@ -15,54 +19,71 @@
         top:calc(50% - 54px);
       }
     }
-    //@include lg{
-    //  margin: 0 -16px;
-    //  .swiper-wrapper {
-    //    flex-wrap: wrap;
-    //    width: 100%;
-    //  }
-    //  .swiper-slide  {
-    //    width: 50%;
-    //    padding: 0 16px;
-    //  }
-    //  .swiper-button-wrapper{
-    //    display: none;
-    //  }
-    //}
-  }
-}
-.license-card{
-  padding: 32px 40px;
-  border-radius: 4px;
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fff;
-  margin-bottom: 44px;
-  color:$grey;
-  @include lg{
-    padding: 48px;
-    margin-bottom: 32px;
-    display: flex;
-  }
-  &__icon{
-    .icon-scale{
-      font-size: 28px;
-      @include lg{
-        font-size: 64px;
+    .swiper-slide  {
+      padding: 0 15px;
+    }
+    @include lg{
+      margin: 0 -16px;
+      .swiper-wrapper {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .swiper-slide  {
+        width: 50%;
+      }
+      .swiper-button-wrapper{
+        display: none;
       }
     }
   }
-  h3{
-    color:$primary;
-    @include font-size($md-font);
-    @include line-height($md-line-height);
-  }
-  p{
-    margin-top: 24px;
-    @include font-size($xs-font);
-    @include line-height($paragraph-line-height);
+  .license-card{
+    padding: 32px 40px;
+    border-radius: 4px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    color:$grey;
     @include lg{
-      @include font-size($paragraph-font);
+      padding: 48px;
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    &__icon{
+      .icon-scale{
+        font-size: 32px;
+        @include lg{
+          font-size: 64px;
+        }
+      }
+      display: flex;
+      align-items: center;
+      @include lg{
+        align-items: flex-start;
+      }
+    }
+    h3{
+      color:$primary;
+      @include font-size($md-font);
+      @include line-height($md-line-height);
+      margin-left: 8px;
+      margin-bottom: 0;
+      @include lg{
+        margin-left: 32px;
+      }
+    }
+    p{
+      width: 100%;
+      margin-top: 24px;
+      @include font-size($xs-font);
+      @include line-height($paragraph-line-height);
+      @include lg{
+        @include font-size($paragraph-font);
+        padding-left: 96px;
+        margin-top: -24px;
+      }
     }
   }
 }
+
 
