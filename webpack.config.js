@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackMd5Hash = require("webpack-md5-hash");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ImageminWebpWebpackPlugin= require("imagemin-webp-webpack-plugin");
 const fs = require("fs");
 const webpack = require('webpack');
 
@@ -64,6 +65,15 @@ module.exports = {
       {
         test: /\.pug$/,
         use: ['html-loader?interpolate', 'pug-html-loader?pretty=true']
+      },
+      {
+        test: /\.(jpeg|jpg|png|gif|svg)$/i,
+        loader: 'file-loader',
+
+        options: {
+            name: '[name].[ext]?[hash]',
+            outputPath: './assets/images/webp'
+        }
       }
     ]
   },
@@ -71,6 +81,10 @@ module.exports = {
     new CleanWebpackPlugin("dist", {}),
     new MiniCssExtractPlugin({
       filename: "style.[contenthash].css"
+    }),
+    new ImageminWebpWebpackPlugin({
+        detailedLogs: true,
+        overrideExtension: true
     }),
 
     ...pages.map(

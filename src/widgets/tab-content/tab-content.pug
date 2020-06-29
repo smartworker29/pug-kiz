@@ -1,23 +1,49 @@
 
-.tab-wrapper
-    -var items = ['Cast','Connectivity','Connectivity','Community']
-    ul.nav.nav-tabs
-        -var tabs = ['tab1','tab2','tab3','tab4']
-        each index, x in tabs
-            li 
-                a(data-toggle="tab" href="#"+tabs[x] class=(x === 0 ? "show active" : ''))= items[x]
-        
+mixin tabContent(multi, img, listcontent, idlist)
+    .tab-wrapper
+        -var items = ['Cast','Connectivity','Connectivity','Community']
+        ul.nav.nav-tabs
+            -var tabs =idlist
+            each index, x in tabs
+                li 
+                    a(data-toggle="tab" href="#"+tabs[x] class=(x === 0 ? "show active" : ''))= items[x]
+            
 
-    .tab-content
-        -var tabs = ['tab1','tab2','tab3','tab4']
-        each index, x in tabs
-            .tab-pane.fade(id=index, class=(x === 0 ? "show active" : ''))
-                .tab-pane__content
-                    h2.section__title FEATURES & BENEFITS
-                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in.
-                    ul
-                        li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare.
-                        li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                .tab-pane__img(style="background-image: url( '${require(`./assets/images/city-img.jpg`)} ' )")
+        .tab-content
+            -var tabs =idlist
+            each index, x in tabs
+                .tab-pane.fade(id=index, class=(x === 0 ? "show active" : ''))
+                    .tab-pane__content
+                        h2.section__title FEATURES & BENEFITS
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in.
+                        ul
+                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare.
+                            li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    if !multi
+                        .tab-pane__content
+                            h2.section__title FEATURES & BENEFITS
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in.
+                            ul
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare.
+                                li Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+                    if !listcontent
+                        .tab-pane__content.list-content
+                            h2.section__title &nbsp;
+                            ul
+                                li 
+                                    strong Buy 
+                                    br
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in.
+                                li 
+                                    strong Lease 
+                                    br
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in.
+                                
+
+                    if !img
+                        .tab-pane__img(style="background-image: url( '${require(`./assets/images/city-img.jpg`)} ' )")
             
