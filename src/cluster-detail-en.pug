@@ -41,3 +41,16 @@ block content
     .container
       .row.no-gutters
         include widgets/tab-content/tab-content
+        +tabContent(false, true, true, idlist=['atab1','atab2','atab3','atab4'])
+
+  .placeholder
+    .container
+      .row.no-gutters
+        include widgets/tab-content/tab-content
+        +tabContent(true, false, true, idlist=['btab1','btab2','btab3','btab4'])
+
+  .placeholder
+    .container
+      .row.no-gutters
+        include widgets/tab-content/tab-content
+        +tabContent(true, true, false, idlist=['ctab1','ctab2','ctab3','ctab4'])
