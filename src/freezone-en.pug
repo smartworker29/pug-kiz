@@ -1,6 +1,33 @@
 extends layout/layout
 block content
 
+
+
+    .placeholder.placeholder--no-padding.banner-cluster
+        include ./widgets/banner/banner
+
+
+    .placeholder
+        .container
+            .widget
+                .widget__header
+                    label.label About
+                    h2.heading KHALIFA PORT FREE TRADE ZONE
+                    p Khalifa Port Free Trade Zone (Khalifa Port FTZ) is a next generation platform for trade, logistics and manufacturing.
+            
+            .location
+                .row.no-gutters
+                    .col-12.col-xl-6
+                        .location__image-wrap
+                            img(src="${require(`./assets/images/city-img.jpg`)}")
+                    .col-12.col-xl-6
+                      .location__wrap-rtl.pt-xl-0
+                        //- label January 07, 2020
+                        h2.section__title Free Zone
+                        p.location__text KIZAD offers both Free Zone and Domestic Industrial Zone facilities for investors, who can choose their facilities based on their business strategy and requirements.
+                        p Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas. Here you will find further information on the benefits and procedures to help you get started and considering the next steps.
+                        //- +link('#', 'with-icon' ,' Read More ')
+
     .placeholder.placeholder--bg-grey
         .container
             include ./widgets/features-table/features-table
@@ -26,8 +53,6 @@ block content
     .placeholder.placeholder--bg-grey
         .container
             include ./widgets/license-type/license-type
-
-    .placeholder
 
     .placeholder.placeholder--bg-grey
         .container

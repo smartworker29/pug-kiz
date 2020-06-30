@@ -20,13 +20,14 @@ block content
 
     .container
       .swiper-custom
-        .swiper-wrapper(data-slide="1")
+        .swiper-wrapper(data-slide="1", data-space="20", data-pagination=true, data-navigation=true)
           each item in [0,1,2,3,4,5,6]
             .swiper-slide
               .location.block-content
                 .row.no-gutters
                     .col-12.col-xl-6
                         .location__image-wrap
+                          a.image-popup(href="${require(`./assets/images/city-img.jpg`)}")
                             img(src="${require(`./assets/images/city-img.jpg`)}")
                     .col-12.col-xl-6
                       .location__wrap-rtl.pt-xl-0
@@ -36,6 +37,21 @@ block content
                         //- +link('#', 'with-icon' ,' Read More ')
         include tiles/swiper-buttons/swiper-buttons
         .swiper-pagination
+
+
+  .placeholder
+      .swiper-custom.without-pagination
+          .swiper-wrapper(data-slide="1", data-space="0")
+            each item in [0,1,2,3,4,5,6]
+              .swiper-slide
+                .location
+                  .row.no-gutters
+                      .col-12
+                          .location__image-wrap
+                            img.w-100(src="${require(`./assets/images/city-img.jpg`)}")
+          
+          include tiles/swiper-buttons/swiper-buttons
+          //- .swiper-pagination
 
   .placeholder
     .container

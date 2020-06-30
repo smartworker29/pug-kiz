@@ -2,6 +2,9 @@
     overflow: hidden;
     position: relative;
     padding-bottom: 50px;
+    &.without-pagination{
+        padding-bottom: 0;
+    }
     .swiper-button-wrapper{
         position: absolute;
         top:calc(50% - 25px);
