@@ -9,9 +9,17 @@
         .location__image-wrap{
             img{
                 @include lg(){
-                    height:600px;
+                    height:700px;
                 }
             }
+        }
+    }
+    &.disable-carousel{
+        .swiper-button-wrapper{
+            display: none !important;
+        }
+        .swiper-pagination{
+            display: none !important;
         }
     }
     .swiper-button-wrapper{

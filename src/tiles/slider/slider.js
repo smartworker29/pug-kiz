@@ -41,6 +41,9 @@ export default function swiperCustom() {
                             },
     
                         });
+                        if($(items).find('.swiper-slide').length < 2){
+                            $(items).parent().addClass('disable-carousel');
+                        }
                     },500)
                     
                 });
