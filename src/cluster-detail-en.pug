@@ -62,6 +62,20 @@ block content
           .swiper-pagination
 
 
+    .placeholder
+      .container
+        .swiper-custom
+          .swiper-wrapper(data-slide="1", data-space="20", data-pagination=true, data-navigation=true)
+            each item in [0,1,2,3,4,5,6]
+              .swiper-slide
+                .location.block-content
+                  .row.no-gutters
+                      .col-12
+                          .location__image-wrap
+                            .image-popup
+                              img(src="${require(`./assets/images/Inforgraphic.png`)}")
+
+
   .placeholder
       .swiper-custom.without-pagination.map-item
           .swiper-wrapper(data-slide="1", data-space="0")
