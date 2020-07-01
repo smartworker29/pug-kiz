@@ -5,6 +5,15 @@
     &.without-pagination{
         padding-bottom: 0;
     }
+    &.map-item{
+        .location__image-wrap{
+            img{
+                @include lg(){
+                    height:600px;
+                }
+            }
+        }
+    }
     .swiper-button-wrapper{
         position: absolute;
         top:calc(50% - 25px);
@@ -13,6 +22,13 @@
 
         @include lg(){
             display: block;
+        }
+        &.container{
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+        
         }
     }
     .swiper-pagination{

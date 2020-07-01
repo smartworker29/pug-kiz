@@ -92,3 +92,17 @@ ul {
   padding-right:100px;
   }
 }
+
+.image-popup{
+  position: relative;
+  display: block;
+  .zoom-icon{
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    color:$secondary;
+    background-color: $white;
+    right: 20px;
+    bottom:20px;
+  }
+}

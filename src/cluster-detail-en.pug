@@ -27,8 +27,9 @@ block content
                 .row.no-gutters
                     .col-12.col-xl-6
                         .location__image-wrap
-                          a.image-popup(href="${require(`./assets/images/city-img.jpg`)}")
+                          .image-popup
                             img(src="${require(`./assets/images/city-img.jpg`)}")
+                            a.zoom-icon.material-icons(href="${require(`./assets/images/city-img.jpg`)}") zoom_in
                     .col-12.col-xl-6
                       .location__wrap-rtl.pt-xl-0
                         //- label January 07, 2020
@@ -40,7 +41,7 @@ block content
 
 
   .placeholder
-      .swiper-custom.without-pagination
+      .swiper-custom.without-pagination.map-item
           .swiper-wrapper(data-slide="1", data-space="0")
             each item in [0,1,2,3,4,5,6]
               .swiper-slide
@@ -48,10 +49,37 @@ block content
                   .row.no-gutters
                       .col-12
                           .location__image-wrap
-                            img.w-100(src="${require(`./assets/images/city-img.jpg`)}")
-          
-          include tiles/swiper-buttons/swiper-buttons
+                            .image-popup
+                              img.w-100(src="${require(`./assets/images/location.jpg`)}")
+                              .container.position-relative
+                                a.zoom-icon.material-icons(href="${require(`./assets/images/location.jpg`)}") zoom_in
+          .container
+            .swiper-button-wrapper.container
+              .swiper-button-next.btn-swiper
+                  em.material-icons trending_flat
+              .swiper-button-prev.btn-swiper
+                  em.material-icons trending_flat
           //- .swiper-pagination
+
+
+  .placeholder
+    .container
+        .swiper-custom.map-item
+            .swiper-wrapper(data-slide="1", data-space="0")
+              each item in [0,1,2,3,4,5,6]
+                .swiper-slide
+                  .location
+                    .row.no-gutters
+                        .col-12
+                            .location__image-wrap
+                              img.w-100(src="${require(`./assets/images/city-img.jpg`)}")
+            
+            .swiper-button-wrapper.container
+              .swiper-button-next.btn-swiper
+                  em.material-icons trending_flat
+              .swiper-button-prev.btn-swiper
+                  em.material-icons trending_flat
+            .swiper-pagination
 
   .placeholder
     .container
