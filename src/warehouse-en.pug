@@ -1,0 +1,93 @@
+extends layout/layout
+block content
+
+  .placeholder.placeholder--no-padding.inner-banner-image(style="background-image:url(${require(`./assets/images/home-banner.jpg`)})")
+    include ./widgets/banner-inner/banner-inner
+    +innerBanner({
+      title: 'Warehouse',
+      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    })
+
+  .placeholder
+    .container.full-slider
+        .location
+          .row.no-gutters
+              .col-12.col-lg-6
+                  .location__image-wrap
+                      img(src="${require(`./assets/images/city-img.jpg`)}")
+              .col-12.col-lg-6
+                .location__wrap-rtl.pt-0
+                  h2.section__title Pre-Built Modular Warehouse Units
+                  p.location__text KIZAD Logistics Park is the region’s advanced centre for storage, distribution and third-party logistics services to serve major markets in the Middle East, Africa and South Asia. KIZAD Logistics Park is a multi-phased development, allowing for unit sizes and designs in later stages to match the growing requirements of your business. Phase 1 and Phase 2 of KIZAD Logistics Park are almost completely leased out. Phase 3, now in its final stages of development, consists of 78 modular warehouse units of varying sizes totalling 44,096 m2.
+
+
+  .placeholder.placeholder--bg-grey
+    .container.feature-carousel
+        .location
+          .row.no-gutters
+              .col-12.col-lg-6
+                  .location__image-wrap
+                      img(src="${require(`./assets/images/city-img.jpg`)}")
+              .col-12.col-lg-6
+                .location__wrap-rtl
+                  .location__wrap-content
+                    h2.section__title Single units
+                    p.location__text Individual single units of varying sizes, shown below, are most suitable for startups and businesses with small-scale operations. The standard units provide different unit options of 440 m², 605 m², 756 m2, 880 m² and 1,210 m².
+                  .location__wrap-image
+                    img(src="${require(`./assets/images/city-img.jpg`)}")
+                    ul.area-define
+                      each x in [0,1,2]
+                        li Plot Area: 
+                          span 87,419 m2
+
+
+  .placeholder#knowMore
+    .container.d-lg-flex.h-100.px-lg-0
+      .row.no-gutters
+        include ./widgets/info-card/info-card
+        +info-card({
+          image: "${require(`./assets/images/info-card-img-2-2x.jpg`)}",
+          title: 'Business facilities',
+          text: 'KIZAD offers a world-class infrastructure and business ecosystem. From industry innovations driving operational efficiency, reliable utilities infrastructure, waste management, internal transport network, advanced laboratory testing services and essential products and services in the value chain to provide businesses a significant advantage.',
+          link: '#'})
+        +info-card({
+          image: "${require(`./assets/images/info-card-img-1-2x.jpg`)}",
+          title: 'Free zone',
+          text: 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.',
+          link: '#'})
+
+  .placeholder
+    .container
+      .row.no-gutters
+        include widgets/tab-content/tab-content
+        +tabContent(true, true, false, idlist=['ctab1','ctab2','ctab3','ctab4'])
+
+
+  .placeholder.placeholder--bg-grey
+    include ./widgets/learn-more/learn-more
+
+
+  .placeholder#faq
+    .container.px-0
+      include widgets/partner-slider/partner-slider
+
+  .placeholder.placeholder--bg-grey
+    .container
+      .widget
+          .widget__header.text-center
+            label.label Frequently Asked Questions
+            h2.heading Common questions about KIZAD
+      include widgets/accordion/accordion
+
+
+  .placeholder.placeholder--bg-grey
+    .container
+      .talk-card
+        .talk-card__wrap.card-white
+            .talk-card__img-wrap
+                i.material-icons insert_drive_file
+            .talk-card__descr.flex-column
+                h2.talk-card__title.section__title.mb-2.mb-lg-4 download our brochure
+                p.talk-card__text Khalifa Industrial Zone Abu Dhabi [KIZAD], a subsidiary of Abu Dhabi Ports, is the largest industrial and free trade zone in the MENA region and offers the most competitive business setup solutions and world-class infrastructure facilities in the UAE.Spread over 410 KM2, KIZAD is home to over 600 companies across industries such as Food, Polymers, Metals, Automotive, Pharmaceuticals, Logistics, Oil & Gas, among others.
+            .talk-card__btn
+                +anchor('btn-white secondary-bordered' ,'Download Brochure')

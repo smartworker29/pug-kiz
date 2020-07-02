@@ -1,18 +1,18 @@
 .talk-card{
-  @include lg{
-    padding: 0 15px;
-  }
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
   &__wrap{
     position: relative;
     border-radius: 4px;
-    padding: 72px 16px 24px;
-    margin: 12px 0;
+    padding: 90px 16px 24px;
     @include lg{
       padding: 128px 40px 40px;
-      margin: 0;
       display: flex;
       flex-direction: column;
       height: 100%;
+    }
+    i{
+      font-size: 55px;
+      color: $secondary;
     }
   }
   &__img-wrap{
@@ -25,9 +25,7 @@
     }
   }
   &__text{
-    font-family: $font-roboto-light;
-    @include line-height($paragraph-line-height);
-    @include font-size($paragraph-font);
+    
     flex: 1 1 auto;
     letter-spacing: -0.3px;
     margin-bottom: 24px;
