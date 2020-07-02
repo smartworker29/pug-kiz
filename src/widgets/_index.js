@@ -27,3 +27,4 @@ import tariffsSlider from "./tariffs/tariffs";
 tariffsSlider().init();
 
 import "./accordion/accordion";
+import "./strategic-location/strategic-location";

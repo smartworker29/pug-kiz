@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('assets/fonts/icomoon/icomoon.eot?8rzzid');
-    src:  url('assets/fonts/icomoon/icomoon.eot?8rzzid#iefix') format('embedded-opentype'),
-      url('assets/fonts/icomoon/icomoon.ttf?8rzzid') format('truetype'),
-      url('assets/fonts/icomoon/icomoon.woff?8rzzid') format('woff'),
-      url('assets/fonts/icomoon/icomoon.svg?8rzzid#icomoon') format('svg');
+    src:  url('assets/fonts/icomoon/icomoon.eot?jzw5uo');
+    src:  url('assets/fonts/icomoon/icomoon.eot?jzw5uo#iefix') format('embedded-opentype'),
+      url('assets/fonts/icomoon/icomoon.ttf?jzw5uo') format('truetype'),
+      url('assets/fonts/icomoon/icomoon.woff?jzw5uo') format('woff'),
+      url('assets/fonts/icomoon/icomoon.svg?jzw5uo#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -24,6 +24,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+.icon-people:before {
+  content: "\e904";
+  color: #fff;
+}
 .icon-present:before {
   content: "\e903";
 }
@@ -31,7 +36,7 @@
   content: "\e902";
   color: #fff;
 }
-.icon-scale:before {
+.icon-icon1:before {
   content: "\e901";
   color: #e10e49;
 }

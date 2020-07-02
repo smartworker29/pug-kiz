@@ -37,17 +37,19 @@
     height: 100%;
   }
   &__top-img{
-    display: inline-block;
     padding: 8px 16px;
     border-left: 1px solid $light-grey;
     @include lg{
       padding: 12px;
     }
-    img{
-      width: 24px;
+    i{
+      font-size: 24px;
       @include lg{
-        width: 32px;
-        transform: rotate(90deg);
+        font-size: 32px;
+        &:before{
+          transform: rotate(90deg);
+        }
+
       }
     }
   }
