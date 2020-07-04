@@ -1,7 +1,14 @@
 extends layout/layout
 block content
 
-
+    .placeholder.placeholder--no-padding
+        .container
+            .widget.text-center
+                .widget__header
+                    label.label Benefits
+                    h2.heading What our partners choose to work with us
+                    p KIZAD is the largest industrial and free trade zone in the UAE and offers the most competitive business setup solutions and infrastructure facilities in the region.
+            include widgets/accordion-benefits/accordion-benefits
 
     .placeholder
         .container
@@ -10,4 +17,5 @@ block content
 
     .placeholder.placeholder--no-padding
         .container
-            include ./widgets/strategic-location/strategic-location
+            include widgets/accordion-strategic/accordion-strategic
+

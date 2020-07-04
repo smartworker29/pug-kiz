@@ -1,0 +1,44 @@
+extends ../accordion-strategic-benefits/accordion-strategic-benefits
+
+block variables
+    -var loctationT = ['Connected to sea', 'Connected by road', 'Connected to air','Future rail']
+    -var loctationSt = ['Major shipping lines', 'Multi-land express highways', '5 International airports','Under Construction']
+
+block accordion
+    .accordion-strategic-benefits.accordion-strategic(class="strategic-acc-item-" + (item + 1))
+        a
+            span
+                img(src='${require(`./assets/images/strategic-img-2x.png`)}')
+            div
+                h2= loctationT[item]
+                p= loctationSt[item]
+            i.material-icons expand_more
+        div
+            strong 25
+                p= loctationSt[item]
+            strong 300+
+                p
+                    | Port-to-port
+                    br
+
+                    | connections
+
+block dt-items
+    .col-6.p-0.d-none.d-lg-block
+        .dt-strategic-benefits.strategic-dt-item(class="strategic-dt-item-" + (item + 1))
+            div
+                h2= loctationT[item]
+                p= loctationSt[item]
+            div
+                span
+                    img(src='${require(`./assets/images/strategic-img-2x.png`)}')
+                div
+                    h2= loctationT[item]
+                    strong 25
+                        p= loctationSt[item]
+                    strong 300+
+                        p
+                            | Port-to-port
+                            br
+
+                            | connections

@@ -7,10 +7,10 @@ var accordionStr = (function () {
         let listaccordion = document.querySelectorAll("[strategic-accordion-wrapper]");
         if(listaccordion){
           [].map.call(listaccordion, function (items) {
-            $( ".accordion-strategic a" ).click(function( event ) {
+            $( ".accordion-strategic-benefits a" ).click(function( event ) {
               event.preventDefault();
             });
-            let accordianitem = $(items).find('.accordion-strategic a');
+            let accordianitem = $(items).find('.accordion-strategic-benefits a');
             accordianitem.next().addClass('accordion-content');
             if(accordianitem){
               [].map.call(accordianitem, function (list) {

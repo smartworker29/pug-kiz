@@ -1,0 +1,173 @@
+.accordion-strategic{
+  & > div{
+    p{
+      margin-left: 16px;
+    }
+  }
+  a{
+    span{
+      border-radius: 50%;
+      overflow: hidden;
+      align-self: flex-start;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: -100px;
+      @include transition(all 0.55s ease-in-out);
+      img{
+        height: 100%;
+      }
+    }
+    p{
+      margin: 10px 0 0;
+      opacity: 1;
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+  h2{
+    &:after{
+      margin-top: 8px;
+      display: block;
+      content: '';
+      height: 2px;
+      background: $secondary;
+      width: 0;
+      @include transition(all 0.3s ease-in-out);
+    }
+  }
+  span{
+    color: $white;
+  }
+  &.active{
+    a {
+      padding-left: 64px;
+      span{
+        left: 16px;
+      }
+      p{
+        opacity: 0;
+        height: 0;
+        margin: 0;
+      }
+    }
+    h2{
+      &:after{
+        width: 66%;
+      }
+    }
+  }
+  .accordion-content{
+    padding: 0 16px 34px;
+  }
+}
+
+
+.strategic-dt-item{
+  display: flex;
+  align-items: center;
+  background-color: rgb(156,167,172);
+  @include xxl{
+    padding-left: 80px;
+  }
+  &:hover{
+    background-color: $primary;
+    > div:nth-child(1){
+      bottom: -50%;
+    }
+    > div:nth-child(2) {
+      margin-left: 0;
+      h2:after{
+        width: 42%;
+      }
+    }
+  }
+  &.strategic-dt-item-1,
+  &.strategic-dt-item-2{
+    border-bottom: 1px solid #cdd2d5;
+  }
+  &.strategic-dt-item-1,
+  &.strategic-dt-item-3{
+    border-right: 1px solid #cdd2d5;
+  }
+  > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    @include transition(all 0.3s ease-in-out);
+    @include xxl{
+      bottom: 80px;
+      left: 80px;
+    }
+    h2{
+      margin-bottom: 16px;
+    }
+  }
+  > div:nth-child(2){
+    display: flex;
+    margin-left: -150%;
+    @include transition(all 0.3s ease-in-out);
+    img{
+      height: 100%;
+    }
+    h2{
+      text-transform: uppercase;
+      margin-bottom: 40px;
+      &:after{
+        margin-top: 16px;
+        display: block;
+        content: '';
+        height: 2px;
+        background: $secondary;
+        width: 0;
+        @include transition(all 0.4s ease-in-out);
+      }
+    }
+    span{
+      border-radius: 50%;
+      overflow: hidden;
+      height: 80px;
+      flex: 0 0 80px;
+      margin-right: 24px;
+      @include xl{
+        height: 124px;
+        flex: 0 0 124px;
+      }
+    }
+    p{
+      margin-left: 16px;
+      @include xxl{
+        margin-left: 24px;
+      }
+    }
+  }
+}
+
+.widget-strategic-accordion{
+  strong{
+    font-family: $font-roboto-bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: $secondary;
+    display: flex;
+    align-items: center;
+    padding-bottom: 24px;
+    &:last-child{
+      padding-bottom: 0;
+    }
+    p{
+      margin-bottom: 0;
+      display: inline-block;
+    }
+    @include xl{
+      font-size: 70px;
+      line-height: 70px;
+    }
+    @include xxl{
+      font-size: 80px;
+      line-height: 80px;
+    }
+  }
+}

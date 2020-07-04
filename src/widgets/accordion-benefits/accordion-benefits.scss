@@ -1,0 +1,120 @@
+.accordion-benefits{
+  > div{
+    p{
+      margin-bottom: 24px;
+      font-family: $font-roboto-light;
+      @include font-size($paragraph-font);
+      @include line-height($paragraph-line-height);
+      letter-spacing: -0.4px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  h2:nth-child(2){
+    &:after{
+      margin-top: 8px;
+      display: block;
+      content: '';
+      height: 2px;
+      background: $secondary;
+      width: 0;
+      @include transition(all 0.4s ease-in-out);
+    }
+  }
+  &.active{
+    h2:nth-child(2){
+      &:after{
+        width: 66%;
+      }
+    }
+  }
+  .accordion-content{
+    padding: 0 16px 24px;
+  }
+}
+
+.benefits-dt-item{
+  &.benefits-dt-item-1{
+    background-color: #ccc;
+  }
+  &.benefits-dt-item-2{
+    background-color: $lighter-grey;
+  }
+  &.benefits-dt-item-3{
+    background-color: #a8a8a3;
+  }
+  &.benefits-dt-item-4{
+    background-color: $disabled;
+  }
+  &:hover {
+     background-color: $primary;
+    .benefits-dt-content-wrap{
+      > div{
+        top: 0;
+      }
+      h2:nth-child(2):after{
+        width: 58%;
+      }
+    }
+  }
+  .benefits-dt-content-wrap{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    > div{
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: calc(100% - 66px);
+      @include transition(all 0.3s ease-in-out);
+      @include xxl{
+        top: calc(100% - 87px);
+      }
+    }
+    h2{
+      text-transform: uppercase;
+      &:nth-child(1){
+        margin-bottom: 0;
+      }
+      &:nth-child(2):after{
+        margin-top: 8px;
+        display: block;
+        content: '';
+        height: 2px;
+        background: $secondary;
+        width: 0;
+        @include transition(all 0.4s ease-in-out);
+      }
+    }
+
+  }
+  @include lg{
+    padding: 40px 40px;
+  }
+
+  @include xxl{
+    padding: 40px 80px;
+
+  }
+  div{
+
+    p{
+      margin-bottom: 32px;
+      font-family: $font-roboto-light;
+      @include font-size($xs-font);
+
+      @include line-height($md-line-height);
+      @include xxl{
+        @include font-size($paragraph-font);
+        @include line-height($paragraph-line-height);
+      }
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}

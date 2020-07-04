@@ -41,15 +41,14 @@
     border-left: 1px solid $light-grey;
     @include lg{
       padding: 12px;
+      transform: rotate(90deg);
+      border-left: none;
+      border-bottom: 1px solid $light-grey;
     }
     i{
       font-size: 24px;
       @include lg{
         font-size: 32px;
-        &:before{
-          transform: rotate(90deg);
-        }
-
       }
     }
   }
