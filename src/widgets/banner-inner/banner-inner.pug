@@ -1,5 +1,7 @@
 mixin innerBanner(data)
-    .banner-inner.container
-        .text.theme-black
-            h1= data.title
-            p= data.content
+    .banner-inner
+        img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+        .container
+            .text.theme-black
+                h1= data.title
+                p= data.content
