@@ -1,0 +1,41 @@
+.case-stydy{
+    width: 100%;
+    .bg-image{
+        img{
+            @include lg(){
+                height:597px;
+                object-fit: cover;
+                width:100%;
+            }
+        }
+    }
+    .swiper-custom{
+        margin-top: -65px;
+        padding-bottom: 0;
+        @include lg(){
+            overflow: visible;
+            .swiper-container{
+                overflow: visible;
+            }
+        }
+        .swiper-slide{
+            background-color: $white;
+            padding: 40px;
+            margin-bottom: 0;
+            .legal-type-card__text{
+                padding:0;
+            }
+        }
+        .swiper-container{
+            padding: 0 15px 40px;
+            @include lg(){
+                padding-bottom: 0;
+            }
+        }
+        .swiper-button-wrapper, .swiper-pagination{
+            @include lg(){
+                display: none;
+            }
+        }
+    }
+}

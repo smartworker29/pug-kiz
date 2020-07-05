@@ -28,3 +28,4 @@ tariffsSlider().init();
 
 import "./accordion/accordion";
 import "./accordion-strategic-benefits/accordion-strategic-benefits";
+import "./case-study/case-study";

@@ -32,7 +32,7 @@ export default function swiperCustom() {
                             // },
                             breakpoints: {
                                 320: {
-                                    
+                                    slidesPerView: 1,
                                 },
                                 991: {
                                     slidesPerView: slideitems,

@@ -15,7 +15,13 @@ block content
             include ./widgets/team/team
 
 
-    .placeholder.placeholder--no-padding
+    .placeholder
         .container
             include widgets/accordion-strategic/accordion-strategic
+
+    .placeholder
+        .container
+            .row
+                include ./widgets/case-study/case-study
+                +caseStudy()
 
