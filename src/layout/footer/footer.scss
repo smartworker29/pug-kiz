@@ -71,6 +71,9 @@ footer {
             @include xl() {
                 margin-top: 0px;
             }
+            a{
+                color:$white;
+            }
             h4 {
                 margin-bottom: 0px;
                 @include md() {
