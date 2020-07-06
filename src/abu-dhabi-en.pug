@@ -1,0 +1,11 @@
+extends layout/layout
+block content
+
+    .placeholder
+        .container.d-lg-flex.h-100
+            .row.info-card-container
+                each item in [0,1,2,3]
+                    .col-12.col-lg-6.info-card
+                        .info-card_inner
+                            .info-card-hovered
+                                include ./widgets/info-card-with-hover/info-card-with-hover

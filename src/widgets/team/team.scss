@@ -25,22 +25,19 @@
     }
   }
   &__img{
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    height: calc((100vw - 30px) * 0.561);
-    overflow: hidden;
-    @include md{
-      height: calc((50vw - 30px) * 0.561);
-    }
-    @include lg{
-      height: calc((100vw/3 - 30px) * 0.561);
-      max-height: 265px;
-    }
     img{
-      display: block;
-      margin: 0 auto;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
       object-fit: cover;
-      height: 100%;
+      width: 100%;
+      height: calc((100vw - 30px) * 0.561);
+      @include md{
+        height: calc((50vw - 30px) * 0.561);
+      }
+      @include lg{
+        height: calc((100vw/3 - 30px) * 0.561);
+        max-height: 265px;
+      }
     }
   }
 }

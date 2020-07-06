@@ -1,11 +1,17 @@
-.info-card{
+.info-card-container{
+  margin-bottom: -24px;
   @include lg{
-    padding: 0 15px;
+    margin-bottom: -36px;
+  }
+}
+
+.info-card{
+  margin-bottom: 24px;
+  @include lg{
+    margin-bottom: 36px;
   }
   &__wrap{
     border-radius: 4px;
-    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
-    margin: 12px 0;
     background-color: #fff;
     @include lg{
       margin: 0;
@@ -14,32 +20,51 @@
       height: 100%;
     }
   }
-
-  &__descr{
-    padding: 0 16px;
-    @include lg{
-      padding: 0 36px 0 40px;
+  &_inner{
+    height: 100%;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  }
+  &__img-wrap{
+    img{
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      object-fit: cover;
+      width: 100%;
+      height: calc((100vw - 30px) * 0.561);
+      @include lg{
+        height: calc((50vw - 30px) * 0.561);
+        max-height: 405px;
+      }
     }
   }
-  &__title{
-    margin: 24px 0 8px;
+
+  &__descr{
+    height: 100% ;
     @include lg{
-      margin: 40px 0 24px;
+      align-self: flex-start;
+      justify-content: space-between;
+    }
+    &-wrap{
+      padding: 16px 16px 24px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      @include lg{
+        padding: 40px 36px 40px 40px;
+      }
     }
   }
   &__text{
-    font-size: 16px;
+    flex: 1 0 auto;
     font-weight: 300;
-    line-height: 1.5;
     color: $grey;
-    margin-bottom: 27px;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    max-height: 4.5em;
+    @include font-size($xs-font);
+    @include line-height($paragraph-line-height);
     @include lg{
-      font-size: 20px;
-      max-height: 7.5em;
-      margin-bottom: 40px;
+      @include font-size($sm-font);
     }
   }
   &__btn{
@@ -49,14 +74,14 @@
     padding: 16px 0;
   }
   &__link{
-    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.88px;
     color: $secondary;
     font-family: $font-roboto-bold;
+    @include font-size($xxs-font);
     @include line-height($sm-line-height);
     @include lg{
-      font-size: 16px;
+      @include font-size($xs-font);
       letter-spacing: 1px;
     }
   }

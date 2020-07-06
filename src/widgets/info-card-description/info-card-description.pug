@@ -1,0 +1,13 @@
+extends ./../info-card/info-card
+block variables
+    -var infoImage = ['${require(`./assets/images/info-card-img-2-2x.jpg`)}', '${require(`./assets/images/info-card-img-1-2x.jpg`)}']
+    -var infoTitle = ['Business facilities', 'Free zone']
+    -var infoText = ['KIZAD offers a world-class infrastructure and business ecosystem. From industry innovations driving operational efficiency, reliable utilities infrastructure, waste management, internal transport network, advanced laboratory testing services and essential products and services in the value chain to provide businesses a significant advantage.', 'KIZAD offers both Free Zone and Domestic Economic Zone facilities for investors, who can choose their facilities based on their business strategy and requirements. Whether you are a small start-up or an established large-scale business, KIZAD can offer customised business facilities spread across its Free Zone and Domestic Tariff Areas.']
+
+block description
+    .info-card__descr-wrap
+        h2.info-card__title.section__title= infoTitle[item]
+        p.info-card__text.mb-0= infoText[item]
+    .info-card__btn.text-center
+        a.info-card__link.text-uppercase(href='#') Read more
+
