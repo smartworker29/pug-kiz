@@ -1,5 +1,14 @@
 .talk-card{
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  &__mb{
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @include lg{
+      margin-bottom: 0;
+    }
+  }
   &__wrap{
     position: relative;
     border-radius: 4px;

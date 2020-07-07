@@ -32,16 +32,6 @@
     .info-card__text.collapsing {
       height: 7.4rem;
     }
-    .show-hide-text{
-      margin-top: 6px;
-      text-decoration: none;
-    }
-    .show-hide-text.collapsed::after {
-      content: 'Read More';
-    }
-    .show-hide-text:not(.collapsed)::after {
-      content: 'Show Less';
-    }
   }
   &__descr-wrap{
     align-items: flex-start;
@@ -66,12 +56,6 @@
         width: calc(100% - 35px);
       }
     }
-    .link{
-      @include font-size($xs-font);
-      @include lg{
-        text-transform: uppercase;
-      }
-    }
     .material-icons{
       cursor: pointer;
       @include lg{
@@ -82,6 +66,17 @@
       margin: 8px 0 16px;
       @include lg{
         margin: 24px 0 40px;
+      }
+    }
+  }
+
+  .link{
+    span,
+    &.show-hide-text{
+      @include font-size($xxs-font);
+      @include lg{
+        text-transform: uppercase;
+        @include font-size($xs-font);
       }
     }
   }

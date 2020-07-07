@@ -1,0 +1,60 @@
+.info-card{
+  &__icon-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    i{
+      font-size: 37px;
+      @include lg{
+        font-size: 68px;
+      }
+    }
+    h2{
+      width: calc(100% - 56px);
+      @include lg{
+        width: calc(100% - 84px);
+      }
+    }
+  }
+  &__list{
+    font-family: $font-roboto-light;
+    letter-spacing: -0.5px;
+    @include font-size($xs-font);
+    @include line-height($paragraph-line-height);
+    @include lg{
+      letter-spacing: 0;
+      @include font-size($sm-font);
+    }
+    padding-left: 22px;
+    li{
+      list-style-type: none;
+      position: relative;
+      &:before{
+        position: absolute;
+        display: block;
+        left: -22px;
+        top: 12px;
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        color: $secondary;
+        background: $secondary;
+      }
+    }
+
+  }
+
+  &__list.collapse:not(.show) {
+    display: block;
+    height: 68px;
+    overflow: hidden;
+    @include lg{
+      height: auto;
+    }
+  }
+  &__list.collapsing {
+    height: 68px;
+  }
+}

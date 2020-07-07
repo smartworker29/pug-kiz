@@ -7,14 +7,14 @@
   if (infoCardBtn) {
     [].map.call(infoCardBtn, function (list) {
       list.onclick = e => {
-        $(list).parent().parent().parent('.info-card__wrap').addClass('active');
+        $(list).closest('.info-card__wrap').addClass('active');
       }
     });
   }
   if (infoCardClose) {
     [].map.call(infoCardClose, function (list) {
       list.onclick = e => {
-        $(list).parent().parent().parent().parent('.info-card__wrap').removeClass('active');
+        $(list).closest('.info-card__wrap').removeClass('active');
       }
     });
   }

@@ -1,0 +1,17 @@
+extends ./../info-card/info-card
+
+block variables
+    -var infoImage = ['${require(`./assets/images/location.jpg`)}', '${require(`./assets/images/info-card-img-1-2x.jpg`)}', '${require(`./assets/images/info-card-img-2-2x.jpg`)}', '${require(`./assets/images/introduction-bg-2x.jpg`)}']
+    -var infoTitle = ['Flexibility in scale of operations', 'Enabling significant cost savings', 'Speed to market and proximity benefits', 'Growing community of clusters and amenitiescost']
+    -var infoIcon = ['scale', 'cost', 'icon', 'community']
+    -var list = [ [ 'Option to operate for the local and regional/global markets through Free Zone zone and Domestic Economic Zone facilities', 'Ample and reliable supply of utilities – power, gas and water - at the most competitive rates in the UAE', 'Simplified and flexible company formation', 'Multiple residential, social areas, leisure facilities within \n'+'10 minutes’  drive'], [ 'Infrastructure to support a wide range of businesses – from startups to mega projects', 'Prime location facilities at very competitive lease rates', 'KIZAD is the single interface for all approvals', 'Multiple on-site staff accommodation facilities are under various stages of planning and development'], [ 'Future-ready development with provisions for expansion and integration with new projects', 'No corporate and income taxes', 'Easy access to key markets through 2 global ports, 5 international airports, multi-lane highways and planned rail, connecting KIZAD with the rest of the UAE and GCC', 'Clustered approach with shared amenities for better planning and leaner development for customers' ], [ 'Flexibility in lease tenure, structuring etc.', 'Duty-free trade in the GCC free trade area for “MADE IN UAE” products', 'Presence of supporting entities such as raw material suppliers, packaging and specialised logistics services within the zone', 'Dedicated clusters for SMEs, Logistics and Business Parks' ] ];
+
+block description
+    .info-card__descr-wrap
+        .info-card__icon-title.mb-3.mb-lg-4
+            i(class='icon-' +infoIcon[item])
+            h2.info-card__title.section__title.mb-0= infoTitle[item]
+        ul.info-card__list.collapse(id='cardList-'+(item + 1))
+            each val in list
+                li.mb-3.mb-lg-4= val[item]
+        a(role="button" class="collapsed link show-hide-text d-lg-none" data-toggle="collapse" href="#cardList-" + (item + 1) aria-expanded="false" aria-controls="cardList-" + (item + 1))

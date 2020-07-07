@@ -25,6 +25,14 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
+.icon-community:before {
+  content: "\e905";
+  color: #e10e49;
+}
+.icon-cost:before {
+  content: "\e906";
+  color: #e10e49;
+}
 .icon-people:before {
   content: "\e904";
   color: #fff;

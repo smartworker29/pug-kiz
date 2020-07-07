@@ -1,0 +1,17 @@
+extends layout/layout
+block content
+
+    .placeholder
+        .container
+            .widget
+                .widget__header
+                    label.label Benefits
+                    h2.heading What our ecosystem offers
+                    p KIZAD's ecosystem enables businesses to benefit from the strategic location, faster access to markets, low set up and operational costs, flexibility in scale of operations and efficient investor support services.
+
+        .container
+            .row.info-card-container
+                each item in [0,1,2,3]
+                    .col-12.col-lg-6.info-card
+                        .info-card_inner
+                             include ./widgets/info-card-icon-list/info-card-icon-list

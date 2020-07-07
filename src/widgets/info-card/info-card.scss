@@ -85,4 +85,14 @@
       letter-spacing: 1px;
     }
   }
+  .show-hide-text{
+    margin-top: 6px;
+    text-decoration: none;
+  }
+  .show-hide-text.collapsed::after {
+    content: 'Read More';
+  }
+  .show-hide-text:not(.collapsed)::after {
+    content: 'Show Less';
+  }
 }

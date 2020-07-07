@@ -17,8 +17,8 @@ block content
         include ./widgets/rich-content/rich-content
 
   .placeholder.placeholder--bg-grey#benifits
-    .container.d-lg-flex.h-100.px-lg-0
-      .row.no-gutters
+    .container
+      .row
         include ./widgets/talk-card/talk-card
         +talk-card({
           color: "secondary",
@@ -64,7 +64,7 @@ block content
       include ./widgets/slider/slider
 
   .placeholder#knowMore
-    .container.d-lg-flex.h-100
+    .container
       .row.info-card-container
         each item in [0,1]
           .col-12.col-lg-6.info-card
