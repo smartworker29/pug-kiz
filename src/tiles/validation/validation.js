@@ -4,6 +4,10 @@ export default function form() {
   return {
     init: () => {
       if ($('form[validation]').length > 0) {
+
+        // $('.custom-form').attr({'novalidate':'novalidate', 'validation':''})
+
+
         jQuery.validator.addMethod("phone", function (value, element) {
           return this.optional(element) || /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/.test(value);
         }, "Please enter correct phone number");
@@ -18,12 +22,11 @@ export default function form() {
           } else {
             console.log('return true')
             return true
-
           }
         }, 'You must complete the antispam verification');
 
 
-        $('form[validation]').each(function (index, ele) {
+        $('.custom-form').each(function (index, ele) {
           $(ele).validate({ // initialize the plugin
             ignore: ".ignore",
           });
