@@ -1,0 +1,11 @@
+.row.featured-item__container
+    .widget.container
+        .widget__header
+            h2.heading Popular pages
+
+    - var pagesTitle = [ 'Investor Benefits', 'Food', 'Free Zone', 'Clusters']
+    each item in [0,1,2,3]
+        .col-12.col-md-6.col-lg-3.featured-item
+            .featured-item__box
+                .featured-item__title= pagesTitle[item]
+                +link('#', 'with-icon' ,'Read More')

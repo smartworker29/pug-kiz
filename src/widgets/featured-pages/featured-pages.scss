@@ -1,0 +1,45 @@
+.featured-item{
+  margin-bottom: 16px;
+  @include lg{
+    margin-bottom: 0;
+  }
+  &__container{
+    width: 100%;
+    margin-bottom: -16px;
+    .widget__header{
+      padding-bottom: 24px;
+    }
+    .heading{
+      margin-bottom: 0;
+    }
+    @include lg{
+      margin-bottom: 0;
+      .widget__header{
+        padding-bottom: 32px;
+      }
+    }
+  }
+  &__box{
+    border-radius: 4px;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    background: $white;
+  }
+  &__title{
+    margin-bottom: 28px;
+    color: $primary;
+    @include font-size($xs-font);
+    @include line-height($paragraph-line-height);
+    @include lg{
+      margin-bottom: 48px;
+      @include font-size($sm-font);
+      @include line-height($lg-line-height);
+    }
+  }
+  span{
+    @include font-size($xxs-font);
+    @include lg{
+      @include font-size($xs-font);
+    }
+  }
+}
