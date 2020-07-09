@@ -85,6 +85,14 @@
       letter-spacing: 1px;
     }
   }
+  &__without-btn{
+    .info-card__btn{
+      display: none;
+    }
+    .info-card__text {
+      max-height: 7.5em;
+    }
+  }
   .show-hide-text{
     margin-top: 6px;
     text-decoration: none;
