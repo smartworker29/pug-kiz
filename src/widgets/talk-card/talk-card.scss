@@ -10,14 +10,16 @@
     }
   }
   &__wrap{
-    position: relative;
     border-radius: 4px;
-    padding: 90px 16px 24px;
-    @include lg{
-      padding: 128px 40px 40px;
+    padding: 32px 16px;
+    @include lg(){
+      padding: 40px;
       display: flex;
       flex-direction: column;
       height: 100%;
+    }
+    @include xl(){
+      padding: 80px;
     }
     i{
       font-size: 55px;
@@ -25,21 +27,24 @@
     }
   }
   &__img-wrap{
-    position: absolute;
-    top: 24px;
     height: 40px;
+    margin-bottom: 24px;
     @include lg{
-      top: 40px;
       height: 64px;
     }
   }
+  &__title{
+    margin-bottom: 8px;
+    @include lg(){
+      margin-bottom: 32px;
+    }
+  }
   &__text{
-    
     flex: 1 1 auto;
     letter-spacing: -0.3px;
     margin-bottom: 24px;
     @include lg{
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
   }
   .btn{
@@ -83,5 +88,8 @@
   .btn{
     border: 2px solid $black;
     color: $black;
+  }
+  .btn.btn-secondary{
+    border: none;
   }
 }

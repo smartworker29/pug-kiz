@@ -5,7 +5,7 @@ mixin talk-card(data)
                 .talk-card__img-wrap
                     img(src= data.image).h-100
                 .talk-card__descr.flex-column.h-100
-                    h2.talk-card__title.section__title.mb-2.mb-lg-4= data.title
+                    h2.talk-card__title.section__title= data.title
                     p.talk-card__text= data.text
                 .talk-card__btn
                     +anchor('' ,'  ' +data.btnText)
