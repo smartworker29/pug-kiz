@@ -20,14 +20,13 @@ block content
 
   .placeholder.placeholder--bg-grey
     .container.full-slider
-        .location.block-content
-          .row.no-gutters
-              .col-12.col-lg-6
-                  .location__image-wrap
+          .row
+              .col-12.offset-lg-1.col-lg-10.col-xl-5
+                  .location__image-wrap.location__slider-image
                       img(src="${require(`./assets/images/city-img.jpg`)}")
-              .col-12.col-lg-6
-                .location__wrap-rtl.pt-0
-                  label January 07, 2020
+              .col-12.offset-lg-1.col-lg-10.offset-xl-0.col-xl-5
+                .location__slider-content
+                  label.swiper-custom__label January 07, 2020
                   h2.section__title INTERNAL TRANSPORTATION NETWORK
                   p.location__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur. Donec finibus dolor mauris, lobortis hendrerit nisl iaculis in. In eu finibus dui, at tincidunt eros. Etiam pretium sit amet dolor eu lacinia. Integer vulputate dolor neque, ut finibus purus lobortis sed. Praesent porta malesuada diam imperdiet condimentum. Mauris id magna nec ex convallis commodo nec vitae elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Proin porta, metus quis tristique vestibulum, leo nunc pulvinar nisl, in lacinia erat quam id lorem.
                   +link('#', 'with-icon' ,' Read More ')

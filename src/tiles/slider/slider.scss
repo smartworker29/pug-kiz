@@ -54,3 +54,34 @@
         }
     }
 }
+
+
+.location__slider-content{
+    padding-top: 24px;
+    .swiper-custom__label{
+        font-family: $font-roboto-medium;
+        text-transform: uppercase;
+        letter-spacing: .92px;
+        font-size: 12px;
+    }
+    @include lg(){
+        .location__text{
+            color: $primary;
+        }
+    }
+    @include xl(){
+        padding-top: 0;
+        .swiper-custom__label{
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+    }
+}
+.location__image-wrap.location__slider-image{
+    @include xl(){
+        max-width: 598px;
+        img{
+            min-height: 543px;
+        }
+    }
+}
