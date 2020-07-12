@@ -1,0 +1,26 @@
+header.white-bg.d-none
+    
+    nav.navbar#navbar
+        .container
+            a.navbar-brand(href='#')
+                img(src='${require(`./assets/images/kizad-logo.svg`)}' alt='logo')
+            .nav-list#header-nav(menu-wrapper)
+                -var menuitem = ['overview', 'investor', 'cluster', 'business', 'free']
+                ul
+                    each index, x in ['Overview', 'Investor Benefits', 'Cluster', 'Business Facilities', 'Free Zone']
+                        li(listItem-toggle)
+                            a(href="#"+menuitem[x])= index
+                                i.material-icons.d-block.d-lg-none keyboard_arrow_right
+                include ../../widgets/sub-menu/sub-menu
+            //- .search-container
+            //-     .search-input
+            //-         a.search-toggle
+            //-             i.material-icons.search-icon search
+            //-             i.material-icons.close-icon clear
+            //-         form.global-search(action='', delimiter="?")
+            //-             input(name="search")
+
+            //- button.navbar-toggler.d-block.d-lg-none(type='button' data-toggle='collapse' data-target='#header-nav' menu-toggler)
+            //-     span.navbar-toggler-icon(aria-hidden='true')
+            //-         - for (var x = 0; x < 6; x++)
+            //-             span

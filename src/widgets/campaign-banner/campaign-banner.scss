@@ -1,0 +1,135 @@
+.no-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 0;
+    background-color: $grey;
+    z-index: 9;
+    @include lg(){
+        padding: 45px 0;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    &__logo {
+        img {
+            height: 54px;
+        }
+    }
+    &__language {
+        a {
+            color: $white;
+            position: relative;
+            &:before{
+                content: "";
+                height: 100%;
+                position: absolute;
+                width: 1px;
+                background: $white;
+                left: -20px;
+            }
+        }
+    }
+}
+
+.banner-no-nav {
+    min-height: auto;
+    background-color: $grey;
+    color: $white;
+    padding:100px 0 0;
+    @include md(){
+        padding:150px 0 50px;
+    }
+    @include lg(){
+        padding:200px 0 50px;
+        
+    }
+    .campaign-content {
+        padding-top:50px;
+        padding-bottom:210px;
+        @include md(){
+            padding-bottom:30px; 
+        }
+        h1 {
+            width:60%;
+            @include font-size($lg-font);
+            margin-bottom: 16px;
+            @include line-height($lg-line-height);
+            @include md() {
+                width:100%;
+                @include font-size($xxxl-font);
+                @include line-height($xxl-line-height);
+            }
+            @include lg() {
+                @include font-size($xxxxl-font);
+                margin-bottom: 40px;
+                @include line-height($xxxxl-line-height);
+            }
+        }
+        p {
+            @include font-size($xs-font);
+            @include line-height($paragraph-line-height);
+            font-family: $font-roboto-light;
+            @include md() {
+                @include font-size($md-font);
+                @include line-height($xl-line-height);
+            }
+            @include lg() {
+                @include font-size($xl-font);
+                @include line-height($xxl-line-height);
+                font-family: $font-roboto-regular;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .campaign-form{
+        background-color: $white;
+        padding-bottom: 30px;
+        @include md(){
+            background-color: transparent;
+            padding-bottom: 0;
+        }
+        form{
+            margin-top: -180px;
+            @include md(){
+                margin-top:0;
+            }
+        }
+    }
+    .no-nav__form{
+        .form{
+            padding:20px;
+        @include lg(){
+            padding:40px;
+        }
+        }
+        
+        input{
+            height:45px;
+        }
+        h3{
+            color:$primary;
+            margin-bottom: 24px;
+            @include lg(){
+                margin-bottom: 30px;
+            }
+        }
+        .form__item{
+            input{
+                padding:0 15px;
+                font-size: 16px;
+                line-height: 18px;
+            }
+            label{
+                top:21px;
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+}

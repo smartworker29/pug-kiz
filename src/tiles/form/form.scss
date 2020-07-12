@@ -166,3 +166,38 @@
     //   }
     // }
   }
+
+  .success-wrapper{
+    max-width: 884px;
+    padding: 32px 16px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    display: none;
+    @include lg(){
+      padding: 80px;
+    }
+    button{
+      -webkit-appearance: none;
+      background: transparent !important;
+      opacity: 1;
+      outline: none !important;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      span{
+        color: #e60000;
+        font-size: 35px;
+      }
+    }
+    i{
+      color:$secondary;
+      font-size: 120px;
+    }
+    h2{
+      margin: 20px 0 15px;
+      color:$primary;
+    }
+  }

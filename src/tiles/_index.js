@@ -9,5 +9,5 @@ import "./magnific-popup/magnific-popup";
 import swiperCustom from "./slider/slider";
 swiperCustom().init();
 
-import form from "./validation/validation";
-form().init();
+// import form from "./validation/validation";
+// form().init();
