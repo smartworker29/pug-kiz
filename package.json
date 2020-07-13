@@ -49,6 +49,7 @@
     "jquery-form-validator": "^2.3.79",
     "jquery-validation": "^1.19.2",
     "magnific-popup": "^1.1.0",
+    "mapbox-gl": "^1.11.1",
     "material-design-icons": "^3.0.1",
     "mdbootstrap": "^4.19.0",
     "multi-clamp": "^2.0.2",

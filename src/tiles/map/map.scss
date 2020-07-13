@@ -1,0 +1,14 @@
+.contact__map{
+    max-height:310px;
+    height:310px;
+    @include lg(){
+        max-height:915px;
+        height:915px;
+    }
+    [map-location]{
+        height: 100%;
+    }
+    .fa-map-marker{
+        font-size: 50px;
+    }
+}

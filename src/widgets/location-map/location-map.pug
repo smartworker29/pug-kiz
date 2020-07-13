@@ -1,0 +1,70 @@
+
+.col-lg-8.order-lg-1.p-0
+    include ../../tiles/map/map
+
+.col-lg-4.p-0
+    .location-list
+        ul
+            -
+                var data_ep = [
+                    //- ONSHORE
+                    {
+                        name: "Abu Dhabi", 
+                        isActive: true,
+                        id: "first-location",
+                        coords: "55.4204, 25.3463",
+                        information: {
+                            title: "Kizad Abu Dhabi Office",
+                            address: "Abu Dhabi, UAE", 
+                            pobox: "54477",
+                            telephone: "800 10 20 30",
+                            fax: "(+971) 2695 2030", 
+                            email: "info@kizad.com",
+                        },
+                    }, 
+                    {
+                        name: "Headquarters", 
+                        coords: "54.3773, 24.4539",
+                        information: {
+                            title: "Khalifa Industrial Zone",
+                            address: "Abu Dhabi, UAE", 
+                            pobox: "54477",
+                            telephone: "800 10 20 30",
+                            fax: "(+971) 2695 2030",  
+                            email: "customerservices@kizad.com",
+                        },
+                        
+                    },
+                    {
+                        name: "Headquarters", 
+                        coords: "54.3773, 24.4539",
+                        information: {
+                            title: "Khalifa Industrial Zone",
+                            address: "Abu Dhabi, UAE", 
+                            pobox: "54477",
+                            telephone: "800 10 20 30",
+                            fax: "(+971) 2695 2030",  
+                            email: "customerservices@kizad.com",
+                        },
+                        
+                    }
+                ]
+
+            each i, index in data_ep
+                li
+                    a(href="javascript:void(0)" data-coord=i.coords  data-popup-info=i.information id= i.id ? i.id : '', class= (index === 0 ? "active" : undefined))
+                        h3 Kizad Abu Dhabi Office
+                        p P.O. Box 54477
+                        p Abu Dhabi, UAE
+                        p 
+                            span Telephone: 
+                            span.tel 800 10 20 30
+                        p (Telephone: +971 800 10 20 30 from outside UAE)
+                        p 
+                            span Fax: 
+                            |+971 2 695 2030
+                        p 
+                            span Email: 
+                            |customerservice@kizad.ae
+
+

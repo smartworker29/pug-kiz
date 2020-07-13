@@ -30,8 +30,11 @@ header {
   nav.navbar {
     padding: 20px 0;
     @include lg() {
-      padding: 0 20px;
+      padding: 0;
       border-top: 1px solid $light-grey;
+    }
+    @include xl(){
+      padding: 0 20px;
     }
     @include custom-width(0px, 1170px) {
       position: fixed;

@@ -1,0 +1,10 @@
+mixin card(data)
+    .link-card
+        .link-card__wrap.card-white
+            .link-card__img-wrap
+                i(class=data.class)
+            .link-card__descr.flex-column
+                h2.link-card__title=data.title
+                p.link-card__text=data.disc
+            .link-card__btn
+                +link('#', 'with-icon' ,' Quicklink 1 ')

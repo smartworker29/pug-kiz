@@ -9,6 +9,8 @@ import benefitSlider from "./benefits/benefits";
 
 import videoslider from "./video-slider/video-slider";
 
+import "./location-map/location-map";
+
 siblingHover().init();
 benefitSlider().init();
 videoslider().init();
