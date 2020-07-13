@@ -1,0 +1,11 @@
+mixin tariffsTiles(data)
+    .offer-card__wrap
+        .offer-card.d-flex.align-items-stretch.h-100.mx-auto
+            .offer-card__icon.d-flex.align-items-center
+                span.icon-calendar
+            .offer-card__content.d-flex.align-items-center.justify-content-around.justify-content-lg-start
+                .offer-card__content-wrap
+                    h3.mb-2.mb-xl-3= data.title
+                    p.mb-2= data.subtitle
+                    span= data.price
+                        p.d-inline-block.mb-0= data.terms

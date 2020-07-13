@@ -1,5 +1,5 @@
 .features-table {
-  &__wrap {
+  .features-table__wrap {
     background: $white;
     width: 100%;
     max-width: 1228px;
@@ -43,7 +43,7 @@
 
     td:nth-child(2) {
       position: relative;
-      font-weight: 400;
+      font-weight: $font-normal;
       font-family: $font-roboto-regular;
       color: #807f83;
       padding-left: 30px;

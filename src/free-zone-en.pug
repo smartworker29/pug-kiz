@@ -30,7 +30,22 @@ block content
 
     .placeholder.placeholder--bg-grey
         .container
-            include ./widgets/features-table/features-table
+            .widget
+                .widget__header
+                    label.label About
+                    h2.heading FEATURES &amp; BENEFITS OF BUSINESS SET UP
+                    p The Free Zone jurisdiction allows 100% foreign ownership in companies, and it is suitable for wholesale distributors, re-exporters, warehousing activities, service providers and manufacturers targeting markets outside the MENA region.
+            .row.features-table
+                .col-12.offset-xl-1.col-xl-10
+                    - let colTitle = ['Key Featured', 'Free Zone']
+                    - let rowName = ['Ownership', 'Tax (Corporate, Income & Sales)', 'VAT', 'Sales in Local Market', 'Ownership', 'Tax (Corporate, Income & Sales)', 'VAT', 'Sales in Local Market']
+                    - let rowVal = ['100% foreign ownership', '100% tax free', 'No VAT', 'Through distributors and / or local agents', '100% foreign ownership', '100% tax free', 'No VAT', 'Through distributors and / or local agents']
+
+                    include ./widgets/features-table/features-table
+                .col-12.offset-xl-1.col-xl-10
+                    .features-table__btn
+                        a.link.features-btn(href="javascript:void(0)") More Features
+                            i.material-icons expand_more
 
     .placeholder
         .container
@@ -56,4 +71,29 @@ block content
 
     .placeholder.placeholder--bg-grey
         .container
+            .widget
+                .widget__header
+                    h2.heading COST OF SETTING UP THE BUSINESS IN KEIC
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id nisl vitae magna pellentesque ornare. Nam augue lectus, pulvinar non porttitor quis, egestas sit amet arcu. Sed in neque at diam vestibulum consectetur.
+            .row
+                include ./widgets/tariffs-tiles/tariffs-tiles
+                .col-12.col-md-6.offset-xl-1.col-xl-5
+                    +tariffsTiles({
+                      title: 'Annual packages',
+                      subtitle: 'Starting at',
+                      price: 'USD 3,000',
+                      terms: 'Per year'
+                    })
+                .col-12.col-md-6.col-xl-5
+                    +tariffsTiles({
+                      title: 'Offers valid until 30 June 2020',
+                      subtitle: 'On first year of operations',
+                      price: '25% OFF',
+                      terms: ''
+                    })
+
             include ./widgets/tariffs/tariffs
+            .row.mt-4
+                .col-12.offset-xl-1.col-xl-10.mt-xl-3
+                    +anchor('btn btn-white secondary-bordered' ,'Download Offers')
+                    +link('#', 'link-primary with-icon ml-4' ,' Contact us ')
