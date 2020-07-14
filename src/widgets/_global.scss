@@ -4,6 +4,10 @@ body {
   font-family: $font-roboto-regular;
   line-height: 1.25;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+    font-kerning: normal;               
+    font-variant-ligatures: common-ligatures contextual;
+    font-feature-settings: "liga";
 }
 h1,
 h2,

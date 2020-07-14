@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src:  url('assets/fonts/icomoon/icomoon.eot?y6wyok');
-    src:  url('assets/fonts/icomoon/icomoon.eot?y6wyok#iefix') format('embedded-opentype'),
-      url('assets/fonts/icomoon/icomoon.ttf?y6wyok') format('truetype'),
-      url('assets/fonts/icomoon/icomoon.woff?y6wyok') format('woff'),
-      url('assets/fonts/icomoon/icomoon.svg?y6wyok#icomoon') format('svg');
+    src:  url('assets/fonts/icomoon/icomoon.eot?63xve9');
+    src:  url('assets/fonts/icomoon/icomoon.eot?63xve9#iefix') format('embedded-opentype'),
+      url('assets/fonts/icomoon/icomoon.ttf?63xve9') format('truetype'),
+      url('assets/fonts/icomoon/icomoon.woff?63xve9') format('woff'),
+      url('assets/fonts/icomoon/icomoon.svg?63xve9#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -57,4 +57,23 @@
 
 .icon-sent:before {
   content: "\e907";
+}
+
+.icon-close:before {
+  content: "\e90d";
+}
+.icon-play:before {
+  content: "\e90c";
+}
+.icon-zoon-in:before {
+  content: "\e90b";
+}
+.icon-arrow-down:before {
+  content: "\e90a";
+}
+.icon-arrow-left:before {
+  content: "\e908";
+}
+.icon-arrow-right:before {
+  content: "\e909";
 }

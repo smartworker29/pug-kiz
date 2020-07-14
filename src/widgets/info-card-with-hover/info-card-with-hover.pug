@@ -8,12 +8,12 @@ block description
         h2.info-card__title.section__title(aria-expanded="false")= infoTitle[item]
         p.info-card__text.collapse.mb-0(id='cardText-'+(item + 1)) Healthcare in Abu Dhabi is high quality, with both public and private hospitals offering premium healthcare, matching the standards of the USA, UK and other high-earning Western countries. English is commonly spoken and most of the medical staff are foreign doctors or foreign-trained. Private medical centres tend to be state-of-the-art and offer a range of inpatient and outpatient clinics. It is a legal requirement for all residents in Abu Dhabi to have private medical insurance and it is your employers responsibility to arranging a minimum level of cover.
         a(role="button" class="collapsed link show-hide-text d-lg-none" data-toggle="collapse" href="#cardText-"+(item + 1) aria-expanded="false" aria-controls="cardText-"+(item + 1))
-        +link('#', 'with-icon info-card-btn' ,' View Useful Links ')
+        +link('#', 'with-icon info-card-btn icon-arrow-right' ,' View Useful Links ')
 
     .info-card__hover-state
         .d-flex.align-items-center.align-items-lg-start.w-100
             h2.info-card__title.section__title.d-flex= infoTitle[item]
-            i.material-icons.info-card__close clear
+            i.icon-close.info-card__close
         p.info-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         each item in [0,1,2,3,4]
             .mb-4

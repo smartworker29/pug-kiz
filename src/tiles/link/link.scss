@@ -18,21 +18,25 @@
     }
     &.with-icon{
         &:after{
-            font-family: 'Material Icons';
-            content: 'trending_flat';
+            content: '\E909';
             margin-left: 14px;
             font-size: 20px;
             line-height: 20px;
-            font-weight: bolder;
+            font-weight: 100;
             vertical-align: middle;
-
             @include transition(all .55s ease-in-out);
+        }
+        &:before{
+            content: '';
         }
         &:hover{
             text-decoration: none;
             &:after{
                 margin-left: 25px;
             }
+        }
+        span{
+            font-family: $font-roboto-medium;
         }
     }
 }

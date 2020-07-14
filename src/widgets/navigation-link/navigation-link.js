@@ -44,7 +44,7 @@ var anchor = (function () {
             "text"    : el.text()
             }).appendTo(".anchor-link select");
         });
-        $("<i class='material-icons '> keyboard_arrow_down </i>").appendTo(".anchor-link select")
+        $("<i class='icon-close'> </i>").appendTo(".anchor-link select")
         $(".anchor-link select").change(function() {
             window.location = $(this).find("option:selected").val();
         });
