@@ -95,14 +95,16 @@
     }
   }
   &__title{
-    font-family: $font-archive-bold;
-    font-size: 20px;
-    color: $primary;
-    @include lg{
-      font-size: 24px;
+    width: 100%;
+    h3{
+      margin-bottom: 0;
+      font-family: $font-archive-bold;
+      @include font-size($md-font);
+      color: $primary;
     }
   }
   &__text{
+    width: 100%;
     font-family: $font-roboto-light;
     font-size: 20px;
     line-height: 1.5;
