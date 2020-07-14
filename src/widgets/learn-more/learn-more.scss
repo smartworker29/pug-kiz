@@ -38,6 +38,28 @@
       transform: translate(0, -28px);
     }
   }
+  &__full-width{
+    .card-learn-more{
+      max-width: 408px;
+      &__content{
+        @include md{
+          padding: 40px 29px 30px 40px;
+          height: auto;
+        }
+      }
+      &__text{
+        p{
+          max-height: 5em;
+          @include lg(){
+            max-height: 4.5em;
+          }
+        }
+        @include lg(){
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
 }
 
 .card-learn-more{
