@@ -5,7 +5,13 @@
             &__wrap{
                 @include lg(){
                     padding-left:0;
-                    padding-right:30px;
+                    padding-right:15px;
+                }
+            }
+            &__image-wrap{
+                @include lg(){
+                    margin-left:15px;
+                    margin-right:0;
                 }
             }
         }
@@ -22,7 +28,7 @@
 .product{
     &__wrap{
         @include lg(){
-            padding-left:30px;
+            padding-left:15px;
         }
     }
     &__text{
@@ -38,6 +44,7 @@
       @include lg{
         margin: 15px 0 20px;
         max-height: 9em;
+        color: $primary;
       }
       @include xl{
         margin: 24px 0 40px;
@@ -47,6 +54,7 @@
         margin-bottom: 20px;
         @include lg(){
             margin-bottom: 0;
+            margin-right: 15px;
         }
       img{
         object-fit: cover;
@@ -57,7 +65,7 @@
           height: auto;
         }
         @include xl{
-          min-height: 450px;
+          min-height: 432px;
           width: auto;
         }
       }
