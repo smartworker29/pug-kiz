@@ -5,7 +5,20 @@
     height:100%;
 
     &__image {
-        border-radius: 4px;
+        img{
+          border-top-right-radius: 4px;
+          border-top-left-radius: 4px;
+          object-fit: cover;
+          width: 100%;
+          height: calc((100vw - 30px) * 0.561);
+          @include md{
+            height: calc((50vw - 30px) * 0.561);
+          }
+          @include lg{
+            height: calc((100vw/3 - 30px) * 0.561);
+            max-height: 265px;
+          }
+        }
     }
     &__content {
         padding: 15px 16px 24px;
@@ -22,11 +35,18 @@
             margin-bottom: 24px;
         }
     }
-    &__date {
-        font-family: $font-roboto-medium;
+    &__date,
+    &__food{
+      font-family: $font-roboto-medium;
+      font-size: 12px;
+      letter-spacing: .92px;
+      @include lg(){
         font-size: 14px;
         letter-spacing: 1.08px;
-        color: $grey;
+      }
+    }
+    &__date {
+        color: $lighter-grey;
     }
     &__food {
         ul {
