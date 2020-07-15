@@ -18,7 +18,11 @@
             position: absolute;
             bottom:20px;
             p{
-                @include font-size($md-font);
+                font-family: $font-archive-bold;
+                @include font-size($xs-font);
+                @include lg(){
+                  @include font-size($md-font);
+                }
             }
         }
         .icon{
