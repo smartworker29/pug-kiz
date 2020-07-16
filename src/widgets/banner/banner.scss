@@ -49,6 +49,14 @@
                 left: auto;
                 transform: translateY(0);
             }
+            &.center{
+                text-align: center;
+                @include md(){
+                    width:80%;
+                    left:50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
             h1 {
                 @include font-size($lg-font);
                 margin-bottom: 16px;
