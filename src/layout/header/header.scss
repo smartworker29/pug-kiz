@@ -162,11 +162,11 @@ header {
               @include transition(0.3s);
               left: 50%;
             }
-            .material-icons {
-              vertical-align: middle;
-              float: right;
-              color: $secondary;
-            }
+            // .material-icons {
+            //   vertical-align: middle;
+            //   float: right;
+            //   color: $secondary;
+            // }
           }
           .dropdown-wrapper {
             display: none;

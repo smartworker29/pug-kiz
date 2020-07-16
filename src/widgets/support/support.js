@@ -49,10 +49,27 @@ $('.email-input').on('blur', function (e) {
     }
 });
 
+$('.custom-dropdown select').on('change', function(){
+    if($(this).val() == ""){
+        $(this).removeClass('valid has-value').addClass('error');
+    }
+    else{
+        $(this).removeClass('error').addClass('valid has-value');
+    }
+})
+
+$('.custom-checkbox .custom').on('click', function (e) {
+    if($(this).prop('checked') == true){
+        $(this).removeClass('error')
+    }
+})
+
 $('.custom-form .submit-button').on('click', function (e) {
     e.preventDefault();
     var inputele = $(this).parents('.custom-form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('.custom-form').find('.form__item textarea');
+    var dropdown = $(this).parents('.custom-form').find('.custom-dropdown select');
+    var checkbox = $(this).parents('.custom-form').find('.custom-checkbox .custom');
     inputele.each(function (e, ele) {
         if ($(ele).hasClass('error') || $(ele).val() == '') {
             $(ele).addClass('error')
@@ -60,6 +77,18 @@ $('.custom-form .submit-button').on('click', function (e) {
     })
     textareaele.each(function (e, ele) {
         if ($(ele).hasClass('error') || $(ele).val() == '') {
+            $(ele).addClass('error')
+        }
+    })
+
+    dropdown.each(function(e,ele){
+        if ($(ele).val() == '') {
+            $(ele).addClass('error')
+        }
+    })
+
+    checkbox.each(function(e,ele){
+        if ($(ele).prop('checked') == false) {
             $(ele).addClass('error')
         }
     })

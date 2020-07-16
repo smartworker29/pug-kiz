@@ -87,12 +87,12 @@
           position: absolute;
 
           &:after{
-            font-family: 'Material Icons';
+            font-family: 'icomoon' !important;
             font-size: 14px;
             line-height: 14px;
             @include lg{
-              font-size: 24px;
-              line-height: 24px;
+              font-size: 20px;
+              line-height: 20px;
             }
           }
         }
@@ -103,11 +103,11 @@
         }
         &.valid ~ span:after{
           color: #00ce64;
-          content: 'done';
+          content: "\e910";
         }
         &.error ~ span:after{
           color: #e60000;
-          content: 'clear';
+          content: '\e90d';
         }
       }
     }
