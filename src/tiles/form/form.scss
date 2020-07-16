@@ -103,15 +103,53 @@
     @include lg(){
       margin-bottom: 24px;
     }
+    label{
+      pointer-events: none;
+      margin: 0;
+      position: absolute;
+      top: 15px;
+      left: 16px;
+      font-family: $font-roboto-regular;
+      color: #a7a9ac;
+      transition: all .3s ease-in-out;
+      @include font-size($xs-font);
+      @include line-height($md-line-height);
+      @include lg{
+        @include font-size($sm-font);
+        top: 27px;
+      }
+    }
     select{
       width:100%;
       outline: none;
+      color: transparent;
       option{
         padding:10px 0;
+        font-family: $font-archive-bold;
+        color:$primary;
+        &:hover{
+          background-color: $light-grey;
+        }
       }
       &.error{
         border: 2px solid #e60000;
+      }
+      &.has-value {
+        padding:36px 12px 14px;
+        color:$primary;
+      
+      & ~ label{
+        top: 8px;
+        font-family: $font-roboto-light;
+        font-size: 12px;
+        line-height: 14px;
+        color: $grey;
+        transition: all .3s ease-in-out;
+        @include lg{
+          top: 16px;
         }
+      }
+      }
     }
     }
 
@@ -132,6 +170,20 @@
             height: 16px;
             position: absolute;
             border: 1px solid #000;
+          }
+          &:checked{
+            &:before{
+              content: "\e910" !important;
+              background: white;
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              border: 1px solid #000;
+              font-size: 17px;
+              text-indent: -2px;
+              line-height: 15px;
+              color: red;
+            }
           }
           &.error{
             &:before{
