@@ -9,6 +9,10 @@
     .partner-slider__slider {
       display: flex;
       position: relative;
+      flex-direction: column;
+      .swiper-wrapper{
+        align-items: center;
+      }
     }
     .swiper-button-prev,
     .swiper-button-next{

@@ -19,5 +19,20 @@
         @include font-size($xs-font);
         color:$primary;
       }
+      .btn.with-icon{
+        @include xl(){
+          text-overflow: ellipsis;
+          display: block;
+          overflow: hidden;
+          position: relative;
+          padding-right: 50px;
+          i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+          }
+        }
+      }
     }
   }
