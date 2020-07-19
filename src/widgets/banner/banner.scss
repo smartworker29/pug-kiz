@@ -29,7 +29,7 @@
         @include xl() {
             position: absolute;
             top: 0;
-            left: 55%;
+            left: 50%;
             transform: translateX(-50%);
         }
         .text {
@@ -39,11 +39,11 @@
             left: 0;
             padding: 0 20px;
             @include md {
-                width: 85%;
+                width: 100%;
             }
             @include xl {
                 position: relative;
-                width: 65%;
+                max-width: 952px;
                 padding-top: 220px;
                 top: 0;
                 left: auto;

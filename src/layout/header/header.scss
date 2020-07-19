@@ -48,7 +48,7 @@ header {
       top: 0;
       width: 100%;
       background-color: $white;
-      z-index: 9999;
+      z-index: 999;
       @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
     }
     .container {

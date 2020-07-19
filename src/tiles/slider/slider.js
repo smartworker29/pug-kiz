@@ -4,7 +4,7 @@ export default function swiperCustom() {
 
     return {
         init: () => {
-            var sliders = $('.swiper-wrapper')
+            var sliders = $('.swiper-custom .swiper-wrapper')
             if(sliders){
                 [].map.call(sliders, function (items) {
                     var slideitems = $(items).data('slide');
@@ -20,8 +20,8 @@ export default function swiperCustom() {
                                 el: '.swiper-pagination',
                             },
                             navigation: {
-                                nextEl: '.swiper-custom .swiper-button-next',
-                                prevEl: '.swiper-custom .swiper-button-prev',
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
                             },
                             // pagination: {
                             //     el: '.swiper-pagination',
