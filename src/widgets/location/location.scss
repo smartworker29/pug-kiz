@@ -54,6 +54,13 @@
     @include xxl{
       padding: 80px 64px 0 48px;
     }
+    label{
+      color: $primary;
+      font-size: 13px;
+      font-family: $font-roboto-medium;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
   }
   &__image-wrap{
     img{
@@ -72,18 +79,18 @@
   }
 }
 
-#products{
-  .location__image-wrap{
-    img{
-      max-height: 648px;
-    }
-  }
-}
+// #products{
+//   .location__image-wrap{
+//     img{
+//       max-height: 648px;
+//     }
+//   }
+// }
 
-#partners{
-  .location__image-wrap{
-    img{
-      max-height: 500px;
-    }
-  }
-}
+// #partners{
+//   .location__image-wrap{
+//     img{
+//       max-height: 500px;
+//     }
+//   }
+// }

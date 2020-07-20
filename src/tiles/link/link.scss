@@ -17,6 +17,7 @@
         color: $primary;
     }
     &.with-icon{
+        font-family: $font-roboto-medium !important;
         &:after{
             content: '\E909';
             margin-left: 14px;
@@ -25,6 +26,7 @@
             font-weight: 100;
             vertical-align: middle;
             @include transition(all .55s ease-in-out);
+            font-family: icomoon!important;
         }
         &:before{
             content: '';
