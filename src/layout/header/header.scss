@@ -114,6 +114,11 @@ header {
               color: $primary;
               padding: 15px 0;
               display: block;
+              display: flex;
+              justify-content: space-between;
+              i{
+                transform: rotate(-90deg);
+              }
             }
           }
         }
@@ -278,10 +283,14 @@ header {
         position: fixed;
         top: 0;
         background: $white;
-        padding: 24px 40px 24px 15px;
+        padding: 31px 40px 29px 15px;
         color: $secondary;
         align-items: center;
         @include font-size($xxs-font);
+        i{
+          transform: rotate(90deg);
+          margin-right: 10px;
+        }
       }
       .contact {
         .btn {

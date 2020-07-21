@@ -10,7 +10,7 @@ var header = (function () {
         let megaback = document.querySelectorAll("[mega-back]");
         if(listitem){
             [].map.call(listitem, function (items) {
-                var itemname = $(items).find('a').attr('href').replace('#','');
+                var itemname = $(items).find('a').attr('data-id').replace('#','');
                 if(windowWidth > 980){
                     var dropdown = $(items).parent().next();
                     $(items).on('mouseenter', function(){
