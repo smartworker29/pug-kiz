@@ -1,16 +1,25 @@
-let hasVal = document.querySelectorAll('form .form__item input:not([type="hidden"]), form .form__item textarea');
+// let hasVal = document.querySelectorAll('form .form__item input:not([type="hidden"]), form .form__item textarea');
 
-hasVal.forEach(el => {
-    el.addEventListener('blur', function () {
-        let val = this.value.trim();
-        if (val.length !== 0) {
-            this.classList.add('has-value');
-        } else {
-            this.classList.remove('has-value');
-        }
+// hasVal.forEach(el => {
+//     el.addEventListener('blur', function () {
+//         let val = this.value.trim();
+//         if (val.length !== 0) {
+//             this.classList.add('has-value');
+//         } else {
+//             this.classList.remove('has-value');
+//         }
+//     }
+//     );
+// });
+
+$('form .form__item input:not([type="hidden"]), form .form__item textarea').on('blur', function () {
+    let val = this.value.trim();
+    if (val.length !== 0) {
+        this.classList.add('has-value');
+    } else {
+        this.classList.remove('has-value');
     }
-    );
-});
+})
 
 $('.text-texarea').on('blur', function (e) {
     $('form button[type=submit]').addClass('btn-secondary');
