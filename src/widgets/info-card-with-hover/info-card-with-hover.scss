@@ -3,6 +3,9 @@
     position: relative;
     overflow: hidden;
     height: 100%;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 100%;
+    }
     .info-card__wrap{
       @include transition(all 0.3s ease-in-out);
       &.active{
@@ -35,6 +38,9 @@
   }
   &__descr-wrap{
     align-items: flex-start;
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      align-items: stretch;
+    }
   }
   &__hover-state{
     position: absolute;

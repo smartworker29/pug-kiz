@@ -5,6 +5,12 @@
   }
 }
 
+.info-card__descr{
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    align-self: auto !important;
+  }
+}
+
 .info-card{
   margin-bottom: 24px;
   @include lg{
@@ -43,6 +49,7 @@
     @include lg{
       align-self: flex-start;
       justify-content: space-between;
+      
     }
     &-wrap{
       padding: 16px 16px 24px;
