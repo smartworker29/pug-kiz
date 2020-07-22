@@ -1,6 +1,48 @@
 extends layout/layout
 block content
 
+
+  .placeholder.placeholder--bg-grey
+    .container
+      .row
+        .contact-form
+          .widget
+            .widget__header.text-center
+              label.label About
+              h2.heading KHALIFA PORT FREE TRADE ZONE
+              p Khalifa Port Free Trade Zone (Khalifa Port FTZ) is a next generation platform for trade, logistics and manufacturing.
+          
+          form.form(action="")
+            h3 ENQUIRE ABOUT METALS
+            .form__item
+              input.form-control.support-input.text-input(placeholder="First Name"  data-rule-minlength="2" data-rule-required="true" name="FirstName"  type="text" value="" onkeyup="this.setAttribute('value',this.value);")
+              //- label First Name
+              span
+            .form__item
+              input.form-control.support-input.text-input(placeholder="Last Name" data-msg="Last Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="LastName"  type="text" value="" onkeyup="this.setAttribute('value',this.value);")
+              //- label Last Name
+              span
+
+            .form__item
+              input.form-control.support-input.text-input(placeholder="Company" data-msg="Compant" type='text' required  name ='compan' data-rule-minlength="2" data-validate-presence = 'true', value="" data-validate-email= 'true' onkeyup="this.setAttribute('value',this.value);")
+              //- label Company
+              span
+
+            .form__item
+              input.form-control.support-input.text-input(placeholder="Phone" data-msg="Phone" data-rule-phone="true" data-rule-required="true" data-validate-presence="true" name="ContactNumber" type="tel" value="" aria-invalid="true" onkeyup="this.setAttribute('value',this.value);")
+              //- label Phone
+              span
+            .form__item
+              input.form-control.support-input.text-input(placeholder="Email" data-msg="Email" type='email' required  name ='email' data-rule-minlength="2" data-validate-presence = 'true', value="" data-validate-email= 'true' onkeyup="this.setAttribute('value',this.value);")
+              //- label Email
+              span
+            .form__item
+              textarea.form-control.support-input.text-input(placeholder="Message" data-msg="" name="message", required  data-validate-presence = 'true' data-rule-maxlength="150" data-rule-minlength="15")
+              span
+
+            span.form-footer.pull-right
+              button.btn.btn-secondary(type='submit') Send
+
   .placeholder
     .container
       .row.block-content

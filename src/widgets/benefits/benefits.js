@@ -9,19 +9,17 @@ export default function benefitSlider() {
                 loop: true,
                 speed: 1500,
                 centeredSlides: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                  },
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                  
                 breakpoints: {
                     320:{
                         slidesPerView: 1,
                     },
                     991: {
                         slidesPerView: 2.3,
-                        navigation: {
-                            nextEl: '.benefit-swiper .swiper-button-next',
-                            prevEl: '.benefit-swiper .swiper-button-prev',
-                        },
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
                         // loopedSlides: 1,
                     },
 

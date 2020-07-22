@@ -12,15 +12,10 @@ export default function licenseSlider() {
             loop: true,
             speed: 1500,
             centeredSlides: true,
-            navigation: {
-              nextEl: '.license-swiper .swiper-button-next',
-              prevEl: '.license-swiper .swiper-button-prev',
-            },
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'bullets',
-              clickable: true,
-            },
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
             breakpoints: {
               320:{
                 slidesPerView: 1,

@@ -12,11 +12,8 @@ export default function tariffsSlider() {
             loop: true,
             speed: 1500,
             centeredSlides: true,
-            pagination: {
-              el: '.swiper-pagination',
-              type: 'bullets',
-              clickable: true,
-            },
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
             autoplay: {
               delay: 3000,
             },
