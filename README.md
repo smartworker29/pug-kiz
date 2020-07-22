@@ -2,7 +2,7 @@
 Starter Repo to be used as start point for any project. it has Babel, Pug and Sass compilers.
 
 # Pre installation:
- 1- Python
+ 1- Python <br/>
  2- Webpack
 
 # Usage:
