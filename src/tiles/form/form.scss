@@ -23,7 +23,7 @@
       @include font-size($sm-font);
     }
 
-    [type=submit] {
+    &[type=submit] {
       height: auto;
       padding: 0;
       padding: 10px 30px;

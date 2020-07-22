@@ -73,12 +73,12 @@ $('.custom-checkbox .custom').on('click', function (e) {
     }
 })
 
-$('.custom-form .submit-button').on('click', function (e) {
+$('form.form input[type=submit]').on('click', function (e) {
     e.preventDefault();
-    var inputele = $(this).parents('.custom-form').find('.form__item input:not([type="hidden"])');
-    var textareaele = $(this).parents('.custom-form').find('.form__item textarea');
-    var dropdown = $(this).parents('.custom-form').find('.custom-dropdown select');
-    var checkbox = $(this).parents('.custom-form').find('.custom-checkbox .custom');
+    var inputele = $(this).parents('form.form').find('.form__item input:not([type="hidden"])');
+    var textareaele = $(this).parents('form.form').find('.form__item textarea');
+    var dropdown = $(this).parents('form.form').find('.custom-dropdown select');
+    var checkbox = $(this).parents('form.form').find('.custom-checkbox .custom');
     inputele.each(function (e, ele) {
         if ($(ele).hasClass('error') || $(ele).val() == '') {
             $(ele).addClass('error')
@@ -102,11 +102,11 @@ $('.custom-form .submit-button').on('click', function (e) {
         }
     })
 
-    $(this).parents('.custom-form').find('.error').first().focus();
+    $(this).parents('.form').find('.error').first().focus();
 
 
-    if ($(this).parents('.custom-form').find('.error').length == 0) {
-        $(this).parents('.custom-form').submit();
+    if ($(this).parents('.form').find('.error').length == 0) {
+        $(this).parents('.form').submit();
     }
 })
 
