@@ -9,8 +9,9 @@ export default function videoSlider() {
                 loop: false,
                 speed: 1500,
                 centeredSlides: false,
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                  },
                 breakpoints: {
                     320:{
                         slidesPerView: 1,
@@ -18,8 +19,10 @@ export default function videoSlider() {
                     },
                     991: {
                         slidesPerView: 3,
-                        nextButton: '.swiper-button-next',
-                        prevButton: '.swiper-button-prev',
+                        navigation: {
+                            nextEl: '.video-swiper .swiper-button-next',
+                            prevEl: '.video-swiper .swiper-button-prev',
+                        },
                         // loopedSlides: 1,
                     },
 

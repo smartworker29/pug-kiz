@@ -6,8 +6,9 @@ export default function newsSlider() {
     init: () => {
       let conf = {
         slidesPerView: 'auto',
-        pagination: '.swiper-pagination',
-        paginationClickable: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
         breakpoints: {
           1500: {
             allowTouchMove: false,
