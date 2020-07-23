@@ -9,8 +9,12 @@ export default function benefitSlider() {
                 loop: true,
                 speed: 1500,
                 centeredSlides: true,
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
+                // pagination: '.swiper-pagination',
+                // paginationClickable: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                  },
+                
                   
                 breakpoints: {
                     320:{
@@ -18,9 +22,10 @@ export default function benefitSlider() {
                     },
                     991: {
                         slidesPerView: 2.3,
-                        nextButton: '.swiper-button-next',
-                        prevButton: '.swiper-button-prev',
-                        // loopedSlides: 1,
+                        navigation: {
+                            nextEl: '.benefit-swiper .swiper-button-next',
+                            prevEl: '.benefit-swiper .swiper-button-prev',
+                        },
                     },
 
                 }

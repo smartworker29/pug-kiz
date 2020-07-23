@@ -20,7 +20,7 @@
                                 h3 Enabling a sustainable economy…
                             .card-learn-more__text.d-none.d-md-block
                                 p Our goal is to establish economies that are economically viable, environmentally sound and socially responsible.
-                            +anchor('btn-white secondary-bordered d-none d-md-inline-block' ,'Read More')
+                            a.btn.btn-white.secondary-bordered.d-none.d-md-inline-block(data-toggle="modal" data-target="#learnMore") Read More
 
             .col-12.col-lg-6.col-xl-5
                 .learn-more__bg.w-100(style="background-image: url( '${require(`./assets/images/learn-more/learn-more-img-1-2x.jpg`)} ' )")
@@ -31,4 +31,35 @@
                                 h3 Download KIZAD brochure
                             .card-learn-more__text.d-none.d-md-block
                                 p For a comprehensive overview of everything that KIZAD offers from competitive business setup solutions and world-class infrastructure facilities in the UAE download our brochure.
-                            +anchor('btn-white secondary-bordered d-none d-md-inline-block' ,'Download')
+                            a.btn.btn-white.secondary-bordered.d-none.d-md-inline-block(data-toggle="modal" data-target="#learnMore") Read More
+
+    .modal.fade#learnMore(tabindex="-1", role="dialog", aria-labelledby= "learnMore", aria-hidden="true")
+        .modal-dialog.modal-dialog-centered.mx-lg-auto(role="document")
+            .modal-content
+                .modal-header.flex-wrap
+                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true").icon-close
+                    h2.heading.section__title.mb-0.pt-4.w-100.text-center.text-uppercase Thank you for your interest in KIZAD
+                .modal-body
+                    p.text-center.mb-4.mx-lg-auto To download this brochure directly please complete the form below.
+                    .form.mx-lg-auto
+                        form(action="", novalidate, validation, recaptcha, data-toastr-message='Form Submitted Successfully !')
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="First Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="FirstName" placeholder="" type="text" value="" onkeyup="this.setAttribute('value',this.value);")
+                                label First Name
+                                span
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="Last Name" data-rule-maxlength="20" data-rule-minlength="2" data-rule-required="true" name="LastName" placeholder="" type="text" value="" onkeyup="this.setAttribute('value',this.value);")
+                                label Last Name
+                                span
+                            .form__item
+                                input.email-input.form-control.support-input.text-input(data-msg="Email" type='email' required  placeholder = '' name ='email' data-rule-minlength="2" data-validate-presence = 'true', value="" data-validate-email= 'true' onkeyup="this.setAttribute('value',this.value);")
+                                label Email
+                                span
+                            .form__item
+                                input.form-control.support-input.text-input(data-msg="Phone" data-rule-phone="true" data-rule-required="true" data-validate-presence="true" name="ContactNumber" placeholder="" type="tel" value="" aria-invalid="true" onkeyup="this.setAttribute('value',this.value);")
+                                label Company Name
+                                span
+
+                            span.d-flex.align-items-center.justify-content-between.justify-content-sm-end.mt-4.form-footer
+                                button.btn.ml-sm-2.ml-md-3(type='submit') Submit

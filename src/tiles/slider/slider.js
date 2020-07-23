@@ -9,12 +9,19 @@ export default function swiperCustom() {
                 [].map.call(sliders, function (items, index) {
                     debugger
                     var classlist = items.classList[0]
+                    var itemclass = $(items).addClass(classlist + index)
                     var item = $(items).find('.swiper-pagination').addClass(classlist + index)
                     var nextitem = $(items).find('.swiper-button-next').addClass(classlist + index)
                     var previtem = $(items).find('.swiper-button-prev').addClass(classlist + index)
                     var slideitems = $(items).find('.swiper-wrapper').data('slide');
-                    var itemSpacing = $(items).find('.swiper-wrapper').data('space');
-                    var swiperCustom = new Swiper(items, {
+                    if(!$(items).find('.swiper-wrapper').data('space') == undefined){
+                        var itemSpacing = $(items).find('.swiper-wrapper').data('space');
+                    }
+                    else{
+                        var itemSpacing = 0;
+                    }
+                    
+                    var swiperCustom = new Swiper(itemclass, {
                         spaceBetween: itemSpacing,
                         loop: false,
                         speed: 1500,
@@ -41,8 +48,6 @@ export default function swiperCustom() {
                     if ($(items).find('.swiper-slide').length < 2) {
                         $(items).parent().addClass('disable-carousel');
                     }
-
-
                 });
             }
         },
