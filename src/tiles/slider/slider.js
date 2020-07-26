@@ -7,7 +7,6 @@ export default function swiperCustom() {
             var sliders = $('.swiper-custom')
             if (sliders) {
                 [].map.call(sliders, function (items, index) {
-                    debugger
                     var classlist = items.classList[0]
                     var itemclass = $(items).addClass(classlist + index)
                     var item = $(items).find('.swiper-pagination').addClass(classlist + index)

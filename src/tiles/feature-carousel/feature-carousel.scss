@@ -1,6 +1,10 @@
 .feature-carousel {
+    .swiper-custom{
+        padding-bottom: 0;
+    }
     .location {
         &__image-wrap {
+            max-width:100%;
             @include lg() {
                 height: 100%;
             }
