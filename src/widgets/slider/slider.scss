@@ -5,6 +5,12 @@
   overflow: hidden;
   margin: 0;
   position: relative;
+  padding:0 15px;
+  .banner__content{
+    @include custom-width(0px, 991px) {
+      margin:0 -15px;
+  }
+  }
   .banner__slides {
     height: auto;
     // border-top:1px solid $light-grey;
@@ -149,25 +155,23 @@
         @include lg(){
           padding:29px 0;
         }
-        &:after{
-          content: "";
-          position: absolute;
-          height: 4px;
-          top: auto;
-          width:0;
-          bottom: -8px;
-          border-radius: 3px;
-          background-color: #ec1a46;
-          left: 50%;
-          transition: .3s;
-        }
+        // &:after{
+        //   content: "";
+        //   position: absolute;
+        //   height: 4px;
+        //   top: auto;
+        //   width:0;
+        //   bottom: -8px;
+        //   border-radius: 3px;
+        //   background-color: #ec1a46;
+        //   left: 50%;
+        //   transition: .3s;
+        // }
         &:hover{
-          &:after{
-            @include xl(){
-              width: calc(100% + 40px);
-              left:-20px;
-            }
-        }
+          @include xl{
+            color:$secondary;
+          }
+          
           
         }
       }
