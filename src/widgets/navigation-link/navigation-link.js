@@ -13,9 +13,7 @@ var anchor = (function () {
                 $(this).parent().addClass('active').siblings().removeClass('active');
                 var target = $(this).attr("href"); 
                 var scrollToPosition = $(target).offset().top - (headerHeight + anchorHeight);
-                $('html').animate({ 'scrollTop': scrollToPosition }, 600, function(target){
-                    window.location.hash = target;
-                });
+                $('html').animate({ 'scrollTop': scrollToPosition }, 600);
                 
                 // e.preventDefault();
             });
@@ -23,9 +21,7 @@ var anchor = (function () {
             $(anchorelink).find('select').on('change', function(e){
                 var target = $(this).val(); 
                 var scrollToPosition = $(target).offset().top - (headerHeight + anchorHeight);
-                $('html').animate({ 'scrollTop': scrollToPosition }, 600, function(target){
-                    window.location.hash = target;
-                });
+                $('html').animate({ 'scrollTop': scrollToPosition }, 600);
                 e.preventDefault();
             });
         }
