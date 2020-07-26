@@ -16,11 +16,16 @@
     }
     .swiper-button-prev,
     .swiper-button-next{
-      display: none;
+      top: calc(50% - 32px);
       @include lg{
         display: flex;
         top: calc(50% - 30px);
         // transform: translate(0, -50%);
+      }
+      &.swiper-button-disabled{
+        @include custom-width(0px, 991px) {
+          display: none !important;
+        }
       }
     }
     .btn-swiper{
@@ -41,7 +46,9 @@
     padding: 0 10px;
     width:100%;
     @include lg{
-      padding:0 90px;
+      padding:0;
+      margin:0 90px;
+      width:calc(100% - 180px);
     }
     .swiper-slide {
       margin: 0 16px;
