@@ -61,6 +61,12 @@
       @include lg{
         padding: 40px 36px 40px 40px;
       }
+      h2{
+        margin-bottom: 8px;
+        @include lg(){
+          margin-bottom: 24px;
+        }
+      }
     }
   }
   &__text{
