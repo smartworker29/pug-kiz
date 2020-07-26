@@ -1,0 +1,90 @@
+extends layout/layout
+block content
+
+
+    .placeholder.pb-0.pt-5
+        .container
+            .widget
+                .widget__header
+                    h2.heading Inner Banner with image and background (not support video)
+
+
+    .placeholder.placeholder--no-padding.inner-banner-image
+        .banner-inner
+            img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+            .container
+                .text.theme-black
+                    h1 News and Updates
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+    .placeholder.placeholder--no-padding.placeholder--bg-grey.inner-banner-image
+        .banner-inner
+            //- img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+            .container
+                .text.theme-black
+                    h1 News and Updates
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+    .placeholder.pb-0.pt-5
+        .container
+            .widget
+                .widget__header
+                    h2.heading Inner Banner with embed video (image/video)
+
+
+
+    .placeholder.placeholder--no-padding.banner-cluster
+
+        .banner
+            //- video(src="src/assets/video/carousel1.mp4", autoplay, loop, muted, preload="auto")
+            //- iframe(src="src/assets/video/carousel1.mp4", frameborder="0",)
+            img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+            .container.block-content
+                .text
+                    h1 The integrated Trade, Logistics and Industrial Hub of Abu Dhabi
+                    p  Enabling trade and industrial investments by leveraging the Integrated services of KIZAD with Khalifa Port.
+                    +anchor('btn-secondary' ,'Read More')
+
+    .placeholder.pb-0.pt-5
+            .container
+                .widget
+                    .widget__header
+                        h2.heading embed video
+
+    .placeholder.placeholder--no-padding.banner-cluster
+        .banner
+            <iframe  src="https://www.youtube.com/embed/iWRTVxGnfqQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            //- video(src="src/assets/video/carousel1.mp4", autoplay, loop, muted, preload="auto")
+            //-iframe(src="https://www.youtube.com/embed/A-twOC3W558", allowscriptaccess="always" allow="autoplay" allowfullscreen="allowfullscreen")
+            //- img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+            .container.block-content
+                .text
+                    h1 The integrated Trade, Logistics and Industrial Hub of Abu Dhabi
+                    p  Enabling trade and industrial investments by leveraging the Integrated services of KIZAD with Khalifa Port.
+                    +anchor('btn-secondary' ,'Read More')
+
+    .placeholder.pb-0.pt-5
+        .container
+            .widget
+                .widget__header
+                    h2.heading Sitecore/local Video
+
+    .placeholder.placeholder--no-padding.banner-cluster
+        .banner
+            video(src="src/assets/video/carousel1.mp4", autoplay, loop, muted, preload="auto")
+            //- iframe(src="src/assets/video/carousel1.mp4", frameborder="0",)
+            //- img(src="${require(`./assets/images/home-banner.jpg`)}" alt='banner')
+            .container.block-content
+                .text
+                    h1 The integrated Trade, Logistics and Industrial Hub of Abu Dhabi
+                    p  Enabling trade and industrial investments by leveraging the Integrated services of KIZAD with Khalifa Port.
+                    +anchor('btn-secondary' ,'Read More')
+
+
+
+
+
+
+
+
