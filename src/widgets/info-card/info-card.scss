@@ -4,6 +4,13 @@
   @include lg{
     margin-bottom: -36px;
   }
+  @include custom-width(0px, 991px) {
+    margin-left:0;
+    margin-right:0;
+    .info-card{
+      padding:0;
+    }
+  }
 }
 
 .info-card__descr{

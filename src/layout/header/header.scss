@@ -75,6 +75,20 @@ header {
       @include transition(all 0.55s ease-in-out);
       [listitem-toggle] {
         font-weight: normal;
+        a.active{
+          @include xl(){
+            &:after{
+              content: "";
+              width: 100%;
+              height: 2px;
+              bottom: -5px;
+              position: absolute;
+              transition: .3s;
+              background-color: $secondary;
+              left:0;
+            }
+          }
+        }
       }
       @include lg() {
         display: flex;

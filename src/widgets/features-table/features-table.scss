@@ -126,5 +126,9 @@
     @include lg{
       height: 72px;
     }
+    .features-btn{
+      cursor: pointer;
+      color:$secondary;
+    }
   }
 }
