@@ -33,6 +33,7 @@
   &__content{
     padding: 16px 0;
     width: 100%;
+    background-color: $white;
     @include lg{
       padding: 10px 10px 10px 16px;
     }
