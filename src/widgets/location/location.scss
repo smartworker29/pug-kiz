@@ -14,6 +14,7 @@
     -webkit-box-orient: vertical;
     overflow-y: hidden;
     text-overflow: ellipsis;
+    
     margin: 0 0 27px;
     @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
@@ -76,6 +77,9 @@
         width: auto;
       }
     }
+  }
+  p{
+    color:$primary;
   }
 }
 

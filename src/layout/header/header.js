@@ -28,6 +28,8 @@ var header = (function () {
                     })
                 }
                 else{
+                    
+                    $(items).find('a').attr('href', 'javascript:void(0)');
                     items.onclick = e => {
                         $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');
                         $(items).parents('.nav-list').addClass('active');
