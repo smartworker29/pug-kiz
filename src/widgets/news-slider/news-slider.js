@@ -5,7 +5,7 @@ export default function newsSlider() {
   return {
     init: () => {
       let conf = {
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         pagination: {
           el: '.swiper-pagination',
         },
@@ -19,7 +19,6 @@ export default function newsSlider() {
             spaceBetween: 24,
           },
           576:{
-            slidesPerView: 'auto',
             spaceBetween: 20,
           },
           320: {

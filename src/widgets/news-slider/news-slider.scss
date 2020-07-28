@@ -1,5 +1,4 @@
 .news-slider{
-  max-width: 1500px;
   @include lg{
     margin-bottom: -24px;
   }
@@ -8,9 +7,6 @@
   }
   .swiper-slide{
     margin-bottom: 44px;
-    @include sm{
-      max-width: 350px;
-    }
      @include lg{
        margin-bottom: 24px;
      }
