@@ -87,3 +87,5 @@ function stickanchor(){
         $(anchorlink).parents('.placeholder').removeClass("fixed-anchor");
     }
 }
+
+
