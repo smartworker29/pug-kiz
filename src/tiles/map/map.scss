@@ -3,7 +3,7 @@
     height:310px;
     @include lg(){
         max-height:915px;
-        height:915px;
+        height:100%;
     }
     [map-location]{
         height: 100%;

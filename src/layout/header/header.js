@@ -33,6 +33,7 @@ var header = (function () {
                     items.onclick = e => {
                         $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');
                         $(items).parents('.nav-list').addClass('active');
+                        $('.back-menu').addClass('d-flex');
                     }
                 }
                 
@@ -41,8 +42,9 @@ var header = (function () {
         if(megaback){
             [].map.call(megaback, function (back) {
                 back.onclick = e => {
-                    $(back).parents('.nav-list').removeClass('active');
-                    $(back).parents('.nav-list').find('.cluster-container').removeClass('open');
+                    $('.nav-list').removeClass('active');
+                    $('.nav-list').find('.cluster-container').removeClass('open');
+                    $('.back-menu').removeClass('d-flex');
                 }
             });
         }

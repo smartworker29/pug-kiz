@@ -8,6 +8,9 @@ header.white-bg
         .container
             a.navbar-brand(href='#')
                 img(src='${require(`./assets/images/kizad-logo.svg`)}' alt='logo')
+            .back-menu(mega-back).d-lg-none
+                i.icon-arrow-down
+                | Back to main menu
             .nav-list#header-nav(menu-wrapper)
                 -var menuitem = ['overview', 'investor', 'cluster', 'business', 'free']
                 ul

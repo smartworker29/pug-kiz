@@ -69,6 +69,21 @@ header {
         }
       }
     }
+    .back-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      background: $white;
+      padding: 31px 40px 29px 15px;
+      color: $secondary;
+      align-items: center;
+      left:0;
+      @include font-size($xxs-font);
+      i{
+        transform: rotate(90deg);
+        margin-right: 10px;
+      }
+    }
     .nav-list {
       flex: auto;
       display: none;
@@ -300,20 +315,6 @@ header {
           }
         }
         
-      }
-      .back-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        background: $white;
-        padding: 31px 40px 29px 15px;
-        color: $secondary;
-        align-items: center;
-        @include font-size($xxs-font);
-        i{
-          transform: rotate(90deg);
-          margin-right: 10px;
-        }
       }
       .contact {
         .btn {
