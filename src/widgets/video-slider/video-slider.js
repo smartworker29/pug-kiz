@@ -33,12 +33,14 @@ export default function videoSlider() {
             });
             var $videoSrc;  
             $('.video-swiper a.icon').click(function() {
+                debugger
                 $videoSrc = $(this).data( "src" );
+                $("#videoslider iframe").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
             });
 
-            $('#videoslider').on('shown.bs.modal', function (e) {
-                $("#videoslider iframe").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-            })
+            // $('#videoslider').on('shown.bs.modal', function (e) {
+            //     $("#videoslider iframe").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+            // })
             
             $('#videoslider').on('hide.bs.modal', function (e) {
                 $("#videoslider iframe").attr('src',''); 

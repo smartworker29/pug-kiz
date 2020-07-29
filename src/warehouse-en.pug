@@ -44,9 +44,9 @@ block content
   .placeholder.placeholder--bg-grey
     .container.feature-carousel
       .swiper-container.swiper-custom
-          .swiper-wrapper(data-slide="1", data-space="20")
-            each m in [0]
-              .swiper-slide.location
+          .swiper-wrapper(data-slide="1", data-space="0")
+            each m in [0,1]
+              .swiper-slide.location.block-content
                 .row
                     .col-12.col-lg-10.col-xl-6
                         .location__image-wrap.location__slider-image
@@ -62,6 +62,8 @@ block content
                             each x in [0,1,2]
                               li Plot Area: 
                                 span 87,419 m2
+          include tiles/swiper-buttons/swiper-buttons
+          .swiper-pagination
 
   .placeholder#knowMore
       .container

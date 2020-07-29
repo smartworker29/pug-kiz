@@ -1,6 +1,17 @@
 .feature-carousel {
-    .swiper-custom{
-        padding-bottom: 0;
+    // .swiper-custom{
+    //     padding-bottom: 0;
+    // }
+    &.disable-carousel{
+        .swiper-pagination, .swiper-button-wrapper{
+            display: none;
+        }
+        .block-content{
+            padding: 0;
+        }
+        .swiper-custom{
+            padding-bottom: 0px;
+        }
     }
     .location {
         &__image-wrap {
