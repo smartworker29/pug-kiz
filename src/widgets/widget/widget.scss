@@ -10,6 +10,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $lighter-grey;
+        font-weight: $font-roboto-medium;
       }
       .heading {
         @include font-size($lg-font);
