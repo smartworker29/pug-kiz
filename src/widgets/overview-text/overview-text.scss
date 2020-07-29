@@ -56,9 +56,28 @@
           }
       }
       p{
-        margin: 24px 0 40px;
+        margin: 0 0 15px;
+        @include lg{
+          margin: 15px 0 20px;
+        }
+        @include xl{
+          margin: 24px 0 24px;
+        }
+
+
         &:empty{
           display: none;
+        }
+        &:last-of-type{
+          &:not(:empty){
+            margin-bottom: 27px;
+            @include lg{
+              margin-bottom:20px;
+            }
+            @include xl{
+              margin-bottom:40px;
+            }
+          }
         }
       }
     }
