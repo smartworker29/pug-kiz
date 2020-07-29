@@ -10,7 +10,7 @@ export default function videoSlider() {
                 speed: 1500,
                 centeredSlides: false,
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.video-swiper .swiper-pagination',
                   },
                 breakpoints: {
                     320:{
