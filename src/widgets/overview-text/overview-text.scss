@@ -55,6 +55,12 @@
               }
           }
       }
+      p{
+        margin: 24px 0 40px;
+        &:empty{
+          display: none;
+        }
+      }
     }
     &__text{
       word-break: break-word;
