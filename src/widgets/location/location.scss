@@ -32,13 +32,13 @@
       padding: 40px 0 32px 0;
     }
     @include lg{
-      padding: 30px 38px 0 0;
+      padding: 30px 32px 0 0;
     }
     @include xl{
-      padding: 50px 38px 0 0;
+      padding: 50px 32px 0 0;
     }
     @include xxl{
-      padding: 80px 48px 0 0;
+      padding: 80px 32px 0 0;
     }
   }
   &__wrap-rtl{
@@ -47,13 +47,13 @@
       padding: 40px 0 32px 0;
     }
     @include lg{
-      padding: 30px 34px 0 38px;
+      padding: 30px 32px 0 32px;
     }
     @include xl{
-      padding: 50px 44px 0 38px;
+      padding: 50px 32px 0 32px;
     }
     @include xxl{
-      padding: 80px 64px 0 48px;
+      padding: 80px 32px 0 32px;
     }
     label{
       color: $primary;

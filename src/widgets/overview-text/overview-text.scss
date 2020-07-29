@@ -1,5 +1,5 @@
 .product-wrapper{
-    &:nth-child(odd){
+    &.reverse{
         direction: rtl;
         .product{
             &__wrap{
