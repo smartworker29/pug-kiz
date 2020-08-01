@@ -229,7 +229,8 @@ header {
               }
               .dropdown-wrapper {
                 display: block;
-                transition: visibility 0s, opacity 0.5s linear;
+                transition: visibility 0s, opacity 0.2s linear;
+                transition-delay:0.5s;
               }
             }
           }
@@ -257,7 +258,7 @@ header {
         top: 100%;
         opacity: 0;
         transition-property: opacity;
-        transition-duration: 0.3s;
+        transition-duration: 0.2s;
         visibility: hidden;
       }
       &.show{
