@@ -10,7 +10,7 @@
   }
   .field-validation-error{
     span{
-      display: none;
+      display: none !important;
     }
   }
   .custom-dropdown{
