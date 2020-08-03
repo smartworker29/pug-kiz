@@ -3,7 +3,12 @@
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     background-color: $white;
     height:100%;
-
+    &:hover{
+        cursor: pointer;
+        .news-widget__text{
+            color:$secondary;
+        }
+    }
     &__image {
         img{
           border-top-right-radius: 4px;
@@ -75,6 +80,7 @@
         font-family: $font-roboto-regular;
         overflow: hidden;
         color: $primary;
+        transition: .3s;
         @include md {
             margin-bottom: 15px;
         }

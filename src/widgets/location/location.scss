@@ -20,7 +20,7 @@
     @include line-height($paragraph-line-height);
     @include lg{
       margin: 15px 0 20px;
-      max-height: 9em;
+      // max-height: 9em;
     }
     @include xl{
       margin: 24px 0 40px;
