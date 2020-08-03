@@ -5,6 +5,7 @@
     background-size: contain;
     background-size: 260px;
     background-position: 131% 100%;
+    border-bottom: 1px solid #d8d8d8;
     @include lg{
         background-size: 344px;
         padding:80px 140px 80px 80px;
@@ -29,6 +30,7 @@
         }
     }
     &.inner-content{
+        border-bottom: 0;
         h2{
             margin-bottom: 8px;
             font-family: $font-archive-bold;
