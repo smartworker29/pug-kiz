@@ -28,4 +28,10 @@
             @include line-height($xxxl-line-height);
         }
     }
+    &.inner-content{
+        h2{
+            margin-bottom: 8px;
+            font-family: $font-archive-bold;
+        }
+    }
 }
