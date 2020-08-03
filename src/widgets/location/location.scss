@@ -64,6 +64,9 @@
     }
   }
   &__image-wrap{
+    @include xl(){
+      height:100%;
+    }
     img{
       object-fit: cover;
       height: 55.91vw;
@@ -75,6 +78,7 @@
       @include xl{
         min-height: 450px;
         width: auto;
+        height:100%;
       }
     }
   }
@@ -82,19 +86,3 @@
     color:$primary;
   }
 }
-
-// #products{
-//   .location__image-wrap{
-//     img{
-//       max-height: 648px;
-//     }
-//   }
-// }
-
-// #partners{
-//   .location__image-wrap{
-//     img{
-//       max-height: 500px;
-//     }
-//   }
-// }
