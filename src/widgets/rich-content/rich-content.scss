@@ -32,6 +32,16 @@
         h2{
             margin-bottom: 8px;
             font-family: $font-archive-bold;
+            letter-spacing: 1px;
+            @include lg(){
+                @include font-size($xxxl-font);
+                @include line-height($xxxl-line-height);
+            }
+        }
+        p{
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
     }
 }
