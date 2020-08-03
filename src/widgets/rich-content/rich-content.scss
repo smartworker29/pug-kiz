@@ -33,6 +33,8 @@
             margin-bottom: 8px;
             font-family: $font-archive-bold;
             letter-spacing: 1px;
+            @include font-size($lg-font);
+            line-height: 32px;
             @include lg(){
                 @include font-size($xxxl-font);
                 @include line-height($xxxl-line-height);
