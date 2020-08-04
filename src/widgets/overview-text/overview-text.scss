@@ -3,6 +3,7 @@
         direction: rtl;
         .product{
             &__wrap{
+              direction: ltr;
                 @include lg(){
                     padding-left:0;
                     padding-right:15px;
