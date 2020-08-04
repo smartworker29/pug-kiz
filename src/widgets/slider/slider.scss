@@ -79,12 +79,12 @@
             @include font-size($paragraph-font);
             @include line-height($paragraph-line-height);
             font-family: $font-roboto-light;
-            color: $grey;
             direction: ltr;
             li {
-                margin-bottom: 12px;
+                margin-bottom: 8px;
+                color: $primary;
                 @include lg() {
-                    margin-bottom: 20px;
+                  margin-bottom: 12px;
                 }
                 list-style: none;
                 &:before {
