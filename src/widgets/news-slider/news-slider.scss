@@ -53,14 +53,14 @@
     font-family: $font-roboto-regular;
     @include font-size($xs-font);
     @include line-height($paragraph-line-height);
-    max-height: 3em;
+    // max-height: 3em;
     overflow: hidden;
     color: $primary;
     @include md{
       @include font-size($sm-font);
       @include line-height($lg-line-height);
       margin-bottom: 32px;
-      max-height: 4.5em;
+      // max-height: 4.5em;
     }
   }
 }
