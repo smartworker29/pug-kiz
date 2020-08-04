@@ -2,9 +2,9 @@ mixin modal(data)
     .modal.fade(id= data.id, tabindex="-1", role="dialog", aria-labelledby= data.id+"Label", aria-hidden="true")
         .modal-dialog.modal-dialog-centered.mx-lg-auto(role="document")
             .modal-content
-                .modal-header.flex-wrap
-                    button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true").icon-close
+                .modal-header.flex-wrap
                     h2.heading.section__title.mb-0.pt-4.w-100.text-center.text-uppercase= data.title
                 .modal-body
                     p.text-center.mb-4.mx-lg-auto= data.modalText
