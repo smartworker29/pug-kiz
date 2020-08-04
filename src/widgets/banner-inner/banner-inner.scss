@@ -87,6 +87,8 @@
         @include custom-width(0px, 991px) {
             position: absolute;
             bottom: 24px;
+            width: 100%;
+            padding: 0;
         }
     }
 }

@@ -13,11 +13,13 @@ export default function swiperCustom() {
                     var nextitem = $(items).find('.swiper-button-next').addClass(classlist + index)
                     var previtem = $(items).find('.swiper-button-prev').addClass(classlist + index)
                     var slideitems = $(items).find('.swiper-wrapper').data('slide');
-                    if(!$(items).find('.swiper-wrapper').data('space') == undefined){
+                    if(!$(items).find('.swiper-wrapper').data('space') == undefined || !$(items).find('.swiper-wrapper').data('space') == ''){
                         var itemSpacing = $(items).find('.swiper-wrapper').data('space');
+                        
                     }
                     else{
                         var itemSpacing = 0;
+                        debugger;
                     }
                     
                     var swiperCustom = new Swiper(itemclass, {
