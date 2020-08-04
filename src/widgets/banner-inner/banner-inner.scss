@@ -27,7 +27,9 @@
 
     .text{
         position: relative;
-        background-color: rgba($white,0.5);
+        // background-color: rgba($white,0.9);
+        background-color: $white;
+        opacity: .9;
         width:100%;
         max-width:777px;
         padding:30px 20px;
@@ -41,8 +43,10 @@
             bottom:80px;
         }
         &.theme-black{
-            background-color: rgba(black,0.5);
+            // background-color: rgba(black,0.9);
             color:$white;
+            background-color: $black;
+            opacity: .9;
         }
         h1{
             @include font-size($lg-font);
