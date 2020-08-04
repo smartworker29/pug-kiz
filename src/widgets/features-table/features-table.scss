@@ -131,4 +131,11 @@
       color:$secondary;
     }
   }
+  &.no-bg{
+    .features-table__wrap td:first-child{
+      background-color: transparent;
+      color:$primary;
+      
+    }
+  }
 }
