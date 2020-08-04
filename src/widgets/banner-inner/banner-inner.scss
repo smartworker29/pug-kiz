@@ -3,6 +3,9 @@
     position: relative;
     padding:30px 15px;
     margin-top: 80px;
+    @include custom-width(0px, 991px) {
+        padding:0;
+    }
     @include md(){
         margin-top:95px;
     }
@@ -78,6 +81,12 @@
             @include lg(){
                 @include font-size($sm-font);
             }
+        }
+    }
+    > .container{
+        @include custom-width(0px, 991px) {
+            position: absolute;
+            bottom: 24px;
         }
     }
 }
