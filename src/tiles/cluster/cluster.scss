@@ -21,7 +21,7 @@
       }
       .btn.with-icon{
         text-align: left;
-        @include xl(){
+        @include lg(){
           text-overflow: ellipsis;
           display: block;
           overflow: hidden;
