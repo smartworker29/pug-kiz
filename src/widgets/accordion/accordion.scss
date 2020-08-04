@@ -4,13 +4,13 @@
         margin-bottom: 3px;
         background-color: $white;
         &.active {
-            background-color: #e8e8e8;
+            background-color: rgba(167, 169, 172, 0.1);
             a {
                 i {
                     transform: rotateX(180deg);
                 }
                 p {
-                    font-family: $font-roboto-regular;
+                    font-family: $font-roboto-medium;
                 }
             }
         }
@@ -23,6 +23,7 @@
             p {
                 margin-bottom: 0;
                 padding-right: 10px;
+                font-family: $font-roboto-regular;
             }
             i {
                 font-size: 20px;
