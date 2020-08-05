@@ -16,6 +16,15 @@
   .custom-dropdown{
     position: relative;
   }
+  input.btn {
+    height: auto;
+    padding: 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background: #7a7a7a;
+    font-size: 14px;
+    color:$white;
+  }
   input, textarea, .custom-dropdown select{
     border-radius: 4px;
     border: solid 1px #d9d8d9;
@@ -28,14 +37,7 @@
       @include font-size($sm-font);
     }
 
-    &[type=submit] {
-      height: auto;
-      padding: 0;
-      padding: 10px 30px;
-      border-radius: 10px;
-      background: #7a7a7a;
-      font-size: 14px;
-    }
+    
 
       &::-webkit-outer-spin-button,
       &::-webkit-inner-spin-button {
@@ -280,7 +282,6 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  display: none;
   @include lg(){
     padding: 80px;
   }

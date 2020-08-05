@@ -73,8 +73,9 @@ $('.custom-checkbox .custom').on('click', function (e) {
     }
 })
 
-$('form.form input[type=submit]').on('click', function (e) {
+$('form.form button[type=submit]').on('click', function (e) {
     e.preventDefault();
+    debugger
     var inputele = $(this).parents('form.form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('form.form').find('.form__item textarea');
     var dropdown = $(this).parents('form.form').find('.custom-dropdown select');
@@ -105,14 +106,15 @@ $('form.form input[type=submit]').on('click', function (e) {
     $(this).parents('.form').find('.error').first().focus();
 
 
-    if ($(this).parents('.form').find('.error').length == 0) {
+    if ($(this).parents('.form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
+        debugger
         $(this).parents('.form').submit();
     }
 })
 
-// $('.modal').on('hidden.bs.modal', function (e) {
-//   $('.support-input').val('').removeClass('error valid has-value');
-//   $('form button[type=submit]').removeClass('btn-secondary');
-// });
+$('.modal').on('hidden.bs.modal', function (e) {
+  $('.form__item').find('input, textarea').val('').removeClass('error valid has-value');
+  $('form button[type=submit]').removeClass('btn-secondary');
+});
 
 
