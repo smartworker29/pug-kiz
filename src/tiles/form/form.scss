@@ -13,6 +13,9 @@
       display: none !important;
     }
   }
+  .close{
+    z-index: 9999;
+  }
   .custom-dropdown{
     position: relative;
   }
