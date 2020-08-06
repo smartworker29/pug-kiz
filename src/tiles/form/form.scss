@@ -23,6 +23,7 @@
       line-height: 32px;
       font-family: $font-archive-bold;
       margin-bottom: 8px;
+      color:$primary;
       @include lg(){
         @include font-size($xs-font);
         @include line-height($md-line-height);
@@ -31,6 +32,7 @@
     }
     p{
       font-family: $font-roboto-light;
+      color:$grey;
       @include lg(){
         font-family: $font-roboto-regular;
       }
