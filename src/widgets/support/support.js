@@ -107,8 +107,7 @@ $('form.form button[type=submit]').on('click', function (e) {
 
 
     if ($(this).parents('.form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
-        debugger
-        $(this).parents('.form').submit();
+        $(this).parents('form').submit();
     }
 })
 

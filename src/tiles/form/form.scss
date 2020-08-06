@@ -318,4 +318,19 @@
     width: 100%;
     max-width: 100%;
   }
+  .success-wrapper{
+    background-color: $white;
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    p{
+      color:$primary;
+    }
+    h2{
+      @include font-size($lg-font);
+      line-height: 32px;
+      @include lg(){
+        @include font-size($xxxl-font);
+      @include line-height($xxxl-line-height);
+      }
+    }
+  }
 }
