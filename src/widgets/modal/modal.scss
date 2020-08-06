@@ -1,6 +1,9 @@
 
 .modal{
   padding: 0 !important;
+  .close{
+    z-index: 9999;
+  }
   .modal-content{
     > button.close{
       background: transparent;
