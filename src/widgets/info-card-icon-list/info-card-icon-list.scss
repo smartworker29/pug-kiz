@@ -54,8 +54,9 @@
       height: auto;
     }
   }
-  &__list.collapse{
+  &__list ul{
     margin-top: 16px;
+    min-height: 68px;
     @include lg(){
       margin-top: 24px;
     }
