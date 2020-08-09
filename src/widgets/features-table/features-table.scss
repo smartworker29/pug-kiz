@@ -37,7 +37,7 @@
       font-family: $font-roboto-medium;
       color: $white;
       @include xl {
-        width: 30.5%;
+        min-width: 30.5%;
       }
     }
 
@@ -52,6 +52,7 @@
       }
       @include xl {
         padding-left: 137px;
+        width:69.5%;
       }
 
       &:before {
@@ -108,7 +109,7 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    i{
+    i,em{
       margin-left: 8px;
       @include lg{
         margin-left: 16px;
