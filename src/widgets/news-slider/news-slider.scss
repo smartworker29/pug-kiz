@@ -1,18 +1,20 @@
 .news-slider{
-  @include lg{
-    margin-bottom: -24px;
-  }
   @include xxl{
-    margin: 0 auto -24px;
+    margin: 0 auto;
+  }
+  .news-wrapper{
+    margin-bottom: 0;
+    height: 100%;
   }
   .swiper-slide{
     margin-bottom: 44px;
+    height: auto;
      @include lg{
-       margin-bottom: 24px;
+       margin-bottom: 0;
      }
   }
   .swiper-pagination{
-    bottom: -5px;
+    bottom: 0;
     @include lg{
       display: none;
     }
@@ -21,6 +23,11 @@
     padding: 0 16px;
     @include xl(){
       overflow: visible;
+    }
+  }
+  .news-widget{
+    &__text{
+      margin-bottom: 32px;
     }
   }
 }
