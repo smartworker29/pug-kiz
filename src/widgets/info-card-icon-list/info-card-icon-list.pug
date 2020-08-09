@@ -8,10 +8,11 @@ block variables
 
 block description
     .info-card__descr-wrap
-        .info-card__icon-title.mb-3.mb-lg-4
+        .info-card__icon-title
             i(class='icon-' +infoIcon[item])
             h2.info-card__title.section__title.mb-0= infoTitle[item]
-        ul.info-card__list.collapse(id='cardList-'+(item + 1))
-            each val in list
-                li.mb-3.mb-lg-4= val[item]
+        .info-card__list.collapse(id='cardList-'+(item + 1))
+            ul
+                each val in list
+                    li= val[item]
         a(role="button" class="collapsed link show-hide-text d-lg-none" data-toggle="collapse" href="#cardList-" + (item + 1) aria-expanded="false" aria-controls="cardList-" + (item + 1))
