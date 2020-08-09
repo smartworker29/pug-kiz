@@ -26,6 +26,9 @@
             transform: translateY(50%);
         }
     }
+    img{
+        height: 101% !important;
+    }
     .container {
         @include xl() {
             position: absolute;
