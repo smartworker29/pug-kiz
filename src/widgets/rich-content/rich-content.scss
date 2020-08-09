@@ -16,6 +16,7 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         color: $lighter-grey;
+        font-family: $font-roboto-medium;
     }
     h2{
         @include font-size($xs-font);
