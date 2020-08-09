@@ -17,6 +17,7 @@ header {
         list-style-type: none;
         display: inline-block;
         margin: 15px 20px;
+        position: relative;
         a {
           @include link-hover;
           @include font-size($xxs-font);
