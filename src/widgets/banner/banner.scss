@@ -117,12 +117,7 @@
             top:50%;
             transform: translateY(-50%);
             width:100%;
-            @include md(){
-                width:80%;
-            }
-            @include xl(){
-                width:60%;
-            }
+            max-width:952px;
             
             h1 {
                 @include font-size($lg-font);
