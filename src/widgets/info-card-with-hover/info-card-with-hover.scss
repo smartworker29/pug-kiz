@@ -16,6 +16,7 @@
       }
     }
     .info-card-btn{
+      display: inherit;
       @include lg{
         margin-top: 14px;
       }
