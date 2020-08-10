@@ -39,24 +39,33 @@
         margin-bottom: 0;
     }
     ul {
-        display: flex;
-        list-style-type: none;
-        li {
-            color: $secondary;
-            &:first-child {
-                &:before {
-                    display: none;
-                }
+        padding-left:22px;
+        margin-bottom:30px;
+        li{
+            list-style-type: none;
+            position: relative;
+            font-family: $font-roboto-light;
+            @include font-size($paragraph-font);
+            @include line-height($paragraph-line-height);
+            margin-top: 16px;
+            @include lg(){
+                margin-top: 24px;
             }
-            &::before {
-                content: "\A";
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: $secondary;
-                display: inline-block;
-                margin: 2px 10px;
+            &:first-child{
+                margin-top: 0;
             }
-        }
+            &:before{
+              position: absolute;
+              display: block;
+              left: -22px;
+              top: 12px;
+              content: '';
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              color: $secondary;
+              background: $secondary;
+            }
+          }
     }
 }
