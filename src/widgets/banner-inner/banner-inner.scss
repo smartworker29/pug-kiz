@@ -81,6 +81,9 @@
             @include lg(){
                 @include font-size($sm-font);
             }
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
     }
     > .container{
