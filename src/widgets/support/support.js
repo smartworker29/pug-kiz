@@ -81,17 +81,16 @@ $('.custom-checkbox .custom').on('click', function (e) {
 })
 
 function buttonHighlite(ele) {
-    if(ele.parents('form').hasClass('error')){
-        ele.parents('form').find('form-footer .btn').removeClass('active')
+    if($(ele).parents('form').find('.error').length == 0){
+        $(ele).parents('form').find('.form-footer .btn').removeClass('active')
     }
     else{
-        ele.parents('form').find('form-footer .btn').addClass('active')
+        $(ele).parents('form').find('.form-footer .btn').addClass('active')
     }
 }
 
-$('form.form button[type=submit]').on('click', function (e) {
+$('form button[type=submit]').on('click', function (e) {
     e.preventDefault();
-    debugger
     var inputele = $(this).parents('.form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('.form').find('.form__item textarea');
     var dropdown = $(this).parents('.form').find('.custom-dropdown select');
@@ -119,10 +118,10 @@ $('form.form button[type=submit]').on('click', function (e) {
         }
     })
 
-    $(this).parents('.form').find('.error').first().focus();
+    $(this).parents('form').find('.error').first().focus();
 
 
-    if ($(this).parents('.form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
+    if ($(this).parents('form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
         $(this).parents('form').submit();
     }
 })

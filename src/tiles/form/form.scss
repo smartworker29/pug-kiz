@@ -50,9 +50,12 @@
     padding: 0;
     padding: 10px 30px;
     border-radius: 10px;
-    // background: #7a7a7a;
+    background: $grey;
     font-size: 14px;
     color:$white;
+    &.active{
+      background: $secondary;
+    }
   }
   input, textarea, .custom-dropdown select{
     border-radius: 4px;
@@ -347,9 +350,9 @@
       &__header{
         padding-bottom:24px;
         h2{
-          margin-bottom: 8px;
+          margin-bottom: 3px;
           @include lg(){
-            margin-bottom: 24px;
+            margin-bottom: 15px;
           }
         }
       }
