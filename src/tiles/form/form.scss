@@ -91,7 +91,7 @@
       border: 2px solid #e60000;
     }
     &.has-value,
-    &.error{
+    &.error,.input-validation-error{
       width: calc(100% - 32px);
       transition: width .2s;
       @include lg{
