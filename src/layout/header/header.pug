@@ -8,7 +8,7 @@ header.white-bg
         .container
             a.navbar-brand(href='#')
                 img(src='${require(`./assets/images/kizad-logo.svg`)}' alt='logo')
-            .back-menu(mega-back).d-lg-none
+            .back-menu(mega-back).d-xl-none
                 i.icon-arrow-down
                 | Back to main menu
             .nav-list#header-nav(menu-wrapper)
@@ -27,7 +27,7 @@ header.white-bg
             //-         form.global-search(action='', delimiter="?")
             //-             input(name="search")
 
-            button.navbar-toggler.d-block.d-lg-none(type='button' data-toggle='collapse' data-target='#header-nav' menu-toggler)
+            button.navbar-toggler.d-block.d-xl-none(type='button' data-toggle='collapse' data-target='#header-nav' menu-toggler)
                 span.navbar-toggler-icon(aria-hidden='true')
                     - for (var x = 0; x < 6; x++)
                         span

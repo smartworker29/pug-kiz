@@ -32,7 +32,7 @@
     }
     p{
       font-family: $font-roboto-light;
-      color:$grey;
+      color:$mute-grey;
       @include font-size($paragraph-font);
       line-height: 24px;
       @include lg(){
@@ -50,7 +50,7 @@
     padding: 0;
     padding: 10px 30px;
     border-radius: 10px;
-    background: #7a7a7a;
+    // background: #7a7a7a;
     font-size: 14px;
     color:$white;
   }
@@ -146,7 +146,7 @@
       top: 15px;
       left: 16px;
       font-family: $font-roboto-regular;
-      color: #a7a9ac;
+      color: $mute-grey;
       transition: all .3s ease-in-out;
       @include font-size($xs-font);
       @include line-height($md-line-height);
@@ -205,7 +205,7 @@
             width: 16px;
             height: 16px;
             position: absolute;
-            border: 1px solid #000;
+            border: 1px solid $grey;
             font-family: 'icomoon';
           }
           &:checked{
@@ -219,7 +219,7 @@
               font-size: 17px;
               text-indent: -2px;
               line-height: 15px;
-              color: red;
+              color: $secondary;
             }
           }
           &.error{
@@ -237,7 +237,7 @@
     height: 112px;
     padding: 16px;
     @include placeholder{
-      color: #a7a9ac;
+      color: $mute-grey;
     }
   }
   // form{
@@ -259,7 +259,7 @@
       top: 15px;
       left: 16px;
       font-family: $font-roboto-regular;
-      color: #a7a9ac;
+      color: $mute-grey;
       transition: all .3s ease-in-out;
       @include font-size($xs-font);
       @include line-height($md-line-height);

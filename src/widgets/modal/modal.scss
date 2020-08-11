@@ -147,7 +147,7 @@
       height: 112px;
       padding: 16px;
       @include placeholder{
-        color: #a7a9ac;
+        color: $mute-grey;
       }
     }
     form{
@@ -169,7 +169,7 @@
         top: 15px;
         left: 16px;
         font-family: $font-roboto-regular;
-        color: #a7a9ac;
+        color: $mute-grey;
         transition: all .3s ease-in-out;
         @include font-size($xs-font);
         @include line-height($md-line-height);

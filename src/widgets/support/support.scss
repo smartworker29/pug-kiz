@@ -7,7 +7,7 @@
   margin-right: -50%;
   transform: translate(-50%, 0);
   width: 330px;
-  @include lg{
+  @include xl{
     right: 0;
     margin-right: 0;
     left: auto;

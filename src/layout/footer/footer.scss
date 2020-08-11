@@ -126,7 +126,7 @@ footer {
     }
     .footer-copyright {
         padding: 10px 0 55px;
-        @include lg() {
+        @include xl() {
             padding: 10px 0;
         }
 

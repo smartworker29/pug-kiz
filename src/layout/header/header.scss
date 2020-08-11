@@ -21,7 +21,7 @@ header {
         a {
           @include link-hover;
           @include font-size($xxs-font);
-          @include custom-width(0px, 991px) {
+          @include custom-width(0px, 1025px) {
             color: $white;
           }
         }
@@ -31,13 +31,12 @@ header {
   nav.navbar {
     padding: 20px 0;
     @include lg() {
-      padding: 0;
       border-top: 1px solid $light-grey;
     }
     @include xl(){
       padding: 0 20px;
     }
-    @include custom-width(0px, 1170px) {
+    @include custom-width(0px, 1199px) {
       position: fixed;
       top: 0;
       width: 100%;
@@ -106,7 +105,7 @@ header {
           }
         }
       }
-      @include lg() {
+      @include xl() {
         display: flex;
       }
       // &.sub-menu-active {
@@ -132,6 +131,9 @@ header {
         left: 0;
         width: 100vw;
         border-top: 1px solid $grey;
+        @include md(){
+          top: 92px;
+        }
         > ul {
           padding: 0 15px;
           display: block;
@@ -153,7 +155,7 @@ header {
           }
         }
       }
-      @include custom-width(0px, 1170px) {
+      @include custom-width(0px, 1199px) {
         &.active{
           .back-menu{
             display: flex;
@@ -178,7 +180,7 @@ header {
         li {
           list-style-type: none;
           cursor: pointer;
-          @include lg {
+          @include xl {
             padding: 35px 0px;
             position: relative;
           }
@@ -206,7 +208,7 @@ header {
           }
           .dropdown-wrapper {
             display: none;
-            @media (max-width: 991px) {
+            @media (max-width: 1199px) {
               position: relative;
               display: block;
               margin: 0 -15px;
@@ -235,7 +237,7 @@ header {
               }
             }
           }
-          @media (max-width: 991px) {
+          @media (max-width: 1199px) {
             &:last-child {
               .simscrollbar,
               .dropdown-footer {
@@ -253,7 +255,7 @@ header {
       background-color: transparent;
       @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
       width: 100%;
-      @include lg(){
+      @include xl(){
         position: absolute;
         //display: none;
         top: 100%;
@@ -269,7 +271,7 @@ header {
         visibility: visible;
       }
       
-      @include custom-width(0px, 1170px) {
+      @include custom-width(0px, 1199px) {
         .social-media {
           display: block;
           padding: 30px 0 0;
@@ -346,13 +348,13 @@ header {
           background: $secondary;
         }
         display: block;
-        @include lg() {
+        @include xl() {
           max-height: 70vh;
         }
       }
       .file-container {
         padding: 30px 15px 0;
-        @include lg() {
+        @include xl() {
           padding: 30px 5% 0 30px;
         }
         &:first-child {
