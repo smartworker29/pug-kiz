@@ -73,4 +73,8 @@
   &__list.collapsing {
     height: 68px;
   }
+  &__close{
+    color:$primary;
+    cursor: pointer;
+  }
 }
