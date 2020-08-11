@@ -19,6 +19,7 @@ $('form .form__item input:not([type="hidden"]), form .form__item textarea').on('
     } else {
         this.classList.remove('has-value');
     }
+    buttonHighlite(this)
 })
 
 $('.text-texarea').on('blur', function (e) {
@@ -31,6 +32,7 @@ $('.text-texarea').on('blur', function (e) {
         $(this).addClass('valid');
         $(this).removeClass('error');
     }
+    buttonHighlite(this)
 });
 
 $('.text-input').on('blur', function (e) {
@@ -43,6 +45,7 @@ $('.text-input').on('blur', function (e) {
         $(this).addClass('valid');
         $(this).removeClass('error');
     }
+    buttonHighlite(this)
 });
 
 $('.email-input').on('blur', function (e) {
@@ -56,6 +59,7 @@ $('.email-input').on('blur', function (e) {
         $(this).addClass('valid');
         $(this).removeClass('error');
     }
+    buttonHighlite(this)
 });
 
 $('.custom-dropdown select').on('change', function(){
@@ -65,13 +69,25 @@ $('.custom-dropdown select').on('change', function(){
     else{
         $(this).removeClass('error').addClass('valid has-value');
     }
+    buttonHighlite(this)
+
 })
 
 $('.custom-checkbox .custom').on('click', function (e) {
     if($(this).prop('checked') == true){
         $(this).removeClass('error')
     }
+    buttonHighlite(this)
 })
+
+function buttonHighlite(ele) {
+    if(ele.parents('form').hasClass('error')){
+        ele.parents('form').find('form-footer .btn').removeClass('active')
+    }
+    else{
+        ele.parents('form').find('form-footer .btn').addClass('active')
+    }
+}
 
 $('form.form button[type=submit]').on('click', function (e) {
     e.preventDefault();
