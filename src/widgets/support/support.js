@@ -12,6 +12,13 @@
 //     );
 // });
 
+
+var tel = $('form .form__item input[type=tel]')
+tel.each(function(){
+    $(this).attr('type','number')
+})
+
+
 $('form .form__item input:not([type="hidden"]), form .form__item textarea').on('blur', function () {
     let val = this.value.trim();
     if (val.length !== 0) {
