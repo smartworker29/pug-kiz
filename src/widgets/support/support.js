@@ -88,20 +88,22 @@ $('.custom-checkbox .custom').on('click', function (e) {
 })
 
 function buttonHighlite(ele) {
-    if($(ele).parents('form').find('.error').length == 0){
-        $(ele).parents('form').find('.form-footer .btn').removeClass('active')
+    var inputele = $(ele).parents('form').find('.form__item input:not([type="hidden"])');
+    var textareaele = $(ele).parents('form').find('.form__item textarea');
+    if($(ele).parents('form').find('.error').length == 0 && inputele != '' && textareaele != '' ){
+        $(ele).parents('form').find('.form-footer .btn').addClass('active')
     }
     else{
-        $(ele).parents('form').find('.form-footer .btn').addClass('active')
+        $(ele).parents('form').find('.form-footer .btn').removeClass('active')
     }
 }
 
 $('form button[type=submit]').on('click', function (e) {
     e.preventDefault();
-    var inputele = $(this).parents('.form').find('.form__item input:not([type="hidden"])');
-    var textareaele = $(this).parents('.form').find('.form__item textarea');
-    var dropdown = $(this).parents('.form').find('.custom-dropdown select');
-    var checkbox = $(this).parents('.form').find('.custom-checkbox .custom');
+    var inputele = $(this).parents('form').find('.form__item input:not([type="hidden"])');
+    var textareaele = $(this).parents('form').find('.form__item textarea');
+    var dropdown = $(this).parents('form').find('.custom-dropdown select');
+    var checkbox = $(this).parents('form').find('.custom-checkbox .custom');
     inputele.each(function (e, ele) {
         if ($(ele).hasClass('error') || $(ele).val() == '') {
             $(ele).addClass('error')
