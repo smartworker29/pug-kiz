@@ -5,7 +5,7 @@
     padding: 25px 0;
     background-color: $grey;
     z-index: 9;
-    @include lg(){
+    @include lg() {
         padding: 45px 0;
     }
     .header {
@@ -23,7 +23,7 @@
         a {
             color: $white;
             position: relative;
-            &:before{
+            &:before {
                 content: "";
                 height: 100%;
                 position: absolute;
@@ -39,27 +39,26 @@
     min-height: auto;
     background-color: $grey;
     color: $white;
-    padding:100px 0 0;
-    @include md(){
-        padding:150px 0 50px;
+    padding: 100px 0 0;
+    @include md() {
+        padding: 150px 0 50px;
     }
-    @include lg(){
-        padding:200px 0 50px;
-        
+    @include lg() {
+        padding: 200px 0 50px;
     }
     .campaign-content {
-        padding-top:50px;
-        padding-bottom:210px;
-        @include md(){
-            padding-bottom:30px; 
+        padding-top: 50px;
+        padding-bottom: 210px;
+        @include md() {
+            padding-bottom: 30px;
         }
         h1 {
-            width:60%;
+            width: 60%;
             @include font-size($lg-font);
             margin-bottom: 16px;
             @include line-height($lg-line-height);
             @include md() {
-                width:100%;
+                width: 100%;
                 @include font-size($xxxl-font);
                 @include line-height($xxl-line-height);
             }
@@ -87,51 +86,58 @@
             }
         }
     }
-    .campaign-form{
+    .campaign-form {
         background-color: $white;
         padding-bottom: 30px;
-        @include md(){
+        @include md() {
             background-color: transparent;
             padding-bottom: 0;
         }
-        form{
+        form {
             margin-top: -180px;
-            @include md(){
-                margin-top:0;
+            @include md() {
+                margin-top: 0;
             }
         }
     }
-    .no-nav__form{
-        .form{
-            padding:20px;
-        @include lg(){
-            padding:40px;
+    .no-nav__form {
+        .form {
+            padding: 20px;
+            @include lg() {
+                padding: 40px;
+            }
         }
+
+        input {
+            height: 45px;
         }
-        
-        input{
-            height:45px;
-        }
-        h3{
-            color:$primary;
+        h3 {
+            color: $primary;
             margin-bottom: 24px;
-            @include lg(){
+            @include lg() {
                 margin-bottom: 30px;
             }
         }
-        .form__item{
-            input{
-                padding:0 15px;
+        .form__item {
+            input {
+                padding: 0 15px;
                 font-size: 16px;
                 line-height: 18px;
             }
-            textarea{
+            textarea {
                 font-size: 16px;
                 line-height: 22px;
-                color:$primary;
+                color: $primary;
+                &::-webkit-input-placeholder,
+                &:-moz-placeholder,
+                &::-moz-placeholder,
+                &:-ms-input-placeholder,
+                &::placeholder {
+                    color: $primary;
+                }
             }
-            label{
-                top:21px;
+            label {
+                top: 21px;
                 font-size: 16px;
                 line-height: 18px;
             }
