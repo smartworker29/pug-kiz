@@ -85,3 +85,13 @@
         }
     }
 }
+
+
+[dir=rtl]{
+    .swiper-button-wrapper{
+        .swiper-button-next{
+            left: 0 !important;
+            right: auto !important;
+        }
+    }
+}
