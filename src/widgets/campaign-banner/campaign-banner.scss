@@ -123,17 +123,40 @@
                 padding: 0 15px;
                 font-size: 16px;
                 line-height: 18px;
+                &::-webkit-input-placeholder{
+                    color: $mute-grey;
+                }
+                &:-moz-placeholder {
+                    color: $mute-grey;
+                }
+                &::-moz-placeholder {
+                    color: $mute-grey;
+                }
+                &:-ms-input-placeholder {
+                    color: $mute-grey;
+                }
+                &::placeholder {
+                    color: $mute-grey;
+                }
             }
             textarea {
                 font-size: 16px;
                 line-height: 22px;
                 color: $primary;
-                &::-webkit-input-placeholder,
-                &:-moz-placeholder,
-                &::-moz-placeholder,
-                &:-ms-input-placeholder,
+                &::-webkit-input-placeholder{
+                    color: $mute-grey;
+                }
+                &:-moz-placeholder {
+                    color: $mute-grey;
+                }
+                &::-moz-placeholder {
+                    color: $mute-grey;
+                }
+                &:-ms-input-placeholder {
+                    color: $mute-grey;
+                }
                 &::placeholder {
-                    color: $primary;
+                    color: $mute-grey;
                 }
             }
             label {
