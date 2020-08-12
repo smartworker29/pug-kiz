@@ -89,7 +89,33 @@
         @include transition(all 0.4s ease-in-out);
       }
     }
-
+    ul {
+      padding-left: 20px;
+      @include font-size($paragraph-font);
+      @include line-height($paragraph-line-height);
+      font-family: $font-roboto-light;
+      color: $white;
+      li {
+          margin-bottom: 7px;
+          @include lg() {
+              margin-bottom: 10px;
+          }
+          list-style: none;
+          &:before {
+              content: "\2022";
+              color: $secondary;
+              font-weight: bold;
+              display: inline-block;
+              width: 1em;
+              margin-left: -1em;
+              font-size: 23px;
+              vertical-align: middle;
+          }
+          b, strong {
+              font-family: $font-roboto-medium;
+          }
+      }
+  }
   }
   @include lg{
     padding: 40px 40px;
