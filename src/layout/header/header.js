@@ -14,10 +14,10 @@ var header = (function () {
                 if(windowWidth > 1200){
                     var dropdown = $(items).parent().next();
                     $(items).on('mouseenter', function(){
-                        setTimeout(function(){
+                        
                         $(items).parents('.nav-list').find('.dropdown-wrapper').addClass('show');
                         $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).addClass('active').siblings().removeClass('active');
-                    },300)
+                    
                     })
                     $(items).on('mouseleave', function(){
                         $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');
