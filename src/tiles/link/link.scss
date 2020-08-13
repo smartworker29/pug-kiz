@@ -42,3 +42,7 @@
         }
     }
 }
+
+[dir=rtl] .link.with-icon:after{
+    content: "\E908";
+}
