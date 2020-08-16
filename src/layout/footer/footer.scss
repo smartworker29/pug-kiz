@@ -57,11 +57,9 @@ footer {
                 @include md() {
                     margin-right: 15px;
                     width: auto;
-                    margin-bottom: 0px;
                 }
                 &:last-child {
                     margin-right: 0;
-                    margin-bottom: 0px;
                 }
             }
         }

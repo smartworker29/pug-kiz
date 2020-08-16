@@ -32,13 +32,11 @@
             padding: 24px;
         }
         .card-stamp {
-            display: block;
+            display: flex;
             justify-content: space-between;
             margin-bottom: 15px;
             align-items: center;
-            @include md(){
-                display: flex;
-            }
+            flex-wrap: wrap;
         }
         p:not(.news-widget__text){
             margin-bottom: 24px;
@@ -49,6 +47,7 @@
       font-family: $font-roboto-medium;
       font-size: 12px;
       letter-spacing: .92px;
+      padding-top: 5px;
       @include lg(){
         font-size: 14px;
         letter-spacing: 1.08px;

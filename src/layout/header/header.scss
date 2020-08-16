@@ -25,6 +25,16 @@ header {
             color: $white;
           }
         }
+        &.active{
+          @include xl{
+            a{
+              &:after{
+                left: 0;
+                width:100%;
+              }
+            }
+          }
+        }
       }
     }
   }
