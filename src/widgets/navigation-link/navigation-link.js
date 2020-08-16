@@ -59,9 +59,17 @@ function scrollToActive() {
     menuItems.click(function (e) {
         var href = $(this).attr("href"),
             offsetTop = href === "#" ? 0 : $(href).offset().top - (topMenuHeight + topheaderHeight) + 1;
-        $('html, body').stop().animate({
-            scrollTop: (offsetTop - 80)
-        }, 850);
+            if($('.anchor-link').parents('.placeholder').hasClass('fixed-anchor')){
+                $('html, body').stop().animate({
+                    scrollTop: (offsetTop - 0)
+                }, 850);
+            }
+            else{
+                $('html, body').stop().animate({
+                    scrollTop: (offsetTop - 80)
+                }, 850);
+            }
+        
         e.preventDefault();
     });
 
