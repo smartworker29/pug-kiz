@@ -32,10 +32,13 @@
             padding: 24px;
         }
         .card-stamp {
-            display: flex;
+            display: block;
             justify-content: space-between;
             margin-bottom: 15px;
             align-items: center;
+            @include md(){
+                display: flex;
+            }
         }
         p:not(.news-widget__text){
             margin-bottom: 24px;

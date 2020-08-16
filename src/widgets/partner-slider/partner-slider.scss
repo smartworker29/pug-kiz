@@ -41,6 +41,9 @@
       display: none;
     }
   }
+  // &__slider{
+  //   padding:0 90px;
+  // }
 
   .swiper-container {
     padding: 0 10px;
@@ -50,12 +53,16 @@
       margin:0 90px;
       width:calc(100% - 180px);
     }
+    .swiper-wrapper{
+      // margin:0 90px;
+      // width:calc(100% - 180px);
+    }
     .swiper-slide {
-      margin: 0 16px;
+      // margin: 0 16px;
       width: auto;
-      @include lg{
-        margin: 0 19px;
-      }
+      // @include lg{
+      //   margin: 0 19px;
+      // }
       .partner-slider__card {
         height: 100%;
         background: $white;

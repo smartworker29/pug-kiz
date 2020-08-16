@@ -5,7 +5,6 @@ export default function partnerSlider() {
     return {
         init: () => {
             let conf = {
-                slidesPerView: 'auto',
                 navigation: {
                     nextEl: '.partner-slider .swiper-button-next',
                     prevEl: '.partner-slider .swiper-button-prev',
@@ -13,9 +12,14 @@ export default function partnerSlider() {
                 breakpoints: {
                     1200: {
                         spaceBetween: 20,
+                        slidesPerView: 6,
+                    },
+                    991: {
+                        slidesPerView: 6,
                     },
                     320: {
-                        spaceBetween: 10,
+                        spaceBetween: 30,
+                        slidesPerView: 3,
                     }
                 }
             }
