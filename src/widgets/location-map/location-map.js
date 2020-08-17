@@ -57,9 +57,9 @@ if ($('[location-tabbed]').length) {
             <p class="address">  ${information.address}</p>
             <p> ${information.pobox} </p>
             <div class="contact">
-                <a href="tel:  "${information.telephone}"> <i class="fa fa-phone"></i> ${information.telephone} </a>
-                <a href="fax: "${information.fax}" > <i class="fa fa-fax"></i> ${information.fax} </a>
-                <a href="fax: "${information.fax}" > <i class="fa fa-envelope"></i> ${information.email} </a>
+                <a href="tel:  "${information.telephone}">${information.telephone} </a>
+                <a href="fax: "${information.fax}" >${information.fax} </a>
+                <a href="fax: "${information.fax}" > ${information.email} </a>
             </div>
         </div>`);
 
