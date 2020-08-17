@@ -252,3 +252,18 @@
   }
 
 }
+
+
+.scEnabledChrome{
+  #banner{
+    .gallery-top{
+      .swiper-wrapper{
+        > .scEnabledChrome{
+          width: 100%;
+          height: 600px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
