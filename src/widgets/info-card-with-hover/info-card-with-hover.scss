@@ -45,13 +45,33 @@
     ul{
     margin-top: 16px;
     min-height: 68px;
+    padding-left: 22px;
     @include lg(){
       margin-top: 24px;
     }
     li{
       margin-top: 16px;
+      list-style-type: none;
+      position: relative;
+      @include font-size($xs-font);
+      @include line-height($paragraph-line-height);
+      color:$grey;
+      font-family: $font-roboto-light;
       @include lg(){
         margin-top: 24px;
+        @include font-size($sm-font);
+      }
+      &:before{
+        position: absolute;
+        display: block;
+        top: 12px;
+        content: "";
+        width: 5px;
+        height: 5px;
+        color: $secondary;
+        border-radius: 50%;
+        background: $secondary;
+        left: -22px;
       }
       &:first-child{
         margin-top: 0;
