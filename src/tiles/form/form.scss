@@ -342,11 +342,12 @@
 }
 
 .contact-form{
-  max-width: 884px;
   width: 100%;
-  margin: 0 auto;
   form{
     .widget{
+      max-width: 884px;
+      width: 100%;
+      margin: 0 auto;
       &__header{
         padding-bottom:24px;
         h2{
@@ -357,14 +358,54 @@
         }
       }
     }
+    .form{
+      max-width: 884px;
+      width: 100%;
+      margin: 0 auto;
+    }
   &.form{
     width: 100%;
     max-width: 100%;
   }
 }
+.brochure-card{
+  @include lg(){
+    margin-top: 70px;
+  }
+}
+.link-card{
+  box-shadow: none;
+  text-align: left;
+  .link-card__wrap{
+    padding: 40px 8px;
+  }
+  .link-card__img-wrap{
+    i{
+      font-size: 64px;
+      @include lg(){
+        font-size: 64px;
+      }
+    }
+  }
+  .link-card__descr{
+    .link-card__title{
+      line-height: 28px;
+      font-size: 24px;
+    }
+    .link-card__text{
+      font-size: 20px;
+      line-height: 30px;
+      color:$grey;
+    }
+  }
+  
+}
   .success-wrapper{
     background-color: $white;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    max-width: 1228px;
+    width: 100%;
+    margin: 0 auto;
     p{
       color:$primary;
     }
