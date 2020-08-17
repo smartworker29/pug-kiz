@@ -133,6 +133,9 @@
                     i{
                         margin-right: 4px;
                     }
+                    &:empty{
+                        display: none;
+                    }
                     // &:not(:has(:not(:empty))){
                     //     display: none;
                     // }
