@@ -124,12 +124,12 @@
   .learn-more{
     .col-12{
       width:100%;
+      min-width: 100%;
     }
     .learn-more__content{
       flex-wrap: nowrap;
       > .scEnabledChrome{
         width: 100%;
-        min-width: 100%;
       }
     }
   }
