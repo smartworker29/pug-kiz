@@ -267,5 +267,12 @@
         }
       }
     }
+    .gallery-thumbs{
+      .swiper-slide{
+        > span{
+          padding:0;
+        }
+      }
+    }
   }
 }
