@@ -1,6 +1,7 @@
 header {
   @include transition(all 0.55s ease-in-out);
-
+  position: relative;
+  z-index: 99999;
   .sub-nav {
     display: none;
     justify-content: flex-end;
