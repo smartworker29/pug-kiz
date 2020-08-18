@@ -390,9 +390,28 @@
       }
   }
   .link-card__btn{
+    position: relative;
+    width: fit-content;
+    &::after{
+      content: "\E909";
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 100;
+      vertical-align: middle;
+      transition: all .55s ease-in-out;
+      font-family: icomoon!important;
+      color:$secondary;
+      margin-left: 14px;
+    }
     .link{
       border: 0;
       background: transparent;
+      outline: none;
+    }
+    &:hover{
+      &::after{
+        margin-left: 25px;
+      }
     }
   }
   .link-card__descr{
