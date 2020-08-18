@@ -373,6 +373,9 @@ header {
         }
         display: block;
         @include xl() {
+          max-height: 65vh;
+        }
+        @include xxl() {
           max-height: 70vh;
         }
       }
