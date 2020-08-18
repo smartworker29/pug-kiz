@@ -218,3 +218,35 @@
     border: 0;
   }
 }
+
+#talk-modal, #feedback-modal{
+  .brochure-card{
+    text-align: left;
+    margin-top: 24px;
+    .product__wrap{
+      h2{
+        margin: 0 0 24px 0;
+        line-height: 28px;
+        font-size: 24px
+      }
+      p{
+        margin-bottom: 20px;
+        color:$grey;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+      .link{
+        margin-top:20px;
+        display: block;
+      }
+    }
+    .product__image-wrap{
+      img{
+        @include lg(){
+          min-height: 217px;
+        }
+      }
+    }
+  }
+}

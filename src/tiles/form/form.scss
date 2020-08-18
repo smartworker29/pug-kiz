@@ -380,12 +380,17 @@
     padding: 40px 8px;
   }
   .link-card__img-wrap{
-    i{
       font-size: 64px;
+      color:$secondary;
       @include lg(){
         font-size: 64px;
       }
-    }
+      p{
+        color:$secondary;
+      }
+  }
+  .link-card__btn{
+    
   }
   .link-card__descr{
     .link-card__title{

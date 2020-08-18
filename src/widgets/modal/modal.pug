@@ -38,9 +38,23 @@ mixin modal(data)
                                     input.hiddenRecaptcha.required#hiddenRecaptcha(type="hidden" name="hiddenRecaptcha")
                                 button.btn.ml-sm-2.ml-md-3(type='submit') Submit
 
-                .success-wrapper.text-center.mx-lg-auto.d-none
+                .success-wrapper.text-center.mx-lg-auto
                     button(type="button" class="close" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true").icon-close
                     i.text-center.icon-sent
                     h2 THANK YOU FOR YOUR FEEDBACK
                     p.text-center.mb-4.mx-lg-auto Your request has now been submitted. Our team are on hand to answer your question or feedback and will be in contact soon.
+
+                    .brochure-card
+                        .product-wrapper
+                            .product
+                                .row.no-gutters
+                                    .col-12.col-lg-6
+                                        .product__image-wrap
+                                            img(src= '${require(`./assets/images/city-img.jpg`)}')
+
+                                    .col-12.col-lg-6.align-self-start
+                                        .product__wrap
+                                            h2.section__title KIZAD Corporate Brochure
+                                            p.product__text For an overview of everything that we offer from competitive business setup solutions and world-class infrastructure facilities in the UAE
+                                            +link('#', 'with-icon icon-arrow-right' ,' Download now ')
