@@ -392,6 +392,7 @@
   .link-card__btn{
     position: relative;
     width: fit-content;
+    cursor: pointer;
     &::after{
       content: "\E909";
       font-size: 20px;
