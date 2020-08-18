@@ -13,18 +13,18 @@
         letter-spacing: 1.5px;
         @include md(){
             letter-spacing: .5px;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
     }
     p{
         @include font-size($sm-font);
-        margin-bottom: 30px;
+        margin-bottom: 24px;
         width:100%;
     }
     img{
         width:auto;
         margin-bottom:30px;
-        max-height: 150px;
+        max-height: 125px;
         float: left;
         border-radius: 5px;
     }

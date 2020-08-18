@@ -390,7 +390,10 @@
       }
   }
   .link-card__btn{
-    
+    .link{
+      border: 0;
+      background: transparent;
+    }
   }
   .link-card__descr{
     .link-card__title{
