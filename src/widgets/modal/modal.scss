@@ -250,3 +250,16 @@
     }
   }
 }
+
+#learnMore{
+  .success-wrapper{
+    .btn{
+      @include md(){
+        width: fit-content;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
