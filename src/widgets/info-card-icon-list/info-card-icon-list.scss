@@ -26,24 +26,25 @@
       letter-spacing: 0;
       @include font-size($sm-font);
     }
-    padding-left: 22px;
-    li{
-      list-style-type: none;
-      position: relative;
-      &:before{
-        position: absolute;
-        display: block;
-        left: -22px;
-        top: 12px;
-        content: '';
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        color: $secondary;
-        background: $secondary;
+    ul{
+      padding-left: 22px;
+      li{
+        list-style-type: none;
+        position: relative;
+        &:before{
+          position: absolute;
+          display: block;
+          left: -22px;
+          top: 12px;
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          color: $secondary;
+          background: $secondary;
+        }
       }
     }
-
   }
 
   &__list.collapse:not(.show) {
