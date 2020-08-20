@@ -80,6 +80,10 @@
             @include line-height($paragraph-line-height);
             font-family: $font-roboto-regular;
             direction: ltr;
+            margin-bottom: 30px;
+            @include lg(){
+              margin-bottom: 40px;
+            }
             li {
                 margin-bottom: 8px;
                 color: $primary;
