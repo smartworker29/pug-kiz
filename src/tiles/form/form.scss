@@ -162,6 +162,7 @@
       width:100%;
       outline: none;
       color: transparent;
+      position: unset;
       option{
         padding:10px 0;
         font-family: $font-archive-bold;
@@ -169,6 +170,9 @@
         &:hover{
           background-color: $light-grey;
         }
+      }
+      @supports (-webkit-appearance:none) {
+        text-indent: 8px;
       }
       &.error{
         border: 2px solid #e60000;
@@ -187,6 +191,12 @@
         @include lg{
           top: 16px;
         }
+        @supports (-webkit-appearance:none) {
+          top:5px;
+          @include lg(){
+            margin-top: 10px;
+          }
+        }
       }
       }
     }
@@ -202,6 +212,7 @@
           width:16px;
           height:16px;
           margin-right: 10px;
+          padding:0;
           &:before{
             content: '';
             background: white;
@@ -362,6 +373,10 @@
       max-width: 884px;
       width: 100%;
       margin: 0 auto;
+      float: left;
+      @include lg(){
+        float: none;
+      }
     }
   &.form{
     width: 100%;
