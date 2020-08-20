@@ -78,7 +78,7 @@
             padding-left: 26px;
             @include font-size($paragraph-font);
             @include line-height($paragraph-line-height);
-            font-family: $font-roboto-light;
+            font-family: $font-roboto-regular;
             direction: ltr;
             li {
                 margin-bottom: 8px;

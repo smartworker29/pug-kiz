@@ -29,6 +29,12 @@
         &:last-of-type {
           margin-bottom: 0;
         }
+        &:first-of-type{
+          margin-top: 8px;
+          @include lg(){
+            margin-top: 16px;
+          }
+        }
         &.dt-primary{
           @include lg(){
             color: $primary;
