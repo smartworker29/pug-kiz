@@ -58,7 +58,7 @@
             
           }
           h1{
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             @include font-size($lg-font);
             @include lg(){
               @include font-size($xxxl-font);
@@ -66,7 +66,7 @@
             }
           }
           p{
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             @include font-size($xxs-font);
             @include line-height($paragraph-line-height);
             @include lg(){

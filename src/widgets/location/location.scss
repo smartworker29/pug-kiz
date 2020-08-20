@@ -61,6 +61,9 @@
       font-family: $font-roboto-medium;
       letter-spacing: 1px;
       margin-bottom: 16px;
+      @include lg(){
+        margin-bottom: 24px;
+      }
     }
   }
   &__image-wrap{
@@ -84,5 +87,37 @@
   }
   p{
     color:$primary;
+  }
+  ul{
+    padding-left: 22px;
+      li{
+        list-style-type: none;
+        position: relative;
+        @include font-size($xxs-font);
+        @include line-height($paragraph-line-height);
+        margin-bottom: 10px;
+        font-family: $font-roboto-light;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        @include md(){
+          @include font-size($xs-font);
+        }
+        @include lg(){
+          @include font-size($sm-font);
+        }
+        &:before{
+          position: absolute;
+          display: block;
+          left: -22px;
+          top: 12px;
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          color: $secondary;
+          background: $secondary;
+        }
+      }
   }
 }

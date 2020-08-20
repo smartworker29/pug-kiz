@@ -2,8 +2,8 @@
     padding-top:40px;
     padding-bottom:40px;
     @include lg{
-        padding-top:80px;
-        padding-bottom:80px;
+        padding-top:60px;
+        padding-bottom:60px;
     }
     + .placeholder{
         padding-top:0px;
@@ -35,7 +35,7 @@
             &:not(.placeholder--bg-grey){
                 padding-top:40px !important;
                 @include lg{
-                    padding-top:80px !important;
+                    padding-top:60px !important;
                 }
             }
         }
@@ -49,7 +49,7 @@
         + .placeholder{
             padding-top:40px;
             @include lg{
-                padding-top:80px;
+                padding-top:60px;
             }
         }
     }
