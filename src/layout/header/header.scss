@@ -297,8 +297,10 @@ header {
           ul{
             padding: 0 15px;
             li {
-              width: 50px;
               float: left;
+              a{
+                font-size: 20px;
+              }
             }
           }
           
@@ -579,4 +581,9 @@ header {
 .dropdown-footer {
   float: left;
   width: 100%;
+  @include custom-width(0px, 1199px) {
+    @supports (-webkit-appearance:none) {
+    padding-bottom: 100px;
+  }
+}
 }
