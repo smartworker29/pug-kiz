@@ -28,7 +28,7 @@
     margin: 0 16px;
     border-radius: 4px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
-    background-color: #ffffff;
+    background-color: $white;
     @include sm{
       max-width: 400px;
     }
@@ -62,8 +62,8 @@
     }
   }
   &__text{
-    font-family: $font-roboto-light;
-    @include font-size($xs-font);
+    font-family: $font-roboto-regular;
+    @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     color: $grey;
     overflow-y: hidden;
@@ -71,7 +71,7 @@
     max-height: 5.6em;
     margin: 7px 0 28px;
     @include lg{
-      @include font-size($sm-font);
+      // @include font-size($sm-font);
       max-height: 7.5em;
       margin: 24px 0 40px;
     }

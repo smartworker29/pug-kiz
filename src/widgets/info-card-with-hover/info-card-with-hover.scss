@@ -53,13 +53,13 @@
       margin-top: 16px;
       list-style-type: none;
       position: relative;
-      @include font-size($xs-font);
+      @include font-size($paragraph-font);
       @include line-height($paragraph-line-height);
       color:$grey;
       font-family: $font-roboto-light;
       @include lg(){
         margin-top: 24px;
-        @include font-size($sm-font);
+        // @include font-size($sm-font);
       }
       &:before{
         position: absolute;

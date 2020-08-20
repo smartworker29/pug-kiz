@@ -82,10 +82,10 @@
     color: $grey;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    @include font-size($xs-font);
+    @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     @include lg{
-      @include font-size($sm-font);
+      // @include font-size($sm-font);
     }
   }
   &__btn{

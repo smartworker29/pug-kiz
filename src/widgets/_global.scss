@@ -19,7 +19,7 @@ h6 {
 }
 
 p {
-  font-family: $font-roboto-light;
+  font-family: $font-roboto-regular;
   @include font-size($paragraph-font);
   @include line-height($paragraph-line-height);
 }

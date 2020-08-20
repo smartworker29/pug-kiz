@@ -20,11 +20,11 @@
   &__list{
     font-family: $font-roboto-light;
     letter-spacing: -0.5px;
-    @include font-size($xs-font);
+    @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     @include lg{
       letter-spacing: 0;
-      @include font-size($sm-font);
+      // @include font-size($sm-font);
     }
     ul{
       padding-left: 22px;
