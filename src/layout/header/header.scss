@@ -2,6 +2,9 @@ header {
   @include transition(all 0.55s ease-in-out);
   position: relative;
   z-index: 999;
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    position: static;
+  }
   .sub-nav {
     display: none;
     justify-content: flex-end;
@@ -26,12 +29,12 @@ header {
             color: $white;
           }
         }
-        &.active{
-          @include xl{
-            a{
-              &:after{
+        &.active {
+          @include xl {
+            a {
+              &:after {
                 left: 0;
-                width:100%;
+                width: 100%;
               }
             }
           }
@@ -44,7 +47,7 @@ header {
     @include lg() {
       border-top: 1px solid $light-grey;
     }
-    @include xl(){
+    @include xl() {
       padding: 0 20px;
     }
     @include custom-width(0px, 1199px) {
@@ -88,9 +91,9 @@ header {
       padding: 31px 40px 29px 15px;
       color: $secondary;
       align-items: center;
-      left:0;
+      left: 0;
       @include font-size($xxs-font);
-      i{
+      i {
         transform: rotate(90deg);
         margin-right: 10px;
       }
@@ -101,17 +104,17 @@ header {
       @include transition(all 0.55s ease-in-out);
       [listitem-toggle] {
         font-weight: normal;
-        a.active{
-          @include xl(){
-            &:after{
+        a.active {
+          @include xl() {
+            &:after {
               content: "";
               width: 100%;
               height: 2px;
               bottom: -5px;
               position: absolute;
-              transition: .3s;
+              transition: 0.3s;
               background-color: $secondary;
-              left:0;
+              left: 0;
             }
           }
         }
@@ -142,7 +145,7 @@ header {
         left: 0;
         width: 100vw;
         border-top: 1px solid $grey;
-        @include md(){
+        @include md() {
           top: 92px;
         }
         > ul {
@@ -159,7 +162,7 @@ header {
               display: block;
               display: flex;
               justify-content: space-between;
-              i{
+              i {
                 transform: rotate(-90deg);
               }
             }
@@ -167,30 +170,31 @@ header {
         }
       }
       @include custom-width(0px, 1199px) {
-        &.active{
-          .back-menu{
+        &.active {
+          .back-menu {
             display: flex;
           }
-          .dropdown-footer, .menu-middle{
+          .dropdown-footer,
+          .menu-middle {
             display: none;
           }
-          > ul{
+          > ul {
             display: none;
           }
-          .cluster-container{
-            &.open{
+          .cluster-container {
+            &.open {
               display: block;
             }
           }
+        }
       }
-    }
-    > ul{
-      li{
-        margin-right: 0 !important;
-        padding-left:20px !important;
-        padding-right:20px !important;
+      > ul {
+        li {
+          margin-right: 0 !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
       }
-    }
       ul {
         margin: 0;
         padding: 0;
@@ -203,7 +207,7 @@ header {
             position: relative;
           }
           margin-right: 40px;
-          
+
           > a {
             color: $primary;
             @include transition(0.3s);
@@ -251,7 +255,7 @@ header {
               .dropdown-wrapper {
                 display: block;
                 transition: visibility 0s, opacity 0.2s linear;
-                transition-delay:0.5s;
+                transition-delay: 0.5s;
               }
             }
           }
@@ -265,7 +269,6 @@ header {
           }
         }
       }
-      
     }
     .dropdown-wrapper {
       z-index: 99;
@@ -273,7 +276,7 @@ header {
       background-color: transparent;
       @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
       width: 100%;
-      @include xl(){
+      @include xl() {
         position: absolute;
         //display: none;
         top: 100%;
@@ -282,33 +285,32 @@ header {
         // transition-duration: 0.2s;
         visibility: hidden;
       }
-      &.show{
+      &.show {
         //display: block;
         opacity: 1;
         // transition-delay: 0.3s;
         visibility: visible;
       }
-      
+
       @include custom-width(0px, 1199px) {
         .social-media {
           display: block;
           padding: 30px 0 0;
           width: 100%;
-          ul{
+          ul {
             padding: 0 15px;
             li {
               float: left;
-              a{
+              a {
                 font-size: 20px;
               }
             }
           }
-          
         }
         .language {
           padding: 30px 15px;
           width: 100%;
-          h6{
+          h6 {
             padding: 0 15px 20px 0;
           }
           li {
@@ -317,14 +319,14 @@ header {
             float: left;
           }
         }
-        .dropdown-footer{
-          .sub-menu{
+        .dropdown-footer {
+          .sub-menu {
             display: flex;
             align-items: center;
-            li{
+            li {
               width: 100%;
-              margin-right:0;
-              a{
+              margin-right: 0;
+              a {
                 text-align: center;
                 padding: 15px 0;
                 width: 100%;
@@ -333,12 +335,12 @@ header {
             }
           }
         }
-        @include md(){
-          .social-media, .language{
-            width:50%;
+        @include md() {
+          .social-media,
+          .language {
+            width: 50%;
           }
         }
-        
       }
       .contact {
         .btn {
@@ -347,8 +349,8 @@ header {
           //   margin-bottom: 20px;
           // }
         }
-        p{
-          @include xl(){
+        p {
+          @include xl() {
             line-height: 20px;
             font-size: 16px;
           }
@@ -407,33 +409,33 @@ header {
         }
       }
 
-      .sub-menu{
-        float:left;
-        width:100%;
+      .sub-menu {
+        float: left;
+        width: 100%;
         background-color: $primary;
-        ul{
+        ul {
           display: flex;
           align-items: center;
-          li{
-            border-bottom:0;
-            a{
-              color:$white;
+          li {
+            border-bottom: 0;
+            a {
+              color: $white;
               text-align: center;
-              padding: 15px 0;;
+              padding: 15px 0;
             }
           }
         }
       }
-      
+
       .cluster-container {
         width: 100vw;
         // @include transition(0.3s);
         z-index: 9999;
         display: none;
-        @include md(){
+        @include md() {
           width: 100%;
         }
-        &.active{
+        &.active {
           display: flex;
         }
       }
@@ -582,8 +584,8 @@ header {
   float: left;
   width: 100%;
   @include custom-width(0px, 1199px) {
-    @supports (-webkit-appearance:none) {
-    padding-bottom: 100px;
+    @supports (-webkit-appearance: none) {
+      padding-bottom: 100px;
+    }
   }
-}
 }

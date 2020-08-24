@@ -75,9 +75,9 @@
           @include md{
             max-width: 190px;
           }
-          @include lg {
-            max-width: 245px;
-          }
+          // @include lg {
+          //   max-width: 245px;
+          // }
           img {
             max-height: 48px;
             @include md{
