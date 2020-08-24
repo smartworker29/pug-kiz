@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     margin-bottom: calc(354px - 25vw);
     @include md{
-      height: 350px;
+      height: 390px;
       padding-top: calc(80px + 4vw);
       margin-bottom: 60px;
     }
@@ -22,6 +22,10 @@
       margin-bottom: 105px;
       padding-top: 80px;
     }
+    .container{
+      height: 100%;
+      position: relative;
+    }
   }
   &__descr{
     padding: 24px 16px;
@@ -35,6 +39,9 @@
     @include lg{
       max-width: 510px;
       padding: 40px;
+      position: absolute;
+      right: 0;
+      bottom: -30px;
     }
     @include xl{
       max-width: 600px;
@@ -66,13 +73,19 @@
     @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     color: $grey;
-    overflow-y: hidden;
+    line-clamp: 5;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
-    max-height: 5.6em;
+    // max-height: 5.6em;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
     margin: 7px 0 28px;
     @include lg{
       // @include font-size($sm-font);
-      max-height: 7.5em;
+      // max-height: 7.5em;
       margin: 24px 0 40px;
     }
   }
