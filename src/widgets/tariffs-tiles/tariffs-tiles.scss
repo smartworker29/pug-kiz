@@ -20,6 +20,9 @@
     @include xxl{
       padding: 67px 73px;
     }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display:block !important;
+   }
   }
   .icon-calendar{
     font-size: 34px;

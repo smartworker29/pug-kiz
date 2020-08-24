@@ -354,6 +354,10 @@
 
 .contact-form{
   width: 100%;
+  padding-top:80px;
+  @include xl(){
+    padding-top:0;
+  }
   form{
     .widget{
       max-width: 884px;
