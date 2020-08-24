@@ -96,7 +96,7 @@
         @include font-size($xxs-font);
         @include line-height($paragraph-line-height);
         margin-bottom: 10px;
-        font-family: $font-roboto-light;
+        // font-family: $font-roboto-light;
         &:last-child{
           margin-bottom: 0;
         }

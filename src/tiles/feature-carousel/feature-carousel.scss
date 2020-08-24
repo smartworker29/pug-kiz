@@ -58,6 +58,9 @@
                         span{
                             font-family: $font-roboto-bold;
                         }
+                        &::before{
+                            display: none;
+                        }
                     }
                 }
             }
