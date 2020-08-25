@@ -19,6 +19,9 @@
             height:264px;
             margin-bottom: 0px;
         }
+        &:last-child{
+            margin-bottom: 0;
+        }
         .content{
             position: absolute;
             bottom:15px;
