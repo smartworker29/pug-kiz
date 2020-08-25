@@ -1,7 +1,7 @@
 .introduction{
   &__image-wrap{
     height: 56.25vw;
-    padding-top: calc(46px + 30vw);
+    padding-top: calc(46px + 26vw);
     background-size: cover;
     background-position: 50% -65px;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
   }
   &__descr{
     padding: 24px 16px;
-    margin: 0 16px;
+    margin: 0;
     border-radius: 4px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     background-color: $white;
@@ -37,6 +37,7 @@
       max-width: 400px;
     }
     @include lg{
+      margin: 0 16px;
       max-width: 510px;
       padding: 40px;
       position: absolute;
