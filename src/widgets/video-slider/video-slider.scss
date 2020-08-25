@@ -8,17 +8,23 @@
         }
     }
     .swiper-slide{
-        height:264px;
+        height:185px;
         background: $grey;
         position: relative;
         color:$white;
         background-size: cover;
         background-repeat: no-repeat;
+        margin-bottom: 40px;;
+        @include lg(){
+            height:264px;
+            margin-bottom: 0px;
+        }
         .content{
             position: absolute;
-            bottom:20px;
+            bottom:15px;
             p{
                 font-family: $font-archive-bold;
+                margin-bottom: 0;
                 @include font-size($xs-font);
                 @include lg(){
                   @include font-size($md-font);
@@ -32,9 +38,12 @@
             transform: translate(-50%, -50%);
             outline: 0;
             i{
-                font-size: 80px;
+                font-size: 60px;
                 color:$white;
                 outline: 0;
+                @include lg(){
+                    font-size: 80px;
+                }
             }
         }
     }
@@ -47,6 +56,12 @@
     .modal{
         .modal-content{
             background-color: $black;
+        }
+    }
+    .swiper-wrapper{
+        display: block;
+        @include lg(){
+            display: flex;
         }
     }
 }

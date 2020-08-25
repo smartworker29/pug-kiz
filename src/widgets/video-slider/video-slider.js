@@ -4,6 +4,7 @@ export default function videoSlider() {
 
     return {
         init: () => {
+            const enableSwiper = function() {
             var videoslide = new Swiper('.video-swiper', {
                 spaceBetween: 20,
                 loop: false,
@@ -27,7 +28,24 @@ export default function videoSlider() {
                     },
 
                 }
-            }, 500);
+            });
+
+        }
+
+            const breakpoint = window.matchMedia( '(min-width:992px)' );
+
+            let mySwiper;
+            const breakpointChecker = function() {
+                if ( breakpoint.matches === true ) {
+                    return enableSwiper();
+                
+                } else if ( breakpoint.matches === false ) {
+                    if ( mySwiper !== undefined ) 
+                        mySwiper.destroy( true, true );
+                        return;
+                }
+            };
+
             $('#videoslider').on('hidden.bs.modal', function (e) {
                 $('#videoslider iframe').attr("src", $("#videoslider iframe").attr("src"));
             });
@@ -45,6 +63,11 @@ export default function videoSlider() {
             $('#videoslider').on('hide.bs.modal', function (e) {
                 $("#videoslider iframe").attr('src',''); 
             }) 
+
+            breakpoint.addListener(breakpointChecker);
+            breakpointChecker();
+
+
         },
 
     }
