@@ -10,10 +10,6 @@
       display: flex;
       position: relative;
       flex-direction: column;
-      margin-right:15px;
-      @include md(){
-        margin-right:0;
-      }
       .swiper-wrapper{
         align-items: center;
       }
@@ -50,7 +46,7 @@
   // }
 
   .swiper-container {
-    padding: 0 10px;
+    padding: 0 30px 0 10px;
     width:100%;
     @include lg{
       padding:0;
@@ -67,6 +63,9 @@
       // @include lg{
       //   margin: 0 19px;
       // }
+      &:last-of-type{
+        margin-right: 20px !important;
+      }
       .partner-slider__card {
         height: 100%;
         background: $white;
