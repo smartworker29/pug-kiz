@@ -49,7 +49,7 @@
 
   &__list.collapse:not(.show) {
     display: block;
-    height: 68px;
+    height: 84px;
     overflow: hidden;
     @include lg{
       height: auto;
