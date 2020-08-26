@@ -1,11 +1,14 @@
 .widget-article {
-    // margin-bottom: 40px;
+     margin-bottom: 40px;
     padding: 0 15px;
-    // @include lg() {
-    //     margin-bottom: 80px;
-    // }
+    @include lg() {
+        margin-bottom: 60px;
+    }
     @include xl() {
         padding: 0;
+    }
+    &:last-of-type{
+        margin-bottom: 0;
     }
     h2 {
         color: $primary;
