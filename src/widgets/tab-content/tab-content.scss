@@ -25,6 +25,7 @@
                 padding: 25px 30px;
                 display: block;
                 position: relative;
+                white-space: nowrap;
                 &.active {
                     font-weight: bold;
                     background-color: $white;
