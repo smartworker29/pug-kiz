@@ -50,7 +50,7 @@
             left: -15px;
             top: 0;
             font-size: 21px;
-            line-height: 24px;;
+            line-height: 21px;;
             @include lg(){
               left: -23px;
               line-height: 23px;
@@ -86,7 +86,7 @@
       &:before {
         position: absolute;
         content: "";
-        transform: translate(-14px, 9px);
+        transform: translate(-14px, 7px);
         width: 5px;
         height: 5px;
         background: $secondary;
