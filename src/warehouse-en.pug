@@ -53,15 +53,17 @@ block content
                             img(src="${require(`./assets/images/city-img.jpg`)}")
                     .col-12.col-lg-10.col-xl-6
                       .location__slider-content
-                        .location__wrap-content
-                          h2.section__title Single units
-                          p.location__text Individual single units of varying sizes, shown below, are most suitable for startups and businesses with small-scale operations. The standard units provide different unit options of 440 m², 605 m², 756 m2, 880 m² and 1,210 m².
-                        .location__wrap-image
+                        .location__wrap-image.order-lg-1
                           img(src="${require(`./assets/images/city-img.jpg`)}")
                           ul.area-define
                             each x in [0,1,2]
                               li Plot Area: 
                                 span 87,419 m2
+
+                        .location__wrap-content.order-lg-0
+                          h2.section__title Single units
+                          p.location__text Individual single units of varying sizes, shown below, are most suitable for startups and businesses with small-scale operations. The standard units provide different unit options of 440 m², 605 m², 756 m2, 880 m² and 1,210 m².
+                        
           include tiles/swiper-buttons/swiper-buttons
           .swiper-pagination
 

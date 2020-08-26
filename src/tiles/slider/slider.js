@@ -19,7 +19,7 @@ export default function swiperCustom() {
                     }
                     else{
                         var itemSpacing = 0;
-                        debugger;
+                    
                     }
                     
                     var swiperCustom = new Swiper(itemclass, {

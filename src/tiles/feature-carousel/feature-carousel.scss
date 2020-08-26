@@ -2,6 +2,13 @@
     // .swiper-custom{
     //     padding-bottom: 0;
     // }
+    padding: 0;
+    .swiper-wrapper{
+        .swiper-slide{
+            padding: 0 15px;
+        }
+        
+    }
     &.disable-carousel{
         .swiper-pagination, .swiper-button-wrapper{
             display: none;
@@ -12,6 +19,9 @@
         .swiper-custom{
             padding-bottom: 0px;
         }
+    }
+    .swiper-button-wrapper{
+        top:164px;
     }
     .location {
         &__image-wrap {
@@ -40,12 +50,20 @@
             }
             &-content {
                 display: block;
+                p{
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
             }
             &-image {
                 img {
-                    height: 240px;
+                    height: 112px;
                     object-fit: cover;
                     width: 100%;
+                    @include lg(){
+                        height: 240px;
+                    }
                 }
                 .area-define{
                     margin: 0;
@@ -57,6 +75,10 @@
                         list-style-type: none;
                         span{
                             font-family: $font-roboto-bold;
+                            float: left;
+                            @include md(){
+                                float: inherit;
+                            }
                         }
                         &::before{
                             display: none;
