@@ -30,6 +30,24 @@
       &:nth-child(9) {
         display: none;
       }
+      ul{
+        
+        li{
+          list-style-type: none;
+          position: relative;
+          &::before{
+            content: "\2022";
+            color: $secondary;
+            font-weight: bold;
+            display: inline-block; 
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            left: -23px;
+            top: 1px;
+          }
+        }
+      }
     }
     td:nth-child(1) {
       font-weight: 500;
@@ -59,8 +77,8 @@
         position: absolute;
         content: "";
         transform: translate(-14px, 6px);
-        width: 5px;
-        height: 5px;
+        width: 4px;
+        height: 4px;
         background: $secondary;
         border-radius: 50%;
         @include lg {
