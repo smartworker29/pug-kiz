@@ -171,7 +171,7 @@
           background-color: $light-grey;
         }
       }
-      @supports (-webkit-appearance:none) {
+      @supports (-webkit-touch-callout: none) {
         text-indent: 8px;
       }
       &.error{
@@ -191,7 +191,7 @@
         @include lg{
           top: 16px;
         }
-        @supports (-webkit-appearance:none) {
+        @supports (-webkit-touch-callout: none) {
           top:2px;
           @include lg(){
             margin-top: 10px;
