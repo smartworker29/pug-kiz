@@ -98,8 +98,8 @@ function buttonHighlite(ele) {
     }
 }
 
-$('form button[type=submit]').on('click', function (e) {
-    e.preventDefault();
+$('form input[type=submit]').on('click', function (e) {
+  
     var inputele = $(this).parents('form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('form').find('.form__item textarea');
     var dropdown = $(this).parents('form').find('.custom-dropdown select');
@@ -131,7 +131,8 @@ $('form button[type=submit]').on('click', function (e) {
 
 
     if ($(this).parents('form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
-        $(this).parents('form').submit();
+        $('body,html').animate({scrollTop:($(this).parents('form').offset().top - 60)},500)
+        // $(this).parents('form').submit();
     }
 })
 
