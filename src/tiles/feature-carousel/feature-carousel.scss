@@ -2,13 +2,13 @@
     // .swiper-custom{
     //     padding-bottom: 0;
     // }
-    padding: 0;
-    .swiper-wrapper{
-        .swiper-slide{
-            padding: 0 15px;
-        }
+    padding: 0 15px;
+    // .swiper-wrapper{
+    //     .swiper-slide{
+    //         padding: 0 15px;
+    //     }
         
-    }
+    // }
     &.disable-carousel{
         .swiper-pagination, .swiper-button-wrapper{
             display: none;
@@ -21,7 +21,13 @@
         }
     }
     .swiper-button-wrapper{
-        top:164px;
+        @include custom-width(0px, 991px) {
+            top:164px;
+            @include md(){
+                top:379px;
+            }
+        }
+        
     }
     .location {
         &__image-wrap {
@@ -50,11 +56,11 @@
             }
             &-content {
                 display: block;
-                p{
-                    &:last-of-type{
-                        margin-bottom: 0;
-                    }
-                }
+                // p{
+                //     &:last-of-type{
+                //         margin-bottom: 0;
+                //     }
+                // }
             }
             &-image {
                 img {
@@ -94,6 +100,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    padding-top:0;
                 }
             }
         }
