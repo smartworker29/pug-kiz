@@ -139,26 +139,26 @@
                     // &:not(:has(:not(:empty))){
                     //     display: none;
                     // }
-                    &:first-child{
-                        &:before{
-                        content:"\F095" !important;
-                        }
-                    }
-                    &:last-child{
-                        &:before{
-                        content: "\F0E0" !important;
-                        }
-                    }
-                    &:before{
-                        margin-right: 4px;
-                        display: inline-block;
-                        content: "\F1AC";
-                        font: normal normal normal 14px/1 FontAwesome;
-                        font-size: inherit;
-                        text-rendering: auto;
-                        -webkit-font-smoothing: antialiased;
-                        -moz-osx-font-smoothing: grayscale;
-                    }
+                    // &:first-child{
+                    //     &:before{
+                    //     content:"\F095" !important;
+                    //     }
+                    // }
+                    // &:last-child{
+                    //     &:before{
+                    //     content: "\F0E0" !important;
+                    //     }
+                    // }
+                    // &:before{
+                    //     margin-right: 4px;
+                    //     display: inline-block;
+                    //     content: "\F1AC";
+                    //     font: normal normal normal 14px/1 FontAwesome;
+                    //     font-size: inherit;
+                    //     text-rendering: auto;
+                    //     -webkit-font-smoothing: antialiased;
+                    //     -moz-osx-font-smoothing: grayscale;
+                    // }
                 }
             }
             >a{

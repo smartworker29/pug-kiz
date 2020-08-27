@@ -35,6 +35,16 @@ if ($('[location-tabbed]').length) {
         } else {
             $(this).addClass('opened');
         }
+        setTimeout(function(){
+            var contactdetail = $('.contact__map .contact a')
+            contactdetail.each(function(i,ele){
+                debugger;
+                if($(ele).text().trim() == ""){
+                    $(ele).addClass('d-none');
+                }
+            })
+        },100)
+       
     });
     // ------------------------------------------------------------------------------------------------------------
     $('[location-tabbed] .location-list a').click(function () {
@@ -57,15 +67,16 @@ if ($('[location-tabbed]').length) {
             <p class="address">  ${information.address}</p>
             <p> ${information.pobox} </p>
             <div class="contact">
-                <a href="tel:  "${information.telephone}">${information.telephone} </a>
-                <a href="fax: "${information.fax}" >${information.fax} </a>
-                <a href="fax: "${information.fax}" > ${information.email} </a>
+            <a href="tel:  "${information.telephone}"> <i class="fa fa-phone"></i> ${information.telephone} </a>
+            <a href="fax: "${information.fax}" > <i class="fa fa-fax"></i> ${information.fax} </a>
+            <a href="fax: "${information.fax}" > <i class="fa fa-envelope"></i> ${information.email} </a>
             </div>
         </div>`);
 
         marker = new mapboxgl.Marker(el).setLngLat(coords).setPopup(popup).addTo(map)
         //$(marker.getElement()).find('a').addClass('opened');
-
+        
+        
 
         // ------------------------------------------------------------------------------------------------------------
         map.flyTo({
