@@ -182,7 +182,7 @@
         display: inline-block;
         position: relative;
         @include lg(){
-          padding:29px 0;
+          padding:14px 0;
         }
         // &:after{
         //   content: "";
@@ -248,7 +248,7 @@
       margin: 0;
       top:0;
       width:154px;
-      height:104px;
+      height:74px;
     }
     .swiper-button-disabled{
       pointer-events: all;
