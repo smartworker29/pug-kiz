@@ -47,7 +47,7 @@
         li{
             list-style-type: none;
             position: relative;
-            font-family: $font-roboto-light;
+            // font-family: $font-roboto-light;
             @include font-size($paragraph-font);
             @include line-height($paragraph-line-height);
             margin-top: 16px;

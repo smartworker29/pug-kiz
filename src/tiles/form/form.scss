@@ -192,7 +192,7 @@
           top: 16px;
         }
         @supports (-webkit-appearance:none) {
-          top:5px;
+          top:2px;
           @include lg(){
             margin-top: 10px;
           }
@@ -399,7 +399,7 @@
     padding: 40px 8px;
   }
   .link-card__img-wrap{
-      font-size: 64px;
+      font-size: 40px;
       color:$secondary;
       @include lg(){
         font-size: 64px;
@@ -436,8 +436,12 @@
   }
   .link-card__descr{
     .link-card__title{
-      line-height: 28px;
+      line-height: 1.2;
+      font-size: 20px;
+      @include md(){
+        line-height: 28px;
       font-size: 24px;
+      }
     }
     .link-card__text{
       font-size: 20px;
