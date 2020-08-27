@@ -396,7 +396,10 @@
   box-shadow: none;
   text-align: left;
   .link-card__wrap{
-    padding: 40px 8px;
+    padding: 40px 8px 0;
+    @include md(){
+      padding: 40px 8px;
+    }
   }
   .link-card__img-wrap{
       font-size: 40px;
