@@ -130,7 +130,7 @@ $('form input[type=submit]').on('click', function (e) {
     $(this).parents('form').find('.error').first().focus();
 
 
-    if ($(this).parents('form').find('.error').length == 0 && inputele != '' && textareaele != '' ) {
+    if ($(this).parents('form').find('.error').length == 0  && textareaele != '' ) {
         $('body,html').animate({scrollTop:($(this).parents('form').offset().top - 60)},500)
         // $(this).parents('form').submit();
     }
