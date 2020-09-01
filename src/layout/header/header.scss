@@ -104,7 +104,25 @@ header {
       @include transition(all 0.55s ease-in-out);
       [listitem-toggle] {
         font-weight: normal;
+        &.active{
+          a{
+            font-family:$font-archive-bold;
+            @include xl() {
+              &:after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                bottom: -5px;
+                position: absolute;
+                transition: 0.3s;
+                background-color: $secondary;
+                left: 0;
+              }
+            }
+          }
+        }
         a.active {
+          font-family:$font-archive-bold;
           @include xl() {
             &:after {
               content: "";
@@ -122,19 +140,6 @@ header {
       @include xl() {
         display: flex;
       }
-      // &.sub-menu-active {
-      //   li.open{
-      //   .dropdown-wrapper {
-      //     .back-menu {
-      //       display: flex;
-      //     }
-      //     .cluster-container{
-      //       height:calc(100vh - 80px);
-      //       overflow-y: auto;
-      //     }
-      //   }
-      // }
-      // }
       &.show {
         display: block;
         position: fixed;
@@ -202,8 +207,12 @@ header {
         li {
           list-style-type: none;
           cursor: pointer;
+          font-family: $font-archive;
+          display:flex;
+          @include transition(0.3s);
+          line-height: 25px;
           @include xl {
-            padding: 35px 0px;
+            padding: 32px 0px;
             position: relative;
           }
           margin-right: 40px;
@@ -245,13 +254,8 @@ header {
           }
           @include lg() {
             &:hover {
-              color: $secondary;
-              > a {
-                &:after {
-                  width: 100%;
-                  left: 0;
-                }
-              }
+              color: $black;
+              font-family: $font-archive-bold;
               .dropdown-wrapper {
                 display: block;
                 transition: visibility 0s, opacity 0.2s linear;

@@ -15,20 +15,22 @@
     }
     
     .swiper-slide{
+        height: auto;
         &.swiper-slide-prev{
-            opacity: .5;
+            opacity: .4;
             
         }
         &.swiper-slide-active{
 
         }
         &.swiper-slide-next{
-            opacity: .5;
+            opacity: .4;
         }
         .text{
             text-align: left;
             display: flex;
-            padding:30px 20px;
+            padding:40px 32px;
+            height: 100%;
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
             .icon{
                 width:65px;
@@ -41,6 +43,17 @@
                 color:$grey;
                 h3{
                     color:$primary;
+                    font-family: $font-roboto-regular;
+                    @include lg(){
+                        @include font-size($md-font);
+                        @include line-height($md-line-height);
+                        margin-bottom: 16px;
+                    }
+                }
+                p{
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
                 }
             }
         }

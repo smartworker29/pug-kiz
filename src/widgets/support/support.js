@@ -103,7 +103,7 @@ $('form input[type=submit]').on('click', function (e) {
     var inputele = $(this).parents('form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('form').find('.form__item textarea');
     var dropdown = $(this).parents('form').find('.custom-dropdown select');
-    var checkbox = $(this).parents('form').find('.custom-checkbox .custom');
+    // var checkbox = $(this).parents('form').find('.custom-checkbox .custom');
     inputele.each(function (e, ele) {
         if ($(ele).hasClass('error') || $(ele).val() == '') {
             $(ele).addClass('error')
@@ -121,11 +121,11 @@ $('form input[type=submit]').on('click', function (e) {
         }
     })
 
-    checkbox.each(function(e,ele){
-        if ($(ele).prop('checked') == false) {
-            $(ele).addClass('error')
-        }
-    })
+    // checkbox.each(function(e,ele){
+    //     if ($(ele).prop('checked') == false) {
+    //         $(ele).addClass('error')
+    //     }
+    // })
 
     $(this).parents('form').find('.error').first().focus();
 

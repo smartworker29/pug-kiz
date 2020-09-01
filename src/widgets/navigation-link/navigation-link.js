@@ -19,11 +19,11 @@ var anchor = (function () {
         },
         _customdropdown = function () {
             $("<select />").appendTo(".anchor-link");
-            $("<option />", {
-                "selected": "selected",
-                "value": "",
-                "text": "Select"
-            }).appendTo(".anchor-link select");
+            // $("<option />", {
+            //     "selected": "selected",
+            //     "value": "",
+            //     "text": "Select"
+            // }).appendTo(".anchor-link select");
             $(".anchor-link a").each(function () {
                 var el = $(this);
                 $("<option />", {
@@ -66,7 +66,7 @@ function scrollToActive() {
             }
             else{
                 $('html, body').stop().animate({
-                    scrollTop: (offsetTop - 80)
+                    scrollTop: (offsetTop - 170)
                 }, 850);
             }
         
@@ -83,8 +83,14 @@ function scrollToActive() {
         var id = cur && cur.length ? cur[0].id : "";
 
         if (lastId !== id) {
+       
             lastId = id;
             menuItems.parent().removeClass("active").end().filter("[href='#" + id + "']").parent().addClass("active");
+            if(id != ''){
+                $('[anchor-wrapper] select').val("#" + id)
+            }
+            
+
         }
     });
 

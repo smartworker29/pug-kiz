@@ -22,7 +22,7 @@
           }
           @include lg{
             height: calc((100vw/3 - 30px) * 0.561);
-            max-height: 265px;
+            max-height: 197px;
           }
         }
     }
@@ -34,7 +34,7 @@
         .card-stamp {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
+            margin-bottom: 24px;
             align-items: center;
             flex-wrap: wrap;
         }

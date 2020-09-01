@@ -1,6 +1,6 @@
 .anchor-link{
     margin: 0;
-    font-family: $font-roboto-regular;
+    font-family: $font-roboto-light;
     width:100%;
     position: relative;
     
@@ -25,15 +25,27 @@
             padding:0 40px;
             display: flex;
             a{
-                @include link-hover;
+                // @include link-hover;
                 padding:30px 0;
                 color:$white;
+                position: relative;
                 &:after{
                     bottom: 0px;
                     height:4px;
+                    content: '';
+                    width:0%;
+                    position: absolute;
+                    background-color: $secondary;
+                    @include transition(.3s);
+                    left:50%;
+                }
+                &:hover{
+                    text-shadow: 0 0.015em #fff,0 -0.015em #fff,0.01em 0 #fff,-0.01em 0 #fff;
+                    // font-family: $font-roboto-medium;
                 }
             }
             &.active{
+                text-shadow: 0 0.015em #fff,0 -0.015em #fff,0.01em 0 #fff,-0.01em 0 #fff;
                 a{
                     &:after{
                         left:0;

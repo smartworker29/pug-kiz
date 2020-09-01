@@ -8,7 +8,7 @@
     border-bottom: 1px solid #d8d8d8;
     @include lg{
         background-size: 344px;
-        padding:80px 140px 80px 80px;
+        padding:60px 140px 60px 80px;
         background-position: 100% 100%;
     }
     label{
@@ -17,17 +17,21 @@
         letter-spacing: 1px;
         color: $lighter-grey;
         font-family: $font-roboto-medium;
+        margin-bottom: 8px;
+        @include lg(){
+            margin-bottom: 24px; 
+        }
     }
     h2{
         @include font-size($xs-font);
         margin-bottom: 0;
         color: $primary;
-        font-family: $font-roboto-light;
+        font-family: $font-roboto-regular;
         @include line-height($paragraph-line-height);
         @include lg() {
             letter-spacing: 2px;
             @include font-size($xl-font);
-            @include line-height($xxxl-line-height);
+            @include line-height($xxl-line-height);
         }
     }
     &.inner-content{

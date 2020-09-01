@@ -79,8 +79,8 @@
     max-width: 100% !important;
     bottom: 0;
     top: initial;
-    left: 0!important;
-    right: 0!important;
+    width:100%;
+  
     z-index: 2;
     @include custom-width ( 0px, 767px ){
         transform: translate(0,0) !important;
@@ -94,7 +94,7 @@
     @include md{
         max-width: 360px !important;
         top: 0;
-        right: initial;
+       
         bottom: initial;
     }
     .mapboxgl-popup-tip{

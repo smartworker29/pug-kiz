@@ -31,15 +31,10 @@
     @include md{
       padding: 40px 0 32px 0;
     }
-    @include lg{
-      padding: 30px 32px 0 0;
-    }
     @include xl{
-      padding: 50px 32px 0 0;
+      padding: 60px 32px 0 0;
     }
-    @include xxl{
-      padding: 80px 32px 0 0;
-    }
+    
   }
   &__wrap-rtl{
     padding: 24px 16px 32px;
@@ -47,14 +42,17 @@
       padding: 40px 0 32px 0;
     }
     @include lg{
-      padding: 30px 32px 0 32px;
+      padding: 0 32px;
     }
-    @include xl{
-      padding: 50px 32px 0 32px;
-    }
-    @include xxl{
-      padding: 80px 32px 0 32px;
-    }
+    // @include lg{
+    //   padding: 30px 32px 0 32px;
+    // }
+    // @include xl{
+    //   padding: 50px 32px 0 32px;
+    // }
+    // @include xxl{
+    //   padding: 80px 32px 0 32px;
+    // }
     label{
       color: $grey;
       font-size: 13px;
@@ -75,19 +73,13 @@
       height: 55.91vw;
       width: 100%;
       @include lg{
-        min-height: 350px;
-        height: auto;
-      }
-      @include xl{
-        min-height: 450px;
-        width: auto;
-        height:100%;
+        height: 350px;
       }
     }
   }
-  p{
-    color:$primary;
-  }
+  // p{
+  //   color:$primary;
+  // }
   ul{
     padding-left: 22px;
       li{
@@ -119,5 +111,45 @@
           background: $secondary;
         }
       }
+  }
+  .section__title{
+    margin-bottom: 0;
+    @include line-height($xxxl-line-height); 
+  }
+
+  &.location-map{
+    .location__image-wrap{
+      img{
+        height: 55.91vw;
+        @include lg{
+          height: 648px;
+        }
+      }
+    }
+
+    .location__wrap-rtl{
+      padding: 24px 16px 32px;
+      @include md{
+        padding: 40px 0 32px 0;
+      }
+      @include lg{
+        padding: 60px 32px 60px 0;
+      }
+      
+    }
+    
+  }
+  &.reverse{
+    direction: rtl;
+    .location__wrap-rtl{
+      padding: 24px 16px 32px;
+      @include md{
+        padding: 40px 0 32px 0;
+      }
+      @include lg{
+        padding: 60px 0 60px 32px;
+      }
+      
+    }
   }
 }

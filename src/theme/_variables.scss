@@ -9,7 +9,7 @@ $breakpoints: (
 /////////////////
 // Fonts
 ////////////////
-$font-sizes: ( xxxs: 14px, xxs: 16px, pg: 18px, xs:20px, sm: 24px, md:25px, lg:30px, xl: 32px, xxl: 33px, xxxl: 40px, xxxxl: 64px);
+$font-sizes: ( xxxs: 14px, xxs: 16px, pg: 18px, xs:20px, sm: 24px, md:25px, lg:30px, xl: 32px, xxl: 33px, xxxl: 40px, xxxxl: 58px);
 //////
 $xxxxl-font: ( null: map-get($font-sizes, lg), xs: map-get($font-sizes, xxl), md: map-get($font-sizes, xxxl), lg: map-get($font-sizes, xxxxl));
 $xxxl-font: ( null: map-get($font-sizes, xl), xs: map-get($font-sizes, xl), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxxl));
@@ -26,7 +26,7 @@ $section-title-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, 
 
 // line height
 ////////////////
-$line-height: ( xxxs: 12px, xxs: 14px, xs:20px, pg: 22px, sm: 24px, md:28px, lg:30px, xl: 36px, xxl: 40px, xxxl: 48px, xxxxl: 74px);
+$line-height: ( xxxs: 12px, xxs: 14px, xs:20px, pg: 26px, sm: 24px, md:28px, lg:30px, xl: 36px, xxl: 40px, xxxl: 48px, xxxxl: 66px);
 //////
 $xxxxl-line-height: ( null: map-get($line-height, xxl), xs: map-get($line-height, xxl), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
 $xxxl-line-height: ( null: map-get($line-height, xl), xs: map-get($line-height, xl), md: map-get($line-height, xxxl), lg: map-get($line-height, xxxl));
@@ -51,10 +51,10 @@ $secondary:  #ec1a46;
 $mute: #fcfcfc;
 $white: #fff;
 $black: #000;
-$grey: #7a7a7a;
+$grey: #757575;
 // $dark-grey:  #333333;
 $light-grey: #d6d6d6;
-$lighter-grey: #989898;
+$lighter-grey: #757575;
 // $light-grey:  #f6f6f6;
 $mute-grey: #a7a9ac;
 $anchor: #0094ff;

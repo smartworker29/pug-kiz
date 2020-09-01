@@ -11,7 +11,7 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         @include lg() {
-            padding: 80px 0;
+            padding: 60px 0;
         }
         .footer-logo {
             img {
@@ -85,6 +85,12 @@ footer {
                 li {
                     list-style: none;
                     padding-bottom: 15px;
+                    @include lg(){
+                        padding-bottom: 24px;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
                 }
                 @include md() {
                     display: block !important;

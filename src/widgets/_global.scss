@@ -1,7 +1,7 @@
 body {
   @include font-size($xs-font);
   font-weight: lighter;
-  font-family: $font-roboto-regular;
+  font-family: $font-roboto-light;
   line-height: 1.25;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -19,7 +19,7 @@ h6 {
 }
 
 p {
-  font-family: $font-roboto-regular;
+  font-family: $font-roboto-light;
   @include font-size($paragraph-font);
   @include line-height($paragraph-line-height);
 }

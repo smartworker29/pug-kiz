@@ -2,7 +2,7 @@ mixin introduction(data)
     .col-12
         .introduction
             .introduction__content(data-relative-input="true")
-                .introduction__image-wrap(data-parallax="scroll" data-image-src="${require(`./assets/images/introduction-bg-2x.jpg`)}"  parallax-wrapper data-speed="0.6")
+                .introduction__image-wrap(style="background-image:url(${require(`./assets/images/introduction-bg-2x.jpg`)})")
                     .container
                         .introduction__descr(class= data.side)
                             .section__subtitle.text-uppercase.mb-2.mb-lg-3 Introduction

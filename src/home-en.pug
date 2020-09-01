@@ -44,20 +44,44 @@ block content
 
   .placeholder
     .container#benifits
-      include ./widgets/location/location
+      //- include ./widgets/location/location
       .location-items-wrap
-        +location({
-          dir: dir,
-          title: 'Strategic Location',
-          text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
-          btnText: 'Read more',
-          image: "${require(`./assets/images/location.jpg`)}"})
-        +location({
-          dir: !dir,
-          title: 'Abu Dhabi',
-          text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
-          btnText: 'Explore',
-          image: "${require(`./assets/images/city-img.jpg`)}"})
+        .location.location-map
+          .row.no-gutters
+              div.col-12.col-lg-5.col-xl-4.order-1
+                  div.location__wrap-rtl
+                      h2.section__title.text-nowrap Strategic Location
+                      p.location__text Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.
+                      +anchor('btn-secondary' ,' Read more' )
+              div.col-12.col-lg-7.col-xl-8.order-lg-1
+
+                  div.location__image-wrap.text-left
+                      img(src= "${require(`./assets/images/location.jpg`)}")
+
+        .location
+          .row.no-gutters.align-items-lg-center
+              div.col-12.col-lg-5.col-xl-4.order-1
+                  div.location__wrap-rtl
+                      h2.section__title.text-nowrap Abu Dhabi'
+                      p.location__text At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.
+                      +anchor('btn-secondary' ,' Explore' )
+              div.col-12.col-lg-7.col-xl-8.order-lg-0
+
+                  div.location__image-wrap.text-left
+                      img(src= "${require(`./assets/images/city-img.jpg`)}")
+
+        //- +location({
+        //-   dir: dir,
+        //-   title: 'Strategic Location',
+        //-   text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
+        //-   btnText: 'Read more',
+        //-   image: "${require(`./assets/images/location.jpg`)}"})
+        //- +location({
+        //-   dir: !dir,
+        //-   title: 'Abu Dhabi',
+        //-   text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
+        //-   btnText: 'Explore',
+        //-   image: "${require(`./assets/images/city-img.jpg`)}"})
 
   .placeholder
     .container#products
@@ -102,7 +126,7 @@ block content
 
 
   .placeholder.placeholder--no-padding
-    .container-fluid.px-0#faq
+    .container#faq
       .row.no-gutters
         include ./widgets/introduction/introduction
         +introduction({

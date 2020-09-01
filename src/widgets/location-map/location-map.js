@@ -38,7 +38,7 @@ if ($('[location-tabbed]').length) {
         setTimeout(function(){
             var contactdetail = $('.contact__map .contact a')
             contactdetail.each(function(i,ele){
-                debugger;
+               
                 if($(ele).text().trim() == ""){
                     $(ele).addClass('d-none');
                 }
