@@ -62,6 +62,18 @@
       margin-right: 4%;
     }
   }
+  .section__subtitle{
+    margin-bottom: 8px;
+    @include lg{
+      margin-bottom: 24px;
+    }
+  }
+  .introduction__text{
+    @include lg(){
+      margin-bottom: 53px;
+    }
+    
+  }
   &__title{
     margin-top: 8px;
     @include lg{

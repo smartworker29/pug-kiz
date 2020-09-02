@@ -14,16 +14,17 @@ var header = (function () {
                 if(windowWidth > 1200){
                     var dropdown = $(items).parent().next();
                     $(items).on('click', function(){
-                        if(!$(items).hasClass('active')){
-                            $(items).addClass('active').siblings().removeClass('active')
-                            $(items).parents('.nav-list').find('.dropdown-wrapper').addClass('show');
-                            $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).addClass('active').siblings().removeClass('active');
+                        if($(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).find('.cluster-links a').length > 1){
+                            if(!$(items).hasClass('active')){
+                                $(items).addClass('active').siblings().removeClass('active')
+                                $(items).parents('.nav-list').find('.dropdown-wrapper').addClass('show');
+                                $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).addClass('active').siblings().removeClass('active');
+                            }
+                            else{
+                                $(items).removeClass('active')
+                                $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');
+                            }
                         }
-                        else{
-                            $(items).removeClass('active')
-                            $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');
-                        }
-                    
                     })
                     // $(items).on('mouseleave', function(){
                     //     $(items).parents('.nav-list').find('.dropdown-wrapper').removeClass('show');

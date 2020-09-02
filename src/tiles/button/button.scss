@@ -6,6 +6,11 @@
     font-family: $font-roboto-medium;
     color:$white;
     background: transparent;
+    
+    @include lg(){
+        padding:14px 30px;
+        max-height: 48px;
+    }
     &.btn-primary{
         border:0;
         background-color: $primary;
@@ -42,6 +47,9 @@
         &.secondary-bordered{
             border: 2px solid $secondary;
             color: $secondary !important;
+            @include lg(){
+                padding:12px 30px;
+            }
         }
     }
     &.with-icon{

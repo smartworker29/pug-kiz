@@ -61,6 +61,7 @@
             @include font-size($lg-font);
             @include lg() {
               @include font-size($xxxl-font);
+              @include line-height($xxxl-line-height);
             }
           }
           p {
@@ -68,8 +69,8 @@
             @include font-size($xxs-font);
             @include line-height($paragraph-line-height);
             @include lg() {
-              @include font-size($sm-font);
-              @include line-height($xl-line-height);
+              @include font-size($xs-font);
+              @include line-height($md-line-height);
             }
             &:last-of-type {
               margin-bottom: 0;
@@ -131,7 +132,7 @@
       height: 500px;
     }
     @include lg() {
-      height: 530px;
+      height: 529px;
     }
     .swiper-button-wrapper {
       bottom: 0;
