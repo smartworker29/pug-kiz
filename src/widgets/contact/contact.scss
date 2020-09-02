@@ -17,7 +17,8 @@
         }
     }
     p{
-        @include font-size($sm-font);
+        @include font-size($paragraph-font);
+        @include line-height($paragraph-line-height);
         margin-bottom: 24px;
         width:100%;
     }
