@@ -136,6 +136,7 @@ header {
             }
           }
         }
+        
       }
       @include xl() {
         display: flex;
@@ -198,6 +199,9 @@ header {
           margin-right: 0 !important;
           padding-left: 20px !important;
           padding-right: 20px !important;
+          a{
+            width:100%;
+          }
         }
       }
       ul {
