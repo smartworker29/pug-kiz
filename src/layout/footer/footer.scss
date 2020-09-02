@@ -11,7 +11,7 @@ footer {
         background-repeat: no-repeat;
         background-size: contain;
         @include lg() {
-            padding: 60px 0;
+            padding: 63px 0;
         }
         .footer-logo {
             img {
@@ -131,7 +131,7 @@ footer {
     .footer-copyright {
         padding: 10px 0 55px;
         @include xl() {
-            padding: 10px 0;
+            padding: 9px 0;
         }
 
         .copyright {
