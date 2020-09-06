@@ -180,6 +180,9 @@ header {
           }
         }
       }
+      .dropdown-wrapper{
+        background-color: $white;
+      }
       @include custom-width(0px, 1199px) {
         &.active {
           .back-menu {
@@ -197,6 +200,9 @@ header {
               display: block;
             }
           }
+        }
+        .dropdown-wrapper{
+          background-color: #f8fafd;
         }
       }
       > ul {
