@@ -45,8 +45,13 @@
   .custom-dropdown{
     position: relative;
   }
-  .form-footer input.btn {
-    height: auto;
+  .form-footer {
+    margin-top: 8px;
+    @include md(){
+      margin-top: 33px;
+    }
+  input.btn {
+    // height: auto;
     padding: 0;
     padding: 10px 30px;
     border-radius: 10px;
@@ -56,6 +61,7 @@
     &.active{
       background: $secondary;
     }
+  }
   }
   input, textarea, .custom-dropdown select{
     border-radius: 4px;
@@ -321,7 +327,6 @@
 .success-wrapper{
   max-width: 884px;
   padding: 0;
-  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -347,8 +352,13 @@
     font-size: 90px;
   }
   h2{
-    margin: 40px 0 24px;
+    margin: 40px 0 16px;
     color:$primary;
+  }
+  p{
+    &:last-of-type{
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -360,7 +370,7 @@
   }
   form{
     .widget{
-      max-width: 884px;
+      max-width: 976px;
       width: 100%;
       margin: 0 auto;
       &__header{
@@ -374,7 +384,7 @@
       }
     }
     .form{
-      max-width: 884px;
+      max-width: 976px;
       width: 100%;
       margin: 0 auto;
       float: left;

@@ -9,21 +9,21 @@
     @include lg(){
       padding:64px;
     }
-    > button.close{
-      background: transparent;
-      opacity: 1;
-      outline: 0;
-      border: 0;
-      position: absolute;
-      right: 16px;
+  }
+  button.close{
+    background: transparent;
+    opacity: 1;
+    outline: 0;
+    border: 0;
+    position: absolute;
+    right: 16px;
+    top: 24px;
+    @include lg(){
+      right: 24px;
       top: 24px;
-      @include lg(){
-        right: 24px;
-        top: 24px;
-      }
-      span{
-        color: $secondary;
-      }
+    }
+    span{
+      color: $secondary;
     }
   }
   .modal-header{
@@ -31,10 +31,10 @@
     padding: 0;
     @include lg{
       padding: 0;
-      span{
-        font-size: 35px;
-        color: #e60000;
-      }
+      // span{
+      //   font-size: 35px;
+      //   color: #e60000;
+      // }
     }
     .close{
       background: transparent;
@@ -143,9 +143,13 @@
     }
     input{
       height: 48px;
-      padding: 10px 16px;
+      padding: 16px 16px 0;
       transition: width .2s;
-     text-align: right;
+     text-align: left;
+     @include md(){
+      text-align: right;
+      padding: 8px 16px 8px;
+     }
       // @include lg{
       //   height: 48px;
       //   padding: 27px 16px;
@@ -190,7 +194,7 @@
       input{
         &:focus,
         &.has-value{
-          padding: 6px 16px 6px;
+          padding: 16px 16px 0;
         }
         &:focus ~ label,
         &.has-value ~ label{
@@ -265,6 +269,14 @@
 }
 
 #learnMore{
+.modal-header{
+  h2{
+    @include font-size($xl-font);
+      @include line-height($xxl-line-height);
+      margin-bottom: 8px;
+  }
+}
+
   .success-wrapper{
     .btn{
       @include md(){
@@ -275,4 +287,5 @@
       }
     }
   }
+
 }
