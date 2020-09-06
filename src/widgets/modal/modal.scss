@@ -26,7 +26,7 @@
     border-bottom: none;
     padding: 24px 16px 0;
     @include lg{
-      padding: 40px 80px 24px;
+      padding: 60px 60px 22px;
       span{
         font-size: 35px;
         color: #e60000;
@@ -40,7 +40,7 @@
   }
 
   &-dialog{
-    max-width: 1044px;
+    max-width: 846px;
     margin: 0;
   }
 
@@ -50,10 +50,7 @@
     border-radius: 0;
     p{
       @include font-size($xs-font);
-      @include line-height($paragraph-line-height);
-      @include lg{
-        @include font-size($sm-font);
-      }
+      @include line-height($sm-line-height);
       color: $primary;
       @include lg{
         max-width: 724px;
@@ -69,11 +66,11 @@
   .form{
     border-radius: 4px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
-    background-color: #ffffff;
+    background-color: $white;
     padding: 32px 16px;
     @include lg{
-      padding: 80px;
-      max-width: 884px;
+      padding: 40px;
+      width: 100%;
     }
     input, textarea{
       border-radius: 4px;
@@ -134,20 +131,21 @@
       }
     }
     input{
-      height: 52px;
-      padding: 17px 16px;
+      height: 48px;
+      padding: 10px 16px;
       transition: width .2s;
-      @include lg{
-        height: 78px;
-        padding: 27px 16px;
-      }
+     text-align: right;
+      // @include lg{
+      //   height: 48px;
+      //   padding: 27px 16px;
+      // }
     }
     textarea{
       resize: none;
       height: 112px;
       padding: 16px;
       @include placeholder{
-        color: $mute-grey;
+        color: $light-grey;
       }
     }
     form{
@@ -169,19 +167,19 @@
         top: 15px;
         left: 16px;
         font-family: $font-roboto-regular;
-        color: $mute-grey;
+        color: $light-grey;
         transition: all .3s ease-in-out;
         @include font-size($xs-font);
         @include line-height($md-line-height);
         @include lg{
           @include font-size($sm-font);
-          top: 27px;
+          top: 14px;
         }
       }
       input{
         &:focus,
         &.has-value{
-          padding: 26px 16px 6px;
+          padding: 6px 16px 6px;
         }
         &:focus ~ label,
         &.has-value ~ label{
@@ -192,26 +190,26 @@
           color: $grey;
           transition: all .3s ease-in-out;
           @include lg{
-            top: 16px;
+            top: 19px;
           }
         }
       }
 
     }
-    .g-recaptcha{
-      max-width: 184px;
-      max-height: 46px;
-      transform:scale(0.6);
-      -webkit-transform:scale(0.6);
-      transform-origin:0 0;
-      -webkit-transform-origin:0 0;
-      @include md{
-        max-width: 200px;
-        max-height: 49px;
-        transform:scale(0.66);
-        -webkit-transform:scale(0.66);
-      }
-    }
+    // .g-recaptcha{
+    //   max-width: 184px;
+    //   max-height: 46px;
+    //   transform:scale(0.6);
+    //   -webkit-transform:scale(0.6);
+    //   transform-origin:0 0;
+    //   -webkit-transform-origin:0 0;
+    //   @include md{
+    //     max-width: 200px;
+    //     max-height: 49px;
+    //     transform:scale(0.66);
+    //     -webkit-transform:scale(0.66);
+    //   }
+    // }
   }
   button{
     background-color: $grey;
@@ -222,7 +220,7 @@
 #talk-modal, #feedback-modal{
   .brochure-card{
     text-align: left;
-    margin-top: 24px;
+    margin-top: 8px;
     .product__wrap{
       h2{
         margin: 0 0 24px 0;
@@ -237,12 +235,16 @@
         }
       }
       .link{
-        margin-top:20px;
+        margin-top:26px;
         display: block;
       }
     }
     .product__image-wrap{
+      @include lg(){
+        margin-right: 1px;
+      }
       img{
+        border-radius: 4px;;
         @include lg(){
           min-height: 217px;
         }

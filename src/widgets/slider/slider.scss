@@ -49,14 +49,14 @@
           transform: translateY(-50%);
           color: $white;
           width: calc(100% - 10px);
-          max-width: 680px;
+          max-width: 848px;
           padding-right: 20px;
           padding-left: 0px;
           @include lg {
             padding-left: 168px;
             width: 100%;
           }
-          h1 {
+          h2 {
             margin-bottom: 24px;
             @include font-size($lg-font);
             @include lg() {
@@ -85,8 +85,8 @@
           ul {
             padding-left: 26px;
             margin-top: 16px;
-            @include font-size($paragraph-font);
-            @include line-height($paragraph-line-height);
+            @include font-size($xs-font);
+            @include line-height($md-line-height);
             font-family: $font-roboto-regular;
             direction: ltr;
             // margin-bottom: 30px;
