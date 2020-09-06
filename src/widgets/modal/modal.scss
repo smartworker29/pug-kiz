@@ -195,6 +195,9 @@
         &:focus,
         &.has-value{
           padding: 16px 16px 0;
+          @include md(){
+            padding: 8px 16px 8px;
+           }
         }
         &:focus ~ label,
         &.has-value ~ label{
