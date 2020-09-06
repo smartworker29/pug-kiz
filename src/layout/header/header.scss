@@ -45,7 +45,7 @@ header {
   nav.navbar {
     padding: 20px 0;
     @include lg() {
-      border-top: 1px solid $light-grey;
+      border-top: 1px solid rgba(0,0,0,.1);
     }
     @include xl() {
       padding: 0 20px;
@@ -150,7 +150,7 @@ header {
         background-color: $white;
         left: 0;
         width: 100vw;
-        border-top: 1px solid $grey;
+        border-top: 1px solid rgba(0,0,0,.1);
         @include md() {
           top: 92px;
         }
@@ -161,15 +161,20 @@ header {
             width: 100%;
             margin: 0;
             padding: 0;
-            border-bottom: 1px solid $light-grey;
+            border-bottom: 1px solid #d8d8d8;
             > a {
               color: $primary;
               padding: 15px 0;
               display: block;
               display: flex;
               justify-content: space-between;
+              
               i {
                 transform: rotate(-90deg);
+                font-size: 12px;
+                font-weight: bolder;
+                line-height: 24px;
+                color:$secondary;
               }
             }
           }
@@ -196,9 +201,12 @@ header {
       }
       > ul {
         li {
-          margin-right: 0 !important;
-          padding-left: 20px !important;
-          padding-right: 20px !important;
+          @include xl(){
+            margin-right: 0 !important;
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+          }
+          
           a{
             width:100%;
           }
@@ -248,6 +256,8 @@ header {
               display: block;
               margin: 0 -15px;
               width: 100vw;
+              background-color: #f8fafd;
+              
               .cluster-container {
                 left: 100%;
                 top: 80px;
@@ -284,6 +294,12 @@ header {
       background-color: transparent;
       @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
       width: 100%;
+      @include custom-width(0px, 1199px){
+        min-height: calc(100vh - 82px);
+        @include md(){
+          min-height: calc(100vh - 94px);
+        }
+      }
       @include xl() {
         position: absolute;
         //display: none;

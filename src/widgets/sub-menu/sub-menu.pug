@@ -6,15 +6,14 @@ include ../../tiles/link/link
 .dropdown-wrapper
     .simscrollbar
         each x in [0,1,2,3,4]
-            .row.grey-bg.cluster-container.no-gutters(id=menuitem[x])
-                .col-lg-3.cluster-header.d-none.d-lg-block
-                    h4=menuitem[x] 
-                .col-lg-9.cluster-links
+            .row.white-bg.cluster-container.no-gutters(id=menuitem[x])
+                //- .col-lg-3.cluster-header.d-none.d-lg-block
+                //-     h4=menuitem[x] 
+                .col-12.cluster-links
                     span.cluster-mob-title.d-block.d-lg-none Overview
-                    .row
+                    .row.no-gutters.pull-left
                         each x in [1,2,3,4,5,6,7,8]
-                            .col-sm-4.col-lg-3
-                                +btn('with-icon' ,' About ClusterAbout Cluster ','icon-Metals')
+                            +btn('with-icon' ,' About ClusterAbout Cluster ','icon-Metals')
         .row.no-gutters.menu-middle
             .col-xl-7.primary-bg.order-md-1
                 .row.no-gutters

@@ -6,13 +6,12 @@
     }
     .cluster-links{
       padding:30px 15px 30px;
-      border-top:1px solid $light-grey;
+      border-top:1px solid rgba(0,0,0,.1);
       @include lg(){
-        border-top:0;
         padding-top:40px;
       }
       @include xl(){
-        padding-right:10%
+        padding: 40px 40px 40px 260px;
       }
       .cluster-mob-title{
         width:100%;
@@ -23,12 +22,18 @@
       }
       .btn.with-icon{
         text-align: left;
+        width:100%;
+        box-shadow: none;
+        background-color: #f7f7f7;
+        @include md(){
+          width:auto;
+          margin-right: 20px;
+        }
         @include lg(){
-          text-overflow: ellipsis;
           display: block;
-          overflow: hidden;
           position: relative;
           padding-right: 50px;
+          
           i{
             position: absolute;
             top: 50%;
@@ -39,6 +44,9 @@
         @include xl(){
           padding:16px 50px 16px 16px;
           line-height: 14px;
+          &:hover{
+            background-color: #bbbbba;
+          }
         }
       }
     }
