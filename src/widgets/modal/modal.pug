@@ -5,9 +5,9 @@ mixin modal(data)
                 button(type="button" class="close" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true").icon-close
                 .modal-header.flex-wrap
-                    h2.heading.section__title.mb-0.pt-4.w-100.text-center.text-uppercase= data.title
+                    h2.heading.section__title.mb-0.w-100.text-center.text-uppercase= data.title
                 .modal-body
-                    p.text-center.mb-4.mx-lg-auto= data.modalText
+                    p.text-center.mx-lg-auto= data.modalText
                     .form.mx-lg-auto
                         form(action="", novalidate, validation, recaptcha, data-toastr-message='Form Submitted Successfully !')
                             .form__item
