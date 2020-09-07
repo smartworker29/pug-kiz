@@ -48,7 +48,7 @@ header {
       border-top: 1px solid rgba(0,0,0,.1);
     }
     @include xl() {
-      padding: 0 20px;
+      padding: 0;
     }
     @include custom-width(0px, 1199px) {
       position: fixed;

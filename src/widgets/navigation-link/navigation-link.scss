@@ -18,21 +18,28 @@
     ul{
         list-style: none;
         display: none;
-        @include xl(){
+        padding: 0 15px;
+        @include lg(){
             display: flex;
         }
         li{
             padding:0 40px;
             display: flex;
             @include lg(){
-                padding:0 8px;
+                padding:0 4px;
             }
             @include xxl(){
-                padding:0 28px;
+                padding:0 20px;
+            }
+            &:first-child{
+                @include lg(){
+                    padding-left: 0;
+                }
+                
             }
             a{
                 // @include link-hover;
-                padding:30px 13px;
+                padding:25px 15px 24px;
                 color:$white;
                 position: relative;
                 font-size: 16px;
@@ -78,7 +85,7 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         @include font-size($xs-font);
-        @include xl(){
+        @include lg(){
             display: none;
         }
         option{

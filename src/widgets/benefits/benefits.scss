@@ -12,17 +12,17 @@
                 display: block;
             }
         }
-        // .swiper-button-next{
-        //     @include xl(){
-        //         right: 0;
-        //     }
+        .swiper-button-next{
+            @include xl(){
+                right: 60px;
+            }
             
-        // }
-        // .swiper-button-prev{
-        //     @include xl(){
-                
-        //     }
-        // }
+        }
+        .swiper-button-next{
+           @media(min-width:1600px){
+                right: 0;
+            }
+        }
     }
     
     .swiper-slide{
