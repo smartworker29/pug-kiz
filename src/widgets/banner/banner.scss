@@ -43,13 +43,14 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
-            padding: 0 20px;
+            padding: 0 0;
             @include md {
                 width: 100%;
+                left:auto;
             }
             @include xl {
                 // position: relative;
-                max-width: 952px;
+                max-width: 610px;
                 // padding-top: 220px;
                 // top: 0;
                 // left: auto;
@@ -119,7 +120,7 @@
             top:50%;
             transform: translateY(-50%);
             width:100%;
-            max-width:952px;
+            max-width:610px;
             
             h1 {
                 @include font-size($lg-font);

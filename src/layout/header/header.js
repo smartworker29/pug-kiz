@@ -12,7 +12,7 @@ var header = (function () {
             [].map.call(listitem, function (items) {
                 var itemname = $(items).find('a').attr('data-id').replace('#','');
                 if(windowWidth > 1200){ 
-                    debugger
+                  
                     var dropdown = $(items).parent().next();
                     var listitems = $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).find('.cluster-links a').length
                     if(listitems > 1){
@@ -43,7 +43,7 @@ var header = (function () {
                     // })
                 }
                 else{
-                    debugger
+                   
                     var listitems = $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).find('.cluster-links a').length
                     items.onclick = e => {
                         $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');

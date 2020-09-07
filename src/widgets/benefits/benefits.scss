@@ -12,6 +12,17 @@
                 display: block;
             }
         }
+        .swiper-button-next{
+            @include xl(){
+                right: 62px;
+            }
+            
+        }
+        .swiper-button-prev{
+            @include xl(){
+                
+            }
+        }
     }
     
     .swiper-slide{
