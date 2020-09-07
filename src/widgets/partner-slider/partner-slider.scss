@@ -46,7 +46,7 @@
   // }
   .swiper-button-next{
     @include xl(){
-        right: 60px;
+        right: 45px;
     }
     
 }
@@ -61,6 +61,9 @@
     @include lg{
       padding:0;
       margin:0 90px;
+      width:calc(100% - 228px);
+    }
+    @include xl(){
       width:calc(100% - 180px);
     }
 
