@@ -24,13 +24,25 @@
         li{
             padding:0 40px;
             display: flex;
+            @include lg(){
+                padding:0 8px;
+            }
+            @include xxl(){
+                padding:0 28px;
+            }
             a{
                 // @include link-hover;
-                padding:30px 0;
+                padding:30px 13px;
                 color:$white;
                 position: relative;
-                @include font-size($paragraph-font);
-                @include line-height($paragraph-line-height);
+                font-size: 16px;
+                // @include line-height($paragraph-line-height);
+                @include lg(){
+                    font-size: 14px;
+                }
+                @include xxl(){
+                    font-size: 16px;
+                }
                 &:after{
                     bottom: 0px;
                     height:4px;
