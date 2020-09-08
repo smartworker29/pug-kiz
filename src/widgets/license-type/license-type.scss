@@ -27,9 +27,13 @@
       .swiper-wrapper {
         flex-wrap: wrap;
         width: 100%;
+        display: flex;
       }
       .swiper-slide  {
         width: 50%;
+        flex-grow: 1;
+        height: auto;
+        margin-bottom: 32px;
       }
       .swiper-button-wrapper{
         display: none;
@@ -41,13 +45,10 @@
     border-radius: 4px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     background-color: #fff;
-    color:$grey;
+    
     @include lg{
-      padding: 48px;
-      margin-bottom: 32px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
+      padding: 30px 40px 40px;
+      height: 100%;
     }
     &__icon{
       .icon-scale{
@@ -56,33 +57,36 @@
           font-size: 64px;
         }
       }
-      display: flex;
-      align-items: center;
-      @include lg{
-        align-items: flex-start;
+      @include md{
+        display: flex;
+      }
+      h3{
+        color:$primary;
+        @include font-size($md-font);
+        font-family: $font-roboto-regular;
+        line-height: 32px;
+        padding-left: 8px;
+        margin-bottom: 0;
+        @include lg(){
+          padding-left: 32px;
+        }
       }
     }
-    h3{
-      color:$primary;
-      @include font-size($md-font);
-      @include line-height($md-line-height);
-      margin-left: 8px;
-      margin-bottom: 0;
-      @include lg{
-        margin-left: 32px;
+    &__text{
+      margin-top:24px;
+      @include lg(){
+        padding-left:96px;
+        margin-top: -9px;
+      }
+
+      p{
+        width: 100%;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
       }
     }
-    p{
-      width: 100%;
-      margin-top: 24px;
-      @include font-size($xs-font);
-      @include line-height($paragraph-line-height);
-      @include lg{
-        @include font-size($paragraph-font);
-        padding-left: 96px;
-        margin-top: -24px;
-      }
-    }
+    
   }
 }
 
