@@ -26,7 +26,7 @@ $section-title-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, 
 
 // line height
 ////////////////
-$line-height: ( xxxs: 12px, xxs: 14px, xs:22px, pg: 26px, sm: 24px, md:28px, lg:30px, xl: 36px, xxl: 40px, xxxl: 48px, xxxxl: 66px);
+$line-height: ( xxxs: 12px, xxs: 14px, xs:22px, pg: 26px, sm: 24px, md:28px, lg:32px, xl: 36px, xxl: 40px, xxxl: 48px, xxxxl: 66px);
 //////
 $xxxxl-line-height: ( null: map-get($line-height, xxl), xs: map-get($line-height, xxl), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
 $xxxl-line-height: ( null: map-get($line-height, xl), xs: map-get($line-height, xl), md: map-get($line-height, xxxl), lg: map-get($line-height, xxxl));

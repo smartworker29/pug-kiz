@@ -1,9 +1,9 @@
-.legal-type-wrap{
-  margin-bottom: -24px;
-  @include xl{
-    margin-bottom: -17px;
-  }
-}
+// .legal-type-wrap{
+//   margin-bottom: -24px;
+//   @include xl{
+//     margin-bottom: -17px;
+//   }
+// }
 .legal-type-card{
   border-radius: 4px;
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
@@ -31,7 +31,7 @@
   &__text{
     padding: 16px 24px 24px;
     @include lg{
-      padding: 32px;
+      padding: 32px 32px 52px;
     }
     @include xl{
       display: flex;
@@ -44,14 +44,20 @@
     @include font-size($md-font);
     @include line-height($xxl-line-height);
     letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    @include md{
+      flex: 1 1 auto;
+      
+    }
     @include lg{
       @include line-height($xl-line-height);
       letter-spacing: 0;
+      margin-bottom: 16px;
     }
     @include xl{
-      flex: 1 1 auto;
-      max-height: 64px;
+      margin-bottom: 0;
     }
+    
     display: -webkit-box;
     overflow: hidden;
     -webkit-line-clamp: 2;
@@ -62,6 +68,9 @@
     @include line-height($paragraph-line-height);
     @include lg{
       @include font-size($paragraph-font);
+    }
+    &:last-of-type{
+      margin-bottom: 0;
     }
   }
 }
