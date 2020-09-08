@@ -272,21 +272,21 @@
 }
 
 #learnMore{
-.modal-header{
   h2{
     @include font-size($xl-font);
       @include line-height($xxl-line-height);
       margin-bottom: 8px;
   }
-}
 
   .success-wrapper{
     .btn{
+      margin-top: 30px;
       @include md(){
         width: fit-content;
         left: 50%;
         position: relative;
         transform: translateX(-50%);
+        margin-top: 40px;
       }
     }
   }
