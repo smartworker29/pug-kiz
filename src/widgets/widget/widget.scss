@@ -11,9 +11,9 @@
         letter-spacing: 1px;
         color: $lighter-grey;
         font-family: $font-roboto-medium;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
         @include lg(){
-          margin-bottom: 24px;
+          margin-bottom: 16px;
         }
       }
       .heading {
@@ -32,9 +32,6 @@
         }
         &:first-of-type{
           margin-top: 8px;
-          @include lg(){
-            margin-top: 16px;
-          }
         }
         &.dt-primary{
           @include lg(){
