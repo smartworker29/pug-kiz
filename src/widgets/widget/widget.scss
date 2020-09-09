@@ -5,6 +5,11 @@
       @include lg(){
         padding-bottom:32px;
       }
+      &.header-large{
+        @include lg(){
+          margin-bottom:8px;
+        }
+      }
       .label {
         font-size: 12px;
         text-transform: uppercase;

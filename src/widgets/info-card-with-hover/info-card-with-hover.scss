@@ -17,6 +17,7 @@
     }
     .info-card-btn{
       display: inherit;
+      padding-top: 0;
       @include lg{
         margin-top: 24px;
       }

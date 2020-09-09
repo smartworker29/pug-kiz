@@ -57,11 +57,12 @@
             width: 100%;
           }
           h2 {
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             @include font-size($lg-font);
             @include lg() {
               @include font-size($xxxl-font);
               @include line-height($xxxl-line-height);
+              margin-bottom: 24px;
             }
           }
           p {

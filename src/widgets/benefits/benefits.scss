@@ -6,9 +6,12 @@
     }
     
     .benefit-swiper{
-        padding-bottom: 70px;
+        padding-bottom: 60px;
         .btn-swiper{
-            top:calc(44% - 50px)
+            top:calc(50% - 50px);
+            @include md{
+                top:calc(44% - 50px);
+            }
         }
         // .swiper-button-wrapper{
         //     display: none;
@@ -84,7 +87,7 @@
                     font-family: $font-roboto-regular;
                     @include font-size($md-font);
                     @include line-height($paragraph-line-height);
-                    margin-bottom: 26px;
+                    margin-bottom: 24px;
                     @include md{
                         margin-bottom: 16px;
                     }

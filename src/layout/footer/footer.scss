@@ -26,7 +26,10 @@ footer {
         .widget-brochure {
             color: $white;
             padding-right: 0px;
-            padding-bottom: 30px;
+            padding-bottom: 0;
+            @include lg{
+                padding-bottom: 30px;
+            }
             @include lg() {
                 padding-right: 40px;
                 padding-bottom: 0;
@@ -48,17 +51,28 @@ footer {
                 }
             }
             p {
-                @include font-size($xs-font);
-                @include line-height($md-line-height);
+                @include font-size($xxs-font);
+                line-height: 16px;
+                margin-bottom: 32px;
+                @include md{
+                    @include font-size($xs-font);
+                    @include line-height($md-line-height);
+                    margin-bottom: 24px;
+                }
             }
             .btn {
                 width: 100%;
-                margin-bottom: 15px;
+                margin-bottom: 24px;
+                height: 48px;
+                padding: 14px 30px;
+                line-height: 20px;
+                font-size: 16px;
                 @include md() {
-                    margin-right: 15px;
+                    margin-right: 24px;
                     width: auto;
                 }
                 &:last-child {
+                    margin-bottom: 24px;
                     margin-right: 0;
                 }
             }
