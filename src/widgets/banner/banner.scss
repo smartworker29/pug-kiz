@@ -33,8 +33,10 @@
         position: relative;
         height: 100%;
         &.block-content{
-            @include custom-width(0px, 1199px) {
-                padding: 0 15px;
+            .text{
+                @include custom-width(0px, 1199px) {
+                    padding: 0 15px;
+                }
             }
         }
         
