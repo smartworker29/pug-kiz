@@ -18,6 +18,7 @@ export default function licenseSlider() {
           },
           pagination: {
             el: '.swiper-pagination',
+            clickable: true,
           },
             breakpoints: {
               320:{

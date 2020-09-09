@@ -12,6 +12,7 @@ export default function videoSlider() {
                 centeredSlides: false,
                 pagination: {
                     el: '.video-swiper .swiper-pagination',
+                    clickable: true,
                   },
                 breakpoints: {
                     320:{

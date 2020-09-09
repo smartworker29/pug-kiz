@@ -9,10 +9,12 @@ export default function benefitSlider() {
                 loop: true,
                 speed: 1500,
                 centeredSlides: true,
+                
                 // pagination: '.swiper-pagination',
                 // paginationClickable: true,
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true,
                   },
                 
                   

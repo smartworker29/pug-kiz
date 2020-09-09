@@ -32,13 +32,7 @@
     .container {
         position: relative;
         height: 100%;
-        &.block-content{
-            .text{
-                @include custom-width(0px, 1199px) {
-                    padding: 0 15px;
-                }
-            }
-        }
+   
         
         // @include xl() {
         //     position: absolute;
@@ -51,7 +45,6 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
-            padding: 0 0;
             @include md {
                 width: 100%;
                 left:auto;
@@ -63,6 +56,9 @@
                 // top: 0;
                 // left: auto;
                 // transform: translateY(0);
+            }
+            @include custom-width(0px, 1199px) {
+                padding: 0 15px;
             }
             &.center{
                 text-align: center;

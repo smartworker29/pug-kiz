@@ -30,6 +30,7 @@ export default function swiperCustom() {
                         slidesPerView: slideitems,
                         pagination: {
                             el: item,
+                            clickable: true,
                           },
                         navigation: {
                             nextEl: nextitem,

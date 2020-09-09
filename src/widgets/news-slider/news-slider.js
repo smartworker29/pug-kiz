@@ -8,6 +8,7 @@ export default function newsSlider() {
         slidesPerView: 3,
         pagination: {
           el: '.swiper-pagination',
+          clickable: true,
         },
         breakpoints: {
           1500: {
