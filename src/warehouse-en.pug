@@ -1,6 +1,6 @@
 extends layout/layout
 block content
-
+  include ./widgets/support/support
   .placeholder.placeholder--no-padding.inner-banner-image(style="background-image:url(${require(`./assets/images/home-banner.jpg`)})")
     include ./widgets/banner-inner/banner-inner
     +innerBanner({

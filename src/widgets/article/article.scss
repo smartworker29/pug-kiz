@@ -50,9 +50,9 @@
             // font-family: $font-roboto-light;
             @include font-size($paragraph-font);
             @include line-height($paragraph-line-height);
-            margin-top: 16px;
+            margin-top: 8px;
             @include lg(){
-                margin-top: 24px;
+                margin-top: 16px;
             }
             &:first-child{
                 margin-top: 0;
