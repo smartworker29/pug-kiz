@@ -23,7 +23,7 @@
     height: 40px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     @include lg{
-      height: 56px;
+      height: 48px;
     }
 
   }
@@ -47,9 +47,6 @@
     }
     i{
       font-size: 24px;
-      @include lg{
-        font-size: 32px;
-      }
     }
   }
   &__text{
