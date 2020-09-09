@@ -1,17 +1,21 @@
 .benefits-wrapper{
+    margin: 0 -15px;
+    width: auto;
+    @include lg{
+        margin: 0;
+    }
+    
     .benefit-swiper{
         padding-bottom: 70px;
         .btn-swiper{
-            width:64px;
-            height:64px;
             top:calc(44% - 50px)
         }
-        .swiper-button-wrapper{
-            display: none;
-            @include lg(){
-                display: block;
-            }
-        }
+        // .swiper-button-wrapper{
+        //     display: none;
+        //     @include lg(){
+        //         display: block;
+        //     }
+        // }
         // .swiper-button-next{
         //     @include xl(){
         //         right: 60px;
@@ -27,6 +31,10 @@
     
     .swiper-slide{
         height: auto;
+        padding: 0 15px;
+        @include lg{
+            padding: 0;
+        }
         &.swiper-slide-prev{
             opacity: .4;
             
@@ -39,26 +47,49 @@
         }
         .text{
             text-align: left;
-            display: flex;
-            padding:41px 32px;
+            display: block;
+            padding:32px 40px;
             height: 100%;
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+            @include md{
+                display: flex; 
+            }
             .icon{
-                width:65px;
-                font-size: 55px;
+                width:32px;
                 color:$secondary;
+                float: left;
+                margin-right: 8px;
+                @include md(){
+                    width:48px;
+                    float: none;
+                    margin-right: 0;
+                }
+                @include xl(){
+                    width:64px;
+                }
             }
             .content{
-                width:calc(100% - 65px);
-                padding-left:20px;
+                
+                padding-left:8px;
                 color:$grey;
+                @include md(){
+                    padding-left:20px;
+                    width:calc(100% - 65px);
+                }
+                @include xl(){
+                    padding-left:32px;
+                }
                 h3{
                     color:$primary;
                     font-family: $font-roboto-regular;
-                    @include lg(){
-                        @include font-size($md-font);
-                        @include line-height($md-line-height);
+                    @include font-size($md-font);
+                    @include line-height($paragraph-line-height);
+                    margin-bottom: 26px;
+                    @include md{
                         margin-bottom: 16px;
+                    }
+                    @include lg(){
+                        @include line-height($md-line-height);
                     }
                 }
                 p{

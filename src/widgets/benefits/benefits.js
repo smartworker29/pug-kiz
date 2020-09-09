@@ -16,7 +16,10 @@ export default function benefitSlider() {
                     el: '.swiper-pagination',
                     clickable: true,
                   },
-                
+                  navigation: {
+                    nextEl: '.benefit-swiper .swiper-button-next',
+                    prevEl: '.benefit-swiper .swiper-button-prev',
+                },
                   
                 breakpoints: {
                     320:{
@@ -24,10 +27,7 @@ export default function benefitSlider() {
                     },
                     991: {
                         slidesPerView: 2.3,
-                        navigation: {
-                            nextEl: '.benefit-swiper .swiper-button-next',
-                            prevEl: '.benefit-swiper .swiper-button-prev',
-                        },
+                        
                     },
 
                 }
