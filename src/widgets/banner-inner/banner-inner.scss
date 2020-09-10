@@ -8,9 +8,10 @@
     }
     @include md(){
         margin-top:95px;
+        height:510px;
     }
     @include xl(){
-        height:510px;
+        
         padding:0;
         margin-top: 0;
     }
@@ -34,16 +35,17 @@
         background-color: $white;
         opacity: .9;
         width:100%;
-        max-width:777px;
+        max-width:610px;
         padding:30px 20px;
         // @include shadow(0 3px 5px rgba(57, 63, 72, 0.3));
         box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
         color:$primary;
         border-radius: 4px;
-        @include xl(){
+        top: 50%;
+        transform: translateY(-50%);
+        @include md(){
             position: absolute;
-            padding:40px;
-            bottom:80px;
+            padding:24px 40px;
         }
         &.theme-black{
             // background-color: rgba(black,0.9);
@@ -52,23 +54,18 @@
             opacity: .8;
         }
         h1{
-            @include font-size($lg-font);
-            @include line-height($lg-line-height);
-            margin-bottom: 20px;
+            @include font-size($xxxl-font);
+            @include line-height($xxxl-line-height);
+            margin-bottom: 24px;
             position: relative;
             @include md(){
-                @include font-size($xxxl-font);
-                @include line-height($xxl-line-height);
+                margin-bottom: 32px;
             }
-            @include lg(){
-                @include font-size($xxxl-font);
-                margin-bottom: 30px;
-                @include line-height($xxxl-line-height);
-            }
+           
             &:after{
                 content: '';
                 position: absolute;
-                bottom:-10px;
+                bottom:-16px;  
                 left:0;
                 background-color: $secondary;
                 height:4px;
@@ -77,10 +74,12 @@
             
         }
         p{
-            @include font-size($xxs-font);
-            @include lg(){
-                @include font-size($sm-font);
-            }
+            @include font-size($sm-font);
+            @include line-height($lg-line-height);
+            font-family: $font-roboto-light;
+                @include md() {
+                    font-family: $font-roboto-regular;
+                }
             &:last-of-type{
                 margin-bottom: 0;
             }
@@ -89,9 +88,9 @@
     > .container{
         @include custom-width(0px, 991px) {
             position: absolute;
-            bottom: 24px;
             width: 100%;
             padding: 0 15px;
+            height: 100%;
         }
     }
 }

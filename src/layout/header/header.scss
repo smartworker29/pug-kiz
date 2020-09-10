@@ -12,22 +12,24 @@ header {
     z-index: 9;
     bottom: 0;
     color: $white;
+    
+    background-color: $primary;
     @include xl {
       display: flex;
     }
     ul {
-      margin: 0;
+      text-align: right;
+
       li {
         list-style-type: none;
         display: inline-block;
-        margin: 14px 20px;
+        margin: 9px 20px 10px;
         position: relative;
         a {
           @include link-hover;
-          @include font-size($xxs-font);
-          @include custom-width(0px, 1025px) {
+          font-size: 12px;
+          line-height: 14px;
             color: $white;
-          }
         }
         &.active {
           @include xl {
