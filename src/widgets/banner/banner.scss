@@ -1,7 +1,7 @@
 .banner {
     position: relative;
     color: $white;
-    height: 475px;
+    height: 432px;
     overflow: hidden;
     margin-top: 80px;
     @include md() {
@@ -45,65 +45,42 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
-            @include md {
-                width: 100%;
+            @include lg {
+                max-width: 610px;
                 left:auto;
             }
-            @include xl {
-                // position: relative;
-                max-width: 610px;
-                // padding-top: 220px;
-                // top: 0;
-                // left: auto;
-                // transform: translateY(0);
-            }
+            
             @include custom-width(0px, 1199px) {
                 padding: 0 15px;
             }
-            &.center{
-                text-align: center;
-                @include md(){
-                    width:80%;
-                    left:50%;
-                    transform: translate(-50%, -50%);
-                }
-            }
+            // &.center{
+            //     text-align: center;
+            //     @include md(){
+            //         width:80%;
+            //         left:50%;
+            //         transform: translate(-50%, -50%);
+            //     }
+            // }
             h1 {
-                @include font-size($lg-font);
+                @include font-size($xxxxl-font);
+                @include line-height($xxxxl-line-height);
                 margin-bottom: 16px;
-                @include line-height($lg-line-height);
-                @include md() {
-                    @include font-size($xxxl-font);
-                    @include line-height($xxl-line-height);
-                }
-                @include lg() {
-                    @include font-size($xxxxl-font);
-                    margin-bottom: 40px;
-                    @include line-height($xxxxl-line-height);
-                }
             }
             p {
-                @include font-size($xs-font);
-                @include line-height($paragraph-line-height);
+                @include font-size($md-font);
+                @include line-height($xl-line-height);
                 font-family: $font-roboto-light;
                 @include md() {
-                    @include font-size($md-font);
-                    @include line-height($xl-line-height);
-                }
-                @include lg() {
-                    @include font-size($xl-font);
-                    @include line-height($xxl-line-height);
                     font-family: $font-roboto-regular;
                 }
+                
                 &:last-of-type{
                     margin-bottom: 0;
                 }
             }
             .btn{
-                margin-top: 20px;
-                @include lg(){
-                    margin-top: 45px;
-                }
+                margin-top: 32px;
+                
             }
         }
     }
@@ -126,28 +103,22 @@
             width:100%;
             max-width:610px;
             
-            h1 {
-                @include font-size($lg-font);
-                @include line-height($lg-line-height);
-                margin-bottom: 20px;
-                position: relative;
-                @include md() {
-                    @include font-size($xxxl-font);
-                    @include line-height($xxl-line-height);
-                }
-                @include lg() {
-                    @include font-size($xxxl-font);
-                    margin-bottom: 30px;
-                    @include line-height($xxxl-line-height);
-                }
-            }
-            p {
-                @include font-size($paragraph-font);
-                @include line-height($paragraph-line-height);
-                &:last-of-type{
-                    margin-bottom: 0;
-                }
-            }
+            // h1 {
+            //     @include font-size($xxxl-font);
+            //     @include line-height($xxl-line-height);
+            //     margin-bottom: 20px;
+            //     position: relative;
+            //     @include lg() {
+            //         margin-bottom: 30px;
+            //     }
+            // }
+            // p {
+            //     @include font-size($paragraph-font);
+            //     @include line-height($paragraph-line-height);
+            //     &:last-of-type{
+            //         margin-bottom: 0;
+            //     }
+            // }
         }
         .container {
             position: relative;
