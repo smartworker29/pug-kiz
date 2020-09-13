@@ -109,6 +109,12 @@
   // p{
   //   color:$primary;
   // }
+  .btn{
+    margin-top: 32px;
+    @include lg{
+      margin-top: 40px;
+    }
+  }
   ul{
     padding-left: 22px;
       li{

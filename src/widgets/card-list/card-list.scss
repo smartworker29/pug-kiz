@@ -4,6 +4,7 @@
     background-color: $white;
     height:100%;
     display: block;
+    position: relative;
     &:hover{
         cursor: pointer;
         .news-widget__text{
@@ -27,9 +28,9 @@
         }
     }
     &__content {
-        padding: 15px 16px 24px;
+        padding: 15px 16px 78px;
         @include md {
-            padding: 24px;
+            padding: 24px 24px 94px ;
         }
         .card-stamp {
             display: flex;
@@ -99,6 +100,10 @@
         @include md {
             margin-bottom: 15px;
         }
+    }
+    .link{
+        position: absolute;
+        bottom: 20px;
     }
 }
 

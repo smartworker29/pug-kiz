@@ -90,7 +90,7 @@
             @include line-height($md-line-height);
             font-family: $font-roboto-regular;
             direction: ltr;
-            // margin-bottom: 30px;
+            margin-bottom: 0px;
             // @include lg(){
             //   margin-bottom: 40px;
             // }
@@ -100,6 +100,7 @@
               // @include lg() {
               //   margin-bottom: 12px;
               // }
+              margin: 0;
               list-style: none;
               &:before {
                 content: "\2022";
@@ -110,6 +111,9 @@
                 margin-left: -1em;
                 font-size: 23px;
                 vertical-align: middle;
+                left: 0;
+                background: transparent;
+                top: 0;
               }
             }
           }
