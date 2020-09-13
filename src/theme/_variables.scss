@@ -12,8 +12,8 @@ $breakpoints: (
 $font-sizes: ( xxxs: 14px, xxs: 16px, pg: 18px, xs:20px, sm: 24px, md:25px, lg:30px, xl: 32px, xxl: 40px, xxxl: 48px, xxxxl: 58px);
 //////
 $xxxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxxxl), lg: map-get($font-sizes, xxxxl));
-$xxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxxl));
-$xxl-font: ( null: map-get($font-sizes, lg), xs: map-get($font-sizes, lg), md: map-get($font-sizes, xl), lg: map-get($font-sizes, xxl));
+$xxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxxl), lg: map-get($font-sizes, xxxl));
+$xxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxl));
 $xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xl));
 $lg-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, md), lg: map-get($font-sizes, lg));
 $md-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, sm), lg: map-get($font-sizes, sm));

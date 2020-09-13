@@ -34,9 +34,12 @@
         .card-stamp {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             align-items: center;
             flex-wrap: wrap;
+            @include md{
+                margin-bottom: 24px;
+            }
         }
         p:not(.news-widget__text){
             margin-bottom: 24px;

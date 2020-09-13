@@ -19,17 +19,23 @@
         list-style: none;
         display: none;
         padding: 0 15px;
+        margin: 0;
         @include lg(){
             display: flex;
         }
         li{
             padding:0 40px;
             display: flex;
+            margin: 0;
+            line-height: normal;
             @include lg(){
                 padding:0 4px;
             }
             @include xxl(){
                 padding:0 20px;
+            }
+            &::before{
+                display: none;
             }
             &:first-child{
                 @include lg(){

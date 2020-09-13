@@ -62,6 +62,9 @@
 }
 
 .benefits-dt-item{
+  @include lg{
+    padding:80px;
+  }
   &.benefits-dt-item-1{
     background-color: #ccc;
   }
@@ -147,14 +150,7 @@
     }
     
   }
-  @include lg{
-    padding: 40px 40px;
-  }
-
-  @include xxl{
-    padding: 40px 80px;
-
-  }
+  
   div{
 
     p{

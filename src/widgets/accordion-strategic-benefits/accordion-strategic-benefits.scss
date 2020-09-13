@@ -11,7 +11,7 @@
     @include transition(all 0.55s ease-in-out);
     i {
       margin-left: auto;
-      font-size: 40px;
+      font-size: 24px;
       line-height: 0;
       color: $white;
       @include transition(all 0.55s ease-in-out);
@@ -70,10 +70,9 @@
 
   h2{
     color: $white;
-    @include font-size($lg-font);
-    @include xxl{
-      @include font-size($xxxl-font);
-    }
+    @include font-size($xxl-font);
+    @include line-height($xxl-line-height);
+    
   }
 }
 

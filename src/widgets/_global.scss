@@ -79,11 +79,10 @@ img {
     font-family: $font-archive-bold;
     color: $primary;
     text-transform: uppercase;
-    @include font-size($section-title-font);
-    line-height: 1.33;
+    @include font-size($xxl-font);
     letter-spacing: 0.6px;
+    @include line-height($xxxl-line-height); 
     @include lg {
-      line-height: 1.2;
       letter-spacing: 1px;
     }
   }
@@ -122,3 +121,35 @@ ul {
     bottom:20px;
   }
 }
+.placeholder{
+  ul {
+    padding-left:22px;
+    margin-bottom:30px;
+    li{
+        list-style-type: none;
+        position: relative;
+        @include font-size($paragraph-font);
+        @include line-height($paragraph-line-height);
+        margin-top: 8px;
+        @include lg(){
+            margin-top: 16px;
+        }
+        &:first-child{
+            margin-top: 0;
+        }
+        &:before{
+          position: absolute;
+          display: block;
+          left: -22px;
+          top: 12px;
+          content: '';
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          color: $secondary;
+          background: $secondary;
+        }
+      }
+  }
+}
+

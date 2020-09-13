@@ -24,12 +24,17 @@
     }
     .swiper-button-wrapper{
         position: absolute;
-        top:calc(50% - 25px);
+        top:90px;
         width:100%;
         display: none;
-
+        @include md{
+            top:223px;
+        }
         @include lg(){
             display: block;
+        }
+        @include xl{
+            top:calc(50% - 25px);
         }
         &.container{
             display: block;
@@ -37,6 +42,9 @@
             transform: translateX(-50%);
             z-index: 9;
         
+        }
+        &.full-height{
+            top:calc(50% - 25px);
         }
     }
     .swiper-pagination{
@@ -57,7 +65,7 @@
 
 
 .location__slider-content{
-    padding-top: 24px;
+    padding-top: 16px;
     .swiper-custom__label{
         font-family: $font-roboto-medium;
         text-transform: uppercase;
@@ -70,10 +78,32 @@
         }
     }
     @include xl(){
-        padding-top: 0;
+        padding-top: 32px;
         .swiper-custom__label{
             letter-spacing: 1px;
-            font-size: 13px;
+            font-size: 12px;
+        }
+    }
+    h2{
+        margin-bottom: 16px;
+        @include xl{
+            margin-bottom: 24px;
+        }
+    }
+    p{
+        margin-bottom: 16px;
+        @include xl{
+            margin-bottom: 24px;
+        }
+        
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    .btn{
+        margin-top: 24px;
+        @include xl{
+            margin-top: 40px; 
         }
     }
 }
