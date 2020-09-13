@@ -7,6 +7,7 @@ $().ready(function () {
 window.onscroll = function () {
     addClasstoElementOnScroll();
     stickanchor();
+    stickFun()
 };
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
@@ -16,6 +17,15 @@ function addClasstoElementOnScroll() {
         navbar.classList.add("sticky-top");
     } else {
         navbar.classList.remove("sticky-top");
+    }
+}
+
+var stickWidget = document.getElementsByClassName("support-widget");
+function stickFun(){
+    if (window.pageYOffset >= 150) {
+        $('.support-widget').addClass("bottom");
+    } else {
+        $('.support-widget').removeClass("bottom");
     }
 }
 

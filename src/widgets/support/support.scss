@@ -7,13 +7,18 @@
   margin-right: -50%;
   transform: translate(-50%, 0);
   width: 330px;
+  @include transition(all 0.55s ease-in-out);
   @include xl{
     right: 0;
     margin-right: 0;
     left: auto;
     bottom: auto;
-    top: 364px;
-    transform: rotate(-90deg) translate(0, 137px);
+    bottom: 44%;
+    transform: rotate(-90deg) translate(0, 141px);
+    &.bottom{
+      bottom:0%;
+      transform: rotate(-90deg) translate(44%, 141px);
+    }
   }
   button{
     border: none;
@@ -22,6 +27,7 @@
     flex: 1 0 165px;
     height: 40px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    outline: none;
     @include lg{
       height: 48px;
     }
