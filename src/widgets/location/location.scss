@@ -109,7 +109,7 @@
   // p{
   //   color:$primary;
   // }
-  .btn{
+  .btn, .link{
     margin-top: 32px;
     @include lg{
       margin-top: 40px;

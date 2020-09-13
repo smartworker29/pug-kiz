@@ -7,7 +7,7 @@
     position: relative;
     &:hover{
         cursor: pointer;
-        .news-widget__text{
+        p{
             color:$secondary;
         }
     }
@@ -42,9 +42,15 @@
                 margin-bottom: 24px;
             }
         }
-        p:not(.news-widget__text){
-            margin-bottom: 24px;
+        p{
+            margin-bottom: 16px;
+            &:last-of-type{
+                margin-bottom: 0;
+            }
         }
+        // p:not(.news-widget__text){
+        //     margin-bottom: 24px;
+        // }
     }
     &__date,
     &__food{
@@ -98,7 +104,7 @@
         color: $primary;
         transition: .3s;
         @include md {
-            margin-bottom: 15px;
+            margin-bottom: 0;
         }
     }
     .link{
