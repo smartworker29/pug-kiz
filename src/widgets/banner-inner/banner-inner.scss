@@ -23,6 +23,7 @@
         position: absolute;
         z-index: 0;
         height: 100%;
+        left:0;
         @include md() {
             bottom: 50%;
             transform: translateY(50%);
@@ -43,10 +44,17 @@
         border-radius: 4px;
         top: 50%;
         transform: translateY(-50%);
-        @include md(){
+        @include md{
+            left:50%;
+            transform: translate(-50%, -50%);
             position: absolute;
             padding:24px 40px;
         }
+        @include lg {
+            left:auto;
+            transform: translate(0%, -50%);
+        }
+        
         &.theme-black{
             // background-color: rgba(black,0.9);
             color:$white;
@@ -86,6 +94,10 @@
         }
     }
     > .container{
+        @include lg{
+            padding-left:100px;
+            padding-right:100px;
+        }
         @include custom-width(0px, 991px) {
             position: absolute;
             width: 100%;
