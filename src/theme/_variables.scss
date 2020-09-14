@@ -37,7 +37,7 @@ $md-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs
 $sm-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xs), lg: map-get($line-height, xs));
 $xs-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xxs), lg: map-get($line-height, xxs));
 $xxs-line-height: ( null: map-get($line-height, xxs), xs: map-get($line-height, xxs), md: map-get($line-height, xxxs), lg: map-get($line-height, xxxs));
-$paragraph-line-height: ( null: map-get($line-height, sm), xs: map-get($line-height, sm), md: map-get($line-height, pg), lg: map-get($line-height, pg));
+$paragraph-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, pg), lg: map-get($line-height, pg));
 $intro-line-height: ( null: map-get($line-height, md), xs: map-get($line-height, md), md: map-get($line-height, xl), lg: map-get($line-height, xl));
 
 /////////////////
