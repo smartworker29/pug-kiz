@@ -29,6 +29,11 @@
         @include font-size($lg-font);
         @include line-height($intro-line-height);
     }
+    p{
+        &:empty{
+            display: none;
+        }
+    }
     &.inner-content{
         border-bottom: 0;
         // h2{
