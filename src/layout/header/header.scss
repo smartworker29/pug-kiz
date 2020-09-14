@@ -170,6 +170,10 @@ header {
               display: block;
               display: flex;
               justify-content: space-between;
+              @include lg{
+                @include font-size($paragraph-font);
+                @include line-height($paragraph-line-height);
+              }
               
               i {
                 transform: rotate(-90deg);
