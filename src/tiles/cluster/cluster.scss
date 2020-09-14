@@ -19,33 +19,31 @@
       margin-bottom: 30px;
       @include font-size($xs-font);
       color:$primary;
+      font-family: $font-roboto-medium;
     }
     .btn.with-icon{
       text-align: left;
       width:100%;
-      padding-right: 50px;
+      padding: 16px;
         position: relative;
         cursor: pointer;
+        display: flex;
+        position: relative;
+        align-items: center;
       @include md(){
         background-color: #f7f7f7;
         box-shadow: none;
         width:auto;
         margin-right: 20px;
       }
-      @include lg(){
-        display: block;
-        position: relative;
-      }
+      
       @include xl(){
-        padding:16px 50px 16px 16px;
         line-height: 14px;
         
       }
       i{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 10px;
+        transform: translateY(0%);
+        margin-left:20px;
       }
       &.active{
         background-color: #bbbbba;
