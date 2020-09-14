@@ -31,7 +31,7 @@
         display: none;
       }
       ul{
-        
+        padding-left:0;
         li{
           list-style-type: none;
           position: relative;
@@ -40,7 +40,7 @@
             margin-bottom: 0;
           }
           &::before{
-            content: "\2022";
+            // content: "\2022";
             color: $secondary;
             font-weight: bold;
             display: inline-block; 
@@ -48,7 +48,7 @@
             width: 5px;
             height: 5px;
             left: -15px;
-            top: 0;
+            top: 9px;
             font-size: 21px;
             line-height: 21px;;
             @include lg(){

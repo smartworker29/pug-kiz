@@ -14,8 +14,8 @@ $font-sizes: ( xxxs: 14px, xxs: 16px, pg: 18px, xs:20px, sm: 24px, md:25px, lg:3
 $xxxxl-font: ( null: map-get($font-sizes, xl), xs: map-get($font-sizes, xl), md: map-get($font-sizes, xxxxl), lg: map-get($font-sizes, xxxxl));
 $xxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxxl), lg: map-get($font-sizes, xxxl));
 $xxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxl));
-$xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xl));
-$lg-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, md), lg: map-get($font-sizes, lg));
+$xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, xl), lg: map-get($font-sizes, xl));
+$lg-font: ( null: map-get($font-sizes, xs), xs: map-get($font-sizes, xs), md: map-get($font-sizes, lg), lg: map-get($font-sizes, lg));
 $md-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, sm), lg: map-get($font-sizes, sm));
 $sm-font: ( null: map-get($font-sizes, xxxs), xs: map-get($font-sizes, xxxs), md: map-get($font-sizes, xs), lg: map-get($font-sizes, xs));
 $xs-font: ( null: map-get($font-sizes, xxs), xs: map-get($font-sizes, xxs), md: map-get($font-sizes, xxs), lg: map-get($font-sizes, xxs));
@@ -26,7 +26,7 @@ $section-title-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, 
 
 // line height
 ////////////////
-$line-height: ( xxxs: 12px, xxs: 14px, xs:22px, pg: 26px, sm: 24px, md:28px, lg:32px, xl: 40px, xxl: 48px, xxxl: 56px, xxxxl: 66px);
+$line-height: ( xxxs: 12px, xxs: 14px, xs:22px, pg: 26px, sm: 24px, md:26px, lg:32px, xl: 40px, xxl: 48px, xxxl: 56px, xxxxl: 66px);
 //////
 $xxxxl-line-height: ( null: map-get($line-height, xl), xs: map-get($line-height, xl), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
 $xxxl-line-height: ( null: map-get($line-height, lg), xs: map-get($line-height, lg), md: map-get($line-height, xxxl), lg: map-get($line-height, xxxl));
@@ -38,6 +38,7 @@ $sm-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs
 $xs-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, xxs), lg: map-get($line-height, xxs));
 $xxs-line-height: ( null: map-get($line-height, xxs), xs: map-get($line-height, xxs), md: map-get($line-height, xxxs), lg: map-get($line-height, xxxs));
 $paragraph-line-height: ( null: map-get($line-height, sm), xs: map-get($line-height, sm), md: map-get($line-height, pg), lg: map-get($line-height, pg));
+$intro-line-height: ( null: map-get($line-height, md), xs: map-get($line-height, md), md: map-get($line-height, xl), lg: map-get($line-height, xl));
 
 /////////////////
 // Colors

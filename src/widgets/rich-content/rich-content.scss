@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-size: 260px;
-    background-position: 131% 100%;
+    background-position: 148% 100%;
     border-bottom: 1px solid #d8d8d8;
     @include lg{
         background-size: 344px;
@@ -23,30 +23,20 @@
         }
     }
     h2{
-        @include font-size($xs-font);
         margin-bottom: 0;
         color: $primary;
         font-family: $font-roboto-regular;
-        @include line-height($paragraph-line-height);
-        @include lg() {
-            letter-spacing: 2px;
-            @include font-size($xl-font);
-            @include line-height($xxl-line-height);
-        }
+        @include font-size($lg-font);
+        @include line-height($intro-line-height);
     }
     &.inner-content{
         border-bottom: 0;
-        h2{
-            margin-bottom: 8px;
-            font-family: $font-archive-bold;
-            letter-spacing: 1px;
-            @include font-size($lg-font);
-            line-height: 32px;
-            @include lg(){
-                @include font-size($xxxl-font);
-                @include line-height($xxxl-line-height);
-            }
-        }
+        // h2{
+        //     margin-bottom: 8px;
+        //     font-family: $font-roboto-regular;
+        //     @include font-size($lg-font);
+        //     @include line-height($intro-line-height);
+        // }
         p{
             &:last-of-type{
                 margin-bottom: 0;
