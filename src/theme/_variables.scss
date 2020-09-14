@@ -11,7 +11,7 @@ $breakpoints: (
 ////////////////
 $font-sizes: ( xxxs: 14px, xxs: 16px, pg: 18px, xs:20px, sm: 24px, md:25px, lg:30px, xl: 32px, xxl: 40px, xxxl: 48px, xxxxl: 58px);
 //////
-$xxxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxxxl), lg: map-get($font-sizes, xxxxl));
+$xxxxl-font: ( null: map-get($font-sizes, xl), xs: map-get($font-sizes, xl), md: map-get($font-sizes, xxxxl), lg: map-get($font-sizes, xxxxl));
 $xxxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxxl), lg: map-get($font-sizes, xxxl));
 $xxl-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, sm), md: map-get($font-sizes, xxl), lg: map-get($font-sizes, xxl));
 $xl-font: ( null: map-get($font-sizes, md), xs: map-get($font-sizes, md), md: map-get($font-sizes, lg), lg: map-get($font-sizes, xl));
@@ -26,9 +26,9 @@ $section-title-font: ( null: map-get($font-sizes, sm), xs: map-get($font-sizes, 
 
 // line height
 ////////////////
-$line-height: ( xxxs: 12px, xxs: 14px, xs:20px, pg: 26px, sm: 24px, md:28px, lg:32px, xl: 40px, xxl: 48px, xxxl: 56px, xxxxl: 66px);
+$line-height: ( xxxs: 12px, xxs: 14px, xs:22px, pg: 26px, sm: 24px, md:28px, lg:32px, xl: 40px, xxl: 48px, xxxl: 56px, xxxxl: 66px);
 //////
-$xxxxl-line-height: ( null: map-get($line-height, md), xs: map-get($line-height, md), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
+$xxxxl-line-height: ( null: map-get($line-height, xl), xs: map-get($line-height, xl), md: map-get($line-height, xxxxl), lg: map-get($line-height, xxxxl));
 $xxxl-line-height: ( null: map-get($line-height, lg), xs: map-get($line-height, lg), md: map-get($line-height, xxxl), lg: map-get($line-height, xxxl));
 $xxl-line-height: ( null: map-get($line-height, lg), xs: map-get($line-height, lg), md: map-get($line-height, xxl), lg: map-get($line-height, xxl));
 $xl-line-height: ( null: map-get($line-height, xs), xs: map-get($line-height, xs), md: map-get($line-height, lg), lg: map-get($line-height, lg));

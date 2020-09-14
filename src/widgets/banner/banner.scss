@@ -64,23 +64,25 @@
             h1 {
                 @include font-size($xxxxl-font);
                 @include line-height($xxxxl-line-height);
-                margin-bottom: 16px;
+                margin-bottom: 8px;
+                @include md{
+                    margin-bottom: 16px;
+                }
             }
             p {
                 @include font-size($md-font);
                 @include line-height($xl-line-height);
-                font-family: $font-roboto-light;
-                @include md() {
-                    font-family: $font-roboto-regular;
-                }
+                font-family: $font-roboto-regular;
                 
                 &:last-of-type{
                     margin-bottom: 0;
                 }
             }
             .btn{
-                margin-top: 32px;
-                
+                margin-top: 16px;
+                @include md{
+                    margin-top: 32px;
+                }
             }
         }
     }
