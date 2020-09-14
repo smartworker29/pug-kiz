@@ -95,10 +95,9 @@
     }
     > .container{
         @include lg{
-            padding-left:100px;
-            padding-right:100px;
+            padding-left:116px;
         }
-        @include custom-width(0px, 991px) {
+        @include custom-width(0px, 767px) {
             position: absolute;
             width: 100%;
             padding: 0 15px;

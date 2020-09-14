@@ -34,8 +34,7 @@
         position: relative;
         height: 100%;
         @include lg{
-            padding-left:100px;
-            padding-right:100px;
+            padding-left:116px;
         }
         
         // @include xl() {
@@ -149,8 +148,8 @@
             transform: translateX(0);
             height: 100%;
             @include lg{
-                padding-left:100px;
-                padding-right:100px;
+                padding-left:116px;
+              
             }
             
         }
