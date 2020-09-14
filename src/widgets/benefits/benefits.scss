@@ -51,17 +51,19 @@
         .text{
             text-align: left;
             display: block;
-            padding:32px 40px;
+            padding:26px 40px;
             height: 100%;
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
             @include md{
                 display: flex; 
+                padding:32px 40px;
             }
             .icon{
                 width:32px;
                 color:$secondary;
                 float: left;
                 margin-right: 8px;
+                margin-bottom: 16px;
                 @include md(){
                     width:48px;
                     float: none;
@@ -87,15 +89,13 @@
                     font-family: $font-roboto-regular;
                     @include font-size($md-font);
                     @include line-height($paragraph-line-height);
-                    margin-bottom: 24px;
-                    @include md{
-                        margin-bottom: 16px;
-                    }
+                    margin-bottom: 16px;
                     @include lg(){
                         @include line-height($md-line-height);
                     }
                 }
                 p{
+                    clear: both;
                     &:last-of-type{
                         margin-bottom: 0;
                     }
