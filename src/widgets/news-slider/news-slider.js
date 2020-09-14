@@ -21,10 +21,10 @@ export default function newsSlider() {
           },
           576:{
             spaceBetween: 20,
-            slidesPerView: 2.25,
+            slidesPerView: 2.10,
           },
           320: {
-            slidesPerView: 1.25,
+            slidesPerView: 1.10,
             spaceBetween: 16,
           }
         }
