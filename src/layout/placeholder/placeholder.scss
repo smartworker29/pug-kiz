@@ -1,6 +1,6 @@
 .placeholder{
-    padding-top:40px;
-    padding-bottom:40px;
+    padding-top:32px;
+    padding-bottom:32px;
     @include lg{
         padding-top:60px;
         padding-bottom:60px;
@@ -22,8 +22,8 @@
     }
     &--bg-grey{
         background-color: $grey-bg;
-        padding-top:40px !important;
-        padding-bottom:40px !important;
+        padding-top:32px !important;
+        padding-bottom:32px !important;
         @include lg{
             padding-top:60px !important;
             padding-bottom:60px !important;
@@ -33,7 +33,7 @@
         }
         + .placeholder{
             &:not(.placeholder--bg-grey){
-                padding-top:40px !important;
+                padding-top:32px !important;
                 @include lg{
                     padding-top:60px !important;
                 }
@@ -47,7 +47,7 @@
         padding-top:0px !important;
         padding-bottom:0px !important;
         + .placeholder{
-            padding-top:40px;
+            padding-top:32px;
             @include lg{
                 padding-top:60px;
             }
