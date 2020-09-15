@@ -15,6 +15,15 @@
   // h2{
   //   margin-bottom: 0;
   // }
+  .col-12{
+    margin-bottom: 24px;
+        @include lg{
+          margin-bottom: 0;
+        }
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+  }
   &__bg{
     height: 264px;
     background-size: cover;
@@ -29,6 +38,7 @@
       height: 490px;
       
     }
+    
   }
   &__card{
     transform: translate(0, -16px);
