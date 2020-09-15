@@ -15,11 +15,11 @@ export default function partnerSlider() {
                         slidesPerView: 6,
                     },
                     991: {
-                        slidesPerView: 6,
+                        slidesPerView: 5,
                     },
                     320: {
                         spaceBetween: 30,
-                        slidesPerView: 3,
+                        slidesPerView: 2.80,
                     }
                 }
             }

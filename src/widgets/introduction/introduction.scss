@@ -1,24 +1,24 @@
 .introduction{
+  margin: 0 -15px;
+  @include lg{
+    margin: 0;
+  }
   &__image-wrap{
-    height: 56.25vw;
+    height: 203px;
     padding-top: calc(46px + 26vw);
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: calc(354px - 25vw);
     @include md{
       height: 390px;
-      padding-top: calc(80px + 4vw);
+      padding-top: 60px;
       margin-bottom: 60px;
     }
     @include lg{
       height: 476px;
-      margin-bottom: 111px;
-    }
-    @include xl{
-      margin-bottom: 123px;
+      margin-bottom: 60px;
     }
     @include xxl{
-      margin-bottom: 105px;
       padding-top: 80px;
     }
     .container{
@@ -27,37 +27,30 @@
     }
   }
   &__descr{
-    padding: 24px 16px;
+    padding: 24px 16px 32px;
     margin: 0;
     border-radius: 4px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     background-color: $white;
-    @include sm{
-      max-width: 400px;
+    @include md{
+      max-width: 724px;
+      bottom: -30px;
+      padding: 40px;
     }
     @include lg{
       margin: 0 16px;
-      max-width: 510px;
-      padding: 40px;
       position: absolute;
       right: 0;
-      bottom: -30px;
-    }
-    @include xl{
-      max-width: 600px;
-    }
-    @include xxl{
-      max-width: 724px;
     }
   }
   &__descr-left{
-    @include sm{
+    @include lg{
       margin-right: auto;
       margin-left: 4%;
     }
   }
   &__descr-right{
-    @include sm{
+    @include lg{
       margin-left: auto;
       margin-right: 4%;
     }
@@ -81,7 +74,7 @@
     }
   }
   &__text{
-    font-family: $font-roboto-regular;
+    font-family: $font-roboto-light;
     @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
     color: $grey;
@@ -94,7 +87,7 @@
     overflow: hidden;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
-    margin: 7px 0 28px;
+    margin: 8px 0 24px;
     @include lg{
       // @include font-size($sm-font);
       // max-height: 7.5em;

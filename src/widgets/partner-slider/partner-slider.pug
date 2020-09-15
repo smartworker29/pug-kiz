@@ -4,37 +4,37 @@ section.widget.partner-slider
     .partner-slider__content
         .partner-slider__slider
             .swiper-container
-                .swiper-wrapper
-                    mixin partnersList(item)
-                        .swiper-slide
-                            .partner-slider__card
-                                .partner-slider__card-header
-                                    img(src= item.logo)
+              .swiper-wrapper
+                  mixin partnersList(item)
+                      .swiper-slide
+                          .partner-slider__card
+                              .partner-slider__card-header
+                                  img(src= item.logo)
 
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/adnoc.png`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/abu-dhabi-ports-2x.png`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/borouge-3x.png`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/etihad-airways-2x.png`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/ega.jpg`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/cosmoplast.jpg`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/ega.jpg`)}'
-                    })
-                    +partnersList({
-                      logo: '${require(`./assets/images/logos/partners/cosmoplast.jpg`)}'
-                    })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/adnoc.png`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/abu-dhabi-ports-2x.png`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/borouge-3x.png`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/etihad-airways-2x.png`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/ega.jpg`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/cosmoplast.jpg`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/ega.jpg`)}'
+                  })
+                  +partnersList({
+                    logo: '${require(`./assets/images/logos/partners/cosmoplast.jpg`)}'
+                  })
                     
 
             include ../../tiles/swiper-buttons/swiper-buttons

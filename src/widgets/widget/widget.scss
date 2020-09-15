@@ -1,7 +1,7 @@
 .widget {
     width:100%;
     .widget__header {
-      padding-bottom:24px;
+      padding-bottom:16px;
       @include lg(){
         padding-bottom:32px;
       }
@@ -22,13 +22,10 @@
         }
       }
       .heading {
-        @include font-size($lg-font);
+        @include font-size($xxxl-font);
         color: $primary;
         text-transform: uppercase;
         margin-bottom: 0;
-        @include lg() {
-          @include font-size($xxxl-font);
-        }
       }
       p {
         color:$primary;
