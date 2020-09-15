@@ -54,6 +54,7 @@
             padding:26px 40px;
             height: 100%;
             box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+            
             @include md{
                 display: flex; 
                 padding:32px 40px;
@@ -86,12 +87,14 @@
                 }
                 h3{
                     color:$primary;
-                    font-family: $font-roboto-regular;
+                    font-family: $font-archive-bold;
                     @include font-size($md-font);
                     @include line-height($paragraph-line-height);
                     margin-bottom: 16px;
+                    margin-top: 5px;
                     @include lg(){
                         @include line-height($md-line-height);
+                        margin-top: 0px;
                     }
                 }
                 p{
