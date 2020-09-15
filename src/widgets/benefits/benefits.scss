@@ -92,6 +92,10 @@
                     @include line-height($paragraph-line-height);
                     margin-bottom: 16px;
                     margin-top: 5px;
+                    padding-left: 32px;
+                    @include md{
+                        padding-left: 0;
+                    }
                     @include lg(){
                         @include line-height($md-line-height);
                         margin-top: 0px;
