@@ -121,10 +121,10 @@
                 left:auto;
                 transform: translate(0%, -50%);
             }
-            h1{
-                @include font-size($xxxl-font);
-                @include line-height($xxxl-line-height);
-            }
+            // h1{
+            //     @include font-size($xxxl-font);
+            //     @include line-height($xxxl-line-height);
+            // }
             // h1 {
             //     @include font-size($xxxl-font);
             //     @include line-height($xxl-line-height);

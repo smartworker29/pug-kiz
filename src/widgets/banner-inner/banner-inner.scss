@@ -62,8 +62,8 @@
             opacity: .8;
         }
         h1{
-            @include font-size($xxxl-font);
-            @include line-height($xxxl-line-height);
+            @include font-size($xxxxl-font);
+                @include line-height($xxxxl-line-height);
             margin-bottom: 24px;
             position: relative;
             @include md(){
@@ -82,12 +82,10 @@
             
         }
         p{
-            @include font-size($sm-font);
-            @include line-height($lg-line-height);
-            font-family: $font-roboto-light;
-                @include md() {
-                    font-family: $font-roboto-regular;
-                }
+            @include font-size($md-font);
+                @include line-height($xl-line-height);
+                font-family: $font-roboto-regular;
+               
             &:last-of-type{
                 margin-bottom: 0;
             }
