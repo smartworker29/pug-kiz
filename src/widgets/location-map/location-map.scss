@@ -22,13 +22,13 @@
           }
     }
     h3{
-        @include font-size($lg-font);
+        @include font-size($xxl-font);
         color: $primary;
         text-transform: uppercase;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         @include lg() {
-          @include font-size($xxxl-font);
-          margin-bottom: 25px;
+          
+          margin-bottom: 24px;
         }
     }
 
@@ -37,6 +37,7 @@
     }
     ul{
         list-style: none;
+        padding-left: 0;
         p{
             .tel{
                 font-family: $font-roboto-bold;
@@ -63,6 +64,9 @@
             }
         }
         li{
+            &::before{
+                display: none;
+            }
             &:last-child{
                 box-shadow: 0 12px 24px 0 rgba(0,0,0,.05);
                 @include lg(){

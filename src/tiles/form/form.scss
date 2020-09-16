@@ -14,31 +14,20 @@
   }
   .custom-text {
     margin-bottom: 18px;
+    margin-top: 32px;
     @include lg() {
       margin-bottom: 24px;
     }
     h2 {
       @include font-size($md-font);
-      line-height: 32px;
-      font-family: $font-archive-bold;
+      @include line-height($xl-line-height);
+      font-family: $font-roboto-regular;
       margin-bottom: 8px;
       color: $primary;
-      @include lg() {
-        @include font-size($md-font);
-        @include line-height($md-line-height);
-        margin-bottom: 14px;
-      }
     }
     p {
       font-family: $font-roboto-light;
-      color: $mute-grey;
       @include font-size($paragraph-font);
-      line-height: 24px;
-      @include lg() {
-        font-family: $font-roboto-regular;
-        @include font-size($xs-font);
-        @include line-height($md-line-height);
-      }
     }
   }
   .custom-dropdown {
@@ -166,14 +155,19 @@
         top: 14px;
       }
     }
+    select::-ms-expand {
+      display: none;
+    }
     select {
       width: 100%;
       outline: none;
       color: transparent;
       position: unset;
+      appearance: none;
       @include md{
         direction: rtl;
       }
+      
       option {
         padding: 10px 0;
         font-family: $font-archive-bold;
@@ -208,7 +202,7 @@
           color: $grey;
           transition: all 0.3s ease-in-out;
           @include lg {
-            top: 16px;
+            top: 19px;
           }
           @supports (-webkit-touch-callout: none) {
             top: 2px;
