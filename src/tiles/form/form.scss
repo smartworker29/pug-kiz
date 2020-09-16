@@ -226,6 +226,7 @@
         height: 16px;
         margin-right: 10px;
         padding: 0;
+        position: relative;
         &:before {
           content: "";
           background: white;
@@ -234,6 +235,7 @@
           position: absolute;
           border: 1px solid $grey;
           font-family: "icomoon";
+          left: 0;
         }
         &:checked {
           &:before {
@@ -353,17 +355,37 @@
 
 .contact-form {
   width: 100%;
-  padding-top: 80px;
+  padding:80px 15px 32px;
   @include xl() {
-    padding-top: 0;
+    padding: 0;
   }
   form {
+    padding: 0;
+    @include lg{
+      padding:0 189px 80px;
+    }
+    .form-footer{
+      margin-top: 32px;
+      text-align: right;
+      @include md{
+        margin-top: 40px;
+      }
+    }
     .widget {
       max-width: 976px;
       width: 100%;
       margin: 0 auto;
       &__header {
         padding-bottom: 24px;
+        @include lg{
+          padding-bottom: 32px;
+        }
+        label{
+          margin-bottom: 8px;
+          @include md{
+            margin-bottom: 32px;
+          }
+        }
         h2 {
           margin-bottom: 3px;
           @include lg() {
@@ -377,7 +399,9 @@
       width: 100%;
       margin: 0 auto;
       float: left;
-      @include lg() {
+      padding: 32px 16px;
+      @include lg{
+        padding:64px 189px 80px;
         float: none;
       }
     }
@@ -387,17 +411,22 @@
     }
   }
   .brochure-card {
-    @include lg() {
-      margin-top: 70px;
+    margin-top: 32px;
+    @include md() {
+      margin-top: 80px;
     }
   }
   .link-card {
     box-shadow: none;
     text-align: left;
+    @include md{
+      padding-bottom: 68px;
+    }
+    
     .link-card__wrap {
-      padding: 40px 8px 0;
+      padding: 0 0 32px;
       @include md() {
-        padding: 40px 8px;
+        padding: 0;
       }
     }
     .link-card__img-wrap {
@@ -414,6 +443,10 @@
       position: relative;
       width: fit-content;
       cursor: pointer;
+      @include md{
+        position: absolute;
+        bottom: 0;
+      }
       &::after {
         content: "\E909";
         font-size: 20px;
@@ -438,21 +471,25 @@
     }
     .link-card__descr {
       .link-card__title {
-        line-height: 1.2;
+        line-height: 24px;
         font-size: 20px;
+        margin: 24px 0 16px;
         @include md() {
-          line-height: 28px;
+          line-height: 32px;
           font-size: 24px;
+          margin: 16px 0;
         }
       }
       .link-card__text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
         color: $grey;
-        @include md() {
-          font-size: 20px;
-          line-height: 30px;
-        }
+      }
+    }
+    .link-card__btn {
+      margin-top: 24px;
+      @include md{
+        margin-top:32px;
       }
     }
   }
@@ -462,15 +499,31 @@
     max-width: 1228px;
     width: 100%;
     margin: 0 auto;
+    padding: 32px 16px 0;
+    @include md{
+      padding: 80px 16px;
+    }
+    @include lg{
+      padding: 80px 117px;
+    }
+
+    .icon{
+      font-size: 120px;
+      @include md{
+        font-size: 99px;
+      }
+      
+    }
+    
     p {
       color: $primary;
     }
     h2 {
-      @include font-size($lg-font);
-      line-height: 32px;
-      @include lg() {
-        @include font-size($xxxl-font);
-        @include line-height($xxxl-line-height);
+      @include font-size($xxl-font);
+      @include line-height($xxl-line-height);
+      margin: 16px 0;
+      @include md{
+        margin: 32px 0 16px;
       }
     }
   }

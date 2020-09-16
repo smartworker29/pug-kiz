@@ -8,6 +8,7 @@ var header = (function () {
         let windowWidth = $(window).width()
         let listitem = document.querySelectorAll("[listitem-toggle]");
         let megaback = document.querySelectorAll("[mega-back]");
+        let menuClose = document.querySelectorAll("[menu-toggler]");
         if(listitem){
             [].map.call(listitem, function (items) {
                 var itemname = $(items).find('a').attr('data-id').replace('#','');
@@ -67,6 +68,18 @@ var header = (function () {
                     $('.nav-list').removeClass('active');
                     $('.nav-list').find('.cluster-container').removeClass('open');
                     $('.back-menu').removeClass('d-flex');
+                }
+            });
+        }
+        if(menuClose){
+            [].map.call(menuClose, function (close) {
+                close.onclick = e => {
+                    if(windowWidth < 1200){ 
+                        
+                        $('.back-menu').removeClass('d-flex');
+                        $('nav .nav-list').removeClass('active');
+                        $('nav .cluster-container.open').removeClass('open');
+                    }
                 }
             });
         }
