@@ -1,69 +1,70 @@
-
-.form{
+.form {
   border-radius: 4px;
   box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
   background-color: #ffffff;
   padding: 32px 16px;
-  @include lg{
+  @include lg {
     padding: 80px;
     max-width: 884px;
   }
-  .field-validation-error{
-    span{
+  .field-validation-error {
+    span {
       display: none !important;
     }
   }
-  .custom-text{
+  .custom-text {
     margin-bottom: 18px;
-    @include lg(){
+    @include lg() {
       margin-bottom: 24px;
     }
-    h2{
+    h2 {
       @include font-size($md-font);
       line-height: 32px;
       font-family: $font-archive-bold;
       margin-bottom: 8px;
-      color:$primary;
-      @include lg(){
+      color: $primary;
+      @include lg() {
         @include font-size($md-font);
         @include line-height($md-line-height);
         margin-bottom: 14px;
       }
     }
-    p{
+    p {
       font-family: $font-roboto-light;
-      color:$mute-grey;
+      color: $mute-grey;
       @include font-size($paragraph-font);
       line-height: 24px;
-      @include lg(){
+      @include lg() {
         font-family: $font-roboto-regular;
         @include font-size($xs-font);
         @include line-height($md-line-height);
       }
     }
   }
-  .custom-dropdown{
+  .custom-dropdown {
     position: relative;
   }
   .form-footer {
     margin-top: 8px;
-    @include md(){
+    @include md() {
       margin-top: 33px;
     }
-  input.btn {
-    // height: auto;
-    padding: 0;
-    padding: 10px 30px;
-    border-radius: 10px;
-    background: $grey;
-    font-size: 14px;
-    color:$white;
-    &.active{
-      background: $secondary;
+    input.btn {
+      // height: auto;
+      padding: 0;
+      padding: 10px 30px;
+      border-radius: 10px;
+      background: $grey;
+      font-size: 14px;
+      color: $white;
+      &.active {
+        background: $secondary;
+      }
     }
   }
-  }
-  input, textarea, .custom-dropdown select{
+  input,
+  textarea,
+  .custom-dropdown select {
     border-radius: 4px;
     border: solid 1px #d9d8d9;
     background-color: $mute;
@@ -71,84 +72,85 @@
     font-family: $font-roboto-regular;
     @include font-size($xs-font);
     @include line-height($md-line-height);
-    @include lg{
+    @include lg {
       @include font-size($sm-font);
     }
 
-    
-
-      &::-webkit-outer-spin-button,
-      &::-webkit-inner-spin-button {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
       -webkit-appearance: none;
       margin: 0;
-      }
+    }
 
-      & [type=number] {
+    & [type="number"] {
       -moz-appearance: textfield;
-      }
+    }
 
-    &:focus{
+    &:focus {
       box-shadow: none;
     }
-    & ~ span{
+    & ~ span {
       opacity: 0;
     }
-    &.error{
+    &.error {
       border: 2px solid #e60000;
     }
     &.has-value,
-    &.error,.input-validation-error{
+    &.error,
+    .input-validation-error {
       width: calc(100% - 32px);
-      transition: width .2s;
-      @include lg{
+      transition: width 0.2s;
+      @include lg {
         width: calc(100% - 48px);
       }
-      & ~ span{
+      & ~ span {
         right: 0;
         top: 50%;
         transform: translateY(-50%);
         position: absolute;
 
-        &:after{
-          font-family: 'icomoon' !important;
+        &:after {
+          font-family: "icomoon" !important;
           font-size: 14px;
           line-height: 14px;
-          @include lg{
+          @include lg {
             font-size: 20px;
             line-height: 20px;
           }
         }
       }
       &.valid ~ span,
-      &.error ~ span{
+      &.error ~ span {
         opacity: 1;
         transition: opacity 0.5s;
       }
-      &.valid ~ span:after{
+      &.valid ~ span:after {
         color: #00ce64;
         content: "\e910";
       }
-      &.error ~ span:after{
+      &.error ~ span:after {
         color: #e60000;
-        content: '\e90d';
+        content: "\e90d";
       }
     }
   }
-  input, .custom-dropdown select{
-    height: 52px;
-    padding: 17px 16px;
-    transition: width .2s;
-    @include lg{
-      height: 78px;
-      padding: 27px 16px;
+  input,
+  .custom-dropdown select {
+    height: 48px;
+    padding: 16px 16px 0;
+    transition: width 0.2s;
+    text-align: left;
+    @include lg {
+      padding: 8px 16px;
+      text-align: right;
     }
   }
-  .custom-dropdown{
+  .custom-dropdown {
     margin-bottom: 18px;
-    @include lg(){
+    @include lg() {
       margin-bottom: 24px;
     }
-    label{
+    label {
       pointer-events: none;
       margin: 0;
       position: absolute;
@@ -156,185 +158,177 @@
       left: 16px;
       font-family: $font-roboto-regular;
       color: $mute-grey;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       @include font-size($xs-font);
       @include line-height($md-line-height);
-      @include lg{
+      @include lg {
         @include font-size($sm-font);
-        top: 27px;
+        top: 14px;
       }
     }
-    select{
-      width:100%;
+    select {
+      width: 100%;
       outline: none;
       color: transparent;
       position: unset;
-      option{
-        padding:10px 0;
+      @include md{
+        direction: rtl;
+      }
+      option {
+        padding: 10px 0;
         font-family: $font-archive-bold;
-        color:$primary;
-        &:hover{
+        color: $primary;
+        &:hover {
           background-color: $light-grey;
+        }
+        @include md{
+          direction: ltr;
         }
       }
       @supports (-webkit-touch-callout: none) {
         text-indent: 8px;
       }
-      &.error{
+      &.error {
         border: 2px solid #e60000;
       }
       &.has-value {
-        padding:36px 12px 14px;
-        color:$primary;
-      
-      & ~ label{
-        top: 8px;
-        font-family: $font-roboto-light;
-        font-size: 12px;
-        line-height: 14px;
-        color: $grey;
-        transition: all .3s ease-in-out;
-        @include lg{
-          top: 16px;
+        color: $primary;
+        &.has-value {
+          padding: 16px 16px 0;
+          @include md() {
+            padding: 8px 16px 8px;
+          }
         }
-        @supports (-webkit-touch-callout: none) {
-          top:2px;
-          @include lg(){
-            margin-top: 10px;
+
+        & ~ label {
+          top: 8px;
+          font-family: $font-roboto-light;
+          font-size: 12px;
+          line-height: 14px;
+          color: $grey;
+          transition: all 0.3s ease-in-out;
+          @include lg {
+            top: 16px;
+          }
+          @supports (-webkit-touch-callout: none) {
+            top: 2px;
+            @include lg() {
+              margin-top: 10px;
+            }
           }
         }
       }
-      }
     }
-    }
+  }
 
-    .custom-checkbox{
-      margin-bottom: 20px;
-      > label{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        input{
-          width:16px;
-          height:16px;
-          margin-right: 10px;
-          padding:0;
-          &:before{
-            content: '';
+  .custom-checkbox {
+    margin-bottom: 20px;
+    > label {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      input {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        padding: 0;
+        &:before {
+          content: "";
+          background: white;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          border: 1px solid $grey;
+          font-family: "icomoon";
+        }
+        &:checked {
+          &:before {
+            content: "\e910" !important;
             background: white;
             width: 16px;
             height: 16px;
             position: absolute;
             border: 1px solid $grey;
-            font-family: 'icomoon';
+            font-size: 17px;
+            text-indent: -2px;
+            line-height: 15px;
+            color: $secondary;
           }
-          &:checked{
-            &:before{
-              content: "\e910" !important;
-              background: white;
-              width: 16px;
-              height: 16px;
-              position: absolute;
-              border: 1px solid $grey;
-              font-size: 17px;
-              text-indent: -2px;
-              line-height: 15px;
-              color: $secondary;
-            }
-          }
-          &.error{
-            &:before{
-              border: 1px solid #e60000;
-            }
+        }
+        &.error {
+          &:before {
+            border: 1px solid #e60000;
           }
         }
       }
     }
-  
+  }
 
-  textarea{
+  textarea {
     resize: none;
     height: 112px;
     padding: 16px;
-    @include placeholder{
+    @include placeholder {
       color: $mute-grey;
     }
   }
-  // form{
-  //   div:last-of-type{
-  //     margin-bottom: 0;
-  //   }
-  // }
-
-  &__item{
+  &__item {
     position: relative;
     margin-bottom: 16px;
-    @include lg{
+    @include lg {
       margin-bottom: 24px;
     }
-    label{
+    label {
       pointer-events: none;
       margin: 0;
       position: absolute;
       top: 15px;
       left: 16px;
-      font-family: $font-roboto-regular;
+      font-family: $font-roboto-light;
       color: $mute-grey;
-      transition: all .3s ease-in-out;
+      transition: all 0.3s ease-in-out;
       @include font-size($xs-font);
       @include line-height($md-line-height);
-      @include lg{
+      @include lg {
         @include font-size($sm-font);
-        top: 27px;
+        top: 14px;
       }
     }
-    input{
+    input {
       &:focus,
-      &.has-value{
-        padding: 26px 16px 6px;
+      &.has-value {
+        padding: 16px 16px 0;
+        @include md() {
+          padding: 8px 16px 8px;
+        }
       }
       &:focus ~ label,
-      &.has-value ~ label{
+      &.has-value ~ label {
         top: 8px;
         font-family: $font-roboto-light;
         font-size: 12px;
         line-height: 14px;
         color: $grey;
-        transition: all .3s ease-in-out;
-        @include lg{
-          top: 16px;
+        transition: all 0.3s ease-in-out;
+        @include lg {
+          top: 19px;
         }
       }
     }
-
   }
-  // .g-recaptcha{
-  //   max-width: 184px;
-  //   max-height: 46px;
-  //   transform:scale(0.6);
-  //   -webkit-transform:scale(0.6);
-  //   transform-origin:0 0;
-  //   -webkit-transform-origin:0 0;
-  //   @include md{
-  //     max-width: 200px;
-  //     max-height: 49px;
-  //     transform:scale(0.66);
-  //     -webkit-transform:scale(0.66);
-  //   }
-  // }
 }
 
-.success-wrapper{
+.success-wrapper {
   max-width: 884px;
   padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  @include lg(){
+  @include lg() {
     padding: 0;
   }
-  button{
+  button {
     -webkit-appearance: none;
     background: transparent !important;
     opacity: 1;
@@ -342,147 +336,147 @@
     position: absolute;
     top: 30px;
     right: 20px;
-    span{
+    span {
       color: #e60000;
       font-size: 35px;
     }
   }
-  i, .icon{
-    color:$secondary;
+  i,
+  .icon {
+    color: $secondary;
     font-size: 90px;
   }
-  h2{
+  h2 {
     margin: 40px 0 16px;
-    color:$primary;
+    color: $primary;
   }
-  p{
-    &:last-of-type{
+  p {
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
 }
 
-.contact-form{
+.contact-form {
   width: 100%;
-  padding-top:80px;
-  @include xl(){
-    padding-top:0;
+  padding-top: 80px;
+  @include xl() {
+    padding-top: 0;
   }
-  form{
-    .widget{
+  form {
+    .widget {
       max-width: 976px;
       width: 100%;
       margin: 0 auto;
-      &__header{
-        padding-bottom:24px;
-        h2{
+      &__header {
+        padding-bottom: 24px;
+        h2 {
           margin-bottom: 3px;
-          @include lg(){
+          @include lg() {
             margin-bottom: 15px;
           }
         }
       }
     }
-    .form{
+    .form {
       max-width: 976px;
       width: 100%;
       margin: 0 auto;
       float: left;
-      @include lg(){
+      @include lg() {
         float: none;
       }
     }
-  &.form{
-    width: 100%;
-    max-width: 100%;
-  }
-}
-.brochure-card{
-  @include lg(){
-    margin-top: 70px;
-  }
-}
-.link-card{
-  box-shadow: none;
-  text-align: left;
-  .link-card__wrap{
-    padding: 40px 8px 0;
-    @include md(){
-      padding: 40px 8px;
+    &.form {
+      width: 100%;
+      max-width: 100%;
     }
   }
-  .link-card__img-wrap{
+  .brochure-card {
+    @include lg() {
+      margin-top: 70px;
+    }
+  }
+  .link-card {
+    box-shadow: none;
+    text-align: left;
+    .link-card__wrap {
+      padding: 40px 8px 0;
+      @include md() {
+        padding: 40px 8px;
+      }
+    }
+    .link-card__img-wrap {
       font-size: 40px;
-      color:$secondary;
-      @include lg(){
+      color: $secondary;
+      @include lg() {
         font-size: 64px;
       }
-      p{
-        color:$secondary;
-      }
-  }
-  .link-card__btn{
-    position: relative;
-    width: fit-content;
-    cursor: pointer;
-    &::after{
-      content: "\E909";
-      font-size: 20px;
-      line-height: 20px;
-      font-weight: 100;
-      vertical-align: middle;
-      transition: all .55s ease-in-out;
-      font-family: icomoon!important;
-      color:$secondary;
-      margin-left: 14px;
-    }
-    .link{
-      border: 0;
-      background: transparent;
-      outline: none;
-    }
-    &:hover{
-      &::after{
-        margin-left: 25px;
+      p {
+        color: $secondary;
       }
     }
-  }
-  .link-card__descr{
-    .link-card__title{
-      line-height: 1.2;
-      font-size: 20px;
-      @include md(){
-        line-height: 28px;
-      font-size: 24px;
-      }
-    }
-    .link-card__text{
-      font-size: 14px;
-      line-height: 24px;
-      color:$grey;
-      @include md(){
+    .link-card__btn {
+      position: relative;
+      width: fit-content;
+      cursor: pointer;
+      &::after {
+        content: "\E909";
         font-size: 20px;
-      line-height: 30px;
+        line-height: 20px;
+        font-weight: 100;
+        vertical-align: middle;
+        transition: all 0.55s ease-in-out;
+        font-family: icomoon !important;
+        color: $secondary;
+        margin-left: 14px;
+      }
+      .link {
+        border: 0;
+        background: transparent;
+        outline: none;
+      }
+      &:hover {
+        &::after {
+          margin-left: 25px;
+        }
+      }
+    }
+    .link-card__descr {
+      .link-card__title {
+        line-height: 1.2;
+        font-size: 20px;
+        @include md() {
+          line-height: 28px;
+          font-size: 24px;
+        }
+      }
+      .link-card__text {
+        font-size: 14px;
+        line-height: 24px;
+        color: $grey;
+        @include md() {
+          font-size: 20px;
+          line-height: 30px;
+        }
       }
     }
   }
-  
-}
-  .success-wrapper{
+  .success-wrapper {
     background-color: $white;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     max-width: 1228px;
     width: 100%;
     margin: 0 auto;
-    p{
-      color:$primary;
+    p {
+      color: $primary;
     }
-    h2{
+    h2 {
       @include font-size($lg-font);
       line-height: 32px;
-      @include lg(){
+      @include lg() {
         @include font-size($xxxl-font);
-      @include line-height($xxxl-line-height);
+        @include line-height($xxxl-line-height);
       }
     }
   }
