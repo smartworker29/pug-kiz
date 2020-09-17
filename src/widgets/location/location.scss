@@ -8,12 +8,12 @@
 }
 .location{
   &__text{
-    word-break: break-word;
-    display: -webkit-box;
-    -webkit-line-clamp: 9;
-    -webkit-box-orient: vertical;
-    overflow-y: hidden;
-    text-overflow: ellipsis;
+    // word-break: break-word;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 9;
+    // -webkit-box-orient: vertical;
+    // overflow-y: hidden;
+    // text-overflow: ellipsis;
     // margin: 0 0 27px;
     @include font-size($paragraph-font);
     @include line-height($paragraph-line-height);
@@ -157,7 +157,7 @@
   .section__title{
     margin-bottom: 8px;
     margin-top: 0;
-    @include line-height($xxxl-line-height); 
+    @include line-height($xxl-line-height); 
     @include lg{
       margin-bottom: 24px;
       margin-top: 0;
