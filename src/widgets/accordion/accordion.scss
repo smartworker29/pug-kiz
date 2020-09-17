@@ -42,6 +42,11 @@
                 &:last-child{
                     margin-bottom: 0;
                 }
+                a{
+                    padding: 0;
+                    display: initial;
+                    color: $anchor;
+                }
             }
         }
     }
