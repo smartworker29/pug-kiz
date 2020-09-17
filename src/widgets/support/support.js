@@ -19,7 +19,7 @@ tel.each(function(){
 })
 
 
-$('form .form__item input:not([type="hidden"]), form .form__item textarea').on('blur', function () {
+$(document).on('blur','form .form__item input:not([type="hidden"]), form .form__item textarea', function () {
     let val = this.value.trim();
     if (val.length !== 0) {
         this.classList.add('has-value');
@@ -29,7 +29,7 @@ $('form .form__item input:not([type="hidden"]), form .form__item textarea').on('
     buttonHighlite(this)
 })
 
-$('.text-texarea').on('blur', function (e) {
+$(document).on('blur','.text-texarea', function (e) {
     $('form button[type=submit]').addClass('btn-secondary');
     if (e.target.value.trim() === '') {
         $(this).removeClass('valid');
@@ -42,7 +42,7 @@ $('.text-texarea').on('blur', function (e) {
     buttonHighlite(this)
 });
 
-$('.text-input').on('blur', function (e) {
+$(document).on('blur', '.text-input',function (e) {
     $('form button[type=submit]').addClass('btn-secondary');
     if (e.target.value.trim() === '') {
         $(this).removeClass('valid');
@@ -55,7 +55,7 @@ $('.text-input').on('blur', function (e) {
     buttonHighlite(this)
 });
 
-$('.email-input').on('blur', function (e) {
+$(document).on('blur', '.email-input',function (e) {
     const regExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     let result = regExp.test(e.target.value);
     if (!result) {
@@ -98,7 +98,7 @@ function buttonHighlite(ele) {
     }
 }
 
-$('form input[type=submit]').on('click', function (e) {
+$(document).on('click','form input[type=submit]', function (e) {
   
     var inputele = $(this).parents('form').find('.form__item input:not([type="hidden"])');
     var textareaele = $(this).parents('form').find('.form__item textarea');
