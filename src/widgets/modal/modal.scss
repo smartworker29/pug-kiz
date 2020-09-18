@@ -236,7 +236,7 @@
 }
 
 #talk-modal, #feedback-modal{
-  .brochure-card{
+  .brochure-card, .product-wrapper {
     text-align: left;
     margin-top: 8px;
     .product__wrap{
@@ -252,9 +252,12 @@
           margin-bottom: 0;
         }
       }
-      .link{
-        margin-top:26px;
-        display: block;
+      .link, .btn{
+        margin-top:24px;
+        display: inline-block;
+        @include md{
+          margin-top:32px;
+        }
       }
     }
     .product__image-wrap{
