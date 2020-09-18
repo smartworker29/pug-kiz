@@ -236,15 +236,24 @@
 }
 
 #talk-modal, #feedback-modal{
+  .placeholder{
+    padding:0
+  }
   .brochure-card, .product-wrapper {
     text-align: left;
-    margin-top: 8px;
+    margin-top: 16px;
+    @include lg{
+      margin-top: 32px;
+    }
     .product__wrap{
-      h2{
-        margin: 0 0 24px 0;
-        line-height: 28px;
-        font-size: 24px
+      padding-top: 0;
+      padding-left: 0;
+      @include md{
+        padding-left: 16px;
+        padding-top: 0;
       }
+      
+      
       p{
         margin-bottom: 20px;
         color:$grey;
@@ -261,13 +270,13 @@
       }
     }
     .product__image-wrap{
-      @include lg(){
-        margin-right: 1px;
-      }
+      margin-right: 0;
       img{
-        border-radius: 4px;;
-        @include lg(){
-          min-height: 217px;
+        border-radius: 4px;
+        width:100%;
+        @include md(){
+          min-height: 10px;
+          height: 220px;
         }
       }
     }
@@ -275,11 +284,11 @@
 }
 
 #learnMore{
-  h2{
-    @include font-size($xl-font);
-      @include line-height($xxl-line-height);
-      margin-bottom: 8px;
-  }
+  // h2{
+  //   @include font-size($xl-font);
+  //     @include line-height($xxl-line-height);
+  //     margin-bottom: 8px;
+  // }
 
   .success-wrapper{
     .btn{

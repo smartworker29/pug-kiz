@@ -343,8 +343,14 @@
     font-size: 90px;
   }
   h2 {
-    margin: 40px 0 16px;
     color: $primary;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    @include line-height($xxl-line-height);
+    @include font-size($xxl-font);
+    @include md{
+      margin-top: 40px;
+    }
   }
   p {
     &:last-of-type {
