@@ -73,6 +73,29 @@ function scrollToActive() {
         e.preventDefault();
     });
 
+    $(document).on('click', 'footer .footer-link a', function(e){
+        var thisval = $(this).attr('href').split('#')[0]
+        var urlval = window.location.pathname
+        if(thisval == urlval){
+            var url = $(this).attr('href').split('#')[1];
+            var elementval = $('#' + url).offset().top
+            var topoffset = 170
+            if(window.innerWidth > 1200){
+                topoffset = 200
+            }
+                $('html, body').stop().animate({
+                    scrollTop: (elementval - topoffset)
+                }, 850);
+            return false
+        }
+        else {
+            return true
+        }
+        
+
+
+    })
+
     $(window).scroll(function () {
         var fromTop = $(this).scrollTop() + topMenuHeight + topheaderHeight + 30;
         var cur = scrollItems.map(function () {

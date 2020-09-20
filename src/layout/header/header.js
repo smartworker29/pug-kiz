@@ -106,6 +106,27 @@ $().ready(function () {
     header.init();
     //addClasstoElementOnScroll()
 });
+$(window).on('load', (event) => {
+    var url = window.location.hash
+    if(url != ""){
+        var locations = url.replace('#','')
+        var offsetTopURL = $('#' + locations).offset().top
+        //  var header = $('.navbar').outerHeight() + 1
+        //  var anchor = $('[anchor-wrapper]').outerHeight() + 1
+        //  var topbarCalc = header + anchor
+        
+        setTimeout(() => {
+            var topoffset = 170
+            if(window.innerWidth > 1200){
+                topoffset = 200
+            }
+            $('html, body').stop().animate({
+                scrollTop: (offsetTopURL - topoffset)
+            }, 850); 
+        }, 300);
+        
+    }
+})
 // window.onscroll = function() {
 //     addClasstoElementOnScroll();
 //     stickanchor();

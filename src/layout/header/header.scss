@@ -166,7 +166,8 @@ header {
             border-bottom: 1px solid #d8d8d8;
             > a {
               color: $primary;
-              padding: 15px 0;
+              padding: 24px 8px;
+              line-height: 19px;
               display: block;
               display: flex;
               justify-content: space-between;
@@ -221,6 +222,10 @@ header {
           
           a{
             width:100%;
+            @include xl{
+              font-size: 20px;
+              line-height: 28px;
+            }
           }
         }
       }

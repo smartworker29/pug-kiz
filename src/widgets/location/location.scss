@@ -67,7 +67,7 @@
     padding:0;
     @include xl(){
       height:100%;
-      padding:0 32px 0 0;
+      padding:0;
     }
     img{
       object-fit: cover;
@@ -81,18 +81,18 @@
   &__wrap{
     padding:16px 0 0;
     @include lg{
-      padding:32px 0 0 32px;
+      padding:32px 0 0 48px;
     }
     &-rtl{
       padding:16px 0 0;
       @include lg{
-        padding:32px 0 0 32px;
+        padding:32px 0 0 48px;
       }
     }
     &-ltr{
       padding:16px 0 0;
       @include lg{
-        padding:32px 32px 0 0;
+        padding:32px 48px 0 0;
       }
     }
   }
