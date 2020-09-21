@@ -63,6 +63,9 @@
 
 .benefits-dt-item{
   @include lg{
+    padding:32px;
+  }
+  @include xl{
     padding:80px;
   }
   &.benefits-dt-item-1{
@@ -127,10 +130,10 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      top: calc(100% - 66px);
+      top: calc(100% - 87px);
       @include transition(all 0.3s ease-in-out);
       @include xxl{
-        top: calc(100% - 87px);
+        
       }
     }
     h2{
