@@ -137,10 +137,12 @@
     ul{
       font-style: italic;
       font-size: 12px;
+      padding-left: 16px;
       li{
         font-size: 12px;
         line-height: 16px;
         list-style-type: disc;
+        margin-top: 0;
         &::before{
           display: none;
         }
