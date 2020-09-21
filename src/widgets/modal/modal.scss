@@ -304,3 +304,15 @@
   }
 
 }
+
+#download-form{
+  .success-wrapper{
+    display: block;
+    .btn, .link{
+      margin-top: 24px;
+      @include md{
+        margin-top: 40px;
+      }
+    }
+  }
+}
