@@ -127,6 +127,26 @@
       @include font-size($paragraph-font);
     }
   }
+  .feature-footnote{
+    margin-top: 16px;
+    p{
+      font-size: 12px;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+    ul{
+      font-style: italic;
+      font-size: 12px;
+      li{
+        font-size: 12px;
+        line-height: 16px;
+        list-style-type: disc;
+        &::before{
+          display: none;
+        }
+      }
+    }
+  }
 
   th,
   .link{
