@@ -21,6 +21,7 @@
     }
     .swiper-slide  {
       padding: 0 15px;
+      height: auto;
     }
     @include lg{
       margin: 0 -16px;
@@ -37,6 +38,9 @@
       .swiper-button-wrapper{
         display: none;
       }
+    }
+    .license-card{
+      height: 100%;
     }
   }
   .license-card{
