@@ -58,7 +58,7 @@
             color: $primary;
             display: none;
             @include lg() {
-                padding: 48px 30px;
+                padding: 48px;
             }
             &.active{
                 display: block;
