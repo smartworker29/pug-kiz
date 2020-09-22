@@ -5,7 +5,7 @@
     z-index: 9999;
   }
   .modal-content{
-    padding:40px 15px;
+    padding:66px 15px 40px;
     @include lg(){
       padding:64px;
     }
@@ -18,9 +18,11 @@
     position: absolute;
     right: 16px;
     top: 24px;
+    font-size: 18px;
     @include lg(){
       right: 24px;
       top: 24px;
+      font-size: 26px;
     }
     span{
       color: $secondary;
