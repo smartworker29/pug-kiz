@@ -22,6 +22,14 @@
     .swiper-slide  {
       padding: 0 15px;
       height: auto;
+      .license-card__text{
+        p{
+          @include custom-width(0px, 990px) {
+            overflow: visible !important;
+            display: block !important;
+          }
+        }
+      }
     }
     @include lg{
       margin: 0 -16px;
