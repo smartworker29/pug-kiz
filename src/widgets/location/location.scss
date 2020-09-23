@@ -98,6 +98,7 @@
   }
   p{
     margin-bottom: 8px;
+    color:$primary;
     @include md{
       margin-bottom: 16px;
     }
