@@ -11,7 +11,6 @@
     @include xl() {
         margin-top: 0;
         height: calc(100vh - 198px);
-        
     }
     iframe,
     video,
@@ -21,60 +20,52 @@
         position: absolute;
         z-index: -1;
         height: 100%;
-        left:0;
+        left: 0;
         @include md() {
             bottom: 50%;
             transform: translateY(50%);
         }
     }
-    img{
+    img {
         height: 101% !important;
     }
     .container {
         position: relative;
         height: 100%;
-        @include lg{
-            padding-left:116px;
+        @include lg {
+            padding-left: 116px;
         }
-        
-        // @include xl() {
-        //     position: absolute;
-        //     top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%);
-        // }
         .text {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
             left: 0;
             max-width: 610px;
-            width:100%;
-            @include md{
-                left:50%;
+            width: 100%;
+            @include md {
+                left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include lg {
-                left:auto;
+                left: auto;
                 transform: translate(0%, -50%);
             }
-            
+
             @include custom-width(0px, 1199px) {
                 padding: 0 15px;
             }
-            // &.center{
-            //     text-align: center;
-            //     @include md(){
-            //         width:80%;
-            //         left:50%;
-            //         transform: translate(-50%, -50%);
-            //     }
-            // }
+            &.center {
+                text-align: center;
+                @include md {
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
             h1 {
                 @include font-size($xxxxl-font);
                 @include line-height($xxxxl-line-height);
                 margin-bottom: 8px;
-                @include md{
+                @include md {
                     margin-bottom: 16px;
                 }
             }
@@ -82,14 +73,14 @@
                 @include font-size($md-font);
                 @include line-height($xl-line-height);
                 font-family: $font-roboto-regular;
-                
-                &:last-of-type{
+
+                &:last-of-type {
                     margin-bottom: 0;
                 }
             }
-            .btn{
+            .btn {
                 margin-top: 16px;
-                @include md{
+                @include md {
                     margin-top: 32px;
                 }
             }
@@ -101,7 +92,7 @@
     .banner {
         padding: 0;
         height: 250px;
-        @include md(){
+        @include md() {
             height: 510px;
             max-height: 510px;
             min-height: 510px;
@@ -109,49 +100,27 @@
         .text {
             padding-top: 0;
             position: absolute;
-            top:50%;
+            top: 50%;
             transform: translateY(-50%);
-            width:100%;
-            max-width:610px;
-            @include md{
-                left:50%;
+            width: 100%;
+            max-width: 610px;
+            @include md {
+                left: 50%;
                 transform: translate(-50%, -50%);
             }
             @include lg {
-                left:auto;
+                left: auto;
                 transform: translate(0%, -50%);
             }
-            // h1{
-            //     @include font-size($xxxl-font);
-            //     @include line-height($xxxl-line-height);
-            // }
-            // h1 {
-            //     @include font-size($xxxl-font);
-            //     @include line-height($xxl-line-height);
-            //     margin-bottom: 20px;
-            //     position: relative;
-            //     @include lg() {
-            //         margin-bottom: 30px;
-            //     }
-            // }
-            // p {
-            //     @include font-size($paragraph-font);
-            //     @include line-height($paragraph-line-height);
-            //     &:last-of-type{
-            //         margin-bottom: 0;
-            //     }
-            // }
         }
         .container {
             position: relative;
             left: 0;
             transform: translateX(0);
             height: 100%;
-            @include lg{
-                padding-left:116px;
-              
+            @include lg {
+                padding-left: 116px;
             }
-            
         }
     }
 }
