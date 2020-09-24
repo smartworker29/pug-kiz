@@ -52,7 +52,7 @@
     .tab-content {
         width: 100%;
         float: left;
-        @include shadow(12px 0px 12px -12px rgba(0, 0, 0, 0.1));
+        @include shadow(0 12px 24px 0 rgba(0, 0, 0, 0.05));
         .tab-pane {
             padding: 25px 15px;
             color: $primary;
