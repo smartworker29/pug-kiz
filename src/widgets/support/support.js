@@ -44,7 +44,9 @@ $(document).on('blur','.text-texarea', function (e) {
 
 $(document).on('blur', '.text-input',function (e) {
     $('form button[type=submit]').addClass('btn-secondary');
-    if (e.target.value.trim() === '') {
+    const regExp = /^[A-Za-z]+$/;
+    let result = regExp.test(e.target.value);
+    if (!result) {
         $(this).removeClass('valid');
         $(this).addClass('error');
     }
