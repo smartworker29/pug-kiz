@@ -7,6 +7,16 @@
   }
 }
 .location{
+  label{
+    color: $grey;
+    font-size: 13px;
+    font-family: $font-roboto-medium;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    @include lg(){
+      margin-bottom: 24px;
+    }
+  }
   &__text{
     // word-break: break-word;
     // display: -webkit-box;
