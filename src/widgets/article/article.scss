@@ -12,25 +12,21 @@
     }
     h2 {
         color: $primary;
-        @include font-size($lg-font);
+        @include font-size($xxl-font);
+        @include line-height($xxl-line-height);
         text-transform: uppercase;
-        @include line-height($lg-line-height);
         margin-top: 40px;
-        @include md() {
-            @include font-size($xxxl-font);
-            @include line-height($xxl-line-height);
-        }
         @include lg() {
-            @include font-size($xxxl-font);
             margin-bottom: 20px;
-            @include line-height($xxxl-line-height);
-            margin-top: 80px;
+            
+            margin-top: 60px;
         }
         &:first-of-type{
             margin-top:0;
         }
     }
     p {
+        color:$light-grey;
         &:last-child {
             margin-bottom: 0;
         }
