@@ -57,6 +57,21 @@ $(document).on('blur', '.text-input',function (e) {
     buttonHighlite(this)
 });
 
+$(document).on('blur', '.number-input',function (e) {
+    $('form button[type=submit]').addClass('btn-secondary');
+    const regExp = /^[0-9]+$/;
+    let result = regExp.test(e.target.value);
+    if (!result) {
+        $(this).removeClass('valid');
+        $(this).addClass('error');
+    }
+    else {
+        $(this).addClass('valid');
+        $(this).removeClass('error');
+    }
+    buttonHighlite(this)
+});
+
 $(document).on('blur', '.email-input',function (e) {
     const regExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     let result = regExp.test(e.target.value);
