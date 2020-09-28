@@ -58,10 +58,9 @@
           }
           h2 {
             margin-bottom: 8px;
-            @include font-size($lg-font);
+            @include font-size($xxl-font);
+              @include line-height($xxl-line-height);
             @include lg() {
-              @include font-size($xxxl-font);
-              @include line-height($xxxl-line-height);
               margin-bottom: 24px;
             }
           }
@@ -86,9 +85,7 @@
           ul {
             padding-left: 26px;
             margin-top: 16px;
-            @include font-size($xs-font);
-            @include line-height($md-line-height);
-            font-family: $font-roboto-regular;
+            
             direction: ltr;
             margin-bottom: 0px;
             // @include lg(){
@@ -102,6 +99,9 @@
               // }
               margin: 0;
               list-style: none;
+              @include font-size($xs-font);
+              @include line-height($md-line-height);
+            font-family: $font-roboto-regular;
               &:before {
                 content: "\2022";
                 color: $white;

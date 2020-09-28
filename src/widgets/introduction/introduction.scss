@@ -4,11 +4,11 @@
     margin: 0;
   }
   &__image-wrap{
-    height: 203px;
+    height: auto;
     padding-top: calc(46px + 26vw);
-    background-size: cover;
+    background-size: auto 203px;
     background-repeat: no-repeat;
-    margin-bottom: calc(354px - 8vw);
+    margin-bottom: 32px;
     @include md{
       height: 390px;
       padding-top: 60px;
