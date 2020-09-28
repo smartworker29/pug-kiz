@@ -100,9 +100,9 @@
     bottom: 40px;
     left: 40px;
     @include transition(all 0.3s ease-in-out);
-    @include xxl{
-      bottom: 80px;
-      left: 80px;
+    @include lg{
+      bottom: 40px;
+      left: 60px;
     }
     h2{
       margin-bottom: 16px;
@@ -141,6 +141,7 @@
     }
     p{
       margin-left: 16px;
+      max-width: 460px;
       @include xxl{
         margin-left: 24px;
       }
