@@ -1,103 +1,105 @@
 .link-card{
-    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
-    &__mb{
-      margin-bottom: 24px;
-      &:last-child{
-        margin-bottom: 0;
-      }
-      @include lg{
-        margin-bottom: 0;
-      }
+  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+  @include md{
+    height:100%;
+  }
+  &__mb{
+    margin-bottom: 24px;
+    &:last-child{
+      margin-bottom: 0;
     }
-    &__wrap{
-      border-radius: 4px;
-      padding: 32px 16px;
-      ;
+    @include lg{
+      margin-bottom: 0;
+    }
+  }
+  &__wrap{
+    border-radius: 4px;
+    padding: 32px 16px;
+    ;
+    @include lg(){
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    @include xl(){
+      padding: 40px 30px;
+    }
+    i{
+      font-size: 40px;
+      color: $secondary;
       @include lg(){
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-      @include xl(){
-        padding: 40px 30px;
-      }
-      i{
-        font-size: 40px;
-        color: $secondary;
-        @include lg(){
-            font-size: 55px;
-        }
+          font-size: 55px;
       }
     }
-    &__img-wrap{
-      height: 40px;
-      margin-bottom: 10px;
-      @include lg{
-        height: 64px;
-      }
+  }
+  &__img-wrap{
+    height: 40px;
+    margin-bottom: 10px;
+    @include lg{
+      height: 64px;
     }
+  }
+  &__title{
+    margin-bottom: 8px;
+    font-size: 20px;
+    color:$primary;
+    font-family: $font-archive-bold;
+    @include lg(){
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+  }
+  &__text{
+    flex: 1 1 auto;
+    margin-bottom: 15px;
+    @include lg{
+      margin-bottom: 25px;
+    }
+  }
+  .btn{
+    width: 100%;
+    @include sm{
+      width: auto;
+    }
+  }
+}
+
+.card-secondary{
+  background-color: $secondary;
+  .talk-card{
     &__title{
-      margin-bottom: 8px;
-      font-size: 20px;
-      color:$primary;
-      font-family: $font-archive-bold;
-      @include lg(){
-        margin-bottom: 15px;
-        font-size: 24px;
-      }
+      color: $white;
     }
     &__text{
-      flex: 1 1 auto;
-      margin-bottom: 15px;
-      @include lg{
-        margin-bottom: 25px;
-      }
+      color: $white;
     }
-    .btn{
-      width: 100%;
-      @include sm{
-        width: auto;
+    &__btn{
+      .btn{
+        color: $white;
       }
     }
   }
-  
-  .card-secondary{
-    background-color: $secondary;
-    .talk-card{
-      &__title{
-        color: $white;
-      }
-      &__text{
-        color: $white;
-      }
-      &__btn{
-        .btn{
-          color: $white;
-        }
-      }
-    }
-    .btn{
-      border: 2px solid #fff;
-    }
+  .btn{
+    border: 2px solid #fff;
   }
-  
-  .card-white{
-    background-color: #fff;
-    .talk-card{
-      &__title{
-        color: $black;
-      }
-      &__text{
-        color: $black;
-      }
-    }
-    .btn{
-      border: 2px solid $black;
+}
+
+.card-white{
+  background-color: #fff;
+  .talk-card{
+    &__title{
       color: $black;
     }
-    .btn.btn-secondary{
-      border: none;
+    &__text{
+      color: $black;
     }
   }
-  
+  .btn{
+    border: 2px solid $black;
+    color: $black;
+  }
+  .btn.btn-secondary{
+    border: none;
+  }
+}

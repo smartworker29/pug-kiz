@@ -39,12 +39,15 @@
     min-height: auto;
     background-color: $grey;
     color: $white;
-    padding: 100px 0 0;
+    padding: 80px 0 0;
     @include md() {
         padding: 150px 0 50px;
     }
     @include lg() {
-        padding: 200px 0 50px;
+        padding: 155px 0 50px;
+    }
+    @include xl{
+        padding: 60px 0 60px;
     }
     .campaign-content {
         padding-top: 50px;
@@ -98,6 +101,16 @@
             @include md() {
                 margin-top: 0;
             }
+            .success-wrapper{
+                @include md{
+                    padding:140px 0;
+                }
+                p{
+                @include font-size($xs-font);
+                @include line-height($sm-line-height);
+                color:$primary;
+                }
+            }
         }
     }
     .no-nav__form {
@@ -108,9 +121,9 @@
             }
         }
 
-        input {
-            height: 45px;
-        }
+        // input {
+        //     height: 45px;
+        // }
         h3 {
             color: $primary;
             margin-bottom: 24px;
@@ -118,52 +131,52 @@
                 margin-bottom: 30px;
             }
         }
-        .form__item {
-            input {
-                padding: 0 15px;
-                font-size: 16px;
-                line-height: 18px;
-                &::-webkit-input-placeholder{
-                    color: $mute-grey;
-                }
-                &:-moz-placeholder {
-                    color: $mute-grey;
-                }
-                &::-moz-placeholder {
-                    color: $mute-grey;
-                }
-                &:-ms-input-placeholder {
-                    color: $mute-grey;
-                }
-                &::placeholder {
-                    color: $mute-grey;
-                }
-            }
-            textarea {
-                font-size: 16px;
-                line-height: 22px;
-                color: $primary;
-                &::-webkit-input-placeholder{
-                    color: $mute-grey;
-                }
-                &:-moz-placeholder {
-                    color: $mute-grey;
-                }
-                &::-moz-placeholder {
-                    color: $mute-grey;
-                }
-                &:-ms-input-placeholder {
-                    color: $mute-grey;
-                }
-                &::placeholder {
-                    color: $mute-grey;
-                }
-            }
-            label {
-                top: 21px;
-                font-size: 16px;
-                line-height: 18px;
-            }
-        }
+        // .form__item {
+        //     input {
+        //         padding: 0 15px;
+        //         font-size: 16px;
+        //         line-height: 18px;
+        //         &::-webkit-input-placeholder{
+        //             color: $mute-grey;
+        //         }
+        //         &:-moz-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &::-moz-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &:-ms-input-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &::placeholder {
+        //             color: $mute-grey;
+        //         }
+        //     }
+        //     textarea {
+        //         font-size: 16px;
+        //         line-height: 22px;
+        //         color: $primary;
+        //         &::-webkit-input-placeholder{
+        //             color: $mute-grey;
+        //         }
+        //         &:-moz-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &::-moz-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &:-ms-input-placeholder {
+        //             color: $mute-grey;
+        //         }
+        //         &::placeholder {
+        //             color: $mute-grey;
+        //         }
+        //     }
+        //     label {
+        //         top: 21px;
+        //         font-size: 16px;
+        //         line-height: 18px;
+        //     }
+        // }
     }
 }
