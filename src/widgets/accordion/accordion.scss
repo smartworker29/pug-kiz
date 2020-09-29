@@ -1,5 +1,9 @@
 .widget-accordion {
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
+    padding:0 16px;
+    @include lg{
+        padding:0
+    }
     .accordion-tiles {
         margin-bottom: 3px;
         background-color: $white;
@@ -22,13 +26,17 @@
             align-items: center;
             p {
                 margin-bottom: 0;
-                padding-right: 10px;
+                padding-right: 16px;
                 font-family: $font-roboto-regular;
             }
             i {
-                font-size: 20px;
+                font-size: 14px;
                 line-height: 0;
                 color: $secondary;
+                font-weight: bold;
+                @include md{
+                    font-size: 23px;
+                }
                 @include transition(all 0.55s ease-in-out);
             }
         }

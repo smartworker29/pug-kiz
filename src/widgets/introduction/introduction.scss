@@ -11,6 +11,7 @@
     margin-bottom: 32px;
     @include md{
       height: 390px;
+      background-size: cover;
       padding-top: 60px;
       margin-bottom: 60px;
     }
