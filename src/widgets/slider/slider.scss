@@ -175,7 +175,7 @@
       padding: 10px 0;
       &:after {
         height: calc(100% - 40px);
-        width: 1px;
+        width: 0px;
         content: "";
         position: absolute;
         right: -10px;
