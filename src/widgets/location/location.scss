@@ -13,6 +13,7 @@
     font-family: $font-roboto-medium;
     letter-spacing: 1px;
     margin-bottom: 16px;
+    line-height: normal;
     @include lg(){
       margin-bottom: 24px;
     }
