@@ -17,6 +17,9 @@ header {
     @include xl {
       display: flex;
     }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      display:block;
+    }
     ul {
       text-align: right;
 

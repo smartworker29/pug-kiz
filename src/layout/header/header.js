@@ -47,9 +47,11 @@ var header = (function () {
                    
                     var listitems = $(items).parents('.nav-list').find('.dropdown-wrapper #' + itemname).find('.cluster-links a').length
                     items.onclick = e => {
-                        $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');
-                        $(items).parents('.nav-list').addClass('active');
-                        $('.back-menu').addClass('d-flex');
+                        if($(items).find('i').length == 1){
+                            $(items).parents('.nav-list').find('.dropdown-wrapper #'+itemname).addClass('open');
+                            $(items).parents('.nav-list').addClass('active');
+                            $('.back-menu').addClass('d-flex');
+                        }
                     }
                     if(listitems > 1){
                         $(items).find('a').attr('href', 'javascript:void(0)');
