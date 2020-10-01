@@ -107,6 +107,9 @@ var header = (function () {
 $().ready(function () {
     header.init();
     //addClasstoElementOnScroll()
+    if($('.content-wrapper.inner-content').parents('.placeholder').next().hasClass('placeholder--bg-grey')){
+        $('.content-wrapper.inner-content').addClass('padd-bottom');
+    }
 });
 $(window).on('load', (event) => {
     var url = window.location.hash

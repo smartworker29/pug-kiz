@@ -17,6 +17,7 @@
         color: $lighter-grey;
         font-family: $font-roboto-medium;
         margin-bottom: 8px;
+        line-height: normal;
         @include lg(){
           margin-bottom: 16px;
         }
