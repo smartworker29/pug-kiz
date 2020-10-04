@@ -20,6 +20,7 @@
     color: $primary;
     font-family: $font-archive;
     @include font-size($xs-font);
+    line-height: normal;
     @include lg{
       @include font-size($paragraph-font);
     }

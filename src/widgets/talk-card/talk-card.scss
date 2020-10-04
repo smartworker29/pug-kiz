@@ -39,8 +39,8 @@
   }
   &__text{
     flex: 1 1 auto;
-    letter-spacing: -0.3px;
     margin-bottom: 24px;
+    color:$mute-grey;
     @include lg{
       margin-bottom: 32px;
     }
@@ -69,18 +69,18 @@
     }
   }
   .btn{
-    border: 2px solid #fff;
+    border: 2px solid $white;
   }
 }
 
 .card-white{
-  background-color: #fff;
+  background-color: $white;
   .talk-card{
     &__title{
-      color: $black;
+      color: $primary;
     }
     &__text{
-      color: $primary;
+      color:$mute-grey;
     }
   }
   .btn{
