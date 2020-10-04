@@ -5,7 +5,7 @@ export default function newsSlider() {
   return {
     init: () => {
       let conf = {
-        slidesPerView: 3,
+        slidesPerView: 1.10,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
@@ -14,10 +14,12 @@ export default function newsSlider() {
           1500: {
             allowTouchMove: false,
             spaceBetween: 24,
+            slidesPerView: 3,
           },
           992: {
             allowTouchMove: true,
             spaceBetween: 24,
+            slidesPerView: 3,
           },
           576:{
             spaceBetween: 20,
