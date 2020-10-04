@@ -43,6 +43,7 @@
             .text{
                 @include font-size($xs-font);
                 color:inherit;
+                line-height: normal;
             }
             .language-links{
                 width:100%;
@@ -69,6 +70,7 @@
                         }
                         > a {
                             padding:0;
+                            line-height: normal;
                         }
                         a{
                             color:$white;
