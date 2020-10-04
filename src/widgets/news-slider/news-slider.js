@@ -6,6 +6,7 @@ export default function newsSlider() {
     init: () => {
       let conf = {
         slidesPerView: 1.10,
+        spaceBetween: 16,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
