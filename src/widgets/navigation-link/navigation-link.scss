@@ -11,6 +11,7 @@
         top: 50%;
         transform: translateY(-50%);
         display: block;
+        font-weight: bold;
         @include lg(){
             display: none;
         }
@@ -87,10 +88,12 @@
         background: $primary;
         color:$white;
         border: 0;
-        padding: 20px 15px;
+        padding: 23px 15px;
         -webkit-appearance: none;
         -moz-appearance: none;
         @include font-size($xs-font);
+        line-height: 16px;
+        border-bottom: 2px solid $secondary;
         @include lg(){
             display: none;
         }

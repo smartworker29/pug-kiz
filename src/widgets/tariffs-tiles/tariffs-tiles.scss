@@ -60,6 +60,7 @@
       @include font-size($md-font);
       color: $secondary;
       font-family: $font-roboto-bold;
+      line-height: normal;
       @include lg{
         font-size: 28px;
       }

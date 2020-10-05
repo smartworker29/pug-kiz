@@ -1,0 +1,47 @@
+.placeholder{
+    .breadcrumb{
+        padding:16px 0;
+        margin: 0;
+        background-color: $white;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+        // border: solid 0.1px $grey;
+        // border-bottom: 1px solid $grey;
+        ul{
+            margin: 0;
+            padding:0;
+            li{
+                font-size: 14px;
+                color:$primary;
+                display: inline-block;
+                font-family: $font-roboto-regular;
+                margin-top: 0;
+                line-height: 16px;
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    content: "\E90A";
+                    font-family: 'icomoon'!important;
+                    transform: rotate(-90deg);
+                    display: inline-block;
+                    font-size: 9px;
+                    font-weight: bold;
+                    margin: 0px 8px 0;
+                    line-height: 13px;
+                    color: $secondary;
+                }
+                a{
+                    display: inline-block;
+                    
+                }
+                &:last-child{
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+    

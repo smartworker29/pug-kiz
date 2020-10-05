@@ -31,7 +31,7 @@ var anchor = (function () {
                     "text": el.text()
                 }).appendTo(".anchor-link select");
             });
-            $("<i class='icon-close'> </i>").appendTo(".anchor-link select")
+            // $("<i class='icon-close'> </i>").appendTo(".anchor-link select")
             $(".anchor-link select").change(function () {
                 window.location = $(this).find("option:selected").val();
             });
@@ -110,7 +110,9 @@ function scrollToActive() {
             lastId = id;
             menuItems.parent().removeClass("active").end().filter("[href='#" + id + "']").parent().addClass("active");
             if(id != ''){
+              
                 $('[anchor-wrapper] select').val("#" + id)
+                // $('[anchor-wrapper] select').find("#" + id).attr('selected','selected')
             }
             
 

@@ -113,6 +113,7 @@
 
     th, td {
       padding: 25px 16px;
+      line-height: normal;
       @include lg {
         padding-left: 32px;
       }
