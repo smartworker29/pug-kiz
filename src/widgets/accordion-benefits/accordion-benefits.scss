@@ -135,8 +135,8 @@
       align-items: flex-start;
       top: calc(100% - 87px);
       @include transition(all 0.3s ease-in-out);
-      @include xxl{
-        
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        display: block;
       }
     }
     h2{
