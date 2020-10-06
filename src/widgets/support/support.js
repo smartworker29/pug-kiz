@@ -44,7 +44,7 @@ $(document).on('blur','.text-texarea', function (e) {
 
 $(document).on('blur', '.text-input',function (e) {
     $('form button[type=submit]').addClass('btn-secondary');
-    const regExp = /^[A-Za-z ]+$/;
+    const regExp = /^[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z]+[\u0600-\u065F\u066A-\u06EF\u06FA-\u06FFa-zA-Z-_ ]*$/;
     let result = regExp.test(e.target.value);
     if (!result) {
         $(this).removeClass('valid');
