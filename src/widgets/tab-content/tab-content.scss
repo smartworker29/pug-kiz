@@ -72,6 +72,15 @@
                 @include lg() {
                     padding-right: 30px;
                 }
+                ol{
+                    line-height: normal;
+                    li{
+                        margin-bottom: 8px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
                 h2 {
                     margin-bottom: 12px;
                     @include lg() {
