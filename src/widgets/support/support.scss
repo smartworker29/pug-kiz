@@ -12,13 +12,19 @@
     right: 0;
     margin-right: 0;
     left: auto;
-    bottom: auto;
     bottom: 44%;
     transform: rotate(-90deg) translate(0, 141px);
     @include transition(all 0.55s ease-in-out);
     &.bottom{
       bottom:0%;
       transform: rotate(-90deg) translate(44%, 141px);
+      
+    }
+  }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    &.bottom{
+      transform: rotate(-90deg) translate(0, 141px) !important;
+      bottom:140px !important;
     }
   }
   button{

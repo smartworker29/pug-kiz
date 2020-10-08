@@ -257,6 +257,7 @@
           }
         }
       }
+      
     }
   }
 
@@ -539,3 +540,43 @@
 [dir=rtl] .contact-form .link-card .link-card__btn:after{
   content: "\E908";
 }
+
+
+  .custom-checkbox{
+    > label{
+      position: relative;
+    }
+    .forie{
+      &:before {
+        content: "";
+        background: white;
+        display: block;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        border: 1px solid $grey;
+        font-family: "icomoon";
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    input.custom{
+      &:checked {
+        ~ .forie{
+          &:before {
+            content: "\e910" !important;
+            background: white;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            border: 1px solid $grey;
+            font-size: 17px;
+            text-indent: -2px;
+            line-height: 15px;
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }

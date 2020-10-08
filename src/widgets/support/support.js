@@ -18,6 +18,10 @@ tel.each(function(){
     $(this).attr('type','number')
 })
 
+var checkboxlabel = $('.custom-checkbox label')
+checkboxlabel.each(function(){
+    $(this).append("<label class='forie'> </label>")
+})
 
 $(document).on('blur','form .form__item input:not([type="hidden"]), form .form__item textarea', function () {
     let val = this.value.trim();

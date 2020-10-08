@@ -2,6 +2,7 @@ extends layout/layout
 block variables
     -   var direction = 'rtl';
 block content
+  include ./widgets/support/support
 
   .placeholder.placeholder--no-padding
     include ./widgets/banner/banner
@@ -13,12 +14,15 @@ block content
         include ./widgets/navigation-link/navigation-link
 
   .placeholder.placeholder--no-padding
+    include ./tiles/breadcrumb/breadcrumb
+
+  .placeholder.placeholder--no-padding
     .container
       .row
         include ./widgets/rich-content/rich-content
 
-  .placeholder.placeholder--bg-grey#benifits
-    .container
+  .placeholder.placeholder--bg-grey
+    .container#about
       .row
         include ./widgets/talk-card/talk-card
         +talk-card({
@@ -36,34 +40,60 @@ block content
           btnText: 'Contact Us'
         })
 
+        
   .placeholder
-    .container
-      .row
+      .container
         include ./widgets/benefits/benefits
 
-  .placeholder#products
-    .container
-      include ./widgets/location/location
-      .location-items-wrap
-        +location({
-          dir: dir,
-          title: 'Strategic Location',
-          text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
-          btnText: 'Read more',
-          image: "${require(`./assets/images/location.jpg`)}"})
-        +location({
-          dir: !dir,
-          title: 'Abu Dhabi',
-          text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
-          btnText: 'Explore',
-          image: "${require(`./assets/images/city-img.jpg`)}"})
 
-  .placeholder#about
-    .container
+  .placeholder
+    .container#benifits
+      //- include ./widgets/location/location
+      .location-items-wrap
+        .location.location-map
+          .row.no-gutters
+              div.col-12.col-lg-5.col-xl-4.order-1
+                  div.location__wrap-rtl
+                      h2.section__title.text-nowrap Strategic Location
+                      p.location__text Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.
+                      +anchor('btn-secondary' ,' Read more' )
+              div.col-12.col-lg-7.col-xl-8.order-lg-1
+
+                  div.location__image-wrap.text-left
+                      img(src= "${require(`./assets/images/location.jpg`)}")
+
+        .location
+          .row.no-gutters.align-items-lg-center
+              div.col-12.col-lg-5.col-xl-4.order-1
+                  div.location__wrap-rtl
+                      h2.section__title.text-nowrap Abu Dhabi'
+                      p.location__text At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.
+                      +anchor('btn-secondary' ,' Explore' )
+              div.col-12.col-lg-7.col-xl-8.order-lg-0
+
+                  div.location__image-wrap.text-left
+                      img(src= "${require(`./assets/images/city-img.jpg`)}")
+
+        //- +location({
+        //-   dir: dir,
+        //-   title: 'Strategic Location',
+        //-   text: 'Strategically located between Abu Dhabi and Dubai, the two most important economic centres of the region, KIZAD has an exceptional location and is ideally positioned to serve the key consumption markets in the GCC, Middle East and Africa.',
+        //-   btnText: 'Read more',
+        //-   image: "${require(`./assets/images/location.jpg`)}"})
+        //- +location({
+        //-   dir: !dir,
+        //-   title: 'Abu Dhabi',
+        //-   text: 'At the centre of trade between Europe, Asia and Africa, Abu Dhabi, the capital of the UAE, is a thriving business and lifestyle hub. Distinctive Arabian hospitality and rich culture, blended with a cosmopolitan and modern lifestyle, make Abu Dhabi an attractive and comfortable city to work and live.',
+        //-   btnText: 'Explore',
+        //-   image: "${require(`./assets/images/city-img.jpg`)}"})
+
+  .placeholder
+    .container#products
+      .row
         include ./widgets/slider/slider
 
-  .placeholder#knowMore
-    .container
+  .placeholder
+    .container#partners
       .row.info-card-container
         each item in [0,1]
           .col-12.col-lg-6.info-card
@@ -71,18 +101,37 @@ block content
               include ./widgets/info-card-description/info-card-description
 
   .placeholder.placeholder--bg-grey
-    include ./widgets/learn-more/learn-more
+    #knowMore
+      include ./widgets/learn-more/learn-more
 
-  .placeholder#Sustainability
-    include widgets/news-slider/news-slider
+  .placeholder
+    .container#knowMore
+      include widgets/news-slider/news-slider
+    //- .container
+    //-   .row
+    //-     .widget.news-slider.mb-3
+    //-       .widget__header.container.d-flex.justify-content-between.align-items-center
+    //-           h2.heading.mb-0 News and Updates
+    //-           +anchor('btn-white secondary-bordered d-none d-lg-inline-block' ,'View all')
+    //-     .col-12.col-md-6.col-lg-4.news-wrapper
+    //-       include ./widgets/card-list/card-list
+    //-       +newsList('true','3', 'false')
 
-  .placeholder#faq
-    .container.px-0
+    //-     .col-12.col-md-6.col-lg-4.news-wrapper
+    //-       include ./widgets/card-list/card-list
+    //-       +newsList('true','3', 'false')
+
+    //-     .col-12.col-md-6.col-lg-4.news-wrapper
+    //-       include ./widgets/card-list/card-list
+    //-       +newsList('true','3', 'false')
+
+  .placeholder
+    .container#Sustainability
       include widgets/partner-slider/partner-slider
 
 
   .placeholder.placeholder--no-padding
-    .container-fluid.px-0
+    .container#faq
       .row.no-gutters
         include ./widgets/introduction/introduction
         +introduction({
@@ -95,7 +144,5 @@ block content
   //  .container.container--small
   //    .row
   //      .col-12
-
-          
 
            
