@@ -6,7 +6,10 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, 0);
-  width: 330px;
+  width:260px;
+  @include sm{
+    width: 330px;
+  }
   
   @include xl{
     right: 0;
@@ -31,10 +34,13 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    flex: 1 0 165px;
+    flex: 1 0 0;
     height: 40px;
     box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.05);
     outline: none;
+    @include sm{
+      flex: 1 0 165px;
+    }
     @include lg{
       height: 48px;
     }
@@ -64,8 +70,12 @@
   }
   &__text{
     font-family: $font-archive-bold;
-    @include font-size($xs-font);
-    @include line-height($paragraph-line-height);
+    font-size: 12px;
+    @include sm{
+      @include font-size($xs-font);
+      @include line-height($paragraph-line-height);
+    }
+    
     @include md{
       @include line-height($md-line-height);
     }

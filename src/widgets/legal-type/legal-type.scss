@@ -40,12 +40,13 @@
   }
   &__title{
     color: $primary;
-    @include font-size($md-font);
+    font-size: 20px;
     @include line-height($xxl-line-height);
     letter-spacing: 0.5px;
     margin-bottom: 8px;
     @include md{
       flex: 1 1 auto;
+      @include font-size($md-font);
       
     }
     @include lg{

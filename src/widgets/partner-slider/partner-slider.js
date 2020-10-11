@@ -9,6 +9,8 @@ export default function partnerSlider() {
                     nextEl: '.partner-slider .swiper-button-next',
                     prevEl: '.partner-slider .swiper-button-prev',
                 },
+                spaceBetween: 30,
+                slidesPerView: 2.80,
                 breakpoints: {
                     1200: {
                         spaceBetween: 20,

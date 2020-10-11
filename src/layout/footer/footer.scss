@@ -176,13 +176,16 @@ footer {
                 li {
                     display: inline-block;
                     margin-bottom: 5px;
+                    margin-left: 30px;
                     @include md() {
-                        margin-right: 30px;
                         margin-bottom: 0px;
                     }
                     &:last-child {
-                        margin-right: 0;
+                        
                         margin-bottom: 0px;
+                    }
+                    &:first-child{
+                        margin-left: 0;
                     }
                     a {
                         color: $white;
