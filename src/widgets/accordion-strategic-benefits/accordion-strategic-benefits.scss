@@ -86,4 +86,6 @@
   height: 32vw;
   max-height: 481px;
   @include transition(background-color 0.3s ease-in-out);
+  background-repeat: no-repeat;
+    background-size: cover;
 }

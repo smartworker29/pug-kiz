@@ -64,6 +64,18 @@
     @include lg {
       @include font-size($sm-font);
     }
+    &::-webkit-input-placeholder {
+      font-family: $font-roboto-light;
+    }
+    &::-moz-placeholder {
+      font-family: $font-roboto-light;
+    }
+    &:-ms-input-placeholder {
+      font-family: $font-roboto-light;
+    }
+    &:-moz-placeholder {
+      font-family: $font-roboto-light;
+    }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
