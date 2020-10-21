@@ -25,17 +25,18 @@ export default function partnerSlider() {
                     }
                 }
             }
+            if($(window).width() > 1200){
+                if($('.partner-slider .swiper-slide').length < 7){
+                    $('.partner-slider .swiper-container').css({'margin':'0', 'width':'100%'});
+                    $('.partner-slider .swiper-button-wrapper').hide();
+                }
+            }
             var swiper = new Swiper('.partner-slider .swiper-container', conf);
         },
 
     }
 }
 
-$().ready(function () {
-    if($(window).width() > 1200){
-        if($('.partner-slider .swiper-slide').length < 7){
-            $('.partner-slider .swiper-container').css({'margin':'0', 'width':'100%'});
-            $('.partner-slider .swiper-button-wrapper').hide();
-        }
-    }
-});
+// $().ready(function () {
+    
+// });
