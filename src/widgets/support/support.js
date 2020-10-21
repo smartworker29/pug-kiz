@@ -20,7 +20,8 @@ tel.each(function(){
 
 var checkboxlabel = $('.custom-checkbox label')
 checkboxlabel.each(function(){
-    $(this).append("<label class='forie'> </label>")
+    var thisid = $(this).find('.custom').attr('id')
+    $(this).append("<label class='forie' for='"+ thisid + "'> </label>")
 })
 
 $(document).on('blur','form .form__item input:not([type="hidden"]), form .form__item textarea', function () {
