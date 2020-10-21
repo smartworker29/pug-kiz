@@ -155,6 +155,7 @@ footer {
             font-weight: bold;
             display: flex;
             align-items: baseline;
+            line-height: normal;
             @include md() {
                 @include font-size($xs-font);
                 align-items: center;

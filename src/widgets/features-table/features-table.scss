@@ -74,6 +74,9 @@
       }
     }
     td:nth-child(1) {
+      @media (max-width:350px){
+        min-width: 120px;
+      }
       font-weight: 500;
       background: $secondary;
       font-family: $font-roboto-medium;
@@ -114,6 +117,7 @@
     th, td {
       padding: 25px 16px;
       line-height: normal;
+      word-break: break-word;
       @include lg {
         padding-left: 32px;
       }
@@ -186,6 +190,20 @@
 
 .feature-footnote{
   margin-top: 16px;
+  ~ .row{
+    a{
+      @media (max-width:350px){
+        float: left;
+        margin-left: 0 !important;
+        margin-top: 15px;
+        clear: both;
+        &:first-child{
+          margin-top: 0;
+          
+        }
+      }
+    }
+  }
   p{
     font-size: 12px;
     font-style: italic;
