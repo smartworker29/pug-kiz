@@ -44,6 +44,9 @@
                 margin-bottom: 0;
             }
         }
+        .link.with-icon:before{
+            display:inline-block;
+        }
         // p:not(.news-widget__text){
         //     margin-bottom: 24px;
         // }
