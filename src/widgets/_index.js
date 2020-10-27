@@ -5,7 +5,7 @@ import "./scroll-events/scroll-events";
 import "./support/support";
 import "./features-table/features-table";
 import benefitSlider from "./benefits/benefits";
-
+import "./tab-content/tab-content"
 
 import videoslider from "./video-slider/video-slider";
 
