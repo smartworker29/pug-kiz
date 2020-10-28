@@ -28,6 +28,7 @@ export default function swiperCustom() {
                         speed: 1500,
                         centeredSlides: false,
                         slidesPerView: 1,
+                        spaceBetween: 20,
                         pagination: {
                             el: item,
                             clickable: true,

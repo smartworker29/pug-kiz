@@ -71,12 +71,19 @@
                         height: 240px;
                     }
                 }
+                > p{
+                    margin-top: 16px; 
+                    font-family: $font-roboto-regular;
+                }
                 .area-define{
                     margin: 0;
                     padding: 15px 0 5px;
                     display: flex;
                     justify-content: space-between;
                     color: $primary;
+                    @include custom-width(0px, 991px) {
+                        margin-bottom: 24px;
+                    }
                     @include custom-width(0px, 400px) {
                         display: block;
                         li{
