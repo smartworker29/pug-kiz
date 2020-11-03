@@ -118,6 +118,9 @@
       padding: 25px 16px;
       line-height: normal;
       word-break: break-word;
+      @include custom-width(0px, 480px) {
+        min-width: 150px;
+    }
       @include lg {
         padding-left: 32px;
       }
