@@ -2,9 +2,9 @@
     position: relative;
     video{
         object-fit: cover;
-        @include lg(){
-            height: 672px;
-        }
+        // @include lg(){
+        //     height: 672px;
+        // }
     }
     i{
         position: absolute;
