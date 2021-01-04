@@ -11,6 +11,7 @@ export default function partnerSlider() {
                 },
                 spaceBetween: 30,
                 slidesPerView: 2.80,
+                loop:true,
                 breakpoints: {
                     1200: {
                         spaceBetween: 20,
